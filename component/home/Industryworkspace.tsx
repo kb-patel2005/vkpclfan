@@ -42,10 +42,10 @@ function Card1({
 
 export default function Industryworkspace() {
     return (
-        <section className="flex w-full flex-col items-center gap-10 px-4 py-10 sm:px-6 lg:gap-14 lg:py-16">
+        <section className="flex w-full flex-col items-center gap-10 px-4 py-6 sm:px-6 lg:gap-14 lg:py-16">
 
             {/* ================= STATS ================= */}
-            <div className="grid w-full max-w-7xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+            <div className="flex w-full flex-wrap lg:gap-10 gap-8 justify-between max-w-7xl">
 
                 {data.map((data1, index) => (
                     <Card1

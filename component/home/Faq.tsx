@@ -48,7 +48,7 @@ export function Faq() {
     };
 
     return (
-        <section id="faq" className="w-full py-16">
+        <section id="faq" className="w-full py-3">
 
             {/* FAQ Schema */}
             <script

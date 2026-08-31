@@ -32,7 +32,7 @@ const products = [
 
 export default function IndustrialSolutions() {
     return (
-        <section className="bg-white py-16">
+        <section className="bg-white py-5">
             <div className="mx-auto max-w-7xl px-4">
 
                 {/* ================= HEADING ================= */}
@@ -112,10 +112,11 @@ export default function IndustrialSolutions() {
                                     <p className="mt-2 text-sm font-normal text-[#5D5D5D]">
                                         {item.desc}
                                     </p>
-
-                                    <button className="w-[50px] flex-end mt-3 rounded-xl bg-[#EDEEF0] py-1 px-3 font-bold">
-                                        →
-                                    </button>
+                                    <div className="w-full flex justify-end">
+                                        <button className="w-[50px] flex-end mt-3 font-bold rounded-xl bg-[#EDEEF0] py-1 px-3">
+                                            →
+                                        </button>
+                                    </div>
 
                                 </div>
                             </div>

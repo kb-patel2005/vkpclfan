@@ -10,12 +10,12 @@ import {
 
 export default function Footer() {
     return (
-        <footer className="bg-[#09273A] text-white mt-5">
+        <footer className="text-[#5D5D5D]">
 
             <div className="mx-auto max-w-7xl px-6 py-14 sm:px-8 lg:px-10">
 
                 {/* ================= 4 COLUMNS ================= */}
-                <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+                <div className="flex flex-wrap lg:gap-8 gap-10 justify-between">
 
                     {/* ================= COLUMN 1 ================= */}
                     <div>
@@ -28,7 +28,7 @@ export default function Footer() {
                         />
 
                         {/* Description */}
-                        <p className="max-w-sm text-sm font-normal leading-6 text-[#C5C5D9]">
+                        <p className="max-w-sm text-sm font-normal leading-6 ">
                             Floent fans are manufactured by Floent Technologies
                             having manufacturing facility at well known industrial
                             city Ahmedabad, Gujarat, India.
@@ -40,7 +40,7 @@ export default function Footer() {
                             <a
                                 href="#"
                                 aria-label="Facebook"
-                                className="flex h-9 w-9 items-center justify-center rounded-full border border-[#C5C5D9] text-[#C5C5D9] transition duration-300 hover:bg-white hover:text-[#09273A]"
+                                className="flex h-9 w-9 items-center justify-center rounded-full border border-[#C5C5D9] transition duration-300 hover:bg-white hover:text-[#09273A]"
                             >
                                 <Users className="h-3.5 w-3.5" strokeWidth={1.9} />
                             </a>
@@ -48,7 +48,7 @@ export default function Footer() {
                             <a
                                 href="#"
                                 aria-label="Instagram"
-                                className="flex h-9 w-9 items-center justify-center rounded-full border border-[#C5C5D9] text-[#C5C5D9] transition duration-300 hover:bg-white hover:text-[#09273A]"
+                                className="flex h-9 w-9 items-center justify-center rounded-full border border-[#C5C5D9]  transition duration-300 hover:bg-white hover:text-[#09273A]"
                             >
                                 <Camera className="h-3.5 w-3.5" strokeWidth={1.9} />
                             </a>
@@ -56,7 +56,7 @@ export default function Footer() {
                             <a
                                 href="#"
                                 aria-label="YouTube"
-                                className="flex h-9 w-9 items-center justify-center rounded-full border border-[#C5C5D9] text-[#C5C5D9] transition duration-300 hover:bg-white hover:text-[#09273A]"
+                                className="flex h-9 w-9 items-center justify-center rounded-full border border-[#C5C5D9]  transition duration-300 hover:bg-white hover:text-[#09273A]"
                             >
                                 <Play className="h-3.5 w-3.5 fill-current" strokeWidth={1.9} />
                             </a>
@@ -64,7 +64,7 @@ export default function Footer() {
                             <a
                                 href="#"
                                 aria-label="LinkedIn"
-                                className="flex h-9 w-9 items-center justify-center rounded-full border border-[#C5C5D9] text-[#C5C5D9] transition duration-300 hover:bg-white hover:text-[#09273A]"
+                                className="flex h-9 w-9 items-center justify-center rounded-full border border-[#C5C5D9]  transition duration-300 hover:bg-white hover:text-[#09273A]"
                             >
                                 <BriefcaseBusiness className="h-3.5 w-3.5" strokeWidth={1.9} />
                             </a>
@@ -72,20 +72,20 @@ export default function Footer() {
                         </div>
                     </div>
 
-
+                    <div className="flex lg:w-1/3 gap-15 justify-between">
                     {/* ================= COLUMN 2 ================= */}
                     <div>
 
-                        <h3 className="mb-5 text-sm font-bold tracking-wider text-white">
+                        <h3 className="mb-5 text-sm font-bold tracking-wider text-black">
                             QUICK LINKS
                         </h3>
 
-                        <ul className="space-y-3 text-sm text-[#C5C5D9]">
+                        <ul className="space-y-3 text-sm ">
 
                             <li>
                                 <a
                                     href="/about"
-                                    className="transition duration-300 hover:text-white"
+                                    className="transition duration-300"
                                 >
                                     About
                                 </a>
@@ -94,7 +94,7 @@ export default function Footer() {
                             <li>
                                 <a
                                     href="/products"
-                                    className="transition duration-300 hover:text-white"
+                                    className="transition duration-300"
                                 >
                                     Our Products
                                 </a>
@@ -103,7 +103,7 @@ export default function Footer() {
                             <li>
                                 <a
                                     href="/blog"
-                                    className="transition duration-300 hover:text-white"
+                                    className="transition duration-300"
                                 >
                                     Blog
                                 </a>
@@ -112,7 +112,7 @@ export default function Footer() {
                             <li>
                                 <a
                                     href="/gallery"
-                                    className="transition duration-300 hover:text-white"
+                                    className="transition duration-300"
                                 >
                                     Gallery
                                 </a>
@@ -125,16 +125,16 @@ export default function Footer() {
                     {/* ================= COLUMN 3 ================= */}
                     <div>
 
-                        <h3 className="mb-5 text-sm font-bold tracking-wider text-white">
+                        <h3 className="mb-5 text-sm font-bold tracking-wider text-black">
                             QUICK LINKS
                         </h3>
 
-                        <ul className="space-y-3 text-sm text-[#C5C5D9]">
+                        <ul className="space-y-3 text-sm">
 
                             <li>
                                 <a
                                     href="/contact-us"
-                                    className="transition duration-300 hover:text-white"
+                                    className="transition duration-300"
                                 >
                                     Contact Us
                                 </a>
@@ -143,7 +143,7 @@ export default function Footer() {
                             <li>
                                 <a
                                     href="/privacy-policy"
-                                    className="transition duration-300 hover:text-white"
+                                    className="transition duration-300"
                                 >
                                     Privacy Policy
                                 </a>
@@ -152,7 +152,7 @@ export default function Footer() {
                             <li>
                                 <a
                                     href="/terms-and-conditions"
-                                    className="transition duration-300 hover:text-white"
+                                    className="transition duration-300"
                                 >
                                     Terms and Conditions
                                 </a>
@@ -160,41 +160,41 @@ export default function Footer() {
 
                         </ul>
                     </div>
-
+                    </div>
 
                     {/* ================= COLUMN 4 ================= */}
                     <div>
 
-                        <h3 className="mb-5 text-sm font-bold tracking-wider text-white">
+                        <h3 className="mb-5 text-sm font-bold tracking-wider text-black">
                             CONTACT
                         </h3>
 
                         {/* Contact Sales */}
-                        <p className="mb-4 text-sm font-semibold text-white">
+                        <p className="mb-4 text-sm font-bold text-[#785900]">
                             Contact Sales
                         </p>
 
                         {/* Email */}
                         <a
                             href="mailto:emain.gmail.com"
-                            className="mb-4 flex items-center gap-3 text-sm text-[#C5C5D9] transition duration-300 hover:text-white"
+                            className="mb-4 flex items-center gap-3 text-sm  transition duration-300 hover:text-white"
                         >
                             <Mail size={18} />
 
                             <span>
-                                emain.gmail.com
+                                info@floentair.com
                             </span>
                         </a>
 
                         {/* Phone */}
                         <a
                             href="tel:+919876543210"
-                            className="flex items-center gap-3 text-sm text-[#C5C5D9] transition duration-300 hover:text-white"
+                            className="flex items-center gap-3 text-sm transition duration-300 hover:text-white"
                         >
                             <Phone size={18} />
 
                             <span>
-                                +91 9876543210
+                                +91 9925624342
                             </span>
                         </a>
 
