@@ -22,9 +22,9 @@ export default function Footer() {
 
                         {/* Logo */}
                         <img
-                            src="/images/logo.png"
+                            src="/floent.png"
                             alt="Floent Fans"
-                            className="mb-5 h-12 w-auto object-contain"
+                            className="mb-5 h-18 w-auto object-contain bg-white p-3 rounded-2xl"
                         />
 
                         {/* Description */}

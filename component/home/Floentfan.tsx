@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 import {
     Plane,
@@ -48,25 +48,84 @@ const data = [
 
 export default function Floentfan() {
     return (
-        <section className='flex flex-col gap-10 items-center my-15'>
-            <div>
-                <h1 className='font-bold text-5xl text-center'>
-                    <span className='text-[#FFC727]'>Floent Fans </span> for Every Large Space</h1>
-                <p className='font-normal text-center text-lg text-[#43474E] mt-5'>Engineered for powerful air circulation across diverse large-scale environments.</p>
+        <section className="my-16 flex flex-col items-center gap-10 px-4">
+
+            {/* ================= HEADING ================= */}
+            <div className="max-w-4xl">
+                <h1 className="text-center text-4xl font-bold leading-tight sm:text-5xl">
+
+                    <span className="text-[#FFC727]">
+                        Floent Fans
+                    </span>{" "}
+                    for Every Large Space
+
+                </h1>
+
+                <p className="mt-5 text-center text-base font-normal text-[#43474E] sm:text-lg">
+                    Engineered for powerful air circulation across diverse
+                    large-scale environments.
+                </p>
+            </div>
+
+
+            {/* ================= CATEGORIES ================= */}
+            <div className="w-full max-w-7xl">
+
+                {/* Mobile Horizontal Scroll */}
+                <div className="flex gap-4 overflow-x-auto pb-3 scrollbar-hide sm:hidden">
+
+                    {data.map((item, index) => {
+                        const Icon = item.logo;
+
+                        return (
+                            <div
+                                key={index}
+                                className="flex h-[100px] min-w-[100px] shrink-0 flex-col items-center justify-center rounded-2xl bg-[#5D5D5D1A] p-3"
+                            >
+                                <Icon
+                                    size={32}
+                                    strokeWidth={1.8}
+                                    className="text-[#09273A]"
+                                />
+
+                                <p className="mt-2 text-center text-[12px] font-semibold leading-tight text-[#09273A]">
+                                    {item.title}
+                                </p>
+                            </div>
+                        );
+                    })}
+
+                </div>
+
+
+                {/* Tablet + Desktop */}
+                <div className="hidden flex-wrap justify-center gap-4 sm:flex lg:flex-nowrap lg:justify-between">
+
+                    {data.map((item, index) => {
+                        const Icon = item.logo;
+
+                        return (
+                            <div
+                                key={index}
+                                className="flex h-[100px] w-[100px] shrink-0 flex-col items-center justify-center rounded-2xl bg-[#5D5D5D1A] p-3"
+                            >
+                                <Icon
+                                    size={32}
+                                    strokeWidth={1.8}
+                                    className="text-[#09273A]"
+                                />
+
+                                <p className="mt-2 text-center text-[12px] font-semibold leading-tight text-[#09273A]">
+                                    {item.title}
+                                </p>
+                            </div>
+                        );
+                    })}
+
+                </div>
 
             </div>
-            <div className='flex gap-6'>
-                {data.map((item, index) => {
-                    const Icon = item.logo;
 
-                    return (
-                        <div key={index} className='p-3 bg-[#5D5D5D1A] w-[100px] h-[100px] flex flex-col justify-center items-center rounded-2xl'>
-                            <Icon size={32} strokeWidth={1.8} />
-                            <p className='font-semibold text-[12px] text-center'>{item.title}</p>
-                        </div>
-                    );
-                })}
-            </div>
         </section>
-    )
+    );
 }

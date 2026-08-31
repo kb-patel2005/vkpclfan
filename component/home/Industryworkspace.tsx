@@ -28,12 +28,12 @@ function Card1({
     title: string;
 }) {
     return (
-        <div className="bg-[#09273A] w-[285px] p-8 rounded-3xl">
-            <h2 className="text-[40px] font-bold text-[#DCE2F6]">
+        <div className="w-full rounded-3xl bg-[#09273A] p-7 sm:w-[285px] lg:p-8">
+            <h2 className="text-[40px] font-bold leading-none text-[#DCE2F6]">
                 {num}
             </h2>
 
-            <p className="text-[12px] font-semibold text-[#C5C5D9]">
+            <p className="mt-3 text-[12px] font-semibold tracking-wide text-[#C5C5D9]">
                 {title}
             </p>
         </div>
@@ -42,10 +42,11 @@ function Card1({
 
 export default function Industryworkspace() {
     return (
-        <section className="w-full flex flex-col gap-10">
+        <section className="flex w-full flex-col items-center gap-10 px-4 py-10 sm:px-6 lg:gap-14 lg:py-16">
 
             {/* ================= STATS ================= */}
-            <div className="flex flex-wrap gap-11 mx-auto max-w-7xl justify-between">
+            <div className="grid w-full max-w-7xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+
                 {data.map((data1, index) => (
                     <Card1
                         key={index}
@@ -53,28 +54,39 @@ export default function Industryworkspace() {
                         title={data1.title}
                     />
                 ))}
+
             </div>
 
-            {/* ================= CTA ================= */}
-            <div className="flex flex-col gap-5 bg-[#09273A] p-10 lg:p-24 max-w-7xl mx-auto justify-center items-center rounded-[40px] text-center">
 
-                <h1 className="text-[40px] font-bold leading-tight text-white lg:text-[64px]">
+            {/* ================= CTA ================= */}
+            <div className="flex w-full max-w-7xl flex-col items-center justify-center rounded-[30px] bg-[#09273A] px-6 py-12 text-center sm:px-10 sm:py-16 lg:rounded-[40px] lg:px-24 lg:py-24">
+
+                {/* Heading */}
+                <h1 className="text-[36px] font-bold leading-[1.1] text-white sm:text-[46px] lg:text-[64px]">
+
                     Ready to Optimize Your{" "}
+
                     <span className="text-[#FDCD2E]">
                         Industrial Workspace?
                     </span>
+
                 </h1>
 
-                <p className="mt-5 text-lg font-normal text-white">
+
+                {/* Description */}
+                <p className="mt-5 max-w-2xl text-base font-normal leading-6 text-white sm:text-lg">
                     Our specialists are ready to provide a custom air-flow
                     audit for your facility.
                 </p>
 
-                <button className="mt-8 w-fit border-2 border-white bg-transparent px-12 py-5 rounded-full text-white transition hover:bg-white hover:text-[#09273A]">
+
+                {/* Button */}
+                <button className="mt-8 rounded-full border-2 border-white bg-transparent px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:bg-white hover:text-[#09273A] sm:px-12 sm:py-5 sm:text-base">
                     Talk to an Expert
                 </button>
 
             </div>
+
         </section>
     );
 }

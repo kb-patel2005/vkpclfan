@@ -3,34 +3,58 @@ import Image from 'next/image'
 
 export default function Landing() {
     return (
-        <section className="relative flex flex-col justify-center h-[80vh] lg:h-[100vh] px-6 lg:px-12">
-            {/* Background Image */}
+        <section className="relative flex min-h-[80vh] items-center px-5 sm:px-8 lg:min-h-screen lg:px-12">
+
+            {/* ================= BACKGROUND IMAGE ================= */}
             <Image
                 src="/HomePage.png"
-                alt="home page"
+                alt="Industrial ventilation solutions"
                 fill
-                className="object-cover w-full h-full absolute top-0 left-0 z-0"
                 priority
+                className="absolute inset-0 -z-10 h-full w-full object-cover"
             />
 
-            {/* Content */}
-            <div className="relative z-10 w-full lg:w-[60%] min-w-[300px] flex flex-col gap-6">
-                <h1 className="text-[28px] md:text-4xl lg:text-[64px] font-bold leading-snug">
-                    Powerful Airflow Engineered for Modern
-                    <span className="text-[#FDCD2E]"> Industries.</span>
+
+            {/* ================= CONTENT ================= */}
+            <div className="relative z-10 flex w-full max-w-4xl flex-col gap-5 sm:gap-6 lg:w-[60%]">
+
+                {/* Heading */}
+                <h1 className="text-[32px] font-bold leading-[1.15] sm:text-5xl lg:text-[64px]">
+
+                    Powerful Airflow Engineered for Modern{" "}
+
+                    <span className="text-[#FDCD2E]">
+                        Industries.
+                    </span>
+
                 </h1>
-                <p className="text-[14px] md:text-[16px] lg:text-[18px] max-w-[600px]">
-                    High-performance exhaust solutions engineered for efficient ventilation, reliable airflow, and demanding industrial environments
+
+
+                {/* Description */}
+                <p className="max-w-[600px] text-sm font-normal leading-6 sm:text-base lg:text-lg lg:leading-7">
+                    High-performance exhaust solutions engineered for efficient
+                    ventilation, reliable airflow, and demanding industrial
+                    environments.
                 </p>
-                <div className="flex flex-wrap gap-4 md:gap-10">
-                    <button className="lg:py-4 lg:px-8 py-3 px-6 text-sm lg:text-lg text-white bg-black">
+
+
+                {/* Buttons */}
+                <div className="flex flex-col gap-3 sm:flex-row sm:gap-5 lg:gap-8">
+
+                    <button className="w-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-lg">
                         EXPLORE PRODUCTS
                     </button>
-                    <button className="lg:py-4 lg:px-8 py-3 px-6 text-sm lg:text-lg text-black bg-white border">
+
+                    <button className="w-full border border-white bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-lg">
                         TALK TO AN ENGINEER
                     </button>
+
                 </div>
+
             </div>
+
         </section>
+
+
     )
 }
