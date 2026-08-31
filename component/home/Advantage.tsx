@@ -41,7 +41,7 @@ export function Advantage() {
             return (
               <div
                 key={i}
-                className="rounded-2xl bg-white p-6 shadow-sm transition hover:shadow-md"
+                className="rounded-2xl bg-white p-6 shadow-sm transition hover:shadow-2xl"
               >
                 <Icon className="mb-6 h-[30px] w-6 text-[#0B2B45]" />
 

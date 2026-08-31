@@ -28,7 +28,7 @@ function Card1({
     title: string;
 }) {
     return (
-        <div className="w-full rounded-3xl bg-[#09273A] p-7 sm:w-[285px] lg:p-8">
+        <div className="w-full rounded-3xl bg-[#09273A] p-7 sm:w-[285px] lg:p-8 hover:scale-105 transition">
             <h2 className="text-[40px] font-sora font-bold leading-none text-[#DCE2F6]">
                 {num}
             </h2>

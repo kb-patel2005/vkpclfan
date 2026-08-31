@@ -58,15 +58,17 @@ export default function IndustrialSolutions() {
                     <div className="relative  overflow-hidden rounded-2xl bg-white shadow-md transition hover:shadow-xl">
 
                         {/* Image */}
-                        <img
-                            src={products[0].img}
-                            alt={products[0].title}
-                            className="absolute inset-0 h-full w-full object-cover"
-                        />
+                        <div className="hoverflow-hidden rounded-t-2xl">
+                            <img
+                                src={products[0].img}
+                                alt={products[0].title}
+                                className="h-full w-full object-cover transition-transform duration-500 hover:scale-110"
+                            />
+                        </div>
 
                         {/* Bottom Content */}
                         <div className="absolute bottom-3 left-3 right-3 rounded-2xl border border-white/20 bg-white/70 p-4 backdrop-blur-[20px]">
-      <h3 className="font-sora text-[32px] font-semibold text-gray-800">
+                            <h3 className="font-sora text-[32px] font-semibold text-gray-800">
                                 {products[0].title}
                             </h3>
 
