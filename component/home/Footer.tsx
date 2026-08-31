@@ -12,7 +12,7 @@ export default function Footer() {
     return (
         <footer className="text-[#5D5D5D]">
 
-            <div className="mx-auto max-w-7xl px-6 py-14 sm:px-8 lg:px-10">
+            <div className="mx-auto max-w-7xl py-14 px-5 sm:px-8 lg:px-0 justify-between">
 
                 {/* ================= 4 COLUMNS ================= */}
                 <div className="flex flex-wrap lg:gap-8 gap-10 justify-between">

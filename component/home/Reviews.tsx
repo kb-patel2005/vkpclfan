@@ -50,6 +50,7 @@ function ReviewCard({
                 transition
                 hover:shadow-lg
                 sm:w-[380px]
+                relative
             "
         >
             {/* Stars */}
@@ -63,9 +64,9 @@ function ReviewCard({
                     />
                 ))}
             </div>
-
+                <div className="text-2xl text-gray-300 absolute top-5 right-5">99</div>
             {/* Review */}
-            <p className="min-h-[96px] text-[15px] font-normal leading-6 text-[#5D5D5D]">
+            <p className="min-h-[96px] text-[16px] font-normal leading-6 text-[#5D5D5D] italic" style={{lineHeight:"28px"}}>
                 "{item.review}"
             </p>
 
@@ -74,15 +75,15 @@ function ReviewCard({
                 <img
                     src={item.avatar}
                     alt={item.name}
-                    className="h-11 w-11 rounded-full object-cover"
+                    className="h-12 w-12 rounded-full object-cover"
                 />
 
                 <div>
-                    <h3 className="text-[15px] font-semibold text-[#09273A]">
+                    <h3 className="text-[16px] font-bold text-[#09273A]">
                         {item.name}
                     </h3>
 
-                    <p className="text-[12px] font-normal text-[#5D5D5D]">
+                    <p className="text-[12px] font-semibold text-[#5D5D5D]">
                         {item.role}
                     </p>
                 </div>
@@ -139,7 +140,7 @@ export default function Reviews() {
                     CLIENT FEEDBACK
                 </div>
 
-                <h1 className="text-4xl font-bold text-[#09273A] sm:text-5xl">
+                <h1 className="text-4xl font-sora font-bold text-[#09273A] sm:text-5xl">
                     Trusted in the Field
                 </h1>
 

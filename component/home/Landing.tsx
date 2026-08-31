@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Landing() {
     return (
-        <section className="relative flex min-h-[80vh] items-center px-5 sm:px-8 lg:min-h-screen lg:px-12">
+        <section className=" relative flex min-h-[70vh] items-center px-5 sm:px-8 lg:h-[80vh] lg:px-12">
 
             {/* ================= BACKGROUND IMAGE ================= */}
             <Image
@@ -16,10 +16,10 @@ export default function Landing() {
 
 
             {/* ================= CONTENT ================= */}
-            <div className="relative z-10 flex w-full max-w-4xl flex-col gap-5 sm:gap-6 lg:w-[60%]">
+            <div className="relative z-10 flex w-full max-w-4xl flex-col gap-7 lg:w-[60%] lg:ml-18">
 
                 {/* Heading */}
-                <h1 className="text-[32px] font-bold leading-[1.15] sm:text-5xl lg:text-[64px]">
+                <h1 className="font-sora text-[32px] font-bold leading-[1.15] sm:text-5xl lg:text-[64px] font-inter">
 
                     Powerful Airflow Engineered for Modern{" "}
 
@@ -31,7 +31,7 @@ export default function Landing() {
 
 
                 {/* Description */}
-                <p className="max-w-[600px] text-sm font-normal leading-6 sm:text-base lg:text-lg lg:leading-7">
+                <p className="max-w-[600px] font-medium text-sm text-[#5D5D5D] font-inter leading-6 sm:text-base lg:text-lg lg:leading-7">
                     High-performance exhaust solutions engineered for efficient
                     ventilation, reliable airflow, and demanding industrial
                     environments.
@@ -41,11 +41,11 @@ export default function Landing() {
                 {/* Buttons */}
                 <div className="flex flex-col gap-3 sm:flex-row sm:gap-5 lg:gap-8">
 
-                    <button className="w-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-lg">
+                    <button className="w-full font-inter bg-[#09273A] hover:bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-lg">
                         EXPLORE PRODUCTS
                     </button>
 
-                    <button className="w-full border border-white bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-lg">
+                    <button className="w-full font-inter border bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-lg">
                         TALK TO AN ENGINEER
                     </button>
 

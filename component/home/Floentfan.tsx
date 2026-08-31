@@ -221,6 +221,7 @@ export default function Floentfan() {
 
                 <h1
                     className="
+                    font-inter
                         text-center
                         text-4xl
                         font-bold

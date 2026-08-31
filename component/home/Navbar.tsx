@@ -35,7 +35,7 @@ export default function Navbar() {
     return (
         <header className="sticky top-0 z-50 w-full bg-white">
 
-            <nav className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
+            <nav className="mx-auto flex h-[76px] max-w-7xl items-center justify-between py-4">
 
                 {/* ================= LEFT - LOGO ================= */}
                 <div className="flex shrink-0 items-center">
@@ -44,8 +44,8 @@ export default function Navbar() {
                         <Image
                             src="/floent.png"
                             alt="Floent Fans"
-                            width={80}
-                            height={80}
+                            width={59}
+                            height={49}
                             className="h-auto object-contain"
                         />
                     </Link>
@@ -60,7 +60,7 @@ export default function Navbar() {
                         <Link
                             key={item.name}
                             href={item.href}
-                            className="text-[15px] font-medium text-[#09273A] transition-colors duration-200 hover:text-[#FDCD2E]"
+                            className="text-[16px] font-normal text-[#474747] transition-colors duration-200 hover:text-[#FDCD2E]"
                         >
                             {item.name}
                         </Link>

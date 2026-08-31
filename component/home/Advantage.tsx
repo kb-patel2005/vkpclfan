@@ -31,8 +31,8 @@ const features = [
 
 export function Advantage() {
   return (
-    <section className="bg-[#F3F5F7] py-16">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 lg:grid-cols-2">
+    <section className="bg-[#F3F5F7] py-16 lg:px-0 px-5">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-2">
         {/* Cards */}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {features.map((item, i) => {
@@ -43,13 +43,13 @@ export function Advantage() {
                 key={i}
                 className="rounded-2xl bg-white p-6 shadow-sm transition hover:shadow-md"
               >
-                <Icon className="mb-6 h-8 w-8 text-[#0B2B45]" />
+                <Icon className="mb-6 h-[30px] w-6 text-[#0B2B45]" />
 
-                <h3 className="text-xl font-bold text-[#0B2B45]">
+                <h3 className="text-2xl font-sora font-bold text-[#09273A]">
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-6 text-gray-500">
+                <p className="mt-3 font-inter text-[16px] leading-6 text-[#5D5D5D]">
                   {item.desc}
                 </p>
               </div>
@@ -63,11 +63,11 @@ export function Advantage() {
             The VENAIRA Advantage
           </span>
 
-          <h2 className="mt-4 text-3xl font-bold leading-tight text-[#0B2B45] md:text-5xl">
+          <h2 className="mt-4 text-3xl font-bold font-sora leading-tight text-[#0B2B45] md:text-5xl">
             Hardware Built For The Decade, Software Built For Performance.
           </h2>
 
-          <p className="mt-6 text-base leading-8 text-gray-500">
+          <p className="mt-6 text-base font-inter font-normal leading-8 text-gray-500">
             We don't just move air. We optimize environments. Our systems are
             the heartbeat of modern manufacturing, ensuring safety, comfort, and
             productivity.
@@ -79,7 +79,7 @@ export function Advantage() {
             </div>
 
             <div>
-              <h4 className="font-semibold text-[#0B2B45]">
+              <h4 className=" text-[16px] font-bold text-[#0B2B45]">
                 Cloud Management Integrated
               </h4>
               <p className="mt-1 text-sm text-gray-500">
