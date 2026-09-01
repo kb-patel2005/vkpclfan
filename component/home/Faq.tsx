@@ -48,7 +48,7 @@ export function Faq() {
     };
 
     return (
-        <section id="faq" className="w-full py-3">
+        <section id="faq" className="w-full py-28 bg-[#F8F9FA]">
 
             {/* FAQ Schema */}
             <script

@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/component/home/Navbar";
 
+import { Manrope } from "next/font/google";
+
 import { Inter, Sora } from "next/font/google";
 import { Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
@@ -38,11 +40,16 @@ const hankenGrotesk = Hanken_Grotesk({
   variable: "--font-hanken",
 });
 
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+});
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${sora.variable} ${hankenGrotesk.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${sora.variable} ${hankenGrotesk.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className={`${inter.className} min-h-full flex flex-col`}>
         <Navbar/>

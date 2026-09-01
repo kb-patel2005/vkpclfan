@@ -1,8 +1,6 @@
 "use client";
 
-import { secureHeapUsed } from "crypto";
-import Image from "next/image";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 const datas = [
     "FABRI-TEK",
@@ -20,32 +18,36 @@ function CityCard({
     return (
         <article
             className="
-        relative
-        shrink-0
-        w-[300px]
-        overflow-hidden"
+                relative
+                w-[300px]
+                shrink-0
+                overflow-hidden
+            "
         >
-            <h1 className="text-2xl leading-8 font-hanken font-semibold text-[#535353] opacity-50">{data}</h1>
+            <h1
+                className="
+                    font-hanken
+                    text-2xl
+                    font-semibold
+                    leading-8
+                    text-[#535353]
+                    opacity-50
+                "
+            >
+                {data}
+            </h1>
         </article>
     );
 }
 
 function CityAutoSlideTrack() {
-    const viewportRef = useRef<HTMLDivElement>(null);
     const trackRef = useRef<HTMLDivElement>(null);
-
     const positionRef = useRef(0);
 
     useEffect(() => {
-        const viewport = viewportRef.current;
         const track = trackRef.current;
 
-        if (!viewport || !track) return;
-
-        const lastCard =
-            track.lastElementChild as HTMLElement | null;
-
-        if (!lastCard) return;
+        if (!track) return;
 
         let animationFrame: number;
 
@@ -54,33 +56,22 @@ function CityAutoSlideTrack() {
         const animate = () => {
             positionRef.current -= speed;
 
-            track.style.transform = `translate3d(
-        ${positionRef.current}px,
-        0,
-        0
-      )`;
+            const halfWidth = track.scrollWidth / 2;
 
-            const lastRect =
-                lastCard.getBoundingClientRect();
-
-            const viewportRect =
-                viewport.getBoundingClientRect();
-
-            let iwidth = window.innerWidth;
-
-            if (lastRect.right <= iwidth - 30) {
-                positionRef.current = 50;
-
-                track.style.transform =
-                    "translate3d(0, 0, 0)";
+            if (Math.abs(positionRef.current) >= halfWidth) {
+                positionRef.current = 0;
             }
 
-            animationFrame =
-                requestAnimationFrame(animate);
+            track.style.transform = `translate3d(
+                ${positionRef.current}px,
+                0,
+                0
+            )`;
+
+            animationFrame = requestAnimationFrame(animate);
         };
 
-        animationFrame =
-            requestAnimationFrame(animate);
+        animationFrame = requestAnimationFrame(animate);
 
         return () => {
             cancelAnimationFrame(animationFrame);
@@ -89,29 +80,76 @@ function CityAutoSlideTrack() {
 
     return (
         <div
-            ref={viewportRef}
-            className="w-full mt-7 bg-transparent"
+            className="
+                mt-7
+                w-full
+                overflow-hidden
+            "
         >
             <div
                 ref={trackRef}
-                className="flex w-max gap-5 pt-3.5 pb-10"
+                className="
+                    flex
+                    w-max
+                    gap-5
+                    pt-3.5
+                    pb-10
+                    will-change-transform
+                "
             >
-                {datas.map((city, index) => (
-                    <CityCard data={city} key={index}/>
+                {/* ================= FIRST SET ================= */}
+
+                {datas.map((data, index) => (
+                    <CityCard
+                        key={`first-${index}`}
+                        data={data}
+                    />
+                ))}
+
+                {/* ================= DUPLICATE SET ================= */}
+
+                {datas.map((data, index) => (
+                    <CityCard
+                        key={`second-${index}`}
+                        data={data}
+                    />
                 ))}
             </div>
         </div>
     );
 }
 
-import React from 'react'
-
 export default function HorizontalScroller() {
-  return (
-    <section className="text-center mt-5 bg-white">
-        <h1 className="text-[16px] text-[#535353] font-semibold pt-8 font-inter " style={{letterSpacing:"2.4px"}}>TRUSTED BY GLOBAL LEADERS</h1>
-        <CityAutoSlideTrack/>
-    </section>
-    
-  )
+    return (
+        <section
+            className="
+                mt-5
+                w-full
+                overflow-hidden
+                bg-white
+                text-center
+            "
+        >
+            {/* ================= TITLE ================= */}
+
+            <h1
+                className="
+                    font-inter
+                    pt-8
+                    text-[16px]
+                    font-semibold
+                    text-[#535353]
+                "
+                style={{
+                    letterSpacing: "2.4px",
+                }}
+            >
+                TRUSTED BY GLOBAL LEADERS
+            </h1>
+
+            {/* ================= AUTO SCROLLER ================= */}
+
+            <CityAutoSlideTrack />
+        </section>
+    );
 }

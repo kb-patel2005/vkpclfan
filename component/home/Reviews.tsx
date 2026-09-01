@@ -131,7 +131,7 @@ export default function Reviews() {
     }, []);
 
     return (
-        <section className="w-full overflow-hidden bg-white px-4 py-12 sm:px-6">
+        <section className="w-full overflow-hidden bg-[#F8F9FA] px-4 py-12 sm:px-6">
 
             {/* ================= HEADING ================= */}
             <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-3 text-center">

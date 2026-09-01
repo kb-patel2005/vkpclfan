@@ -60,8 +60,8 @@ function CategoryCard({
         <article
             className="
                 flex
-                h-[110px]
-                w-[126px]
+                h-[125px]
+                w-[140px]
                 shrink-0
                 flex-col
                 items-center
@@ -77,7 +77,7 @@ function CategoryCard({
                 className="text-[#09273A] pb-2 w-[52px] h-[52px]"
             />
 
-            <p className="mt-2 text-center text-[12px] p-2 font-semibold leading-tight text-[#09273A]">
+            <p className="mt-2 text-center text-[12px] px-5 font-semibold leading-tight text-[#09273A]">
                 {data.title}
             </p>
         </article>
@@ -198,14 +198,14 @@ export default function Floentfan() {
     return (
         <section
             className="
-                my-16
+                py-24
                 flex
                 w-full
                 flex-col
                 items-center
                 gap-2
                 overflow-hidden
-                bg-white
+                bg-[#F8F9FA]
                 px-4
             "
         >

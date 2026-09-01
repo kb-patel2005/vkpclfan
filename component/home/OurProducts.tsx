@@ -62,7 +62,7 @@ export default function IndustrialSolutions() {
                     <div className="w-full lg:basis-2/5">
                         <div className="relative h-full overflow-hidden rounded-2xl bg-white shadow-md transition hover:shadow-xl">
 
-                            <div className="h-full overflow-hidden">
+                            <div className="h-full  overflow-hidden">
                                 <img
                                     src={products[0].img}
                                     alt={products[0].title}
@@ -119,11 +119,11 @@ export default function IndustrialSolutions() {
                                     </div>
 
                                     {/* Image */}
-                                    <div className="h-[208px] overflow-hidden">
+                                    <div className="h-[260px] w-full overflow-hidden">
                                         <img
                                             src={item.img}
                                             alt={item.title}
-                                            className="h-[205px] w-full object-cover transition-transform duration-500 hover:scale-110"
+                                            className="h-[260px] w-full object-cover transition-transform duration-500 hover:scale-110"
                                         />
                                     </div>
 
@@ -152,9 +152,9 @@ export default function IndustrialSolutions() {
                 </div>
 
                 {/* ================= BOTTOM IMAGE ================= */}
-                <div className="mt-12">
+                <div className="mt-12 overflow-hidden ">
                     <img
-                        src="/images/factory.png"
+                        src="/images/factory1.png"
                         alt="Factory"
                         className="mx-auto w-full max-w-6xl object-contain"
                     />
