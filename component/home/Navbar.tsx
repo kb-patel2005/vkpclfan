@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState } from "react";
@@ -34,28 +33,27 @@ export default function Navbar() {
 
     return (
         <header className="sticky top-0 z-50 w-full bg-white">
+            <nav className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 lg:px-0">
 
-            <nav className="mx-auto flex h-[76px] max-w-7xl items-center justify-between py-4 *:px-5 lg:px-0">
-
-                {/* ================= LEFT - LOGO ================= */}
+                {/* LOGO */}
                 <div className="flex shrink-0 items-center">
-
-                    <Link href="/" onClick={() => setMenuOpen(false)}>
+                    <Link
+                        href="/"
+                        onClick={() => setMenuOpen(false)}
+                    >
                         <Image
                             src="/floent.png"
                             alt="Floent Fans"
                             width={59}
                             height={49}
-                            className="h-auto object-contain"
+                            priority
+                            className="h-auto w-[59px] object-contain"
                         />
                     </Link>
-
                 </div>
 
-
-                {/* ================= MIDDLE - DESKTOP NAV ================= */}
+                {/* DESKTOP NAV */}
                 <div className="hidden items-center gap-7 lg:flex">
-
                     {navLinks.map((item) => (
                         <Link
                             key={item.name}
@@ -65,16 +63,13 @@ export default function Navbar() {
                             {item.name}
                         </Link>
                     ))}
-
                 </div>
 
-
-                {/* ================= RIGHT - DESKTOP ACTIONS ================= */}
+                {/* DESKTOP ACTIONS */}
                 <div className="hidden items-center gap-3 lg:flex">
 
                     {/* Search */}
                     <div className="flex h-[42px] w-[180px] items-center gap-2 rounded-full border border-gray-200 px-4">
-
                         <Search
                             size={17}
                             className="shrink-0 text-[#5D5D5D]"
@@ -85,9 +80,7 @@ export default function Navbar() {
                             placeholder="Search"
                             className="w-full bg-transparent text-sm text-[#09273A] outline-none placeholder:text-[#999]"
                         />
-
                     </div>
-
 
                     {/* Get Quote */}
                     <Link
@@ -96,15 +89,13 @@ export default function Navbar() {
                     >
                         Get Quote
                     </Link>
-
                 </div>
 
-
-                {/* ================= MOBILE MENU BUTTON ================= */}
+                {/* MOBILE MENU BUTTON */}
                 <button
                     type="button"
                     aria-label={menuOpen ? "Close menu" : "Open menu"}
-                    onClick={() => setMenuOpen(!menuOpen)}
+                    onClick={() => setMenuOpen((prev) => !prev)}
                     className="flex h-10 w-10 items-center justify-center rounded-lg text-[#09273A] lg:hidden"
                 >
                     {menuOpen ? (
@@ -113,17 +104,14 @@ export default function Navbar() {
                         <Menu size={25} />
                     )}
                 </button>
-
             </nav>
 
-
-            {/* ================= MOBILE MENU ================= */}
+            {/* MOBILE MENU */}
             {menuOpen && (
                 <div className="border-t border-gray-100 bg-white px-5 py-5 shadow-lg lg:hidden">
 
                     {/* Navigation */}
                     <div className="flex flex-col">
-
                         {navLinks.map((item) => (
                             <Link
                                 key={item.name}
@@ -134,13 +122,10 @@ export default function Navbar() {
                                 {item.name}
                             </Link>
                         ))}
-
                     </div>
 
-
-                    {/* Search */}
+                    {/* Mobile Search */}
                     <div className="mt-5 flex h-[46px] w-full items-center gap-2 rounded-full border border-gray-200 px-4">
-
                         <Search
                             size={18}
                             className="shrink-0 text-[#5D5D5D]"
@@ -151,11 +136,9 @@ export default function Navbar() {
                             placeholder="Search"
                             className="w-full bg-transparent text-sm outline-none placeholder:text-[#999]"
                         />
-
                     </div>
 
-
-                    {/* Get Quote */}
+                    {/* Mobile Get Quote */}
                     <Link
                         href="/contact-us"
                         onClick={() => setMenuOpen(false)}
@@ -163,10 +146,8 @@ export default function Navbar() {
                     >
                         Get Quote
                     </Link>
-
                 </div>
             )}
-
         </header>
     );
 }

@@ -79,11 +79,11 @@ function ReviewCard({
                 />
 
                 <div>
-                    <h3 className="text-[16px] font-bold text-[#09273A]">
+                    <h3 className="text-[16px] leading-6 font-bold text-[#09273A]">
                         {item.name}
                     </h3>
 
-                    <p className="text-[12px] font-semibold text-[#5D5D5D]">
+                    <p className="text-[12px] leading-4 font-normal text-[#5D5D5D]">
                         {item.role}
                     </p>
                 </div>
@@ -131,7 +131,7 @@ export default function Reviews() {
     }, []);
 
     return (
-        <section className="w-full overflow-hidden bg-[#F8F9FA] px-4 py-12 sm:px-6">
+        <section className="w-full overflow-hidden bg-[#F8F9FA] py-6 lg:py-12">
 
             {/* ================= HEADING ================= */}
             <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-3 text-center">
@@ -148,7 +148,7 @@ export default function Reviews() {
 
 
             {/* ================= AUTO SCROLLER ================= */}
-            <div className="mx-auto mt-12 w-full max-w-[1400px] overflow-hidden">
+            <div className="mx-auto mt-12 w-full overflow-hidden">
 
                 <div
                     ref={trackRef}

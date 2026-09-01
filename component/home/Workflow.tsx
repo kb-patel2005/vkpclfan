@@ -9,7 +9,7 @@ const steps = [
     no: "01",
     title: "Connection",
     desc: "Connect with us to solve your ventilation challenges in the most economical way.",
-    property: "top-[48px] bottom-[16px]",
+    property: "top-[20px] lg:top-[48px] bottom-[16px]",
     icon: (
       <svg
         width="30"
@@ -51,7 +51,7 @@ const steps = [
     no: "03",
     title: "Analyze",
     desc: "Our engineering team studies the collected data and prepares the optimal ventilation solution.",
-    property: "bottom-[48px] top-[16px]",
+    property: "bottom-[48px] top-[70px] lg:top-[16px]",
     icon: (
       <svg
         width="27"
@@ -72,7 +72,7 @@ const steps = [
     no: "04",
     title: "Client Validation",
     desc: "Detailed proposal discussion, approvals, and final confirmation.",
-    property: "lg:top-[64px] -top-[16px]",
+    property: "lg:top-[64px] top-[100px]",
     icon: (
       <svg
         width="33"
@@ -92,7 +92,7 @@ const steps = [
 
 export default function Workflow() {
   return (
-    <section className="bg-[#F8F9FA] py-16 lg:px-0 px-5">
+    <section className="bg-[#F8F9FA] lg:py-16 py-8 lg:px-0 px-5">
       <div className="mx-auto max-w-7xl">
         {/* Heading */}
         <div className="text-center flex flex-col items-center gap-[15px]">
@@ -110,22 +110,15 @@ export default function Workflow() {
         </div>
 
         {/* Workflow */}
-        <div className="relative mt-42">
+        <div className="relative lg:mt-42 md:mt-20 mt-10">
           {/* Animated SVG line */}
-          <div className="absolute left-0 right-0 ml-30 top-0 hidden md:block animate-curve-jump">
-            <svg
-              width="1020"
-              height="150"
-              viewBox="0 0 1090 146"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0.627869 107.922C0.627869 107.922 449.076 -100.879 716.906 66.4614C984.737 233.801 1088.63 79.9485 1088.63 79.9485"
-                stroke="black"
-                strokeWidth="3"
-              />
+          <div className="absolute left-0 right-0 ml-25 top-0 hidden md:block animate-curve-jump">
+            <svg width="1030" height="160" viewBox="0 0 1081 134" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.522278 99.2755C0.522278 99.2755 509.363 -89.723 731.943 57.8154C954.522 205.354 1079.52 86.854 1079.52 86.854" stroke="black" strokeWidth="3" strokeDasharray="6 6" />
             </svg>
+
+
+
           </div>
 
           {/* Cards */}
@@ -160,7 +153,7 @@ export default function Workflow() {
         </div>
 
         {/* CTA */}
-        <div className="mx-auto lg:mt-32 mt-8 flex max-w-3xl flex-col md:flex-row items-center justify-between gap-4 rounded-full bg-white py-6 px-10 shadow-[#09273A1A] shadow-2xl">
+        <div className="mx-auto mt-32 flex max-w-3xl flex-col md:flex-row items-center justify-between gap-4 rounded-full bg-white py-6 px-10 shadow-[#09273A1A] shadow-2xl">
           <div className="flex items-center gap-4">
             <Lightbulb className="text-[#09273A]" />
             <p className="lg:text-[22px] text-lg font-semibold text-[#191C1E]">

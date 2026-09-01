@@ -31,7 +31,7 @@ const products = [
 
 export default function IndustrialSolutions() {
     return (
-        <section className="bg-white py-5 px-5 lg:px-0 mt-32">
+        <section className="bg-white py-5 px-5 lg:px-0 mt-5 lg:mt-32">
             <div className="mx-auto max-w-7xl">
 
                 {/* ================= HEADING ================= */}
@@ -106,7 +106,7 @@ export default function IndustrialSolutions() {
 
                     {/* ========== RIGHT 60% ========== */}
                     <div className="w-full lg:basis-3/5">
-                        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <div className="grid grid-cols-1 gap-2 lg:gap-4 sm:grid-cols-2">
 
                             {products.slice(1).map((item, index) => (
                                 <div

@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Landing() {
     return (
-        <section className=" relative flex min-h-auto items-center px-5 sm:px-8 lg:h-[90vh] lg:px-12">
+        <section className=" relative flex h-[80vh] items-center px-5 sm:px-8 lg:h-[90vh] lg:px-12">
 
             {/* ================= BACKGROUND IMAGE ================= */}
             <Image

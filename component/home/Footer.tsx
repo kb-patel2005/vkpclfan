@@ -94,11 +94,10 @@ export default function Footer() {
     <footer className="text-[#5D5D5D]">
       <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-0">
 
-        {/* ================= 4 COLUMNS ================= */}
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap *:gap-10 lg:gap-0 justify-between">
 
           {/* ================= COLUMN 1 ================= */}
-          <div className="w-full lg:basis-1/4 lg:pr-6">
+          <div className="lg:pr-6">
             {/* Logo */}
             <img
               src="/floent.png"
@@ -115,22 +114,22 @@ export default function Footer() {
 
             {/* Social Icons */}
             <div className="mt-6 flex items-center gap-3">
-        {socialLinks.map((social) => (
-          <a
-            key={social.name}
-            href={social.href}
-            aria-label={social.name}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-[#C5C5D9] transition duration-300 hover:bg-white"
-          >
-            {social.icon}
-          </a>
-        ))}
-      </div>
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  aria-label={social.name}
+                  className="flex h-9 w-9 items-center justify-center rounded-full transition bg-[#EDEEEF] duration-300 hover:bg-white"
+                >
+                  {social.icon}
+                </a>
+              ))}
+            </div>
           </div>
 
 
           {/* ================= COLUMN 2 ================= */}
-          <div className="mt-8 basis-1/2 lg:mt-0 lg:basis-1/4 lg:pr-6">
+          <div className="mt-8 lg:mt-0 lg:pr-6">
 
             <h3 className="mb-5 text-[16px] leading-6 font-bold tracking-wider text-[#191C1D]">
               Quick Links
@@ -172,19 +171,6 @@ export default function Footer() {
                   Gallery
                 </a>
               </li>
-            </ul>
-
-          </div>
-
-
-          {/* ================= COLUMN 3 ================= */}
-          <div className="mt-8 basis-1/2 lg:mt-0 lg:basis-1/4 lg:pr-6">
-
-            <h3 className="mb-5 text-[16px] leading-6 font-bold tracking-wider text-[#191C1D]">
-              Quick Links
-            </h3>
-
-            <ul className="space-y-3 text-sm">
               <li>
                 <a
                   href="/contact-us"
@@ -193,29 +179,10 @@ export default function Footer() {
                   Contact Us
                 </a>
               </li>
-
-              <li>
-                <a
-                  href="/privacy-policy"
-                  className="transition font-normal text-[#5D5D5D] text-[16px] duration-300 hover:text-black"
-                >
-                  Privacy Policy
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="/terms-and-conditions"
-                  className="transition font-normal text-[#5D5D5D] text-[16px] duration-300 hover:text-black"
-                >
-                  Terms and Conditions
-                </a>
-              </li>
             </ul>
 
           </div>
-
-
+         
           {/* ================= COLUMN 4 ================= */}
           <div className="mt-8 w-full lg:mt-0 lg:basis-1/4">
 
@@ -233,7 +200,7 @@ export default function Footer() {
               href="mailto:info@floentair.com"
               className="mb-4 flex items-center gap-3 text-sm transition duration-300 hover:text-black"
             >
-              
+
 
               <span>
                 email: info@floentair.com
@@ -257,12 +224,20 @@ export default function Footer() {
 
 
         {/* ================= COPYRIGHT ================= */}
-        <div className="mt-12 border-t border-gray-200 pt-6">
+        <div className="mt-12 border-t border-gray-200 pt-6 flex items-center justify-between gap-4 sm:flex-row flex-col">
 
           <p className="text-center text-xs text-[#C5C5D9]">
             © {new Date().getFullYear()} Floent Technologies.
             All rights reserved.
           </p>
+          <div className="flex items-center gap-4 justify-center">
+            <a href="#" className="text-xs  hover:text-black">
+              Privacy Policy
+            </a>
+            <a href="#" className="text-xs  hover:text-black">
+              Terms and Conditions
+            </a>
+          </div>
 
         </div>
 
