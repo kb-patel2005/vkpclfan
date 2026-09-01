@@ -77,7 +77,7 @@ function CategoryCard({
                 className="text-[#09273A] pb-2 w-[52px] h-[52px]"
             />
 
-            <p className="mt-2 text-center text-[12px] font-semibold leading-tight text-[#09273A]">
+            <p className="mt-2 text-center text-[12px] p-2 font-semibold leading-tight text-[#09273A]">
                 {data.title}
             </p>
         </article>

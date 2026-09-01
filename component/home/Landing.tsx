@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Landing() {
     return (
-        <section className=" relative flex min-h-[70vh] items-center px-5 sm:px-8 lg:h-[80vh] lg:px-12">
+        <section className=" relative flex min-h-auto items-center px-5 sm:px-8 lg:h-[90vh] lg:px-12">
 
             {/* ================= BACKGROUND IMAGE ================= */}
             <Image
@@ -11,7 +11,7 @@ export default function Landing() {
                 alt="Industrial ventilation solutions"
                 fill
                 priority
-                className="absolute inset-0 -z-10 h-full w-full object-cover"
+                className="absolute inset-0 -z-10 h-full w-full object-fill"
             />
 
 

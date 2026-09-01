@@ -31,8 +31,8 @@ const products = [
 
 export default function IndustrialSolutions() {
     return (
-        <section className="bg-white py-5 px-5 lg:px-0">
-            <div className="mx-auto max-w-[1119px]">
+        <section className="bg-white py-5 px-5 lg:px-0 mt-32">
+            <div className="mx-auto max-w-7xl">
 
                 {/* ================= HEADING ================= */}
                 <div className="text-center">
@@ -66,7 +66,7 @@ export default function IndustrialSolutions() {
                                 <img
                                     src={products[0].img}
                                     alt={products[0].title}
-                                    className="h-full w-full object-fill transition-transform duration-500 hover:scale-110"
+                                    className="h-full object-cover transition-transform duration-500 hover:scale-110"
                                 />
                             </div>
 
@@ -111,7 +111,7 @@ export default function IndustrialSolutions() {
                             {products.slice(1).map((item, index) => (
                                 <div
                                     key={index}
-                                    className="relative overflow-hidden rounded-2xl m-2 bg-white shadow-md transition hover:shadow-xl"
+                                    className="relative overflow-hidden rounded-2xl m-2 bg-white shadow-md transition hover:shadow-xl align-middle"
                                 >
                                     {/* Icon */}
                                     <div className="absolute left-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow backdrop-blur-sm">
@@ -119,11 +119,11 @@ export default function IndustrialSolutions() {
                                     </div>
 
                                     {/* Image */}
-                                    <div className="h-[185px] overflow-hidden">
+                                    <div className="h-[208px] overflow-hidden">
                                         <img
                                             src={item.img}
                                             alt={item.title}
-                                            className="h-full w-full object-cover transition-transform duration-500 hover:scale-110"
+                                            className="h-[205px] w-full object-cover transition-transform duration-500 hover:scale-110"
                                         />
                                     </div>
 
