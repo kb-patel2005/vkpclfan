@@ -168,7 +168,7 @@ export default function Workflow() {
             </p>
           </div>
 
-          <button className="rounded-full sm:w-full bg-[#062C49] px-8 py-3 text-white hover:bg-[#0B3C63] transition">
+          <button className="rounded-full  bg-[#062C49] px-8 py-3 text-white hover:bg-[#0B3C63] transition">
             Let's Talk →
           </button>
         </div>
