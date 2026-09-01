@@ -35,7 +35,7 @@ export default function Navbar() {
     return (
         <header className="sticky top-0 z-50 w-full bg-white">
 
-            <nav className="mx-auto flex h-[76px] max-w-7xl items-center justify-between py-4">
+            <nav className="mx-auto flex h-[76px] max-w-7xl items-center justify-between py-4 *:px-5 lg:px-0">
 
                 {/* ================= LEFT - LOGO ================= */}
                 <div className="flex shrink-0 items-center">

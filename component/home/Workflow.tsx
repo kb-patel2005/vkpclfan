@@ -31,16 +31,16 @@ export default function Workflow() {
   return (
     <section className="bg-[#F3F5F7] py-16 lg:px-0 px-5">
       <div className="mx-auto max-w-7xl">
-        <div className="text-center">
-          <span className="rounded-full font-inter bg-[#09273A1A] px-4 py-1 text-xs font-semibold uppercase tracking-widest text-[#09273A]">
+        <div className="text-center flex flex-col items-center justify-center gap-[15px]">
+          <span className="rounded-full font-inter bg-[#09273A1A] px-4 py-1 text-xs font-semibold uppercase tracking-[1.2px] text-[#09273A]">
             Our Workflow
           </span>
 
-          <h2 className="mt-[15px] text-3xl font-bold text-[#0B2B45] md:text-5xl">
+          <h2 className="font-sora text-3xl font-bold text-[#0B2B45] md:text-5xl">
             Our Workflow
           </h2>
 
-          <p className="mt-[15px] font-normal font-inter text-lg text-[#5D5D5D]">
+          <p className="font-normal font-inter text-lg text-[#5D5D5D]">
             Accurate solution proposition. The reason why people choose us.
           </p>
         </div>
@@ -80,15 +80,15 @@ export default function Workflow() {
         </div>
 
         {/* CTA */}
-        <div className="mx-auto mt-14 flex max-w-3xl flex-col items-center justify-between gap-4 rounded-full bg-white py-6 px-10 shadow md:flex-row md:px-6">
-          <div className="flex items-center gap-4">
+        <div className="mx-auto mt-14 flex max-w-3xl flex-col items-center justify-between gap-4 rounded-full bg-white py-6 px-10 shadow md:flex-row">
+          <div className="flex text-[22px] items-center gap-4">
             <Lightbulb className="text-[#09273A]" />
             <p className=" text-[#191C1E] font-semibold font-inter">
               Do you like our workflow?
             </p>
           </div>
 
-          <button className="rounded-full bg-[#062C49] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#0B3C63]">
+          <button className="rounded-full bg-[#062C49] px-8 py-3 text-[16px] font-medium text-white transition hover:bg-[#0B3C63]">
             Let's Talk →
           </button>
         </div>

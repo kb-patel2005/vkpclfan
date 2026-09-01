@@ -25,7 +25,7 @@ function CityCard({
         w-[300px]
         overflow-hidden"
         >
-            <h1 className="text-xl">{data}</h1>
+            <h1 className="text-2xl leading-8 font-hanken font-semibold text-[#535353] opacity-50">{data}</h1>
         </article>
     );
 }
@@ -109,7 +109,7 @@ import React from 'react'
 export default function HorizontalScroller() {
   return (
     <section className="text-center mt-5 bg-white">
-        <h1 className="text-[16px] text-[#535353] font-semibold pt-8 font-inter tracking-widest">TRUSTED BY GLOBAL LEADERS</h1>
+        <h1 className="text-[16px] text-[#535353] font-semibold pt-8 font-inter " style={{letterSpacing:"2.4px"}}>TRUSTED BY GLOBAL LEADERS</h1>
         <CityAutoSlideTrack/>
     </section>
     

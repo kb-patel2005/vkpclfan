@@ -21,8 +21,9 @@ export default function Home() {
       <Workflow/>
       <Advantage/>
       <Floentfan/>
-      <Faq/>
+      
       <Reviews/>
+      <Faq/>
       <Industryworkspace/>
       <Footer/>
     </main>

@@ -60,21 +60,21 @@ function CategoryCard({
         <article
             className="
                 flex
-                h-[115px]
-                w-[115px]
+                h-[110px]
+                w-[126px]
                 shrink-0
                 flex-col
                 items-center
                 justify-center
                 rounded-2xl
                 bg-[#5D5D5D1A]
-                p-3
+                
             "
         >
             <Icon
-                size={36}
+                size={52}
                 strokeWidth={1.8}
-                className="text-[#09273A]"
+                className="text-[#09273A] pb-2 w-[52px] h-[52px]"
             />
 
             <p className="mt-2 text-center text-[12px] font-semibold leading-tight text-[#09273A]">
@@ -131,14 +131,9 @@ function CategoryAutoSlideTrack() {
             const viewportRect =
                 viewport.getBoundingClientRect();
 
-            /*
-             * When the last card reaches
-             * the right-side threshold,
-             * restart from initial position.
-             */
             if (lastRect.right <= window.innerWidth - 30) {
 
-                positionRef.current = 50;
+                positionRef.current = 0;
 
                 track.style.transform =
                     "translate3d(0, 0, 0)";
@@ -163,7 +158,7 @@ function CategoryAutoSlideTrack() {
             ref={viewportRef}
             className="
                 mt-7
-                w-full
+                wax-w-7xl
                 overflow-hidden
                 lg:overflow-visible
             "
@@ -208,7 +203,7 @@ export default function Floentfan() {
                 w-full
                 flex-col
                 items-center
-                gap-10
+                gap-2
                 overflow-hidden
                 bg-white
                 px-4
@@ -250,9 +245,6 @@ export default function Floentfan() {
                 </p>
 
             </div>
-
-
-            {/* ================= CATEGORIES ================= */}
 
             <CategoryAutoSlideTrack />
 
