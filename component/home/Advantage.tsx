@@ -59,7 +59,7 @@ const features = [
 
 export function Advantage() {
   return (
-    <section className="bg-[#F8F9FA] py-16 lg:px-0">
+    <section className="bg-[#F8F9FA] py-16 lg:px-0 px-5">
       <div className="max-w-7xl mx-auto grid grid-cols-12 gap-6 mt-14">
 
         {/* Left: 6 columns */}

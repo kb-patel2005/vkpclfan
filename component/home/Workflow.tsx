@@ -30,7 +30,7 @@ const steps = [
     no: "02",
     title: "Site Examination",
     desc: "Our engineers visit your site, inspect the premises, and collect technical data.",
-    property: "-top-[32px] bottom-[96px]",
+    property: "top-[48px] lg:-top-[32px] bottom-[96px]",
     icon: (
       <svg
         width="17"
@@ -72,7 +72,7 @@ const steps = [
     no: "04",
     title: "Client Validation",
     desc: "Detailed proposal discussion, approvals, and final confirmation.",
-    property: "top-[64px]",
+    property: "lg:top-[64px] -top-[16px]",
     icon: (
       <svg
         width="33"
@@ -160,15 +160,15 @@ export default function Workflow() {
         </div>
 
         {/* CTA */}
-        <div className="mx-auto mt-32 flex max-w-3xl flex-col md:flex-row items-center justify-between gap-4 rounded-full bg-white py-6 px-10 shadow-[#09273A1A] shadow-2xl">
+        <div className="mx-auto lg:mt-32 mt-8 flex max-w-3xl flex-col md:flex-row items-center justify-between gap-4 rounded-full bg-white py-6 px-10 shadow-[#09273A1A] shadow-2xl">
           <div className="flex items-center gap-4">
             <Lightbulb className="text-[#09273A]" />
-            <p className="text-[22px] font-semibold text-[#191C1E]">
+            <p className="lg:text-[22px] text-lg font-semibold text-[#191C1E]">
               Do you like our workflow?
             </p>
           </div>
 
-          <button className="rounded-full bg-[#062C49] px-8 py-3 text-white hover:bg-[#0B3C63] transition">
+          <button className="rounded-full sm:w-full bg-[#062C49] px-8 py-3 text-white hover:bg-[#0B3C63] transition">
             Let's Talk →
           </button>
         </div>
