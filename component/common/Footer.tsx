@@ -199,11 +199,6 @@ export default function Footer() {
                 Contact
               </h3>
 
-              {/* Contact Sales */}
-              <p className="mb-4 text-sm font-bold text-[#785900]">
-                Contact Sales
-              </p>
-
               {/* Email */}
               <a
                 href="mailto:info@floentair.com"
