@@ -2,7 +2,7 @@ import { Advantage } from "@/component/home/Advantage";
 import { Faq } from "@/component/home/Faq";
 import Features from "@/component/home/Feature";
 import Floentfan from "@/component/home/Floentfan";
-import Footer from "@/component/home/Footer";
+import Footer from "@/component/common/Footer";
 import HorizontalScroller from "@/component/home/HorizontalScroller";
 import Industryworkspace from "@/component/home/Industryworkspace";
 import Landing from "@/component/home/Landing";

@@ -8,6 +8,7 @@ import { Manrope } from "next/font/google";
 import { Inter, Sora } from "next/font/google";
 import { Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
+import MobileBottomDiv from "@/component/common/MobileBottomDiv";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,7 +54,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className={`${inter.className} min-h-full flex flex-col`}>
         <Navbar/>
-        {children}</body>
+        {children}
+        <MobileBottomDiv/>
+      </body>
     </html>
   );
 }
