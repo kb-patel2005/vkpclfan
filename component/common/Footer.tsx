@@ -129,7 +129,7 @@ export default function Footer() {
 
 
           {/* ================= COLUMN 2 ================= */}
-          <div className="w-full lg:w-[60%] mt-8 flex flex-wrap justify-between">
+          <div className="w-full lg:w-[60%] mt-8 flex justify-between">
             <div className="lg:mt-0 lg:pr-6">
 
               <h3 className="mb-5 text-[16px] leading-6 font-bold tracking-wider text-[#191C1D]">
@@ -193,7 +193,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="lg:mt-0 lg:w-[33%]">
+            <div className="lg:mt-0 w-[50%] lg:w-[33%]">
 
               <h3 className="mb-5 text-[16px] leading-6 font-bold tracking-wider text-[#191C1D]">
                 Contact Sales
