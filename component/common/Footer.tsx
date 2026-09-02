@@ -130,7 +130,7 @@ export default function Footer() {
 
           {/* ================= COLUMN 2 ================= */}
           <div className="w-full lg:w-[60%] mt-8 flex justify-between">
-            <div className="lg:mt-0 lg:pr-6">
+            <div className="lg:mt-0 lg:pr-6 lg:w-[33%]">
 
               <h3 className="mb-5 text-[16px] leading-6 font-bold tracking-wider text-[#191C1D]">
                 Quick Links
@@ -140,29 +140,29 @@ export default function Footer() {
                 <li>
                   <a
                     href="/about"
-                    className="link-hover transition font-normal text-[#5D5D5D] text-[16px] duration-500 hover:text-[#FDCD2E]"
+                    className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]"
                   >
                     About
                   </a>
 
                 </li>
                 <li>
-                  <a href="/products" className="link-hover transition font-normal text-[#5D5D5D] text-[16px] duration-500 hover:text-[#FDCD2E]">
+                  <a href="/products" className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
                     Our Products
                   </a>
                 </li>
                 <li>
-                  <a href="/blog" className="link-hover transition font-normal text-[#5D5D5D] text-[16px] duration-500 hover:text-[#FDCD2E]">
+                  <a href="/blog" className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
                     Blog
                   </a>
                 </li>
                 <li>
-                  <a href="/gallery" className="link-hover transition font-normal text-[#5D5D5D] text-[16px] duration-500 hover:text-[#FDCD2E]">
+                  <a href="/gallery" className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
                     Gallery
                   </a>
                 </li>
                 <li className="lg:hidden">
-                  <a href="/contact-us" className="link-hover transition font-normal text-[#5D5D5D] text-[16px] duration-500 hover:text-[#FDCD2E]">
+                  <a href="/contact-us" className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
                     Contact Us
                   </a>
                 </li>
@@ -170,24 +170,24 @@ export default function Footer() {
 
             </div>
 
-            <div className="hidden lg:block">
+            <div className="hidden lg:block lg:w-[33%]">
               <h3 className="mb-5 text-[16px] font-bold tracking-wider text-[#191C1D]">
                 Quick Links
               </h3>
 
               <ul className="space-y-3 text-sm">
                 <li>
-                  <a href="/contact-us" className="link-hover transition text-[#5D5D5D] text-[16px] hover:text-[#FDCD2E]">
+                  <a href="/contact-us" className="link-hover transition text-[#5D5D5D] text-[14px] hover:text-[#FDCD2E]">
                     Contact Us
                   </a>
                 </li>
                 <li>
-                  <a href="/privacy-policy" className="link-hover transition text-[#5D5D5D] text-[16px] hover:text-[#FDCD2E]">
+                  <a href="/privacy-policy" className="link-hover transition text-[#5D5D5D] text-[14px] hover:text-[#FDCD2E]">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="/terms-and-services" className="link-hover transition text-[#5D5D5D] text-[16px] hover:text-[#FDCD2E]">
+                  <a href="/terms-and-services" className="link-hover transition text-[#5D5D5D] text-[14px] hover:text-[#FDCD2E]">
                     Terms and Services
                   </a>
                 </li>
@@ -202,7 +202,7 @@ export default function Footer() {
               {/* Email */}
               <a
                 href="mailto:info@floentair.com"
-                className="mb-4 flex items-center gap-3 text-[16px] transition duration-300 hover:text-black"
+                className="mb-4 flex items-center gap-3 text-[14px] transition duration-300 hover:text-black"
               >
                 <span>
                   Email: info@floentair.com
@@ -212,7 +212,7 @@ export default function Footer() {
               {/* Phone */}
               <a
                 href="tel:+919925624342"
-                className="flex items-center gap-3 mb-4 text-[16px] transition duration-300 hover:text-black"
+                className="flex items-center gap-3 mb-4 text-[14px] transition duration-300 hover:text-black"
               >
 
                 <span>
@@ -222,7 +222,7 @@ export default function Footer() {
 
               <a
                 href="#"
-                className="flex items-center gap-3 text-[16px] transition duration-300 hover:text-black"
+                className="flex items-center gap-3 text-[14px] transition duration-300 hover:text-black"
               >
                 <span>
                   Address: xyz.pvt.ltd, 123, abc street, Ahmedabad, Gujarat, India
@@ -237,15 +237,15 @@ export default function Footer() {
         {/* ================= COPYRIGHT ================= */}
         <div className="mt-12 lg:mb-0 mb-14 border-t border-gray-200 pt-6 flex items-center justify-between gap-4 sm:flex-row flex-col">
 
-          <p className="text-center text-sm text-[#5D5D5D]">
+          <p className="text-center text-[13px] font-bold text-[#5D5D5D]">
             © {new Date().getFullYear()} Floent Technologies.
             All rights reserved.
           </p>
           <div className="flex items-center gap-4 justify-center">
-            <a href="#" className="text-sm   hover:text-[#FDCD2E]">
+            <a href="#" className="text-[13px]   hover:text-[#FDCD2E]">
               Privacy Policy
             </a>
-            <a href="#" className="text-sm  hover:text-[#FDCD2E]">
+            <a href="#" className="text-[13px]  hover:text-[#FDCD2E]">
               Terms and Conditions
             </a>
           </div>
