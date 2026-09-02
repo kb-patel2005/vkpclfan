@@ -14,7 +14,7 @@ export default function Landing() {
                 alt="Industrial ventilation solutions"
                 fill
                 priority
-                className="absolute inset-0 -z-10 h-full w-[800px] lg:w-full lg:object-fill"
+                className="absolute inset-0 -z-10 h-full w-full lg:w-full lg:object-fill"
             />
 
             {/* Content */}
