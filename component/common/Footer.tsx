@@ -193,7 +193,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="lg:mt-0">
+            <div className="lg:mt-0 lg:w-[33%]">
 
               <h3 className="mb-5 text-[16px] leading-6 font-bold tracking-wider text-[#191C1D]">
                 Contact Sales
@@ -204,8 +204,6 @@ export default function Footer() {
                 href="mailto:info@floentair.com"
                 className="mb-4 flex items-center gap-3 text-[16px] transition duration-300 hover:text-black"
               >
-
-
                 <span>
                   Email: info@floentair.com
                 </span>
@@ -214,11 +212,20 @@ export default function Footer() {
               {/* Phone */}
               <a
                 href="tel:+919925624342"
-                className="flex items-center gap-3 text-[16px] transition duration-300 hover:text-black"
+                className="flex items-center gap-3 mb-4 text-[16px] transition duration-300 hover:text-black"
               >
 
                 <span>
                   Phone: +91 9925624342
+                </span>
+              </a>
+
+              <a
+                href="#"
+                className="flex items-center gap-3 text-[16px] transition duration-300 hover:text-black"
+              >
+                <span>
+                  Address: xyz.pvt.ltd, 123, abc street, Ahmedabad, Gujarat, India
                 </span>
               </a>
 

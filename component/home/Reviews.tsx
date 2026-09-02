@@ -137,7 +137,7 @@ export default function Reviews() {
         <section className="w-full overflow-hidden bg-[#F8F9FA] py-6 lg:py-12">
 
             {/* ================= HEADING ================= */}
-            <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-3 text-center">
+            <div className="mx-auto flex max-w-7xl px-5 flex-col items-center justify-center gap-3 text-center">
 
                 <div className="rounded-full bg-[#09273A1A] px-4 py-1.5 text-[12px] font-semibold text-[#09273A]">
                     CLIENT FEEDBACK

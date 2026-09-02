@@ -192,7 +192,7 @@ export default function Workflow() {
         </motion.div>
 
         {/* CTA */}
-        <div className="mx-auto mt-32 flex max-w-3xl flex-col items-center justify-between gap-4 rounded-3xl lg:rounded-full bg-white py-6 px-10 shadow-[#09273A1A] shadow-xl md:flex-row">
+        <div className="mx-auto mt-32 flex w-full lg:max-w-3xl flex-col items-center justify-between gap-4 rounded-3xl lg:rounded-full bg-white py-6 px-10 shadow-[#09273A1A] shadow-xl md:flex-row">
           <div className="flex items-center gap-4">
             <Lightbulb className="text-[#09273A]" />
             <p className="text-lg font-semibold text-[#191C1E] lg:text-[22px]">

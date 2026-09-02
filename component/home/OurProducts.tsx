@@ -124,7 +124,7 @@ export default function IndustrialSolutions() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true, amount: 0.2 }}
                                     transition={{ duration: 0.6, delay: index * 0.2 }}
-                                    className="relative overflow-hidden rounded-2xl m-2 bg-white shadow-md transition duration-300 hover:shadow-2xl hover:shadow-[#FDCD2E]/60 hover:shadow-xl align-middle">
+                                    className="relative overflow-hidden rounded-2xl bg-white shadow-md transition duration-300 hover:shadow-2xl hover:shadow-[#FDCD2E]/60 hover:shadow-xl align-middle">
                                     <div className="absolute left-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow backdrop-blur-sm">
                                         <Building2 size={22} className="text-[#09273A]" />
                                     </div>
