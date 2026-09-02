@@ -34,7 +34,7 @@ const products = [
 
 export default function IndustrialSolutions() {
     return (
-        <section className="w-full bg-white pt-5 px-5 lg:px-6 mt-5 lg:mt-32">
+        <section className="w-full bg-white pt-5 px-6 lg:px-6 mt-5 lg:mt-6">
             <div className="mx-auto max-w-7xl">
 
                 {/* ================= HEADING ================= */}
@@ -160,7 +160,7 @@ export default function IndustrialSolutions() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="mt-12 overflow-hidden"
+                    className="overflow-hidden"
                 >
                     <img
                         src="/images/factory2.png"

@@ -20,7 +20,7 @@ export default function MobileBottomDiv() {
     return (
         <div
             id="mobile-bar"
-            className="fixed bottom-0 left-0 right-0 z-50 bg-[#F8F9FA] py-3 px-5 flex justify-between items-center border-t border-[#EDEEEF] lg:hidden translate-y-full transition-transform duration-500"
+            className="fixed bottom-0 left-0 right-0 z-50 bg-white py-3 px-5 flex justify-between items-center lg:hidden translate-y-full transition-transform duration-500"
         >
             <div className="flex items-center w-full h-18 text-sm font-medium text-[#09273A]">
                 <button className="flex gap-1.5 items-center justify-center  font-sora w-[35%] h-10 bg-[#09273A] rounded-l-full text-white p-2 rounded-md hover:bg-[#0056b3]">

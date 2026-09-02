@@ -62,8 +62,8 @@ const features = [
 
 export function Advantage() {
   return (
-    <section className="w-full bg-[#F8F9FA] px-5 py-8 sm:py-10 lg:px-6 lg:py-16">
-        <div className="mx-auto mt-8 grid max-w-7xl grid-cols-12  sm:mt-10 lg:mt-14 lg:gap-10">
+    <section className="w-full bg-[#F8F9FA] px-6 py-8 sm:py-10 lg:px-6 lg:py-4">
+        <div className="mx-auto grid max-w-7xl grid-cols-12 lg:gap-10">
 
           <motion.div
             initial={{ x: -100, opacity: 0 }}

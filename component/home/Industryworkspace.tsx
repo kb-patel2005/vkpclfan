@@ -37,7 +37,7 @@ function Card1({
 
 export default function Industryworkspace() {
   return (
-    <section className="flex w-full flex-col items-center bg-[#F8F9FA] gap-4 justify-center md:gap-5 px-5 py-6 sm:px-6 lg:gap-14 lg:py-20">
+    <section className="flex w-full flex-col items-center bg-[#F8F9FA] gap-4 justify-center md:gap-5 px-5 py-6 sm:px-6 lg:gap-14 lg:py-8">
       {/* ================= STATS ================= */}
       <motion.div
         initial={{ x: -80, opacity: 0.5 }}

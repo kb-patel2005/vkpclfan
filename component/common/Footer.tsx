@@ -92,7 +92,7 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="text-[#5D5D5D]">
-      <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-0">
+      <div className="mx-auto max-w-7xl px-5 py-8 md:px-6 lg:px-0">
 
         <div className="flex flex-wrap *:gap-5 lg:gap-0 justify-between">
 
@@ -235,7 +235,7 @@ export default function Footer() {
 
 
         {/* ================= COPYRIGHT ================= */}
-        <div className="mt-12 lg:mb-0 mb-14 border-t border-gray-200 pt-6 flex items-center justify-between gap-4 sm:flex-row flex-col">
+        <div className="mt-12 lg:mb-0 mb-20 border-t border-gray-200 pt-6 flex items-center justify-between gap-4 sm:flex-row flex-col">
 
           <p className="text-center text-[13px] font-bold text-[#5D5D5D]">
             © {new Date().getFullYear()} Floent Technologies.

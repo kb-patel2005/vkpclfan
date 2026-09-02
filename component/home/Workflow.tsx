@@ -93,6 +93,135 @@ const steps = [
 
 export default function Workflow() {
   return (
+    // <section className="bg-[#F8F9FA] lg:py-16 py-8 lg:px-0 px-5">
+    //   <div className="mx-auto max-w-7xl">
+
+    //     <div className="text-center flex flex-col items-center gap-[15px]">
+    //       <span className="rounded-full bg-[#09273A1A] px-4 py-1 text-xs font-semibold uppercase tracking-[1.2px] text-[#09273A]">
+    //         Our Workflow
+    //       </span>
+
+    //       <h2 className="font-sora text-3xl md:text-5xl font-bold text-[#0B2B45]">
+    //         Our Workflow
+    //       </h2>
+
+    //       <p className="text-lg text-[#5D5D5D] font-inter">
+    //         Accurate solution proposition. The reason why people choose us.
+    //       </p>
+    //     </div>
+
+    //     <motion.div
+    //       initial={{ x: -80, opacity: 0.5 }}
+    //       whileInView={{ x: 0, opacity: 1 }}
+    //       viewport={{ once: true, amount: 0.3 }}
+    //       transition={{ duration: 0.8, ease: "easeOut" }} className="relative lg:mt-42 md:mt-20 mt-10">
+    //       {/* Animated SVG line */}
+    //       <div className="lg:block hidden absolute left-0 right-0 ml-25 top-0 animate-curve-jump">
+    //         <svg
+    //           width="1030"
+    //           height="160"
+    //           viewBox="0 0 1081 134"
+    //           fill="none"
+    //           xmlns="http://www.w3.org/2000/svg"
+    //           className="animate-dash"
+    //         >
+    //           <path
+    //             d="M0.522278 99.2755C0.522278 99.2755 509.363 -89.723 731.943 57.8154C954.522 205.354 1079.52 86.854 1079.52 86.854"
+    //             stroke="black"
+    //             strokeWidth="3"
+    //             strokeDasharray="6 6"
+    //           />
+    //         </svg>
+
+
+
+    //       </div>
+
+    //       <div className="lg:hidden absolute left-0 right-0 ml-25 top-0 hidden md:block animate-curve-jump">
+    //         <svg
+    //           width="800"
+    //           height="160"
+    //           viewBox="0 0 1081 134"
+    //           fill="none"
+    //           xmlns="http://www.w3.org/2000/svg"
+    //           className="animate-dash"
+    //         >
+    //           <path
+    //             d="M0.522278 99.2755C0.522278 99.2755 509.363 -89.723 731.943 57.8154C954.522 205.354 1079.52 86.854 1079.52 86.854"
+    //             stroke="black"
+    //             strokeWidth="3"
+    //             strokeDasharray="6 6"
+    //           />
+    //         </svg>
+
+
+
+    //       </div>
+
+    //       {/* Cards */}
+    //       <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+    //         {steps.map((step, i) => {
+    //           return (
+    //             <div
+    //               key={i}
+    //               className={`relative flex flex-col items-center justify-center text-center ${step.property} workflow-card`}
+    //               style={{ animationDelay: `${i * 0.35}s` }}
+    //             >
+    //               <span className="absolute -top-10 font-manrope font-bold -translate-y-1/3 text-[120px] text-[#E0E3E566] max-sm:scale-[0.7]">
+    //                 {step.no}
+    //               </span>
+
+    //               <div className="relative z-10 lg:mb-8 mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-white shadow-lg max-sm:scale-[0.7] transition duration-300 hover:shadow-2xl hover:shadow-[#FDCD2E]/60">
+    //                 {step.icon}
+    //               </div>
+
+
+    //               <div className="w-[255px] rounded-2xl bg-white p-6 flex flex-col gap-3 border-[#E2E8F0CC] border shadow-sm transition duration-300 hover:shadow-2xl hover:shadow-[#FDCD2E]/60">
+    //                 <h3 className="font-semibold font-manrope text-xl leading-8 text-[#191C1E]">
+    //                   {step.title}
+    //                 </h3>
+    //                 <p className="text-sm leading-5 text-[#5D5D5D]">
+    //                   {step.desc}
+    //                 </p>
+    //               </div>
+    //             </div>
+    //           );
+    //         })}
+    //       </div>
+    //     </motion.div>
+
+    //     <div className="mx-auto mt-32 flex w-full lg:max-w-3xl flex-col items-center justify-between gap-4 rounded-3xl lg:rounded-full bg-white py-6 px-10 shadow-[#09273A1A] shadow-xl md:flex-row">
+    //       <div className="flex items-center gap-4">
+    //         <Lightbulb className="text-[#09273A]" />
+    //         <p className="text-lg font-semibold text-[#191C1E] lg:text-[22px]">
+    //           Do you like our workflow?
+    //         </p>
+    //       </div>
+
+    //       <button className="rounded-full bg-[#062C49] px-8 py-3 text-white hover:bg-[#0B3C63] transition w-full md:w-auto">
+    //         Let's Talk →
+    //       </button>
+    //     </div>
+
+    //   </div>
+
+    //   <style jsx>{`
+    //     .workflow-card {
+    //       animation: float 3s ease-in-out infinite;
+    //       will-change: transform;
+    //     }
+
+    //     @keyframes float {
+    //       0%,
+    //       100% {
+    //         transform: translateY(0px);
+    //       }
+    //       50% {
+    //         transform: translateY(-15px);
+    //       }
+    //     }
+    //   `}</style>
+    // </section>
     <section className="bg-[#F8F9FA] lg:py-16 py-8 lg:px-0 px-5">
       <div className="mx-auto max-w-7xl">
         {/* Heading */}
@@ -115,8 +244,10 @@ export default function Workflow() {
           initial={{ x: -80, opacity: 0.5 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8, ease: "easeOut" }} className="relative lg:mt-42 md:mt-20 mt-10">
-          {/* Animated SVG line */}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="relative lg:mt-28 md:mt-20 mt-10"
+        >
+          {/* Animated SVG line - DESKTOP ONLY */}
           <div className="lg:block hidden absolute left-0 right-0 ml-25 top-0 animate-curve-jump">
             <svg
               width="1030"
@@ -133,34 +264,10 @@ export default function Workflow() {
                 strokeDasharray="6 6"
               />
             </svg>
-
-
-
-          </div>
-
-          <div className="lg:hidden absolute left-0 right-0 ml-25 top-0 hidden md:block animate-curve-jump">
-            <svg
-              width="800"
-              height="160"
-              viewBox="0 0 1081 134"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="animate-dash"
-            >
-              <path
-                d="M0.522278 99.2755C0.522278 99.2755 509.363 -89.723 731.943 57.8154C954.522 205.354 1079.52 86.854 1079.52 86.854"
-                stroke="black"
-                strokeWidth="3"
-                strokeDasharray="6 6"
-              />
-            </svg>
-
-
-
           </div>
 
           {/* Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
             {steps.map((step, i) => {
               return (
                 <div
@@ -168,19 +275,22 @@ export default function Workflow() {
                   className={`relative flex flex-col items-center justify-center text-center ${step.property} workflow-card`}
                   style={{ animationDelay: `${i * 0.35}s` }}
                 >
+                  {/* Number */}
                   <span className="absolute -top-10 font-manrope font-bold -translate-y-1/3 text-[120px] text-[#E0E3E566] max-sm:scale-[0.7]">
                     {step.no}
                   </span>
 
+                  {/* Circle */}
                   <div className="relative z-10 lg:mb-8 mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-white shadow-lg max-sm:scale-[0.7] transition duration-300 hover:shadow-2xl hover:shadow-[#FDCD2E]/60">
                     {step.icon}
                   </div>
 
-
+                  {/* Card */}
                   <div className="w-[255px] rounded-2xl bg-white p-6 flex flex-col gap-3 border-[#E2E8F0CC] border shadow-sm transition duration-300 hover:shadow-2xl hover:shadow-[#FDCD2E]/60">
                     <h3 className="font-semibold font-manrope text-xl leading-8 text-[#191C1E]">
                       {step.title}
                     </h3>
+
                     <p className="text-sm leading-5 text-[#5D5D5D]">
                       {step.desc}
                     </p>
@@ -192,9 +302,10 @@ export default function Workflow() {
         </motion.div>
 
         {/* CTA */}
-        <div className="mx-auto mt-32 flex w-full lg:max-w-3xl flex-col items-center justify-between gap-4 rounded-3xl lg:rounded-full bg-white py-6 px-10 shadow-[#09273A1A] shadow-xl md:flex-row">
+        <div className="mx-auto mt-30 flex w-full lg:max-w-3xl flex-col items-center justify-between gap-4 rounded-3xl lg:rounded-full bg-white py-6 px-10 shadow-[#09273A1A] shadow-xl md:flex-row">
           <div className="flex items-center gap-4">
             <Lightbulb className="text-[#09273A]" />
+
             <p className="text-lg font-semibold text-[#191C1E] lg:text-[22px]">
               Do you like our workflow?
             </p>
@@ -204,25 +315,40 @@ export default function Workflow() {
             Let's Talk →
           </button>
         </div>
-
       </div>
 
       <style jsx>{`
-        .workflow-card {
-          animation: float 3s ease-in-out infinite;
-          will-change: transform;
-        }
+    .workflow-card {
+      animation: float 3s ease-in-out infinite;
+      will-change: transform;
+    }
 
-        @keyframes float {
-          0%,
-          100% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-15px);
-          }
-        }
-      `}</style>
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    /* Tablet: hide curve only */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .workflow-card {
+        animation: none;
+      }
+    }
+
+    /* Mobile: keep your existing behavior */
+    @media (max-width: 767px) {
+      .workflow-card {
+        animation: float 3s ease-in-out infinite;
+        will-change: transform;
+      }
+    }
+  `}</style>
     </section>
   );
 }

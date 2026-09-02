@@ -206,7 +206,7 @@ export default function Floentfan() {
         <section
             className="
                 py-8
-                lg:py-24
+                lg:py-8
                 flex
                 w-full
                 flex-col

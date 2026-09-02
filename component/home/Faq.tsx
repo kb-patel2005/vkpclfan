@@ -51,7 +51,7 @@ export function Faq() {
     };
 
     return (
-        <section id="faq" className="w-full lg:py-28 py-8 bg-[#F8F9FA]">
+        <section id="faq" className="w-full lg:pb-10 py-8 bg-[#F8F9FA]">
 
             {/* FAQ Schema */}
             <script
@@ -99,7 +99,7 @@ export function Faq() {
                         >
 
                             {/* Question */}
-                            <summary className="flex min-h-[64px] cursor-pointer list-none items-center justify-between gap-5 px-5 text-left text-[16px] font-medium text-[#6d6866] sm:px-6 [&::-webkit-details-marker]:hidden">
+                            <summary className="flex min-h-[64px] cursor-pointer list-none items-center justify-between gap-5 px-5 text-left text-[14px] font-medium text-[#6d6866] sm:px-6 [&::-webkit-details-marker]:hidden">
 
                                 <span>
                                     {item.question}
@@ -116,7 +116,7 @@ export function Faq() {
                             {/* Answer */}
                             <div className="px-5 pb-6 pt-1 sm:px-6">
 
-                                <p className="text-[15px] leading-7 text-[#6f6966]">
+                                <p className="text-[12px] leading-7 text-[#6f6966]">
                                     {item.answer}
                                 </p>
 
