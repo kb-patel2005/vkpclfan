@@ -12,8 +12,7 @@ export default function Landing() {
             <Image
                 src="/HomePage.png"
                 alt="Industrial ventilation solutions"
-                height={800}
-                width={800}
+                fill
                 priority
                 className="absolute inset-0 -z-10 h-full w-[800px] lg:w-full lg:object-fill"
             />

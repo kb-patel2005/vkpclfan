@@ -25,9 +25,9 @@ export default function MobileBottomDiv() {
             <div className="flex items-center w-full h-18">
                 <button className="flex gap-1.5 items-center justify-center  font-sora w-[35%] h-10 bg-[#09273A] rounded-l-full text-white p-2 rounded-md hover:bg-[#0056b3]">
                     <svg width="18" height="18" viewBox="0 0 43 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M41.5 18.5C41.5 17.5172 41.4895 16.5345 41.4685 15.5488C41.3377 9.41772 41.2724 6.35219 39.0101 4.08132C36.7478 1.81046 33.5994 1.73135 27.3024 1.57314C23.4214 1.47563 19.5786 1.47562 15.6976 1.57312C9.40066 1.73133 6.25217 1.81043 3.98991 4.08129C1.72765 6.35216 1.66227 9.41769 1.53153 15.5488C1.48949 17.5201 1.48949 19.4799 1.53153 21.4512C1.66228 27.5823 1.72766 30.6478 3.98991 32.9187C6.25217 35.1896 9.40067 35.2687 15.6977 35.4269C18.6426 35.5009 21.5656 35.5187 24.5 35.4804" stroke="#141B34" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M11.5 11.5L17.384 14.9789C20.8144 17.007 22.1856 17.007 25.616 14.9789L31.5 11.5" stroke="#141B34" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M31.5 34.5C32.4831 35.5114 35.0995 39.5 36.5 39.5M41.5 34.5C40.5169 35.5114 37.9005 39.5 36.5 39.5M36.5 39.5V23.5" stroke="#141B34" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M41.5 18.5C41.5 17.5172 41.4895 16.5345 41.4685 15.5488C41.3377 9.41772 41.2724 6.35219 39.0101 4.08132C36.7478 1.81046 33.5994 1.73135 27.3024 1.57314C23.4214 1.47563 19.5786 1.47562 15.6976 1.57312C9.40066 1.73133 6.25217 1.81043 3.98991 4.08129C1.72765 6.35216 1.66227 9.41769 1.53153 15.5488C1.48949 17.5201 1.48949 19.4799 1.53153 21.4512C1.66228 27.5823 1.72766 30.6478 3.98991 32.9187C6.25217 35.1896 9.40067 35.2687 15.6977 35.4269C18.6426 35.5009 21.5656 35.5187 24.5 35.4804" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M11.5 11.5L17.384 14.9789C20.8144 17.007 22.1856 17.007 25.616 14.9789L31.5 11.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" stroke-linejoin="round" />
+                        <path d="M31.5 34.5C32.4831 35.5114 35.0995 39.5 36.5 39.5M41.5 34.5C40.5169 35.5114 37.9005 39.5 36.5 39.5M36.5 39.5V23.5" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
 
                     Enquiry
