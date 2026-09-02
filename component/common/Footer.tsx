@@ -196,7 +196,7 @@ export default function Footer() {
             <div className="lg:mt-0">
 
               <h3 className="mb-5 text-[16px] leading-6 font-bold tracking-wider text-[#191C1D]">
-                Contact
+                Contact Sales
               </h3>
 
               {/* Email */}
@@ -207,7 +207,7 @@ export default function Footer() {
 
 
                 <span>
-                  email: info@floentair.com
+                  Email: info@floentair.com
                 </span>
               </a>
 
@@ -218,7 +218,7 @@ export default function Footer() {
               >
 
                 <span>
-                  phone: +91 9925624342
+                  Phone: +91 9925624342
                 </span>
               </a>
 
