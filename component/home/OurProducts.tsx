@@ -46,7 +46,7 @@ export default function IndustrialSolutions() {
                         Our Products
                     </span>
 
-                    <h1 className="mt-[15px] font-sora text-4xl lg:text-[40px] font-bold leading-tight text-[#14324A] lg:text-[64px] lg:leading-[70.4px]">
+                    <h1 className="mt-[15px] font-sora lg:text-[42px] text-[33px] font-bold leading-tight text-[#14324A] lg:text-[64px] lg:leading-[70.4px]">
                         Industrial Precision Solutions
                     </h1>
 
@@ -86,24 +86,22 @@ export default function IndustrialSolutions() {
                             </div>
                             <div className="absolute bottom-3 left-3 right-3 rounded-2xl border border-white/20 bg-white/70 p-4 backdrop-blur-[20px]">
                                 <div className="flex items-center justify-between">
-                                    <h3 className="font-sora text-[32px] font-semibold text-[#14324A]">
+                                    <h3 className="font-sora text-[20px] lg:text-[32px] font-semibold text-[#14324A]">
                                         {products[0].title}
                                     </h3>
                                     <div className="flex justify-end">
-                                        <button className="rounded-xl bg-[#EDEEF0] p-2">
+                                        <button className="rounded-xl bg-[#EDEEF0] lg:p-2 p-1.5">
                                             <ArrowRight size={20} />
                                         </button>
                                     </div>
                                 </div>
-                                <p className="mt-2 font-inter text-[16px] leading-6 text-[#5D5D5D]">
+                                <p className=" mt-1 lg:mt-2 font-inter text-[14px] leading-normal text-[#5D5D5D]">
                                     {products[0].desc}
                                 </p>
-                                <button className="mt-3 hidden font-semibold text-[#09273A] lg:block">
+                                <button className="mt-2 lg:mt-3 font-semibold text-[#09273A] text-[12px] lg:block">
                                     EXPLORE SOLUTION →
                                 </button>
-                                <button className="mt-3 rounded-xl bg-white/60 p-2 lg:hidden">
-                                    <ArrowRight size={22} />
-                                </button>
+                                
                             </div>
                         </div>
                     </motion.div>
@@ -136,17 +134,19 @@ export default function IndustrialSolutions() {
                                         />
                                     </div>
                                     <div className="flex flex-col justify-between p-4">
-                                        <h3 className="font-sora text-[20px] font-semibold text-[#14324A]">
+                                        <div className="flex justify-between items-center">
+                                            <h3 className="font-sora text-[20px] font-semibold text-[#14324A]">
                                             {item.title}
                                         </h3>
-                                        <p className="mt-2 font-inter text-[16px] leading-6 text-[#5D5D5D]">
-                                            {item.desc}
-                                        </p>
-                                        <div className="mt-4 flex justify-end">
                                             <button className="rounded-xl bg-[#EDEEF0] p-2">
                                                 <ArrowRight size={20} />
                                             </button>
                                         </div>
+                                        
+                                        <p className="mt-1 lg:mt-2 font-inter text-[14px] leading-normal text-[#5D5D5D]">
+                                            {item.desc}
+                                        </p>
+                                        
                                     </div>
                                 </motion.div>
                             ))}
