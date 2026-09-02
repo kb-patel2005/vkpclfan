@@ -119,7 +119,7 @@ export default function Footer() {
                   key={social.name}
                   href={social.href}
                   aria-label={social.name}
-                  className="flex h-9 w-9 items-center justify-center rounded-full transition bg-[#EDEEEF] duration-300 hover:bg-white"
+                  className="flex h-9 w-9 items-center justify-center rounded-full transition bg-[#EDEEEF] duration-300 hover:bg-[#FDCD2E] hover:text-white"
                 >
                   {social.icon}
                 </a>
@@ -129,7 +129,7 @@ export default function Footer() {
 
 
           {/* ================= COLUMN 2 ================= */}
-          <div className="w-full lg:w-[50%] mt-8 flex justify-between">
+          <div className="w-full lg:w-[60%] mt-8 flex justify-between">
             <div className="lg:mt-0 lg:pr-6">
 
               <h3 className="mb-5 text-[16px] leading-6 font-bold tracking-wider text-[#191C1D]">
@@ -140,43 +140,29 @@ export default function Footer() {
                 <li>
                   <a
                     href="/about"
-                    className="transition font-normal text-[#5D5D5D] text-[16px] duration-300 hover:text-black"
+                    className="link-hover transition font-normal text-[#5D5D5D] text-[16px] duration-500 hover:text-[#FDCD2E]"
                   >
                     About
                   </a>
-                </li>
 
+                </li>
                 <li>
-                  <a
-                    href="/products"
-                    className="transition font-normal text-[#5D5D5D] text-[16px] duration-300 hover:text-black"
-                  >
+                  <a href="/products" className="link-hover transition font-normal text-[#5D5D5D] text-[16px] duration-500 hover:text-[#FDCD2E]">
                     Our Products
                   </a>
                 </li>
-
                 <li>
-                  <a
-                    href="/blog"
-                    className="transition font-normal text-[#5D5D5D] text-[16px] duration-300 hover:text-black"
-                  >
+                  <a href="/blog" className="link-hover transition font-normal text-[#5D5D5D] text-[16px] duration-500 hover:text-[#FDCD2E]">
                     Blog
                   </a>
                 </li>
-
                 <li>
-                  <a
-                    href="/gallery"
-                    className="transition font-normal text-[#5D5D5D] text-[16px] duration-300 hover:text-black"
-                  >
+                  <a href="/gallery" className="link-hover transition font-normal text-[#5D5D5D] text-[16px] duration-500 hover:text-[#FDCD2E]">
                     Gallery
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="/contact-us"
-                    className="transition font-normal text-[#5D5D5D] text-[16px] duration-300 hover:text-black"
-                  >
+                <li className="lg:hidden">
+                  <a href="/contact-us" className="link-hover transition font-normal text-[#5D5D5D] text-[16px] duration-500 hover:text-[#FDCD2E]">
                     Contact Us
                   </a>
                 </li>
@@ -184,6 +170,29 @@ export default function Footer() {
 
             </div>
 
+            <div className="hidden lg:block">
+              <h3 className="mb-5 text-[16px] font-bold tracking-wider text-[#191C1D]">
+                Quick Links
+              </h3>
+
+              <ul className="space-y-3 text-sm">
+                <li>
+                  <a href="/contact-us" className="link-hover transition text-[#5D5D5D] text-[16px] hover:text-[#FDCD2E]">
+                    Contact Us
+                  </a>
+                </li>
+                <li>
+                  <a href="/privacy-policy" className="link-hover transition text-[#5D5D5D] text-[16px] hover:text-[#FDCD2E]">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="/terms-and-services" className="link-hover transition text-[#5D5D5D] text-[16px] hover:text-[#FDCD2E]">
+                    Terms and Services
+                  </a>
+                </li>
+              </ul>
+            </div>
             <div className="lg:mt-0">
 
               <h3 className="mb-5 text-[16px] leading-6 font-bold tracking-wider text-[#191C1D]">
@@ -226,15 +235,15 @@ export default function Footer() {
         {/* ================= COPYRIGHT ================= */}
         <div className="mt-12 lg:mb-0 mb-14 border-t border-gray-200 pt-6 flex items-center justify-between gap-4 sm:flex-row flex-col">
 
-          <p className="text-center text-xs text-[#C5C5D9]">
+          <p className="text-center text-[16px] text-[#5D5D5D]">
             © {new Date().getFullYear()} Floent Technologies.
             All rights reserved.
           </p>
           <div className="flex items-center gap-4 justify-center">
-            <a href="#" className="text-xs  hover:text-black">
+            <a href="#" className="text-[16px]   hover:text-[#FDCD2E]">
               Privacy Policy
             </a>
-            <a href="#" className="text-xs  hover:text-black">
+            <a href="#" className="text-[16px]  hover:text-[#FDCD2E]">
               Terms and Conditions
             </a>
           </div>

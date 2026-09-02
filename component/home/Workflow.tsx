@@ -151,12 +151,12 @@ export default function Workflow() {
                     {step.no}
                   </span>
 
-                  <div className="relative z-10 lg:mb-8 mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-white shadow-lg max-sm:scale-[0.7]">
+                  <div className="relative z-10 lg:mb-8 mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-white shadow-lg max-sm:scale-[0.7] transition duration-300 hover:shadow-2xl hover:shadow-[#FDCD2E]/60">
                     {step.icon}
                   </div>
 
 
-                  <div className="w-[255px] rounded-2xl bg-white p-6 flex flex-col gap-3 border-[#E2E8F0CC] border shadow-sm">
+                  <div className="w-[255px] rounded-2xl bg-white p-6 flex flex-col gap-3 border-[#E2E8F0CC] border shadow-sm transition duration-300 hover:shadow-2xl hover:shadow-[#FDCD2E]/60">
                     <h3 className="font-semibold font-manrope text-xl leading-8 text-[#191C1E]">
                       {step.title}
                     </h3>

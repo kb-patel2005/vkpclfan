@@ -50,6 +50,9 @@ function ReviewCard({
                 transition
                 hover:shadow-lg
                 sm:w-[380px]
+                duration-300
+                hover:shadow-xl
+                hover:shadow-[#FDCD2E]/20
                 relative
             "
         >
@@ -148,7 +151,7 @@ export default function Reviews() {
 
 
             {/* ================= AUTO SCROLLER ================= */}
-            <div className="mx-auto mt-12 w-full overflow-hidden">
+            <div className="mx-auto mt-12 pb-7 w-full overflow-hidden">
 
                 <div
                     ref={trackRef}

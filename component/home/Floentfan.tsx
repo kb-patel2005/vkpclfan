@@ -12,6 +12,7 @@ import {
     Church,
     Car,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const datas = [
     {
@@ -68,7 +69,13 @@ function CategoryCard({
                 justify-center
                 rounded-2xl
                 bg-[#5D5D5D1A]
-                
+                hover:scale-105
+                cursor-pointer
+                shadow-sm
+                transition
+                duration-300
+                hover:shadow-2xl
+                hover:shadow-[#FDCD2E]/60
             "
         >
             <Icon
@@ -213,7 +220,12 @@ export default function Floentfan() {
 
             {/* ================= HEADING ================= */}
 
-            <div className="max-w-4xl">
+            <motion.div
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="max-w-4xl">
 
                 <h1
                     className="
@@ -245,7 +257,7 @@ export default function Floentfan() {
                     diverse large-scale environments.
                 </p>
 
-            </div>
+            </motion.div>
 
             <CategoryAutoSlideTrack />
 

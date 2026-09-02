@@ -88,6 +88,7 @@ export function Advantage() {
                     transition
                     duration-300
                     hover:shadow-xl
+                    hover:shadow-[#FDCD2E]/20
                     sm:p-7
                     lg:gap-4
                     lg:px-[32px]

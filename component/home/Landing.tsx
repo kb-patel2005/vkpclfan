@@ -22,7 +22,7 @@ export default function Landing() {
             <motion.div
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
                 className="relative z-10 flex w-full max-w-4xl flex-col gap-7 lg:w-[50%] lg:ml-18"
             >
                 {/* Heading */}

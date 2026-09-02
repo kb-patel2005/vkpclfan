@@ -75,3 +75,14 @@ body {
 .animate-curve-jump {
   animation: curveJump 3s ease-in-out infinite;
 }
+
+.link-hover:hover::before {
+  content: "-";
+  color: #FDCD2E; /* yellow */
+  margin-right: 6px;
+  
+}
+
+.link-hover:hover {
+  font-weight: bold;
+}
