@@ -94,7 +94,7 @@ export default function Footer() {
     <footer className="text-[#5D5D5D]">
       <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-0">
 
-        <div className="flex flex-wrap *:gap-10 lg:gap-0 justify-between">
+        <div className="flex flex-wrap *:gap-5 lg:gap-0 justify-between">
 
           {/* ================= COLUMN 1 ================= */}
           <div className="lg:pr-6">
@@ -129,102 +129,102 @@ export default function Footer() {
 
 
           {/* ================= COLUMN 2 ================= */}
-          <div className="mt-8 lg:mt-0 lg:pr-6">
+          <div className="w-full lg:w-[50%] mt-8 flex justify-between">
+            <div className="lg:mt-0 lg:pr-6">
 
-            <h3 className="mb-5 text-[16px] leading-6 font-bold tracking-wider text-[#191C1D]">
-              Quick Links
-            </h3>
+              <h3 className="mb-5 text-[16px] leading-6 font-bold tracking-wider text-[#191C1D]">
+                Quick Links
+              </h3>
 
-            <ul className="space-y-3 text-sm">
-              <li>
-                <a
-                  href="/about"
-                  className="transition font-normal text-[#5D5D5D] text-[16px] duration-300 hover:text-black"
-                >
-                  About
-                </a>
-              </li>
+              <ul className="space-y-3 text-sm">
+                <li>
+                  <a
+                    href="/about"
+                    className="transition font-normal text-[#5D5D5D] text-[16px] duration-300 hover:text-black"
+                  >
+                    About
+                  </a>
+                </li>
 
-              <li>
-                <a
-                  href="/products"
-                  className="transition font-normal text-[#5D5D5D] text-[16px] duration-300 hover:text-black"
-                >
-                  Our Products
-                </a>
-              </li>
+                <li>
+                  <a
+                    href="/products"
+                    className="transition font-normal text-[#5D5D5D] text-[16px] duration-300 hover:text-black"
+                  >
+                    Our Products
+                  </a>
+                </li>
 
-              <li>
-                <a
-                  href="/blog"
-                  className="transition font-normal text-[#5D5D5D] text-[16px] duration-300 hover:text-black"
-                >
-                  Blog
-                </a>
-              </li>
+                <li>
+                  <a
+                    href="/blog"
+                    className="transition font-normal text-[#5D5D5D] text-[16px] duration-300 hover:text-black"
+                  >
+                    Blog
+                  </a>
+                </li>
 
-              <li>
-                <a
-                  href="/gallery"
-                  className="transition font-normal text-[#5D5D5D] text-[16px] duration-300 hover:text-black"
-                >
-                  Gallery
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/contact-us"
-                  className="transition font-normal text-[#5D5D5D] text-[16px] duration-300 hover:text-black"
-                >
-                  Contact Us
-                </a>
-              </li>
-            </ul>
+                <li>
+                  <a
+                    href="/gallery"
+                    className="transition font-normal text-[#5D5D5D] text-[16px] duration-300 hover:text-black"
+                  >
+                    Gallery
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/contact-us"
+                    className="transition font-normal text-[#5D5D5D] text-[16px] duration-300 hover:text-black"
+                  >
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
 
+            </div>
+
+            <div className="lg:mt-0">
+
+              <h3 className="mb-5 text-[16px] leading-6 font-bold tracking-wider text-[#191C1D]">
+                Contact
+              </h3>
+
+              {/* Contact Sales */}
+              <p className="mb-4 text-sm font-bold text-[#785900]">
+                Contact Sales
+              </p>
+
+              {/* Email */}
+              <a
+                href="mailto:info@floentair.com"
+                className="mb-4 flex items-center gap-3 text-sm transition duration-300 hover:text-black"
+              >
+
+
+                <span>
+                  email: info@floentair.com
+                </span>
+              </a>
+
+              {/* Phone */}
+              <a
+                href="tel:+919925624342"
+                className="flex items-center gap-3 text-sm transition duration-300 hover:text-black"
+              >
+
+                <span>
+                  phone: +91 9925624342
+                </span>
+              </a>
+
+            </div>
           </div>
-         
-          {/* ================= COLUMN 4 ================= */}
-          <div className="mt-8 w-full lg:mt-0 lg:basis-1/4">
-
-            <h3 className="mb-5 text-[16px] leading-6 font-bold tracking-wider text-[#191C1D]">
-              Contact
-            </h3>
-
-            {/* Contact Sales */}
-            <p className="mb-4 text-sm font-bold text-[#785900]">
-              Contact Sales
-            </p>
-
-            {/* Email */}
-            <a
-              href="mailto:info@floentair.com"
-              className="mb-4 flex items-center gap-3 text-sm transition duration-300 hover:text-black"
-            >
-
-
-              <span>
-                email: info@floentair.com
-              </span>
-            </a>
-
-            {/* Phone */}
-            <a
-              href="tel:+919925624342"
-              className="flex items-center gap-3 text-sm transition duration-300 hover:text-black"
-            >
-
-              <span>
-                phone: +91 9925624342
-              </span>
-            </a>
-
-          </div>
-
         </div>
 
 
         {/* ================= COPYRIGHT ================= */}
-        <div className="mt-12 border-t border-gray-200 pt-6 flex items-center justify-between gap-4 sm:flex-row flex-col">
+        <div className="mt-12 lg:mb-0 mb-14 border-t border-gray-200 pt-6 flex items-center justify-between gap-4 sm:flex-row flex-col">
 
           <p className="text-center text-xs text-[#C5C5D9]">
             © {new Date().getFullYear()} Floent Technologies.

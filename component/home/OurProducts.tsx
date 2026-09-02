@@ -1,3 +1,6 @@
+'use client'
+
+import { motion } from "framer-motion";
 import { ArrowRight, Building2 } from "lucide-react";
 import React from "react";
 
@@ -31,7 +34,7 @@ const products = [
 
 export default function IndustrialSolutions() {
     return (
-        <section className="bg-white py-5 px-5 lg:px-0 mt-5 lg:mt-32">
+        <section className="bg-white pt-5 px-5 lg:px-0 mt-5 lg:mt-32">
             <div className="mx-auto max-w-7xl">
 
                 {/* ================= HEADING ================= */}
@@ -43,7 +46,7 @@ export default function IndustrialSolutions() {
                         Our Products
                     </span>
 
-                    <h1 className="mt-[15px] font-sora text-[40px] font-bold leading-tight text-[#14324A] lg:text-[64px] lg:leading-[70.4px]">
+                    <h1 className="mt-[15px] font-sora text-4xl lg:text-[40px] font-bold leading-tight text-[#14324A] lg:text-[64px] lg:leading-[70.4px]">
                         Industrial Precision Solutions
                     </h1>
 
@@ -59,21 +62,25 @@ export default function IndustrialSolutions() {
                 <div className="mt-10 flex flex-col gap-4 lg:flex-row">
 
                     {/* ========== LEFT 40% ========== */}
-                    <div className="w-full lg:basis-2/5">
+                    <motion.div
+                        initial={{ x: -80, opacity: 0.5 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="w-full lg:basis-2/5"
+                    >
+                        {/* Left card content */}
                         <div className="relative h-full overflow-hidden rounded-2xl bg-white shadow-md transition hover:shadow-xl">
-
-                            <div className="h-full  overflow-hidden">
+                            <div className="h-full overflow-hidden">
                                 <img
                                     src={products[0].img}
                                     alt={products[0].title}
                                     className="h-full object-cover transition-transform duration-500 hover:scale-110"
                                 />
                             </div>
-
-                            <div className="absolute top-5 left-4 z-10 flex items-center justify-center  bg-white px-3 py-1">
+                            <div className="absolute top-5 left-4 z-10 flex items-center justify-center bg-white px-3 py-1">
                                 <span className="text-xs font-medium text-[#09273A]">• Best Seller</span>
                             </div>
-
                             <div className="absolute bottom-3 left-3 right-3 rounded-2xl border border-white/20 bg-white/70 p-4 backdrop-blur-[20px]">
                                 <div className="flex items-center justify-between">
                                     <h3 className="font-sora text-[32px] font-semibold text-[#14324A]">
@@ -85,40 +92,40 @@ export default function IndustrialSolutions() {
                                         </button>
                                     </div>
                                 </div>
-
-
                                 <p className="mt-2 font-inter text-[16px] leading-6 text-[#5D5D5D]">
                                     {products[0].desc}
                                 </p>
-
-                                {/* Desktop */}
                                 <button className="mt-3 hidden font-semibold text-[#09273A] lg:block">
                                     EXPLORE SOLUTION →
                                 </button>
-
-                                {/* Mobile */}
                                 <button className="mt-3 rounded-xl bg-white/60 p-2 lg:hidden">
                                     <ArrowRight size={22} />
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* ========== RIGHT 60% ========== */}
-                    <div className="w-full lg:basis-3/5">
+                    <motion.div
+                        initial={{ x: 80, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="w-full lg:basis-3/5"
+                    >
                         <div className="grid grid-cols-1 gap-2 lg:gap-4 sm:grid-cols-2">
-
                             {products.slice(1).map((item, index) => (
-                                <div
+                                <motion.div
                                     key={index}
+                                    initial={{ opacity: 0, y: 40 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, amount: 0.2 }}
+                                    transition={{ duration: 0.6, delay: index * 0.2 }}
                                     className="relative overflow-hidden rounded-2xl m-2 bg-white shadow-md transition hover:shadow-xl align-middle"
                                 >
-                                    {/* Icon */}
                                     <div className="absolute left-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow backdrop-blur-sm">
                                         <Building2 size={22} className="text-[#09273A]" />
                                     </div>
-
-                                    {/* Image */}
                                     <div className="h-[260px] w-full overflow-hidden">
                                         <img
                                             src={item.img}
@@ -126,40 +133,39 @@ export default function IndustrialSolutions() {
                                             className="h-[260px] w-full object-cover transition-transform duration-500 hover:scale-110"
                                         />
                                     </div>
-
-                                    {/* Content */}
                                     <div className="flex flex-col justify-between p-4">
                                         <h3 className="font-sora text-[20px] font-semibold text-[#14324A]">
                                             {item.title}
                                         </h3>
-
                                         <p className="mt-2 font-inter text-[16px] leading-6 text-[#5D5D5D]">
                                             {item.desc}
                                         </p>
-
                                         <div className="mt-4 flex justify-end">
                                             <button className="rounded-xl bg-[#EDEEF0] p-2">
                                                 <ArrowRight size={20} />
                                             </button>
                                         </div>
                                     </div>
-                                </div>
+                                </motion.div>
                             ))}
-
                         </div>
-                    </div>
-
+                    </motion.div>
                 </div>
 
                 {/* ================= BOTTOM IMAGE ================= */}
-                <div className="mt-12 overflow-hidden ">
+                <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="mt-12 overflow-hidden"
+                >
                     <img
-                        src="/images/factory1.png"
+                        src="/images/factory2.png"
                         alt="Factory"
                         className="mx-auto w-full max-w-6xl object-contain"
                     />
-                </div>
-
+                </motion.div>
             </div>
         </section>
     );

@@ -1,4 +1,6 @@
+'use client'
 
+import { motion } from "framer-motion";
 import React from "react";
 
 const data = [
@@ -33,7 +35,7 @@ function Card1({
                 {num}
             </h2>
 
-            <p className="mt-2 text-[12px] font-semibold tracking-wide text-[#C5C5D9]" style={{letterSpacing:"1.2px"}}>
+            <p className="mt-2 text-[12px] font-semibold tracking-wide text-[#C5C5D9]" style={{ letterSpacing: "1.2px" }}>
                 {title}
             </p>
         </div>
@@ -42,10 +44,15 @@ function Card1({
 
 export default function Industryworkspace() {
     return (
-        <section className="flex w-full flex-col items-center bg-[#F8F9FA] gap-3 justify-center md:gap-5 px-4 py-6 sm:px-6 lg:gap-14 lg:py-20">
+        <section className="flex w-full flex-col items-center bg-[#F8F9FA] gap-4 justify-center md:gap-5 px-4 py-6 sm:px-6 lg:gap-14 lg:py-20">
 
             {/* ================= STATS ================= */}
-            <div className="flex w-full flex-wrap lg:gap-10 gap-8 sm:justify-around justify-center max-w-7xl">
+            < motion.div
+                initial={{ x: -80, opacity: 0.5 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="flex w-full flex-wrap lg:gap-10 gap-4 sm:justify- justify-center max-w-7xl">
 
                 {data.map((data1, index) => (
                     <Card1
@@ -55,11 +62,16 @@ export default function Industryworkspace() {
                     />
                 ))}
 
-            </div>
+            </motion.div>
 
 
             {/* ================= CTA ================= */}
-            <div className="flex w-full max-w-7xl flex-col gap-8 items-center justify-center rounded-[30px] bg-[#09273A] px-6 py-12 text-center sm:px-10 sm:py-16 lg:rounded-[40px] lg:px-24 lg:py-24">
+            < motion.div
+                initial={{ x: -80, opacity: 0.5 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="flex w-full max-w-7xl flex-col gap-8 items-center justify-center rounded-[30px] bg-[#09273A] px-6 py-12 text-center sm:px-10 sm:py-16 lg:rounded-[40px] lg:px-24 lg:py-24">
 
                 {/* Heading */}
                 <h1 className="text-[36px] font-bold leading-[1.1] font-sora text-white sm:text-[46px] lg:text-[64px]">
@@ -85,7 +97,7 @@ export default function Industryworkspace() {
                     Talk to an Expert
                 </button>
 
-            </div>
+            </motion.div>
 
         </section>
     );

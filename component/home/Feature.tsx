@@ -70,7 +70,7 @@ const data = [
 
 export default function Features() {
     return (
-        <section className="mt-0 px-6 py-12 w-full bg-[#F8F9FA]">
+        <section className="mt-0 lg:px-6 py-12 w-full bg-[#F8F9FA]">
             <div className="mx-auto max-w-7xl flex-wrap items-center justify-center lg:justify-between gap-6 flex">
                 {data.map((item, idx) => {
                     const Icon = item.icon;
