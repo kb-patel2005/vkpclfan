@@ -99,7 +99,7 @@ export function Faq() {
                         >
 
                             {/* Question */}
-                            <summary className="flex min-h-[64px] cursor-pointer list-none items-center justify-between gap-5 px-5 text-left text-[14px] font-medium text-[#6d6866] sm:px-6 [&::-webkit-details-marker]:hidden">
+                            <summary className="flex min-h-[64px] cursor-pointer list-none items-center justify-between gap-5 px-5 text-left lg:text-[16px] text-[14px] font-medium text-[#6d6866] sm:px-6 [&::-webkit-details-marker]:hidden">
 
                                 <span>
                                     {item.question}

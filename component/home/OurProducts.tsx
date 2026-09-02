@@ -62,11 +62,8 @@ export default function IndustrialSolutions() {
                 <div className="mt-10 flex flex-col gap-4 lg:flex-row">
 
                     {/* ========== LEFT 40% ========== */}
-                    <motion.div
-                        initial={{ x: -80, opacity: 0.5 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
+                    <div
+                        
                         className="w-full lg:basis-2/5 transition
                 duration-300
                 hover:shadow-2xl
@@ -104,24 +101,16 @@ export default function IndustrialSolutions() {
                                 
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
 
                     {/* ========== RIGHT 60% ========== */}
-                    <motion.div
-                        initial={{ x: -100, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
+                    <div
                         className="w-full lg:basis-3/5"
                     >
                         <div className="grid grid-cols-1 gap-2 lg:gap-4 sm:grid-cols-2">
                             {products.slice(1).map((item, index) => (
-                                <motion.div
-                                    key={index}
-                                    initial={{ opacity: 0, y: 40 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true, amount: 0.2 }}
-                                    transition={{ duration: 0.6, delay: index * 0.2 }}
+                                <div
+                                    
                                     className="relative overflow-hidden rounded-2xl bg-white shadow-md transition duration-300 hover:shadow-2xl hover:shadow-[#FDCD2E]/60 hover:shadow-xl align-middle">
                                     <div className="absolute left-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow backdrop-blur-sm">
                                         <Building2 size={22} className="text-[#09273A]" />
@@ -148,18 +137,14 @@ export default function IndustrialSolutions() {
                                         </p>
                                         
                                     </div>
-                                </motion.div>
+                                </div>
                             ))}
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
 
                 {/* ================= BOTTOM IMAGE ================= */}
-                <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
+                <div
                     className="overflow-hidden"
                 >
                     <img
@@ -167,7 +152,7 @@ export default function IndustrialSolutions() {
                         alt="Factory"
                         className="mx-auto w-full max-w-6xl object-contain"
                     />
-                </motion.div>
+                </div>
             </div>
         </section>
     );
