@@ -116,7 +116,7 @@ export function Faq() {
                             {/* Answer */}
                             <div className="px-5 pb-6 pt-1 sm:px-6">
 
-                                <p className="text-[12px] leading-7 text-[#6f6966]">
+                                <p className="text-[14px] leading-7 text-[#6f6966]">
                                     {item.answer}
                                 </p>
 
