@@ -129,7 +129,7 @@ export default function Footer() {
 
 
           {/* ================= COLUMN 2 ================= */}
-          <div className="w-full lg:w-[60%] mt-8 flex justify-between">
+          <div className="w-full lg:w-[60%] mt-8 flex flex-wrap justify-between">
             <div className="lg:mt-0 lg:pr-6">
 
               <h3 className="mb-5 text-[16px] leading-6 font-bold tracking-wider text-[#191C1D]">
@@ -207,7 +207,7 @@ export default function Footer() {
               {/* Email */}
               <a
                 href="mailto:info@floentair.com"
-                className="mb-4 flex items-center gap-3 text-sm transition duration-300 hover:text-black"
+                className="mb-4 flex items-center gap-3 text-[16px] transition duration-300 hover:text-black"
               >
 
 
@@ -219,7 +219,7 @@ export default function Footer() {
               {/* Phone */}
               <a
                 href="tel:+919925624342"
-                className="flex items-center gap-3 text-sm transition duration-300 hover:text-black"
+                className="flex items-center gap-3 text-[16px] transition duration-300 hover:text-black"
               >
 
                 <span>
@@ -235,15 +235,15 @@ export default function Footer() {
         {/* ================= COPYRIGHT ================= */}
         <div className="mt-12 lg:mb-0 mb-14 border-t border-gray-200 pt-6 flex items-center justify-between gap-4 sm:flex-row flex-col">
 
-          <p className="text-center text-[16px] text-[#5D5D5D]">
+          <p className="text-center text-sm text-[#5D5D5D]">
             © {new Date().getFullYear()} Floent Technologies.
             All rights reserved.
           </p>
           <div className="flex items-center gap-4 justify-center">
-            <a href="#" className="text-[16px]   hover:text-[#FDCD2E]">
+            <a href="#" className="text-sm   hover:text-[#FDCD2E]">
               Privacy Policy
             </a>
-            <a href="#" className="text-[16px]  hover:text-[#FDCD2E]">
+            <a href="#" className="text-sm  hover:text-[#FDCD2E]">
               Terms and Conditions
             </a>
           </div>

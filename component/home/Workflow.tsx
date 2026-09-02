@@ -113,13 +113,34 @@ export default function Workflow() {
         {/* Workflow */}
         <motion.div
           initial={{ x: -80, opacity: 0.5 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }} className="relative lg:mt-42 md:mt-20 mt-10">
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }} className="relative lg:mt-42 md:mt-20 mt-10">
           {/* Animated SVG line */}
-          <div className="absolute left-0 right-0 ml-25 top-0 hidden md:block animate-curve-jump">
+          <div className="lg:block hidden absolute left-0 right-0 ml-25 top-0 animate-curve-jump">
             <svg
               width="1030"
+              height="160"
+              viewBox="0 0 1081 134"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="animate-dash"
+            >
+              <path
+                d="M0.522278 99.2755C0.522278 99.2755 509.363 -89.723 731.943 57.8154C954.522 205.354 1079.52 86.854 1079.52 86.854"
+                stroke="black"
+                strokeWidth="3"
+                strokeDasharray="6 6"
+              />
+            </svg>
+
+
+
+          </div>
+
+          <div className="lg:hidden absolute left-0 right-0 ml-25 top-0 hidden md:block animate-curve-jump">
+            <svg
+              width="800"
               height="160"
               viewBox="0 0 1081 134"
               fill="none"

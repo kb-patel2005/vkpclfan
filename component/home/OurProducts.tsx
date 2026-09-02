@@ -34,7 +34,7 @@ const products = [
 
 export default function IndustrialSolutions() {
     return (
-        <section className="bg-white pt-5 px-5 lg:px-0 mt-5 lg:mt-32">
+        <section className="w-full bg-white pt-5 px-5 lg:px-0 mt-5 lg:mt-32">
             <div className="mx-auto max-w-7xl">
 
                 {/* ================= HEADING ================= */}
@@ -110,7 +110,7 @@ export default function IndustrialSolutions() {
 
                     {/* ========== RIGHT 60% ========== */}
                     <motion.div
-                        initial={{ x: 80, opacity: 0 }}
+                        initial={{ x: -100, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
