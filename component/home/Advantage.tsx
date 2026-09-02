@@ -113,7 +113,7 @@ export function Advantage() {
           </motion.div>
 
           <motion.div
-            initial={{ x: 100, opacity: 0 }}
+            initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="col-span-12 flex flex-col justify-center gap-3 mt-5 lg:mt-0 lg:col-span-6 lg:gap-4 "
