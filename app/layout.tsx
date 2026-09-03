@@ -9,6 +9,9 @@ import { Inter, Sora } from "next/font/google";
 import { Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 import MobileBottomDiv from "@/component/common/MobileBottomDiv";
+import { Plus_Jakarta_Sans } from "next/font/google";
+
+import { Space_Grotesk } from "next/font/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,11 +49,22 @@ const manrope = Manrope({
   variable: "--font-manrope",
 });
 
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-plus-jakarta",
+});
+
+
+const space = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space",
+});
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${sora.variable} ${hankenGrotesk.variable} ${manrope.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${sora.variable} ${hankenGrotesk.variable} ${manrope.variable} ${plusJakarta.variable} ${space.variable} h-full antialiased`}
     >
       <body className={`${inter.className} min-h-full flex flex-col`}>
         <Navbar/>
