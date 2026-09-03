@@ -74,10 +74,10 @@ export default function Trust() {
     ];
 
     return (
-        <section className="w-full py-24 max-lg:px-5">
+        <section className="w-full py-2 lg:py-16 max-lg:px-5">
             <div
 
-                className="mx-auto flex max-w-7xl flex-wrap justify-center gap-12 sm:justify-between lg:gap-8">
+                className="mx-auto flex max-w-7xl flex-wrap justify-center gap-4 sm:justify-between lg:gap-8">
 
                 {/* LEFT CONTENT */}
                 <motion.div

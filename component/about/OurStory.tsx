@@ -67,18 +67,18 @@ const cards = [
 
 export default function AboutCards() {
     return (
-        <section className="w-full bg-[#F8F9FA] py-8 max-lg:px-5">
+        <section className="w-full bg-[#F8F9FA] pb-8 lg:pb-8 pt-5 lg:pt-10 max-lg:px-5">
             <motion.div
                 initial={{ x: 0, y: 100, opacity: 0 }}
                 whileInView={{ x: 0, y: 0, opacity: 1 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="mx-auto max-w-7xl flex flex-col gap-16 
+                className="mx-auto max-w-7xl flex flex-col gap-4 lg:gap-8 
                 ">
                 <h1 className="border-l-4 border-[#0058BE] pl-4 font-jakarta text-[40px] font-bold leading-[48px] tracking-[-0.8px]">
                     Our Story
                 </h1>
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-3 max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-3 max-w-7xl mx-auto pt-2">
                     {cards.map((card) => (
                         <div
                             key={card.number}

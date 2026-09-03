@@ -5,15 +5,15 @@ import { motion } from 'framer-motion';
 
 export default function AboutLanding() {
     return (
-        <section className='w-full h-auto py-20 max-lg:px-5'>
-            <div className='max-w-7xl flex flex-wrap lg:gap-[48px] gap-3 mx-auto justify-between items-center'>
+        <section className='w-full h-auto py-10 lg:py-20 max-lg:px-5'>
+            <div className='max-w-7xl flex flex-wrap lg:gap-[48px] lg:gap-3 gap-8 mx-auto justify-between items-center'>
                 <motion.div
                     initial={{ x: -50, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.3, ease: "easeOut" }}
                     className='flex flex-col lg:w-[50%] gap-16'>
                     <div className='flex flex-col gap-3'>
-                        <p className='font-sora text-[16px] tracking-[3.2px] font-normal leading-6 flex items-center'> <p className='mr-2'>— </p><p>ENGINEERED FOR PERFORMANCE</p></p>
+                        <p className='font-sora text-[12px] tracking-[3.2px] font-normal leading-6 flex items-center'> <p className='mr-2'>— </p><p>ENGINEERED FOR PERFORMANCE</p></p>
                         {/* <h1 className='font-sora font-extrabold text-[64px] leading-[70.4px] tracking-[-1.28px] text-[#0F172A]'>Powering
                             Industries.
                             <br />
