@@ -74,7 +74,7 @@ export default function Trust() {
     ];
 
     return (
-        <section className="w-full lg:px-0 px-4 py-24">
+        <section className="w-full py-24 max-lg:px-5">
             <div
 
                 className="mx-auto flex max-w-7xl flex-wrap justify-center gap-12 sm:justify-between lg:gap-8">
@@ -103,7 +103,7 @@ export default function Trust() {
                             Driven by Trust.
                         </span>
                     </h1> */}
-                    <h1 className='font-sora text-[40px] font-bold leading-[70.4px] tracking-[-1.6px] sm:text-5xl lg:text-[64px] text-[#0F172A]'>
+                    <h1 className='font-sora text-[40px] font-bold leading-12 lg:leading-[70.4px] tracking-[-1.6px] sm:text-5xl lg:text-[64px] text-[#0F172A]'>
                         Built on Quality.<br />
                         <span className="text-[#FFB800]">
                             Driven by Trust.
@@ -173,7 +173,7 @@ export default function Trust() {
                         {cards.map((card) => (
                             <div
                                 key={card.number}
-                                className="relative h-[204.31px] w-full overflow-hidden rounded-[28px] border border-[#06245C1A] p-8 sm:w-[300px]
+                                className="relative h-[180px] w-full overflow-hidden rounded-[28px] border border-[#06245C1A] px-8 py-6 sm:w-[300px]
                                     shadow-sm
                                     transition
                                     duration-300
@@ -243,7 +243,7 @@ export default function Trust() {
 
                         {/* Middle Content */}
                         <div className="flex min-w-0 flex-col gap-1">
-                            <h3 className="font-jakarta text-[24px] font-bold leading-[32px] tracking-[0px] text-[#09273A]">
+                            <h3 className="font-jakarta text-[18px] lg:text-[24px] font-bold leading-[32px] tracking-[0px] text-[#09273A]">
                                 BUSINESS NETWORK
                             </h3>
 

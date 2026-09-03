@@ -67,7 +67,7 @@ const cards = [
 
 export default function AboutCards() {
     return (
-        <section className="w-full bg-[#F8F9FA] py-24 lg:px-0 px-4 ">
+        <section className="w-full bg-[#F8F9FA] py-8 max-lg:px-5">
             <motion.div
                 initial={{ x: 0, y: 100, opacity: 0 }}
                 whileInView={{ x: 0, y: 0, opacity: 1 }}
@@ -102,7 +102,7 @@ export default function AboutCards() {
 
                             {/* Content */}
                             <div className="mt-4">
-                                <h3 className="font-jakarta text-[32px] font-bold leading-[38.4px] tracking-[-0.64px]">
+                                <h3 className="font-jakarta text-[24px] lg:text-[32px] font-bold leading-[38.4px] tracking-[-0.64px]">
                                     {card.title}
                                 </h3>
 

@@ -46,24 +46,23 @@ function Card1({
 
 export default function AboutCounters() {
   return (
-    <section className='w-full py-16 border border-[#C5C6CD] bg-white'>
-      <div className='mx-auto max-w-7xl'>
-          <div className="flex flex-wrap justify-center lg:justify-between gap-6">
-            {data.map((item, index) => (
-              <div
-                key={index}
-                className={index !== 0 ? "border-0 lg:border-l border-[#C5C6CD]" : ""}
-              >
-                <Card1
-                  num={item.num}
-                  suffix={item.suffix}
-                  title={item.title}
-                />
-              </div>
-            ))}
-          
+    <section className="w-full border border-[#C5C6CD] bg-white py-16 max-lg:px-5">
+      <div className="mx-auto max-w-7xl">
+        <div className="flex flex-wrap justify-center gap-y-8 lg:justify-between lg:gap-y-0">
+          {data.map((item, index) => (
+            <div
+              key={index}
+              className={`flex justify-center w-full sm:w-1/2 lg:w-auto ${index !== 0 ? "lg:border-l border-[#C5C6CD]" : ""
+                }`}
+            >
+              <Card1
+                num={item.num}
+                suffix={item.suffix}
+                title={item.title}
+              />
+            </div>
+          ))}
         </div>
-
       </div>
     </section>
   )
