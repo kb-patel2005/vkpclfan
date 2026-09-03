@@ -1,20 +1,35 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import React from 'react'
 
 export default function LetsBuild() {
     return (
-        
-            <section className='w-full h-[300px] max-w-7xl mx-auto flex flex-col items-center justify-center gap-6'>
-                <svg width="60" height="28" viewBox="0 0 60 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.75 27.5C9.91667 27.5 6.66667 26.1667 4 23.5C1.33333 20.8333 0 17.5833 0 13.75C0 9.91667 1.33333 6.66667 4 4C6.66667 1.33333 9.91667 0 13.75 0C15.2917 0 16.7708 0.270833 18.1875 0.8125C19.6042 1.35417 20.875 2.125 22 3.125L26.25 7L22.5 10.375L18.625 6.875C17.9583 6.29167 17.2083 5.83333 16.375 5.5C15.5417 5.16667 14.6667 5 13.75 5C11.3333 5 9.27083 5.85417 7.5625 7.5625C5.85417 9.27083 5 11.3333 5 13.75C5 16.1667 5.85417 18.2292 7.5625 19.9375C9.27083 21.6458 11.3333 22.5 13.75 22.5C14.6667 22.5 15.5417 22.3333 16.375 22C17.2083 21.6667 17.9583 21.2083 18.625 20.625L38 3.125C39.125 2.125 40.3958 1.35417 41.8125 0.8125C43.2292 0.270833 44.7083 0 46.25 0C50.0833 0 53.3333 1.33333 56 4C58.6667 6.66667 60 9.91667 60 13.75C60 17.5833 58.6667 20.8333 56 23.5C53.3333 26.1667 50.0833 27.5 46.25 27.5C44.7083 27.5 43.2292 27.2292 41.8125 26.6875C40.3958 26.1458 39.125 25.375 38 24.375L33.75 20.5L37.5 17.125L41.375 20.625C42.0417 21.2083 42.7917 21.6667 43.625 22C44.4583 22.3333 45.3333 22.5 46.25 22.5C48.6667 22.5 50.7292 21.6458 52.4375 19.9375C54.1458 18.2292 55 16.1667 55 13.75C55 11.3333 54.1458 9.27083 52.4375 7.5625C50.7292 5.85417 48.6667 5 46.25 5C45.3333 5 44.4583 5.16667 43.625 5.5C42.7917 5.83333 42.0417 6.29167 41.375 6.875L22 24.375C20.875 25.375 19.6042 26.1458 18.1875 26.6875C16.7708 27.2292 15.2917 27.5 13.75 27.5Z" fill="#09273A" />
-                </svg>
-                <p className="font-sora text-center text-[16px] font-normal leading-[24px] tracking-[0px] text-[#0F172A]">
-                    Engineered for today.
-                    <br />
-                    Built for the long run.
-                </p>
-                <button className="h-[64px] w-[345.95px] rounded-[4px] bg-[#09273A] px-10 py-5 font-sora text-[16px] font-normal leading-[24px] tracking-[0.8px] text-white text-center uppercase shadow-[0px_8px_30px_0px_#00548F40]">
+
+        <motion.section 
+        initial={{ x: -100, y:0,opacity: 0 }}
+                    whileInView={{ x: 0, y:0, opacity: 1 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+        className='w-full py-32 flex flex-col items-center justify-center gap-6 bg-white lg:mx-0 mx-4'>
+            
+            <svg width="60" height="28" viewBox="0 0 60 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.75 27.5C9.91667 27.5 6.66667 26.1667 4 23.5C1.33333 20.8333 0 17.5833 0 13.75C0 9.91667 1.33333 6.66667 4 4C6.66667 1.33333 9.91667 0 13.75 0C15.2917 0 16.7708 0.270833 18.1875 0.8125C19.6042 1.35417 20.875 2.125 22 3.125L26.25 7L22.5 10.375L18.625 6.875C17.9583 6.29167 17.2083 5.83333 16.375 5.5C15.5417 5.16667 14.6667 5 13.75 5C11.3333 5 9.27083 5.85417 7.5625 7.5625C5.85417 9.27083 5 11.3333 5 13.75C5 16.1667 5.85417 18.2292 7.5625 19.9375C9.27083 21.6458 11.3333 22.5 13.75 22.5C14.6667 22.5 15.5417 22.3333 16.375 22C17.2083 21.6667 17.9583 21.2083 18.625 20.625L38 3.125C39.125 2.125 40.3958 1.35417 41.8125 0.8125C43.2292 0.270833 44.7083 0 46.25 0C50.0833 0 53.3333 1.33333 56 4C58.6667 6.66667 60 9.91667 60 13.75C60 17.5833 58.6667 20.8333 56 23.5C53.3333 26.1667 50.0833 27.5 46.25 27.5C44.7083 27.5 43.2292 27.2292 41.8125 26.6875C40.3958 26.1458 39.125 25.375 38 24.375L33.75 20.5L37.5 17.125L41.375 20.625C42.0417 21.2083 42.7917 21.6667 43.625 22C44.4583 22.3333 45.3333 22.5 46.25 22.5C48.6667 22.5 50.7292 21.6458 52.4375 19.9375C54.1458 18.2292 55 16.1667 55 13.75C55 11.3333 54.1458 9.27083 52.4375 7.5625C50.7292 5.85417 48.6667 5 46.25 5C45.3333 5 44.4583 5.16667 43.625 5.5C42.7917 5.83333 42.0417 6.29167 41.375 6.875L22 24.375C20.875 25.375 19.6042 26.1458 18.1875 26.6875C16.7708 27.2292 15.2917 27.5 13.75 27.5Z" fill="#09273A" />
+            </svg>
+            <p className="font-sora text-center text-[16px] font-normal leading-[24px] tracking-[0px] text-[#0F172A]">
+                Engineered for today.
+                <br />
+                Built for the long run.
+            </p>
+            {/* <button className="h-[64px] w-[345.95px] rounded-[4px] bg-[#09273A] px-10 py-5 font-sora text-[16px] font-normal leading-[24px] tracking-[0.8px] text-white text-center uppercase shadow-[0px_8px_30px_0px_#00548F40]">
                     LET'S BUILD A BETTER SYSTEM
-                </button>
-            </section>
+                </button> */}
+            <motion.button
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }}
+
+                className="font-inter bg-[#09273A] hover:bg-black px-4 py-3 text-sm font-medium text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
+            >LET'S BUILD A BETTER SYSTEM</motion.button>
+        </motion.section>
     )
 }

@@ -1,3 +1,6 @@
+'use client'
+
+import { motion } from 'framer-motion';
 import React from 'react'
 
 export default function Trust() {
@@ -72,13 +75,20 @@ export default function Trust() {
 
     return (
         <section className="w-full lg:px-0 px-4 py-24">
-            <div className="mx-auto flex max-w-7xl flex-wrap justify-center gap-12 sm:justify-between lg:gap-8">
+            <div
+
+                className="mx-auto flex max-w-7xl flex-wrap justify-center gap-12 sm:justify-between lg:gap-8">
 
                 {/* LEFT CONTENT */}
-                <div className="flex w-full flex-col gap-6 lg:w-[40%]">
+                <motion.div
+                    initial={{ x: -100, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="flex w-full flex-col gap-6 lg:w-[40%]">
 
                     <p className="font-space text-[11px] font-bold leading-[11px] tracking-[1.1px] text-[#09273A] uppercase">
-                        WHY PEOPLE CHOOSE US{" "}
+                        WHY PEOPLE {"  "}
                         <span className="text-[#FFB800]">
                             CHOOSE US{" "}
                             <span className="ml-2 font-bold tracking-[-2px]">
@@ -87,21 +97,34 @@ export default function Trust() {
                         </span>
                     </p>
 
-                    <h1 className="font-sora text-[64px] font-extrabold leading-[70.4px] tracking-[-1.6px]">
+                    {/* <h1 className="font-sora text-[64px] font-extrabold leading-[70.4px] tracking-[-1.6px]">
+                        Built on Quality.<br />
+                        <span className="text-[#FFB800]">
+                            Driven by Trust.
+                        </span>
+                    </h1> */}
+                    <h1 className='font-sora text-[40px] font-bold leading-[70.4px] tracking-[-1.6px] sm:text-5xl lg:text-[64px] text-[#0F172A]'>
                         Built on Quality.<br />
                         <span className="text-[#FFB800]">
                             Driven by Trust.
                         </span>
                     </h1>
 
-                    <p className="font-jakarta text-[18px] font-normal leading-[29.25px] tracking-[0px] text-[#44474D]">
+                    {/* <p className="font-jakarta text-[18px] font-normal leading-[29.25px] tracking-[0px] text-[#44474D]">
+                        At Austar Technologies, we combine international quality
+                        standards with reliable service and strong support to deliver
+                        HVLS fans that our customers can depend on—every single
+                        time.
+                    </p> */}
+
+                    <p className="max-w-[600px] font-medium font-inter leading-6 sm:text-base text-[16px] lg:leading-7 text-[#475569]">
                         At Austar Technologies, we combine international quality
                         standards with reliable service and strong support to deliver
                         HVLS fans that our customers can depend on—every single
                         time.
                     </p>
 
-                    <ul className="flex flex-col gap-4">
+                    {/* <ul className="flex flex-col gap-4">
                         {benefits.map((benefit, index) => (
                             <li
                                 key={index}
@@ -116,11 +139,33 @@ export default function Trust() {
                                 </p>
                             </li>
                         ))}
+                    </ul> */}
+
+                    <ul className="flex flex-col gap-4">
+                        {benefits.map((benefit, index) => (
+                            <li
+                                key={index}
+                                className="flex items-center gap-3"
+                            >
+                                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#1555E81A] text-[12px] font-bold text-black">
+                                    ✓
+                                </span>
+
+                                <p className="font-jakarta text-[15px] font-normal leading-[24px] text-[#44474D]">
+                                    {benefit}
+                                </p>
+                            </li>
+                        ))}
                     </ul>
-                </div>
+                </motion.div>
 
                 {/* RIGHT CARDS */}
-                <div className="w-full lg:w-[50%]">
+                <motion.div
+                    initial={{ x: 0, y: 50, opacity: 0 }}
+                    whileInView={{ x: 0, y: 0, opacity: 1 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="w-full lg:w-[50%]">
 
                     {/* 4 CARDS */}
                     <div className="flex flex-wrap justify-center gap-6 sm:justify-between">
@@ -128,7 +173,13 @@ export default function Trust() {
                         {cards.map((card) => (
                             <div
                                 key={card.number}
-                                className="relative h-[204.31px] w-full overflow-hidden rounded-[28px] border border-[#06245C1A] p-8 sm:w-[300px]"
+                                className="relative h-[204.31px] w-full overflow-hidden rounded-[28px] border border-[#06245C1A] p-8 sm:w-[300px]
+                                    shadow-sm
+                                    transition
+                                    duration-300
+                                    hover:shadow-2xl
+                                    hover:shadow-[#FDCD2E]/60
+                                "
                                 style={{
                                     backgroundColor: card.bg,
                                 }}
@@ -136,8 +187,8 @@ export default function Trust() {
                                 {/* Number */}
                                 <span
                                     className={`absolute right-[-12px] top-[-35px] font-jakarta text-[120px] font-black leading-[120px] ${card.bg === "#FFFFFF"
-                                            ? "text-[#09273A]/5"
-                                            : "text-white/5"
+                                        ? "text-[#09273A]/5"
+                                        : "text-white/5"
                                         }`}
                                 >
                                     {card.number}
@@ -151,8 +202,8 @@ export default function Trust() {
                                 {/* Heading */}
                                 <h3
                                     className={`relative z-10 mt-3 pt-3 font-jakarta text-[20px] font-bold leading-[28px] ${card.bg === "#FFFFFF"
-                                            ? "text-[#09273A]"
-                                            : "text-white"
+                                        ? "text-[#09273A]"
+                                        : "text-white"
                                         }`}
                                 >
                                     {card.title}
@@ -161,8 +212,8 @@ export default function Trust() {
                                 {/* Description */}
                                 <p
                                     className={`relative z-10 font-jakarta text-[14px] font-normal leading-[20px] ${card.bg === "#FFFFFF"
-                                            ? "text-[#44474D]"
-                                            : "text-white/70"
+                                        ? "text-[#44474D]"
+                                        : "text-white/70"
                                         }`}
                                 >
                                     {card.description}
@@ -172,7 +223,7 @@ export default function Trust() {
                     </div>
 
                     {/* BUSINESS NETWORK */}
-                    <div className="relative mt-6 flex h-[135.67px] w-full items-center gap-6 overflow-hidden rounded-[28px] border border-[#06245C1A] p-8 lg:w-[624.8px]">
+                    <div className="relative mt-6 flex h-[135.67px] w-full items-center gap-6 overflow-hidden rounded-[28px] border border-[#06245C1A] p-8 lg:w-[624.8px] shadow-sm transition duration-300 hover:shadow-2xl hover:shadow-[#FDCD2E]/60">
 
                         {/* Icon */}
                         <div className="flex h-[69.67px] w-[63.67px] shrink-0 items-center justify-center rounded-[16px] bg-[#06245C0D] px-4 pt-4 pb-[22px]">
@@ -207,7 +258,7 @@ export default function Trust() {
                         </span>
 
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     )

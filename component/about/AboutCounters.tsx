@@ -22,11 +22,13 @@ function Card1({
   return (
     <div className="flex flex-col gap-2 px-4 justify-center items-center hover:scale-105 transition">
       {typeof num === "string" ? (
-        <h2 className="font-jakarta text-[56px] w-[100px] lg:w-[250px] font-extrabold leading-[56px] tracking-[-1.68px] text-center">
+        // <h2 className="font-jakarta text-[56px] lg:w-[250px] font-extrabold leading-[56px] tracking-[-1.68px] text-center">
+        <h2 className="font-jakarta text-[45px] lg:w-[250px] font-extrabold leading-[56px] tracking-[-1.68px] text-center">
           {num}
         </h2>
       ) : (
-        <h2 className="font-jakarta text-[56px] w-[250px] font-extrabold leading-[56px] tracking-[-1.68px] text-center">
+        // <h2 className="font-jakarta text-[56px] w-[250px] font-extrabold leading-[56px] tracking-[-1.68px] text-center">
+        <h2 className="font-jakarta text-[45px] w-[250px] font-extrabold leading-[56px] tracking-[-1.68px] text-center">
           <CountUp end={num} duration={2} />
           {suffix}
         </h2>
@@ -44,7 +46,7 @@ function Card1({
 
 export default function AboutCounters() {
   return (
-    <section className='w-full py-16 border border-[#C5C6CD]'>
+    <section className='w-full py-16 border border-[#C5C6CD] bg-white'>
       <div className='mx-auto max-w-7xl'>
           <div className="flex flex-wrap justify-center lg:justify-between gap-6">
             {data.map((item, index) => (

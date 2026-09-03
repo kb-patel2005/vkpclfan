@@ -1,3 +1,7 @@
+'use client'
+
+import { motion } from "framer-motion";
+
 const cards = [
     {
         icon: (
@@ -64,7 +68,13 @@ const cards = [
 export default function AboutCards() {
     return (
         <section className="w-full bg-[#F8F9FA] py-24 lg:px-0 px-4 ">
-            <div className="mx-auto max-w-7xl flex flex-col gap-16 ">
+            <motion.div
+                initial={{ x: 0, y: 100, opacity: 0 }}
+                whileInView={{ x: 0, y: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="mx-auto max-w-7xl flex flex-col gap-16 
+                ">
                 <h1 className="border-l-4 border-[#0058BE] pl-4 font-jakarta text-[40px] font-bold leading-[48px] tracking-[-0.8px]">
                     Our Story
                 </h1>
@@ -72,7 +82,14 @@ export default function AboutCards() {
                     {cards.map((card) => (
                         <div
                             key={card.number}
-                            className="rounded-[8px] bg-white px-8 pt-8 pb-[46.39px] shadow-[0px_10px_40px_0px_#0A192F0A]"
+                            className="rounded-[8px] bg-white px-8 pt-8 pb-[46.39px] shadow-[0px_10px_40px_0px_#0A192F0A]
+                            
+                transition
+                duration-300
+                hover:shadow-2xl
+                hover:shadow-[#FDCD2E]/60
+                hover:scale-105
+                            "
                         >
                             {/* Top row */}
                             <div className="flex items-start justify-between">
@@ -96,7 +113,7 @@ export default function AboutCards() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }
