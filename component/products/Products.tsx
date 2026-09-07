@@ -97,7 +97,7 @@ export default function Products() {
 
     const [showFilters, setShowFilters] = useState(false);
     return (
-        <section className='mt-20 flex flex-col gap-12'>
+        <section className='lg:mt-20 mt-10 flex flex-col lg:gap-12 gap-4'>
             <motion.div
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
@@ -142,8 +142,7 @@ export default function Products() {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className='w-full flex flex-col gap-12'>
-
+                className='w-full flex flex-col gap-4 lg:gap-12'>
 
                 <div className="flex flex-wrap p-6 w-full max-w-7xl mx-auto items-center gap-6 bg-white">
 
@@ -177,12 +176,12 @@ export default function Products() {
                                 className="p-2.5 border-[#C3C5D980] border w-full"
                             />
 
-                            <select className="p-2.5 border-[#C3C5D980] border w-full">
+                            <select className="m-2.5 border-[#C3C5D980] border w-full">
                                 <option>Motor Power</option>
                                 <option>Motor Power</option>
                             </select>
 
-                            <select className="p-2.5 border-[#C3C5D980] border w-full">
+                            <select className="m-2.5 border-[#C3C5D980] border w-full">
                                 <option>Application</option>
                                 <option>Motor Power</option>
                             </select>
@@ -207,16 +206,18 @@ export default function Products() {
                             placeholder="🔎 Search models or specs..."
                             className="p-2.5 border-[#C3C5D980] border w-[60%]"
                         />
-
-                        <select className="p-2.5 border-[#C3C5D980] border lg:w-[18%]">
-                            <option>Motor Power</option>
-                            <option>Motor Power</option>
-                        </select>
-
-                        <select className="p-2.5 border-[#C3C5D980] border lg:w-[18%]">
-                            <option>Application</option>
-                            <option>Motor Power</option>
-                        </select>
+                        <div className='p-2.5 border-[#C3C5D980] border lg:w-[18%]'>
+                            <select className="w-full outline-none">
+                                <option>Motor Power</option>
+                                <option>Motor Power</option>
+                            </select>
+                        </div>
+                        <div className="p-2.5 border-[#C3C5D980] border lg:w-[18%]">
+                            <select className="w-full outline-none">
+                                <option>Application</option>
+                                <option>Motor Power</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
@@ -230,7 +231,7 @@ export default function Products() {
                         initial={{ x: -50, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.3, ease: "easeOut" }}
-                        className="relative z-10 flex flex-col gap-7 py-3 lg:p-[48px]"
+                        className="relative z-10 flex flex-col gap-7 lg:text-left text-center py-3 lg:p-[48px]"
                     >
                         {/* Heading */}
                         <h1 className="font-sora text-[32px] font-bold leading-[1.15] sm:text-5xl ">
