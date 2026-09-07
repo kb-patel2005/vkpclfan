@@ -1,7 +1,11 @@
+import DetailLanding from '@/component/products/DetailLanding'
 import React from 'react'
 
-export default function page() {
+export default async function page({ params }:{params: Promise<{ slug: string }>;}) {
+    const {slug} = await params;
   return (
-    <div>page</div>
+    <div className='bg-[#F8F9FA]'>
+        <DetailLanding slug={slug}/>
+    </div>
   )
 }

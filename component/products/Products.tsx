@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
 
 const data = [
@@ -94,6 +95,7 @@ const data = [
 
 export default function Products() {
     const [active, setActive] = useState("all-products");
+    const router = useRouter()
 
     const [showFilters, setShowFilters] = useState(false);
     return (
@@ -261,6 +263,7 @@ export default function Products() {
                             <motion.button
                                 whileTap={{ scale: 0.95 }}
                                 whileHover={{ scale: 1.05 }}
+                                onClick={()=>router.push("/products/exhuast-fan")}
                                 className="w-full font-inter border bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                             >
                                 VIEW DETAILS →
