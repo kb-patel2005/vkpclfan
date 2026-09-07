@@ -163,7 +163,7 @@ export default function Products() {
 
                         <button
                             onClick={() => setShowFilters(!showFilters)}
-                            className="border border-[#09273A] p-2"
+                            className="p-2"
                         >
                             ☰
                         </button>
@@ -178,12 +178,12 @@ export default function Products() {
                                 className="p-2.5 border-[#C3C5D980] border w-full"
                             />
 
-                            <select className="m-2.5 border-[#C3C5D980] border w-full">
+                            <select className="p-2.5 border-[#C3C5D980] border w-full">
                                 <option>Motor Power</option>
                                 <option>Motor Power</option>
                             </select>
 
-                            <select className="m-2.5 border-[#C3C5D980] border w-full">
+                            <select className="p-2.5 border-[#C3C5D980] border w-full">
                                 <option>Application</option>
                                 <option>Motor Power</option>
                             </select>
@@ -205,21 +205,17 @@ export default function Products() {
                     <div className="hidden lg:flex w-[80%] gap-[16px] justify-between">
                         <input
                             type="text"
-                            placeholder="🔎 Search models or specs..."
+                            placeholder="🔍 Search models or specs..."
                             className="p-2.5 border-[#C3C5D980] border w-[60%]"
                         />
-                        <div className='p-2.5 border-[#C3C5D980] border lg:w-[18%]'>
-                            <select className="w-full outline-none">
-                                <option>Motor Power</option>
-                                <option>Motor Power</option>
-                            </select>
-                        </div>
-                        <div className="p-2.5 border-[#C3C5D980] border lg:w-[18%]">
-                            <select className="w-full outline-none">
-                                <option>Application</option>
-                                <option>Motor Power</option>
-                            </select>
-                        </div>
+                        <select className="p-2.5 w-full outline-none border-[#C3C5D980] border lg:w-[18%]">
+                            <option>Motor Power</option>
+                            <option>Application</option>
+                        </select>
+                        <select className="p-2.5 w-full outline-none border-[#C3C5D980] border lg:w-[18%]">
+                            <option>Application</option>
+                            <option>Motor Power</option>
+                        </select>
                     </div>
                 </div>
 
@@ -263,7 +259,7 @@ export default function Products() {
                             <motion.button
                                 whileTap={{ scale: 0.95 }}
                                 whileHover={{ scale: 1.05 }}
-                                onClick={()=>router.push("/products/exhuast-fan")}
+                                onClick={() => router.push("/products/exhuast-fan")}
                                 className="w-full font-inter border bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                             >
                                 VIEW DETAILS →

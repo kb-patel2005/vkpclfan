@@ -104,7 +104,7 @@ export default function DetailLanding({ slug }: { slug: string }) {
     const [active, setActive] = useState("Description");
 
     return (
-        <section className='w-full flex flex-col gap-14 lg:px-0 px-5'>
+        <section className='w-full flex flex-col gap-20 lg:px-0 px-5 pt-5 lg:pt-10'>
             <div>
                 <nav
                     aria-label="Breadcrumb"
@@ -209,10 +209,10 @@ export default function DetailLanding({ slug }: { slug: string }) {
                 </div>
             </div>
 
-            <div className="w-full bg-white">
+            <div className="w-full flex flex-col gap-[26px]">
                 {/* Tabs */}
                 <div
-                    className="max-w-7xl mx-auto flex items-center gap-8 py-4 px-5 lg:px-0 overflow-x-auto whitespace-nowrap [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                    className="max-w-7xl w-full px-16 mx-auto flex bg-white items-center gap-8 py-4  lg:px-16 overflow-x-auto whitespace-nowrap [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
                 >
                     <Link
                         href="/products/abc"
@@ -258,7 +258,7 @@ export default function DetailLanding({ slug }: { slug: string }) {
                 </div>
 
                 {/* Content */}
-                <section className="w-full max-w-7xl mx-auto px-5 lg:px-[32px] py-5 lg:py-10 border border-[#C3C5D94D] border-l-4 border-l-[#09273A]">
+                <section className={`w-full max-w-7xl mx-auto px-5 lg:px-[32px] py-5 lg:py-10 border border-[#C3C5D94D] border-l-4 border-l-[#09273A] ${active == "Ask For a Price" ? "bg-white" : ""}`}>
 
                     {/* DESCRIPTION */}
                     {active === "Description" && (
@@ -321,7 +321,7 @@ export default function DetailLanding({ slug }: { slug: string }) {
 
                     {/* ASK FOR A PRICE */}
                     {active === "Ask For a Price" && (
-                        <div>
+                        <div className='bg-white'>
                             <h2 className="font-sora font-bold text-[32px] leading-[40px] text-[#09273A]">
                                 Ask For a Price
                             </h2>
@@ -338,7 +338,7 @@ export default function DetailLanding({ slug }: { slug: string }) {
                                         <input
                                             type="text"
                                             placeholder="First Name"
-                                            className="w-full h-[52px] px-4 border border-[#C3C5D94D] outline-none"
+                                            className="w-full h-[52px] px-4 border bg-[#F1F1F1] border-[#C3C5D94D] outline-none"
                                         />
                                     </div>
                                     <div className='flex flex-col gap-2'>
@@ -346,7 +346,7 @@ export default function DetailLanding({ slug }: { slug: string }) {
                                         <input
                                             type="text"
                                             placeholder="Company / Organization"
-                                            className="w-full h-[52px] px-4 border border-[#C3C5D94D] outline-none"
+                                            className="w-full h-[52px] px-4 border bg-[#F1F1F1] border-[#C3C5D94D] outline-none"
                                         />
                                     </div>
                                 </div>
@@ -358,7 +358,7 @@ export default function DetailLanding({ slug }: { slug: string }) {
                                         <input
                                             type="email"
                                             placeholder="Email Address"
-                                            className="w-full h-[52px] px-4 border border-[#C3C5D94D] outline-none"
+                                            className="w-full h-[52px] px-4 border bg-[#F1F1F1] border-[#C3C5D94D] outline-none"
                                         />
                                     </div>
 
@@ -367,7 +367,7 @@ export default function DetailLanding({ slug }: { slug: string }) {
                                         <input
                                             type="tel"
                                             placeholder="Phone No."
-                                            className="w-full h-[52px] px-4 border border-[#C3C5D94D] outline-none"
+                                            className="w-full h-[52px] px-4 border bg-[#F1F1F1] border-[#C3C5D94D] outline-none"
                                         />
                                     </div>
                                 </div>
@@ -378,7 +378,7 @@ export default function DetailLanding({ slug }: { slug: string }) {
 
                                     <select
                                         defaultValue=""
-                                        className="w-full h-[52px] px-4 border border-[#C3C5D94D] outline-none"
+                                        className="w-full h-[52px] px-4 border border-[#C3C5D94D] outline-none bg-[#F1F1F1]"
                                     >
                                         <option value="" disabled>
                                             Product Interest
@@ -403,9 +403,10 @@ export default function DetailLanding({ slug }: { slug: string }) {
                                     <p className='text-[12px] leading-4 tracking-[1.2px] font-bold'>Project Specifications / Message</p>
 
                                     <textarea
-                                        placeholder="Message"
+                                        placeholder="Provide details regarding airflow volume (CFM), facility dimensions, 
+operating environment, or specific technical challenges..."
                                         rows={5}
-                                        className="w-full px-4 py-4 border border-[#C3C5D94D] outline-none resize-none"
+                                        className="w-full px-4 py-4 border bg-[#F1F1F1] border-[#C3C5D94D] outline-none resize-none"
                                     />
                                 </div>
 
@@ -414,9 +415,17 @@ export default function DetailLanding({ slug }: { slug: string }) {
                                     type="submit"
                                     className="w-full h-[52px] mt-5 px-8 py-4 bg-[#09273A] text-white flex items-center justify-center"
                                 >
-                                    Submit Inquiry
+                                    <span className='mr-3'>SUBMIT INQUIRY</span>
+                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z" fill="white" />
+                                    </svg>
+
                                 </button>
+
+                                <p className='text-[11px] mt-5 leading-[16.5px] font-normal text-[#434656] text-center'>By submitting this form, you agree to our Privacy Policy regarding data collection and industrial<br />
+                                    communications.</p>
                             </form>
+
                         </div>
                     )}
 

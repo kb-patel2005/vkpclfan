@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Manufacturer() {
     return (
-        <section className='w-full'>
+        <section className='w-full py-20 bg-[#F8F9FA]'>
             <div className='max-w-7xl mx-auto flex flex-col gap-10'>
                 <h1 className="font-sora font-bold text-[48px] leading-[56px] tracking-[-0.96px] text-center align-middle">
                     Floent{" "}
