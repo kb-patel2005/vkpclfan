@@ -1,7 +1,11 @@
+'use client'
+
+import { motion } from "framer-motion";
+
 const specs = [
     {
         title: "HEAT REMOVAL",
-        desc: "Efficiently expels excess industrial heat, maintaining machinery lifespan.",
+        desc:`Efficiently expels excess industrial heat,\nmaintaining machinery lifespan.`,
         icon: (
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.3333 10.6667V8H20V10.6667H13.3333ZM13.3333 5.33333V2.66667H24V5.33333H13.3333ZM6.66667 24C4.82222 24 3.25 23.35 1.95 22.05C0.65 20.75 0 19.1778 0 17.3333C0 16.2667 0.233333 15.2722 0.7 14.35C1.16667 13.4278 1.82222 12.6444 2.66667 12V4C2.66667 2.88889 3.05556 1.94444 3.83333 1.16667C4.61111 0.388889 5.55556 0 6.66667 0C7.77778 0 8.72222 0.388889 9.5 1.16667C10.2778 1.94444 10.6667 2.88889 10.6667 4V12C11.5111 12.6444 12.1667 13.4278 12.6333 14.35C13.1 15.2722 13.3333 16.2667 13.3333 17.3333C13.3333 19.1778 12.6833 20.75 11.3833 22.05C10.0833 23.35 8.51111 24 6.66667 24ZM2.66667 17.3333H10.6667C10.6667 16.6889 10.5278 16.0889 10.25 15.5333C9.97222 14.9778 9.57778 14.5111 9.06667 14.1333L8 13.3333V4C8 3.62222 7.87222 3.30556 7.61667 3.05C7.36111 2.79444 7.04444 2.66667 6.66667 2.66667C6.28889 2.66667 5.97222 2.79444 5.71667 3.05C5.46111 3.30556 5.33333 3.62222 5.33333 4V13.3333L4.26667 14.1333C3.75556 14.5111 3.36111 14.9778 3.08333 15.5333C2.80556 16.0889 2.66667 16.6889 2.66667 17.3333Z" fill="white" />
@@ -43,18 +47,22 @@ const specs = [
 
 export function Specifications() {
     return (
-        <section className="bg-[#09273A] py-16 px-5 w-full">
-            <div className="text-center max-w-7xl mx-auto">
-                <h2 className="font-sora font-bold text-4xl text-white">
+        <section className="bg-[#09273A] py-16 lg:px-0 px-5 w-full">
+            <motion.div
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}  className="text-center max-w-7xl mx-auto">
+                <h2 className="font-sora font-semibold text-[40px] lg:text-5xl text-white lg:leading-[57.6px] tracking-[-0.96px]">
                     Key Component{" "}
-                    <span className="text-[#F4B51E]">Specifications</span>
+                    <span className="text-[#FDCD2E]">Specifications</span>
                 </h2>
 
-                <p className="mt-3 text-sm text-[#AFC8F0]">
+                <p className="mt-[14.9px] text-sm text-[#AFC8F0] lg:leading-[28.8px]">
                     Advanced safety systems built to protect your people, equipment, and operations.
                 </p>
 
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+                <div className="flex flex-wrap lg:justify-around justify-center gap-8 mt-10 lg:mt-12">
                     {specs.map((item) => (
                         <div key={item.title} className="flex flex-col items-center gap-4">
                             <div className="text-3xl text-white">{item.icon}</div>
@@ -63,13 +71,13 @@ export function Specifications() {
                                 {item.title}
                             </h3>
 
-                            <p className="text-sm font-normal w-[200px] text-center leading-5 text-white">
+                            <p className="text-sm font-normal w-[200px] lg:w-[180px] text-center leading-5 text-white">
                                 {item.desc}
                             </p>
                         </div>
                     ))}
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }

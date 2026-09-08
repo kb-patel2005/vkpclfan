@@ -2,7 +2,7 @@ import Footer from '@/component/common/Footer';
 import { Faq } from '@/component/home/Faq';
 import Industryworkspace from '@/component/home/Industryworkspace';
 import Reviews from '@/component/home/Reviews';
-import { ApplicationsOfFan } from '@/component/products/ApplicationsOfFan';
+import ApplicationsOfFan from '@/component/products/ApplicationsOfFan';
 import BenefitFan from '@/component/products/BenefitFan';
 import Manufacturer from '@/component/products/Manufacturer';
 import { Specifications } from '@/component/products/Specifications';

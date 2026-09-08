@@ -1,12 +1,20 @@
+'use client'
+
+import { motion } from 'framer-motion'
 import React from 'react'
 
 export default function BenefitFan() {
   return (
-    <section className="w-full bg-[#F8F9FA] py-12 lg:py-20 px-5 lg:px-0">
-      <div className="flex flex-col lg:flex-row max-w-7xl mx-auto gap-8 lg:gap-6">
+    <section className="w-full bg-[#F8F9FA] py-10 lg:py-20 px-5 lg:px-0">
+      <motion.div
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }} 
+         className="flex flex-col lg:flex-row max-w-7xl mx-auto gap-8 lg:gap-6">
 
         {/* Left Content */}
-        <div className="w-full lg:w-[35%] flex flex-col gap-6">
+        <div className="w-full lg:w-[35%] flex flex-col gap-4 lg:gap-6">
           <h1 className="font-sora font-bold text-[32px] leading-[40px] lg:text-[40px] lg:leading-[48px]">
             Benefits of Industrial{" "}
             <span className="text-[#FDCD2E]">Exhaust Fan</span>
@@ -26,7 +34,7 @@ export default function BenefitFan() {
           alt="benefit of exhaust fan"
           className="w-full h-[280px] object-cover lg:object-fill lg:w-[60%] lg:h-[670px]"
         />
-      </div>
+      </motion.div>
     </section>
   )
 }

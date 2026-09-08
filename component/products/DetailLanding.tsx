@@ -104,7 +104,7 @@ export default function DetailLanding({ slug }: { slug: string }) {
     const [active, setActive] = useState("Description");
 
     return (
-        <section className='w-full flex flex-col gap-20 lg:px-0 px-5 pt-5 lg:pt-10'>
+        <section className='w-full flex flex-col gap-4 lg:gap-12 lg:px-0 px-5 pt-5 lg:pt-10 bg-[#F8F9FA]'>
             <div>
                 <nav
                     aria-label="Breadcrumb"
@@ -132,7 +132,12 @@ export default function DetailLanding({ slug }: { slug: string }) {
                     </ol>
                 </nav>
             </div>
-            <div className='flex flex-wrap mx-auto max-w-7xl gap-6 lg:gap-4'>
+            <motion.div
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className='flex flex-wrap mx-auto max-w-7xl gap-6 lg:gap-4'>
                 <div className='w-full lg:w-[15%]'>
                     <div className='bg-[#09273A] h-full lg:p-8 px-4 py-2'>
                         <h2 className='text-white font-extrabold text-sm leading-6 pb-2 lg:pb-8'>Related Products</h2>
@@ -140,14 +145,14 @@ export default function DetailLanding({ slug }: { slug: string }) {
                             <h2 className='text-black font-bold text-[12px] leading-3 tracking-[1.2px] py-2 px-4 bg-white'>MODELS</h2>
                             <ul className='flex flex-row lg:flex-col gap-2'>
                                 {models.map((e) => (
-                                    <li className='text-white font-bold text-[10px] leading-3 tracking-[1.2px] py-2 px-4'>{e}</li>
+                                    <li className='text-white font-bold text-[10px] leading-3 tracking-[1.2px] py-2 px-4' key={e}>{e}</li>
                                 ))}
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div className='flex flex-wrap lg:w-[80%] justify-center lg:justify-between'>
-                    <div className='flex flex-col justify-center items-center gap-10'>
+                <div className='flex flex-wrap gap-5 lg:w-[80%] justify-center lg:justify-between'>
+                    <div className='flex flex-col justify-center items-center gap-5 lg:gap-10'>
                         <img
                             src={'/images/exhaust-main.png'}
                             alt={'Exhaust fan'}
@@ -157,17 +162,17 @@ export default function DetailLanding({ slug }: { slug: string }) {
                             <img
                                 src={'/exhuast1.png'}
                                 alt={'Exhaust fan'}
-                                className="w-[105px] lg:w-[140px] object-cover transition-transform duration-500 hover:scale-105"
+                                className="w-[90px] lg:w-[140px] object-cover transition-transform duration-500 hover:scale-105"
                             />
                             <img
                                 src={'/exhuast2.png'}
                                 alt={'Exhaust fan'}
-                                className="w-[105px] lg:w-[140px] object-cover transition-transform duration-500 hover:scale-105"
+                                className="w-[90px] lg:w-[140px] object-cover transition-transform duration-500 hover:scale-105"
                             />
                             <img
                                 src={'/exhuast3.png'}
                                 alt={'Exhaust fan'}
-                                className="w-[105px] lg:w-[140px] object-cover transition-transform duration-500 hover:scale-105"
+                                className="w-[90px] lg:w-[140px] object-cover transition-transform duration-500 hover:scale-105"
                             />
                         </div>
                     </div>
@@ -207,12 +212,16 @@ export default function DetailLanding({ slug }: { slug: string }) {
                         </motion.button>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
-            <div className="w-full flex flex-col gap-[26px]">
+            <motion.div
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }} className="w-full flex flex-col gap-[26px]">
                 {/* Tabs */}
                 <div
-                    className="max-w-7xl w-full px-16 mx-auto flex bg-white items-center gap-8 py-4  lg:px-16 overflow-x-auto whitespace-nowrap [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                    className="max-w-7xl w-full mx-auto flex bg-white items-center gap-8 py-4 px-3 lg:px-16 overflow-x-auto whitespace-nowrap [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
                 >
                     <Link
                         href="/products/abc"
@@ -376,27 +385,32 @@ export default function DetailLanding({ slug }: { slug: string }) {
                                 <div className='flex flex-col gap-2 mt-5'>
                                     <p className='text-[12px] leading-4 tracking-[1.2px] font-bold'>Product Interest Area</p>
 
-                                    <select
-                                        defaultValue=""
-                                        className="w-full h-[52px] px-4 border border-[#C3C5D94D] outline-none bg-[#F1F1F1]"
-                                    >
-                                        <option value="" disabled>
-                                            Product Interest
-                                        </option>
+                                    <div className="relative bg-[#F1F1F1] border border-[#C3C5D94D] ">
+                                        <select className="appearance-none w-full py-2.5 pl-3 pr-10">
+                                            <option value="product interest">
+                                                Product Interest
+                                            </option>
 
-                                        <option value="high-airflow">
-                                            High Airflow
-                                        </option>
+                                            <option value="high-airflow">
+                                                High Airflow
+                                            </option>
 
-                                        <option value="heavy-duty">
-                                            Heavy Duty
-                                        </option>
+                                            <option value="heavy-duty">
+                                                Heavy Duty
+                                            </option>
 
-                                        <option value="low-maintenance">
-                                            Low Maintenance
-                                        </option>
-                                    </select>
+                                            <option value="low-maintenance">
+                                                Low Maintenance
+                                            </option>
+                                        </select>
+                                        <svg className="absolute right-2 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-width="2" d="M6 9l6 6 6-6" />
+                                        </svg>
+                                    </div>
+
                                 </div>
+
 
                                 {/* Message */}
                                 <div className='flex flex-col gap-2 mt-5 '>
@@ -416,7 +430,7 @@ operating environment, or specific technical challenges..."
                                     className="w-full h-[52px] mt-5 px-8 py-4 bg-[#09273A] text-white flex items-center justify-center"
                                 >
                                     <span className='mr-3'>SUBMIT INQUIRY</span>
-                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z" fill="white" />
                                     </svg>
 
@@ -430,7 +444,7 @@ operating environment, or specific technical challenges..."
                     )}
 
                 </section>
-            </div>
+            </motion.div>
 
 
         </section>

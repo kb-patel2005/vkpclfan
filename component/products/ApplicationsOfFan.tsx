@@ -1,4 +1,115 @@
-const applications = [
+// const applications = [
+//     {
+//         name: "Churches", icon:
+//             (<svg width="67" height="70" viewBox="0 0 67 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+//                 <path d="M0 70V43.3333L13.3333 37.4167V26.6667L30 18.3333V13.3333H23.3333V6.66667H30V0H36.6667V6.66667H43.3333V13.3333H36.6667V18.3333L53.3333 26.6667V37.4167L66.6667 43.3333V70H40V60C40 58.1667 39.3472 56.5972 38.0417 55.2917C36.7361 53.9861 35.1667 53.3333 33.3333 53.3333C31.5 53.3333 29.9306 53.9861 28.625 55.2917C27.3194 56.5972 26.6667 58.1667 26.6667 60V70H0ZM33.3333 41.6667C34.7222 41.6667 35.9028 41.1806 36.875 40.2083C37.8472 39.2361 38.3333 38.0556 38.3333 36.6667C38.3333 35.2778 37.8472 34.0972 36.875 33.125C35.9028 32.1528 34.7222 31.6667 33.3333 31.6667C31.9444 31.6667 30.7639 32.1528 29.7917 33.125C28.8194 34.0972 28.3333 35.2778 28.3333 36.6667C28.3333 38.0556 28.8194 39.2361 29.7917 40.2083C30.7639 41.1806 31.9444 41.6667 33.3333 41.6667Z" fill="#09273A" />
+//             </svg>
+//             )
+//     },
+//     {
+//         name: "Temples", icon: (
+//             <svg width="74" height="70" viewBox="0 0 74 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+//                 <path d="M24.1667 16.6667L36.6667 0L49.1667 16.6667H24.1667ZM16.6667 30V26.1667C13.7778 25.4444 11.3889 23.9167 9.5 21.5833C7.61111 19.25 6.66667 16.5278 6.66667 13.4167H13.3333C13.3333 15.1944 13.9861 16.7361 15.2917 18.0417C16.5972 19.3472 18.1389 20 19.9167 20H53.4167C55.1944 20 56.7361 19.3472 58.0417 18.0417C59.3472 16.7361 60 15.1944 60 13.4167H66.6667C66.6667 16.5278 65.7222 19.25 63.8333 21.5833C61.9444 23.9167 59.5556 25.4444 56.6667 26.1667V30H16.6667ZM10 70V39.5C7.11111 38.7778 4.72222 37.25 2.83333 34.9167C0.944444 32.5833 0 29.8611 0 26.75H6.66667C6.66667 28.5278 7.31944 30.0694 8.625 31.375C9.93056 32.6806 11.4722 33.3333 13.25 33.3333H60.0833C61.8611 33.3333 63.4028 32.6806 64.7083 31.375C66.0139 30.0694 66.6667 28.5278 66.6667 26.75H73.3333C73.3333 29.8611 72.3889 32.5833 70.5 34.9167C68.6111 37.25 66.2222 38.7778 63.3333 39.5V70H40V56.6667C40 55.7222 39.6806 54.9306 39.0417 54.2917C38.4028 53.6528 37.6111 53.3333 36.6667 53.3333C35.7222 53.3333 34.9306 53.6528 34.2917 54.2917C33.6528 54.9306 33.3333 55.7222 33.3333 56.6667V70H10Z" fill="#09273A" />
+//             </svg>
+
+//         )
+//     },
+//     {
+//         name: "Gurukuls", icon: (
+//             <svg width="67" height="70" viewBox="0 0 67 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+//                 <path d="M19.3333 20L23.25 7.08333V0H29.9167V6.66667H36.6667V0H43.3333V6.66667L47.3333 20H19.3333ZM0 70V33.3333H6.66667V40H13.3333H53.3333H60V33.3333H66.6667V70H36.6667V53.3333H30V70H0ZM15.3333 33.3333L17.3333 26.6667H49.3333L51.3333 33.3333H15.3333Z" fill="#09273A" />
+//             </svg>
+
+//         )
+//     },
+//     {
+//         name: "Mosques", icon: (
+//             <svg width="80" height="67" viewBox="0 0 80 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+//                 <path d="M23.1667 23.5C22 23.5 21.1806 23.2639 20.7083 22.7917C20.2361 22.3194 20 21.5 20 20.3333C20 18.1111 20.5278 16.0556 21.5833 14.1667C22.6389 12.2778 24.0556 10.7222 25.8333 9.5L40 0L54.1667 9.5C55.9444 10.7222 57.3611 12.2778 58.4167 14.1667C59.4722 16.0556 60 18.1111 60 20.3333C60 21.5 59.7639 22.3194 59.2917 22.7917C58.8194 23.2639 58 23.5 56.8333 23.5H23.1667ZM3.33333 66.6667V25.75C2.33333 25.1389 1.52778 24.3472 0.916667 23.375C0.305556 22.4028 0 21.2778 0 20C0 18.7222 0.666667 17.1667 2 15.3333C3.33333 13.5 4.88889 11.7222 6.66667 10C8.44444 11.7222 10 13.5 11.3333 15.3333C12.6667 17.1667 13.3333 18.7222 13.3333 20C13.3333 21.2778 13.0278 22.4028 12.4167 23.375C11.8056 24.3472 11 25.1389 10 25.75V40H16.6667V33.3333C16.6667 31.9444 17.1111 30.6111 18 29.3333C18.8889 28.0556 20.1667 27.2222 21.8333 26.8333H58.1667C59.8333 27.2222 61.1111 28.0556 62 29.3333C62.8889 30.6111 63.3333 31.9444 63.3333 33.3333V40H70V25.75C69 25.1389 68.1945 24.3472 67.5833 23.375C66.9722 22.4028 66.6667 21.2778 66.6667 20C66.6667 18.7222 67.3333 17.1667 68.6667 15.3333C70 13.5 71.5556 11.7222 73.3333 10C75.1111 11.7222 76.6667 13.5 78 15.3333C79.3333 17.1667 80 18.7222 80 20C80 21.2778 79.6945 22.4028 79.0833 23.375C78.4722 24.3472 77.6667 25.1389 76.6667 25.75V66.6667H46.6667V53.3333C46.6667 51.5 46.0139 49.9306 44.7083 48.625C43.4028 47.3194 41.8333 46.6667 40 46.6667C38.1667 46.6667 36.5972 47.3194 35.2917 48.625C33.9861 49.9306 33.3333 51.5 33.3333 53.3333V66.6667H3.33333Z" fill="#09273A" />
+//             </svg>
+
+//         )
+//     },
+//     {
+//         name: "Hospitals", icon:
+//             (
+//                 <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+//                     <path d="M25 46.6667H35V35H46.6667V25H35V13.3333H25V25H13.3333V35H25V46.6667ZM6.66667 60C4.83333 60 3.26389 59.3472 1.95833 58.0417C0.652778 56.7361 0 55.1667 0 53.3333V6.66667C0 4.83333 0.652778 3.26389 1.95833 1.95833C3.26389 0.652778 4.83333 0 6.66667 0H53.3333C55.1667 0 56.7361 0.652778 58.0417 1.95833C59.3472 3.26389 60 4.83333 60 6.66667V53.3333C60 55.1667 59.3472 56.7361 58.0417 58.0417C56.7361 59.3472 55.1667 60 53.3333 60H6.66667Z" fill="#09273A" />
+//                 </svg>
+
+//             )
+//     },
+//     {
+//         name: "Universities", icon: (<svg width="74" height="60" viewBox="0 0 74 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+//             <path d="M66.6667 46.6667V23.6667L36.6667 40L0 20L36.6667 0L73.3333 20V46.6667H66.6667ZM36.6667 60L13.3333 47.3333V30.6667L36.6667 43.3333L60 30.6667V47.3333L36.6667 60Z" fill="#09273A" />
+//         </svg>
+//         )
+//     },
+//     {
+//         name: "Warehouses", icon: (
+//             <svg width="67" height="60" viewBox="0 0 67 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+//                 <path d="M0 60V13.3333L33.3333 0L66.6667 13.3333V60H46.6667V33.3333H20V60H0ZM23.3333 60V53.3333H30V60H23.3333ZM30 50V43.3333H36.6667V50H30ZM36.6667 60V53.3333H43.3333V60H36.6667Z" fill="#09273A" />
+//             </svg>
+
+//         )
+//     },
+//     {
+//         name: "Factory Workshops", icon:
+//             (
+//                 <svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+//                     <path d="M0 66.6667V26.5833L23.3333 16.6667V23.3333L40 16.6667V26.6667H66.6667V66.6667H0ZM30 53.3333H36.6667V40H30V53.3333ZM16.6667 53.3333H23.3333V40H16.6667V53.3333ZM43.3333 53.3333H50V40H43.3333V53.3333ZM66 21.6667H50.5833L53.4167 0H63.3333L66 21.6667Z" fill="#09273A" />
+//                 </svg>
+
+//             )
+//     },
+//     {
+//         name: "Health Clubs", icon:
+//             (
+//                 <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+//                     <path d="M37.6667 66L33 61.3333L44.8333 49.5L16.5 21.1667L4.66667 33L0 28.3333L4.66667 23.5L0 18.8333L7 11.8333L2.33333 7L7 2.33333L11.8333 7L18.8333 0L23.5 4.66667L28.3333 0L33 4.66667L21.1667 16.5L49.5 44.8333L61.3333 33L66 37.6667L61.3333 42.5L66 47.1667L59 54.1667L63.6667 59L59 63.6667L54.1667 59L47.1667 66L42.5 61.3333L37.6667 66Z" fill="#09273A" />
+//                 </svg>
+
+//             )
+//     },
+// ];
+
+// export function ApplicationsOfFan() {
+//     return (
+//         <section className="bg-white py-16 px-5">
+//             <div className="max-w-7xl mx-auto text-center">
+//                 <h2 className="font-sora font-bold text-4xl text-[#09273A]">
+//                     Application of{" "}
+//                     <span className="text-[#F4B51E]">HVLS Fans</span>
+//                 </h2>
+
+//                 <p className="mt-3 text-sm text-[#6B7280]">
+//                     Engineered to transform any large space.
+//                 </p>
+
+//                 <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-9 gap-6 mt-12">
+//                     {applications.map((item) => (
+//                         <div
+//                             key={item.name}
+//                             className="flex flex-col items-center justify-start gap-3"
+//                         >
+//                             <div className="text-4xl text-[#09273A]">{item.icon}</div>
+
+//                             <p className="text-[16px] font-normal leading-[25.6px] text-[#000613]">
+//                                 {item.name}
+//                             </p>
+//                         </div>
+//                     ))}
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// }
+"use client";
+
+import React, { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+
+const datas = [
     {
         name: "Churches", icon:
             (<svg width="67" height="70" viewBox="0 0 67 70" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,7 +174,8 @@ const applications = [
             )
     },
     {
-        name: "Health Clubs", icon:
+        name: "Health Clubs",
+        icon:
             (
                 <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M37.6667 66L33 61.3333L44.8333 49.5L16.5 21.1667L4.66667 33L0 28.3333L4.66667 23.5L0 18.8333L7 11.8333L2.33333 7L7 2.33333L11.8333 7L18.8333 0L23.5 4.66667L28.3333 0L33 4.66667L21.1667 16.5L49.5 44.8333L61.3333 33L66 37.6667L61.3333 42.5L66 47.1667L59 54.1667L63.6667 59L59 63.6667L54.1667 59L47.1667 66L42.5 61.3333L37.6667 66Z" fill="#09273A" />
@@ -73,34 +185,191 @@ const applications = [
     },
 ];
 
-export function ApplicationsOfFan() {
+
+
+function CategoryCard({
+    data,
+}: {
+    data: (typeof datas)[number];
+}) {
+
+
     return (
-        <section className="bg-white py-16 px-5">
-            <div className="max-w-7xl mx-auto text-center">
-                <h2 className="font-sora font-bold text-4xl text-[#09273A]">
-                    Application of{" "}
-                    <span className="text-[#F4B51E]">HVLS Fans</span>
-                </h2>
+        <article
+            className="
+                flex
+                h-[125px]
+                w-[140px]
+                flex-col
+                items-center
+                justify-center
+                rounded-2xl
+                hover:scale-105
+                cursor-pointer
+                transition
+                duration-300
+                hover:shadow-2xl
+                hover:shadow-[#FDCD2E]/60
+            "
+        >
+            {data.icon}
 
-                <p className="mt-3 text-sm text-[#6B7280]">
-                    Engineered to transform any large space.
-                </p>
+            <p className="mt-2 text-center text-[12px] px-5 font-semibold leading-tight text-[#09273A]">
+                {data.name}
+            </p>
+        </article>
+    );
+}
 
-                <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-9 gap-6 mt-12">
-                    {applications.map((item) => (
-                        <div
-                            key={item.name}
-                            className="flex flex-col items-center justify-start gap-3"
-                        >
-                            <div className="text-4xl text-[#09273A]">{item.icon}</div>
 
-                            <p className="text-[16px] font-normal leading-[25.6px] text-[#000613]">
-                                {item.name}
-                            </p>
-                        </div>
-                    ))}
-                </div>
+function CategoryAutoSlideTrack() {
+
+    const viewportRef = useRef<HTMLDivElement>(null);
+    const trackRef = useRef<HTMLDivElement>(null);
+
+    const positionRef = useRef(0);
+
+    useEffect(() => {
+
+        const viewport = viewportRef.current;
+        const track = trackRef.current;
+
+        if (!viewport || !track) return;
+
+        // Don't run animation on large screens
+        const mediaQuery = window.matchMedia("(min-width: 1024px)");
+
+        if (mediaQuery.matches) {
+            return;
+        }
+
+        const lastCard =
+            track.lastElementChild as HTMLElement | null;
+
+        if (!lastCard) return;
+
+        let animationFrame: number;
+
+        const speed = 0.5;
+
+        const animate = () => {
+
+            positionRef.current -= speed;
+
+            track.style.transform = `translate3d(
+                ${positionRef.current}px,
+                0,
+                0
+            )`;
+
+            const lastRect =
+                lastCard.getBoundingClientRect();
+
+            const viewportRect =
+                viewport.getBoundingClientRect();
+
+            if (lastRect.right <= window.innerWidth - 30) {
+
+                positionRef.current = 0;
+
+                track.style.transform =
+                    "translate3d(0, 0, 0)";
+            }
+
+            animationFrame =
+                requestAnimationFrame(animate);
+        };
+
+        animationFrame =
+            requestAnimationFrame(animate);
+
+        return () => {
+            cancelAnimationFrame(animationFrame);
+        };
+
+    }, []);
+
+
+    return (
+        <div
+            ref={viewportRef}
+            className="
+                mt-7
+                max-w-7xl
+                overflow-hidden
+                lg:overflow-visible
+            "
+        >
+
+            <div
+                ref={trackRef}
+                className="
+                mx-auto
+                    flex
+                    max-w-7xl
+                    gap-5
+                    pb-5
+                    pt-3.5
+                    lg:w-full
+                    lg:justify-between
+                    lg:transform-none
+                "
+            >
+
+                {datas.map((item, index) => (
+                    <CategoryCard
+                        key={index}
+                        data={item}
+                    />
+                ))}
+
             </div>
+
+        </div>
+    );
+}
+
+
+export default function ApplicationsOfFan() {
+
+    return (
+        <section
+            className="
+                py-8
+                lg:py-8
+                flex
+                w-full
+                flex-col
+                items-center
+                gap-2
+                overflow-hidden
+                bg-[#F8F9FA]
+                px-4
+            "
+        >
+
+            {/* ================= HEADING ================= */}
+
+            <motion.div
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="max-w-7xl mx-auto text-center lg:mt-20 mt-5">
+
+                 <h2 className="font-sora font-bold text-4xl leading-[57.6px] tracking-[-0.96px] text-[#09273A]">
+                     Application of{" "}
+                     <span className="text-[#F4B51E]">HVLS Fans</span>
+                 </h2>
+
+                 <p className="mt-3 text-lg leading-[28.8px]  [text-[#43474E]">
+                     Engineered to transform any large space.
+                 </p>
+
+            </motion.div>
+
+            <CategoryAutoSlideTrack />
+
         </section>
     );
 }
