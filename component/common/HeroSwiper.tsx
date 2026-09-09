@@ -38,7 +38,7 @@ export default function HeroSwiper({ models,herourl }: { models: Model[],herourl
     >
       {/* Main swipeable image */}
       <img
-        src={herourl}
+        src={models[currentIndex].url}
         alt={models[currentIndex].title}
         className="w-[440px] h-[350px] object-cover transition-transform duration-500"
       />
