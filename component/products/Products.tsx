@@ -205,7 +205,7 @@ export default function Products() {
                                 </svg>
                             </div> */}
 
-                            <SelectBox items={["application", "Motor Power"]} value='Application' classes='w-full py-[22px]' />
+                            <SelectBox items={["application", "Motor Power"]} value='Application' classes='w-full  border border-[#C3C5D980] bg-white' />
                             {/* <div className="relative">
                                 <select className="appearance-none w-full border border-[#C3C5D980] py-2.5 pl-3 pr-10">
 
@@ -217,7 +217,7 @@ export default function Products() {
                                     <path stroke="currentColor" stroke-width="2" d="M6 9l6 6 6-6" />
                                 </svg>
                             </div> */}
-                            <SelectBox items={["application", "Motor Power"]} classes='py-[22px]' value='Application' />
+                            <SelectBox items={["application", "Motor Power"]} classes='w-full  border border-[#C3C5D980] bg-white' value='Application' />
 
                         </div>
                     )}
