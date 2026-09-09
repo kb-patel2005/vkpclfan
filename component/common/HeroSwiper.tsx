@@ -22,6 +22,8 @@ export default function HeroSwiper({ models, features }: Props) {
   const [activeModel, setActiveModel] = useState(-1)
   const [touchStartX, setTouchStartX] = useState<number | null>(null)
 
+  const [currentIndex, setCurrentIndex] = useState(0) // start at models[0]
+
   const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     setTouchStartX(e.touches[0].clientX)
   }
@@ -33,21 +35,22 @@ export default function HeroSwiper({ models, features }: Props) {
 
     if (diff > 50) {
       // swipe left → next image
-      setActiveModel((prev) => {
-        const next = (prev + 1) % (models.length - 1)
-        setHeroimage(models[next + 1].url)
-        return next
-      })
+      setCurrentIndex((prev) => (prev + 1) % models.length)
+      setHeroimage(models[(currentIndex + 1) % models.length].url)
     } else if (diff < -50) {
       // swipe right → previous image
-      setActiveModel((prev) => {
-        const next = prev <= 0 ? models.length - 1 : prev - 1
-        setHeroimage(models[next + 1].url)
-        return next
-      })
+      setCurrentIndex((prev) =>
+        prev === 0 ? models.length - 1 : prev - 1
+      )
+      setHeroimage(
+        models[
+          currentIndex === 0 ? models.length - 1 : currentIndex - 1
+        ].url
+      )
     }
     setTouchStartX(null)
   }
+
 
   return (
     <motion.div
@@ -77,11 +80,10 @@ export default function HeroSwiper({ models, features }: Props) {
               {models.slice(1).map((e, idx) => (
                 <li
                   key={e.title}
-                  className={`text-center font-bold text-[10px] leading-3 tracking-[1.2px] py-2 px-2 lg:px-4 cursor-pointer ${
-                    activeModel === idx
+                  className={`text-center font-bold text-[10px] leading-3 tracking-[1.2px] py-2 px-2 lg:px-4 cursor-pointer ${activeModel === idx
                       ? "bg-white text-black"
                       : "text-white"
-                  }`}
+                    }`}
                   onClick={() => {
                     setHeroimage(e.url)
                     setActiveModel(idx)
@@ -96,11 +98,11 @@ export default function HeroSwiper({ models, features }: Props) {
       </div>
 
       {/* Main content */}
-      <div className="flex flex-wrap gap-5 lg:w-[80%] justify-center lg:justify-between">
+      <div className="flex flex-wrap lg:gap-5 lg:w-[80%] justify-center lg:justify-between">
         <div className="flex flex-col items-center">
           {/* Swipeable hero image */}
           <div
-            className="w-full lg:w-[440px] h-[350px] overflow-hidden relative"
+            className="w-full lg:w-[440px] h-[300px] lg:h-[380px] overflow-hidden relative"
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
           >
