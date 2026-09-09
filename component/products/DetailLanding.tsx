@@ -129,7 +129,7 @@ export default function DetailLanding({ slug }: { slug: string }) {
 
     const [active, setActive] = useState("Description");
     const [heroimage, setHeroimage] = useState(models[0].url);
-    const [activeModel, setActiveModel] = useState(models[0].title);
+    const [activeModel, setActiveModel] = useState(-1);
 
     const [formData, setFormData] = useState({
         name: "",
@@ -204,17 +204,17 @@ Message: ${formData.message}`;
                     <div className='bg-[#09273A] h-full lg:p-8 px-4 py-2'>
                         <h2 className='text-white font-extrabold text-sm leading-6 pb-2 lg:pb-8'>Related Products</h2>
                         <div className='flex flex-col lg:gap-2'>
-                            <h2 className='text-black font-bold text-[12px] leading-3 tracking-[1.2px] py-2 px-4 bg-white cursor-pointer text-center' onClick={() => { setHeroimage(models[0].url); setActiveModel("Model") }}>MODELS</h2>
+                            <h2 className='text-black font-bold text-[12px] leading-3 tracking-[1.2px] py-2 px-4 bg-white cursor-pointer text-center' onClick={() => { setHeroimage(models[0].url); setActiveModel(-1) }}>MODELS</h2>
                             <ul className='flex flex-row lg:flex-col gap-2 justify-between mt-0.5'>
-                                {models.slice(1).map((e) => (
-                                    <li className={`text-center font-bold text-[10px] leading-3 tracking-[1.2px] py-2 px-2 lg:px-4 cursor-pointer ${activeModel == e.title ? "bg-white text-black" : "text-white "} `} onClick={() => { setHeroimage(e.url); setActiveModel(e.title) }} key={e.title}>{e.title}</li>
+                                {models.slice(1).map((e,idx:number) => (
+                                    <li className={`text-center font-bold text-[10px] leading-3 tracking-[1.2px] py-2 px-2 lg:px-4 cursor-pointer ${activeModel ==  idx ? "bg-white text-black" : "text-white "} `} onClick={() => { setHeroimage(e.url); setActiveModel(idx) }} key={e.title}>{e.title}</li>
                                 ))}
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div className='flex flex-wrap gap-5 lg:w-[80%] justify-center lg:justify-between'>
-                    <HeroSwiper models={models}/>
+                    <HeroSwiper models={models} herourl={heroimage}/>
                     <div className='flex flex-col gap-4 lg:w-[50%]'>
                         <h1 className='font-sora font-bold leading-[1.15] sm:text-5xl text-[32px]'>Exhaust Fan Series</h1>
 

@@ -5,7 +5,7 @@ interface Model {
   title: string
 }
 
-export default function HeroSwiper({ models }: { models: Model[] }) {
+export default function HeroSwiper({ models,herourl }: { models: Model[],herourl:string }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [touchStartX, setTouchStartX] = useState<number | null>(null)
 
@@ -38,7 +38,7 @@ export default function HeroSwiper({ models }: { models: Model[] }) {
     >
       {/* Main swipeable image */}
       <img
-        src={models[currentIndex].url}
+        src={herourl}
         alt={models[currentIndex].title}
         className="w-[440px] h-[350px] object-cover transition-transform duration-500"
       />
