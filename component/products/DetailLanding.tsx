@@ -194,68 +194,7 @@ Message: ${formData.message}`;
                     </ol>
                 </nav>
             </div>
-            <motion.div
-                initial={{ x: -100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className='flex flex-wrap mx-auto max-w-7xl gap-6 lg:gap-4'>
-                <div className='w-full lg:w-[15%]'>
-                    <div className='bg-[#09273A] h-full lg:p-8 px-4 py-2'>
-                        <h2 className='text-white font-extrabold text-sm leading-6 pb-2 lg:pb-8'>Related Products</h2>
-                        <div className='flex flex-col lg:gap-2'>
-                            <h2 className='text-black font-bold text-[12px] leading-3 tracking-[1.2px] py-2 px-4 bg-white cursor-pointer text-center' onClick={() => { setHeroimage(models[0].url); setActiveModel(-1) }}>MODELS</h2>
-                            <ul className='flex flex-row lg:flex-col gap-2 justify-between mt-0.5'>
-                                {models.slice(1).map((e,idx:number) => (
-                                    <li className={`text-center font-bold text-[10px] leading-3 tracking-[1.2px] py-2 px-2 lg:px-4 cursor-pointer ${activeModel ==  idx ? "bg-white text-black" : "text-white "} `} onClick={() => { setHeroimage(e.url); setActiveModel(idx) }} key={e.title}>{e.title}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div className='flex flex-wrap gap-5 lg:w-[80%] justify-center lg:justify-between'>
-                    <HeroSwiper models={models} herourl={heroimage}/>
-                    <div className='flex flex-col gap-4 lg:w-[50%]'>
-                        <h1 className='font-sora font-bold leading-[1.15] sm:text-5xl text-[32px]'>Exhaust Fan Series</h1>
-
-                        <p className="font-inter font-normal text-[16px] leading-[28px] tracking-[0px] text-[#09273A]">
-                            Built for demanding operating conditions, the Floent Exhaust Fan offers reliable performance, durable construction, low maintenance, and energy-efficient ventilation, helping maintain a cooler, cleaner, and better-ventilated environment.
-                        </p>
-                        <div className="grid grid-cols-2 gap-3">
-                            {features.map((feature, index) => (
-                                <div
-                                    key={index}
-                                    className="flex items-center gap-2 p-3 bg-white border border-[#C3C5D94D] min-w-0"
-                                >
-                                    {feature.icon}
-
-                                    <p className="font-inter font-medium text-[14px] leading-[20px] tracking-[0.14px] text-[#09273A] truncate">
-                                        {feature.label}
-                                    </p>
-                                </div>
-                            ))}
-                        </div>
-                        <motion.button
-                            whileTap={{ scale: 0.95 }}
-                            whileHover={{ scale: 1.05 }}
-                            onClick={() => {
-                                setActive("Ask For a Price")
-                                document.getElementById("tabs")?.scrollIntoView({
-                                    behavior: "smooth",
-                                    block: "start"
-                                });
-                            }}
-                            className="w-full flex justify-center font-inter mt-6 bg-[#09273A] hover:bg-black px-6 py-3 text-sm font-medium text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
-                        >
-                            <span className='mr-2'>
-                                <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 16H12V14H4V16ZM4 12H12V10H4V12ZM2 20C1.45 20 0.979167 19.8042 0.5875 19.4125C0.195833 19.0208 0 18.55 0 18V2C0 1.45 0.195833 0.979167 0.5875 0.5875C0.979167 0.195833 1.45 0 2 0H10L16 6V18C16 18.55 15.8042 19.0208 15.4125 19.4125C15.0208 19.8042 14.55 20 14 20H2ZM9 7V2H2V18H14V7H9ZM2 2V7V2V7V18V2Z" fill="white" />
-                                </svg></span>
-                            ASK FOR PRICE
-                        </motion.button>
-                    </div>
-                </div>
-            </motion.div>
+            <HeroSwiper models={models} features={features} />
 
             <motion.div
                 initial={{ x: -100, opacity: 0 }}
