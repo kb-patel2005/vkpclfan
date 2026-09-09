@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
+import { SelectBox } from '../common/SelectBox';
 
 const data = [
     {
@@ -13,6 +14,7 @@ const data = [
         leftdata: "15,000 CFM",
         rightone: "POWER",
         rightdata: "5 HP",
+        category: "CENTRIFUGAL FANS",
         img: "/images/hvls.jpg",
         icon: (
             <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,6 +29,7 @@ const data = [
         leftdata: "15,000 CFM",
         rightone: "COVERAGE",
         rightdata: "5 HP",
+        category: "EXHAUST FANS",
         img: "/images/exhaust-small.jpg",
         icon: (
             <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,6 +44,7 @@ const data = [
         leftdata: "15,000 CFM",
         rightone: "COVERAGE",
         rightdata: "5 HP",
+        category: "CENTRIFUGAL FANS",
         img: "/images/mobile.jpg",
         icon: (
             <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -55,6 +59,7 @@ const data = [
         leftdata: "15,000 CFM",
         rightone: "POWER",
         rightdata: "5 HP",
+        category: "CENTRIFUGAL FANS",
         img: "/images/hvls.jpg",
         icon: (
             <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,6 +74,7 @@ const data = [
         leftdata: "15,000 CFM",
         rightone: "COVERAGE",
         rightdata: "5 HP",
+        category: "EXHAUST FANS",
         img: "/images/exhaust-small.jpg",
         icon: (
             <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -83,6 +89,7 @@ const data = [
         leftdata: "15,000 CFM",
         rightone: "COVERAGE",
         rightdata: "5 HP",
+        category: "CENTRIFUGAL FANS",
         img: "/images/mobile.jpg",
         icon: (
             <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -121,8 +128,8 @@ export default function Products() {
 
                         <Link
                             href="/products"
-                            onClick={() => setActive("exhuast-fans")}
-                            className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${active === "exhuast-fans" ? "border-b-2 border-[#09273A] pb-2" : ""
+                            onClick={() => setActive("EXHAUST FANS")}
+                            className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${active === "EXHAUST FANS" ? "border-b-2 border-[#09273A] pb-2" : ""
                                 } `}
                         >
                             EXHAUST FANS
@@ -130,8 +137,8 @@ export default function Products() {
 
                         <Link
                             href="/products"
-                            onClick={() => setActive("centrifugal-fans")}
-                            className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${active === "centrifugal-fans" ? "border-b-2 border-[#09273A] pb-2" : ""
+                            onClick={() => setActive("CENTRIFUGAL FANS")}
+                            className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${active === "CENTRIFUGAL FANS" ? "border-b-2 border-[#09273A] pb-2" : ""
                                 } `}
                         >
                             CENTRIFUGAL FANS
@@ -186,7 +193,7 @@ export default function Products() {
                                     className="pl-10 w-full py-2.5 outline-none" />
                             </div>
 
-                            <div className="relative ">
+                            {/* <div className="relative ">
                                 <select className="appearance-none w-full border border-[#C3C5D980] py-2.5 pl-3 pr-10">
                                     <option>Application</option>
                                     <option>Motor Power</option>
@@ -196,8 +203,10 @@ export default function Products() {
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                     <path stroke="currentColor" stroke-width="2" d="M6 9l6 6 6-6" />
                                 </svg>
-                            </div>
-                            <div className="relative">
+                            </div> */}
+
+                            <SelectBox items={["application", "Motor Power"]} value='Application' classes='w-full py-[22px]' />
+                            {/* <div className="relative">
                                 <select className="appearance-none w-full border border-[#C3C5D980] py-2.5 pl-3 pr-10">
 
                                     <option>Motor Power</option>
@@ -207,7 +216,9 @@ export default function Products() {
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                     <path stroke="currentColor" stroke-width="2" d="M6 9l6 6 6-6" />
                                 </svg>
-                            </div>
+                            </div> */}
+                            <SelectBox items={["application", "Motor Power"]} classes='py-[22px]' value='Application' />
+
                         </div>
                     )}
 
@@ -244,7 +255,7 @@ export default function Products() {
                                 className="pl-10 w-full py-2.5 outline-none" />
                         </div>
 
-                        <div className="relative w-64">
+                        {/* <div className="relative w-64">
                             <select className="appearance-none w-full border border-[#C3C5D980] py-2.5 pl-3 pr-10">
                                 <option>Application</option>
                                 <option>Motor Power</option>
@@ -254,8 +265,10 @@ export default function Products() {
                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                 <path stroke="currentColor" stroke-width="2" d="M6 9l6 6 6-6" />
                             </svg>
-                        </div>
-                        <div className="relative w-64">
+                        </div> */}
+                        <SelectBox items={["application", "Motor Power"]} classes='w-64 border border-[#C3C5D980]' value='Application' />
+
+                        {/* <div className="relative w-64">
                             <select className="appearance-none w-full border border-[#C3C5D980] py-2.5 pl-3 pr-10">
 
                                 <option>Motor Power</option>
@@ -265,7 +278,9 @@ export default function Products() {
                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                 <path stroke="currentColor" stroke-width="2" d="M6 9l6 6 6-6" />
                             </svg>
-                        </div>
+                        </div> */}
+                        <SelectBox items={["Application", "Motor power", "Motor Power"]} classes='w-64 border border-[#C3C5D980] bg-white' value="application" />
+
                     </div>
                 </div>
 
@@ -298,7 +313,7 @@ export default function Products() {
                             <motion.button
                                 whileTap={{ scale: 0.95 }}
                                 whileHover={{ scale: 1.05 }}
-                                onClick={()=>router.push('/products/exhuast-fan/#tabs')}
+                                onClick={() => router.push('/products/exhuast-fan/#tabs')}
                                 className="w-full font-inter bg-[#09273A] hover:bg-black px-6 py-3 text-sm font-medium text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                             >
                                 REQUEST QUOTE
@@ -320,67 +335,73 @@ export default function Products() {
             <div
                 className='w-full lg:px-0 px-5'>
                 <div className="max-w-7xl mx-auto flex flex-wrap justify-center lg:justify-between gap-6">
-                    {data?.map((e, index) => (
-                        <div
-                            key={index}
-                            className="relative w-full sm:w-[48%] lg:w-[32%] lg:min-h-[520px] rounded-sm border border-gray-200 bg-white overflow-hidden shadow-[0px_4px_12px_0px_#071B3A0D]"
-                        >
-                            {/* Icon */}
-                            <div className="h-10 w-10 absolute top-3 left-3 rounded-md bg-white flex items-center justify-center z-10">
-                                {e.icon}
-                            </div>
-
-                            {/* Image */}
-                            <div className="lg:h-[300px] h-[250px] lg:h-[60%] w-full">
-                                <img
-                                    src={e.img}
-                                    alt="Industrial Fan"
-                                    className="h-full w-full object-cover"
-                                />
-                            </div>
-
-                            {/* Content */}
-                            <div className="h-auto lg:h-[40%] p-5 flex flex-col">
-                                <h3 className="font-sora text-[20px] font-semibold uppercase leading-[28px] tracking-[-0.4px] text-[#071B3A]">
-                                    {e.title}
-                                </h3>
-
-                                <p className="mt-2 font-inter text-[12px] font-normal uppercase leading-[18px] text-gray-600">
-                                    {e.desc}
-                                </p>
-
-                                <div className="my-4 border-b border-dashed border-[#5D5D5D]" />
-
-                                <div className="grid grid-cols-2 gap-4 pb-6">
-                                    <div>
-                                        <p className="font-inter text-[10px] leading-[15px] text-gray-500">
-                                            {e.leftone}
-                                        </p>
-                                        <h4 className="mt-1 font-inter text-[14px] font-medium leading-[20px] tracking-[0.14px] text-[#071B3A]">
-                                            {e.leftdata}
-                                        </h4>
+                    {data?.map((e, index) => {
+                        if (e.category == active || active == "all-products") {
+                            return (
+                                <div
+                                    key={index}
+                                    className="relative w-full sm:w-[48%] lg:w-[32%] lg:min-h-[520px] rounded-sm border border-gray-200 bg-white overflow-hidden shadow-[0px_4px_12px_0px_#071B3A0D]"
+                                >
+                                    {/* Icon */}
+                                    <div className="h-10 w-10 absolute top-3 left-3 rounded-md bg-white flex items-center justify-center z-10">
+                                        {e.icon}
                                     </div>
 
-                                    <div>
-                                        <p className="font-inter text-[10px] leading-[15px] text-gray-500">
-                                            {e.rightone}
+                                    {/* Image */}
+                                    <div className="lg:h-[300px] h-[250px] lg:h-[60%] w-full">
+                                        <img
+                                            src={e.img}
+                                            alt="Industrial Fan"
+                                            className="h-full w-full object-cover"
+                                        />
+                                    </div>
+
+                                    {/* Content */}
+                                    <div className="h-auto lg:h-[40%] p-5 flex flex-col">
+                                        <h3 className="font-sora text-[20px] font-semibold uppercase leading-[28px] tracking-[-0.4px] text-[#071B3A]">
+                                            {e.title}
+                                        </h3>
+
+                                        <p className="mt-2 font-inter text-[12px] font-normal uppercase leading-[18px] text-gray-600">
+                                            {e.desc}
                                         </p>
-                                        <h4 className="mt-1 font-inter text-[14px] font-medium leading-[20px] tracking-[0.14px] text-[#071B3A]">
-                                            {e.rightdata}
-                                        </h4>
+
+                                        <div className="my-4 border-b border-dashed border-[#5D5D5D]" />
+
+                                        <div className="grid grid-cols-2 gap-4 pb-6">
+                                            <div>
+                                                <p className="font-inter text-[10px] leading-[15px] text-gray-500">
+                                                    {e.leftone}
+                                                </p>
+                                                <h4 className="mt-1 font-inter text-[14px] font-medium leading-[20px] tracking-[0.14px] text-[#071B3A]">
+                                                    {e.leftdata}
+                                                </h4>
+                                            </div>
+
+                                            <div>
+                                                <p className="font-inter text-[10px] leading-[15px] text-gray-500">
+                                                    {e.rightone}
+                                                </p>
+                                                <h4 className="mt-1 font-inter text-[14px] font-medium leading-[20px] tracking-[0.14px] text-[#071B3A]">
+                                                    {e.rightdata}
+                                                </h4>
+                                            </div>
+                                        </div>
+
+                                        <motion.button
+                                            whileTap={{ scale: 0.95 }}
+                                            whileHover={{ scale: 1.05 }}
+                                            className="w-full border bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent"
+                                        >
+                                            VIEW SPECS →
+                                        </motion.button>
                                     </div>
                                 </div>
-
-                                <motion.button
-                                    whileTap={{ scale: 0.95 }}
-                                    whileHover={{ scale: 1.05 }}
-                                    className="w-full border bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent"
-                                >
-                                    VIEW SPECS →
-                                </motion.button>
-                            </div>
-                        </div>
-                    ))}
+                            )
+                        }else{
+                            return null;
+                        }
+                    })}
                 </div>
 
             </div>

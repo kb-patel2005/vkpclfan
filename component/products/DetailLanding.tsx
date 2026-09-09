@@ -140,11 +140,16 @@ export default function DetailLanding({ slug }: { slug: string }) {
         message: ""
     });
 
-    
+
 
     const handleChange = (e: any) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
+
+    const valueChange = (val: string) => {
+        setFormData({ ...formData, interest: val });
+
+    }
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
@@ -382,7 +387,7 @@ Message: ${formData.message}`;
                                 <div className="flex flex-col gap-2 mt-5">
                                     <p className="text-[12px] leading-4 tracking-[1.2px] font-bold">Product Interest Area</p>
                                     <div className="relative bg-[#F1F1F1] border border-[#C3C5D94D]" >
-                                        <select
+                                        {/* <select
                                             name="interest"
                                             value={formData.interest}
                                             onChange={handleChange}
@@ -393,7 +398,15 @@ Message: ${formData.message}`;
                                             <option value="High Airflow">High Airflow</option>
                                             <option value="Heavy Duty">Heavy Duty</option>
                                             <option value="Low Maintenance">Low Maintenance</option>
-                                        </select>
+                                        </select> */}
+                                        <SelectBox
+                                            items={["High Airflow", "Heavy Duty", "Low Maintenance"]}
+                                            classes="w-full bg-[#F1F1F1] border-[#C3C5D94D] outline-none bg-[#F1F1F1]"
+                                            value={formData.interest}
+                                            onChange={(val) => valueChange(val)}
+                                        />
+
+
                                         {/* <SelectBox
                                             name='interest'
                                             onChange={handleChange}

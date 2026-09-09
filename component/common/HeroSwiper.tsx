@@ -80,7 +80,7 @@ export default function HeroSwiper({ models, features }: Props) {
               {models.slice(1).map((e, idx) => (
                 <li
                   key={e.title}
-                  className={`text-center font-bold text-[10px] leading-3 tracking-[1.2px] py-2 px-2 lg:px-4 cursor-pointer ${activeModel === idx
+                  className={`text-center font-bold text-xs leading-3 tracking-[1.2px] py-2 px-2 lg:px-4 cursor-pointer ${activeModel === idx
                       ? "bg-white text-black"
                       : "text-white"
                     }`}
