@@ -202,9 +202,9 @@ Message: ${formData.message}`;
                         <h2 className='text-white font-extrabold text-sm leading-6 pb-2 lg:pb-8'>Related Products</h2>
                         <div className='flex flex-col lg:gap-2'>
                             <h2 className='text-black font-bold text-[12px] leading-3 tracking-[1.2px] py-2 px-4 bg-white cursor-pointer text-center' onClick={() => { setHeroimage(models[0].url); setActiveModel("Model") }}>MODELS</h2>
-                            <ul className='flex flex-row lg:flex-col gap-2'>
+                            <ul className='flex flex-row lg:flex-col gap-2 justify-between mt-0.5'>
                                 {models.slice(1).map((e) => (
-                                    <li className={`text-center font-bold text-[10px] leading-3 tracking-[1.2px] py-2 px-4 cursor-pointer ${activeModel == e.title ? "bg-white text-black" : "text-white "} `} onClick={() => { setHeroimage(e.url); setActiveModel(e.title) }} key={e.title}>{e.title}</li>
+                                    <li className={`text-center font-bold text-[10px] leading-3 tracking-[1.2px] py-2 px-3.5 lg:px-4 cursor-pointer ${activeModel == e.title ? "bg-white text-black" : "text-white "} `} onClick={() => { setHeroimage(e.url); setActiveModel(e.title) }} key={e.title}>{e.title}</li>
                                 ))}
                             </ul>
                         </div>
@@ -219,8 +219,8 @@ Message: ${formData.message}`;
                             className="w-[440px] h-[350px] object-cover transition-transform duration-500 hover:scale-105"
                         />
 
-                        {/* Thumbnails with swipe on mobile */}
-                        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory justify-center lg:justify-between w-full">
+                        {/* Thumbnails */}
+                        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory w-full lg:justify-between">
                             {models.slice(1).map((e) => (
                                 <img
                                     key={e.title}
@@ -232,6 +232,7 @@ Message: ${formData.message}`;
                             ))}
                         </div>
                     </div>
+
 
                     <div className='flex flex-col gap-4 lg:w-[50%]'>
                         <h1 className='font-sora font-bold leading-[1.15] sm:text-5xl text-[32px]'>Exhaust Fan Series</h1>

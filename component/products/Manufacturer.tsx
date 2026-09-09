@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function Manufacturer() {
     return (
-        <section className='lg:px-0 px-5 w-full lg:py-20 pt-10 bg-[#F8F9FA]'>
+        <section className='lg:px-0 px-5 w-full lg:py-20 pt-5 bg-[#F8F9FA]'>
             <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
