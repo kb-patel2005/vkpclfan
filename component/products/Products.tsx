@@ -105,6 +105,11 @@ export default function Products() {
     const router = useRouter()
 
     const [showFilters, setShowFilters] = useState(false);
+
+    const activeProducts = () => {
+        return data.filter((e) => e.category == active || active == "all-products")
+    }
+
     return (
         <section className='lg:mt-20 mt-10 flex flex-col lg:gap-12 gap-4'>
             <motion.div
@@ -334,74 +339,69 @@ export default function Products() {
             </motion.div>
             <div
                 className='w-full lg:px-0 px-5'>
-                <div className="max-w-7xl mx-auto flex flex-wrap justify-center lg:justify-between gap-6">
-                    {data?.map((e, index) => {
-                        if (e.category == active || active == "all-products") {
-                            return (
-                                <div
-                                    key={index}
-                                    className="relative w-full sm:w-[48%] lg:w-[32%] lg:min-h-[520px] rounded-sm border border-gray-200 bg-white overflow-hidden shadow-[0px_4px_12px_0px_#071B3A0D]"
-                                >
-                                    {/* Icon */}
-                                    <div className="h-10 w-10 absolute top-3 left-3 rounded-md bg-white flex items-center justify-center z-10">
-                                        {e.icon}
-                                    </div>
+                <div className={`max-w-7xl mx-auto flex flex-wrap ${activeProducts().length <= 2?"lg:justify-items-start justify-items-center":"lg:justify-between justify-center"}   gap-6`}>
+                    {activeProducts().length > 0 && activeProducts().map((e, index) => (
+                        <div
+                            key={index}
+                            className="relative w-full sm:w-[48%] lg:w-[32%] lg:min-h-[520px] rounded-sm border border-gray-200 bg-white overflow-hidden shadow-[0px_4px_12px_0px_#071B3A0D]"
+                        >
+                            {/* Icon */}
+                            <div className="h-10 w-10 absolute top-3 left-3 rounded-md bg-white flex items-center justify-center z-10">
+                                {e.icon}
+                            </div>
 
-                                    {/* Image */}
-                                    <div className="lg:h-[300px] h-[250px] lg:h-[60%] w-full">
-                                        <img
-                                            src={e.img}
-                                            alt="Industrial Fan"
-                                            className="h-full w-full object-cover"
-                                        />
-                                    </div>
+                            {/* Image */}
+                            <div className="lg:h-[300px] h-[250px] lg:h-[60%] w-full">
+                                <img
+                                    src={e.img}
+                                    alt="Industrial Fan"
+                                    className="h-full w-full object-cover"
+                                />
+                            </div>
 
-                                    {/* Content */}
-                                    <div className="h-auto lg:h-[40%] p-5 flex flex-col">
-                                        <h3 className="font-sora text-[20px] font-semibold uppercase leading-[28px] tracking-[-0.4px] text-[#071B3A]">
-                                            {e.title}
-                                        </h3>
+                            {/* Content */}
+                            <div className="h-auto lg:h-[40%] p-5 flex flex-col">
+                                <h3 className="font-sora text-[20px] font-semibold uppercase leading-[28px] tracking-[-0.4px] text-[#071B3A]">
+                                    {e.title}
+                                </h3>
 
-                                        <p className="mt-2 font-inter text-[12px] font-normal uppercase leading-[18px] text-gray-600">
-                                            {e.desc}
+                                <p className="mt-2 font-inter text-[12px] font-normal uppercase leading-[18px] text-gray-600">
+                                    {e.desc}
+                                </p>
+
+                                <div className="my-4 border-b border-dashed border-[#5D5D5D]" />
+
+                                <div className="grid grid-cols-2 gap-4 pb-6">
+                                    <div>
+                                        <p className="font-inter text-[10px] leading-[15px] text-gray-500">
+                                            {e.leftone}
                                         </p>
+                                        <h4 className="mt-1 font-inter text-[14px] font-medium leading-[20px] tracking-[0.14px] text-[#071B3A]">
+                                            {e.leftdata}
+                                        </h4>
+                                    </div>
 
-                                        <div className="my-4 border-b border-dashed border-[#5D5D5D]" />
-
-                                        <div className="grid grid-cols-2 gap-4 pb-6">
-                                            <div>
-                                                <p className="font-inter text-[10px] leading-[15px] text-gray-500">
-                                                    {e.leftone}
-                                                </p>
-                                                <h4 className="mt-1 font-inter text-[14px] font-medium leading-[20px] tracking-[0.14px] text-[#071B3A]">
-                                                    {e.leftdata}
-                                                </h4>
-                                            </div>
-
-                                            <div>
-                                                <p className="font-inter text-[10px] leading-[15px] text-gray-500">
-                                                    {e.rightone}
-                                                </p>
-                                                <h4 className="mt-1 font-inter text-[14px] font-medium leading-[20px] tracking-[0.14px] text-[#071B3A]">
-                                                    {e.rightdata}
-                                                </h4>
-                                            </div>
-                                        </div>
-
-                                        <motion.button
-                                            whileTap={{ scale: 0.95 }}
-                                            whileHover={{ scale: 1.05 }}
-                                            className="w-full border bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent"
-                                        >
-                                            VIEW SPECS →
-                                        </motion.button>
+                                    <div>
+                                        <p className="font-inter text-[10px] leading-[15px] text-gray-500">
+                                            {e.rightone}
+                                        </p>
+                                        <h4 className="mt-1 font-inter text-[14px] font-medium leading-[20px] tracking-[0.14px] text-[#071B3A]">
+                                            {e.rightdata}
+                                        </h4>
                                     </div>
                                 </div>
-                            )
-                        }else{
-                            return null;
-                        }
-                    })}
+
+                                <motion.button
+                                    whileTap={{ scale: 0.95 }}
+                                    whileHover={{ scale: 1.05 }}
+                                    className="w-full border bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent"
+                                >
+                                    VIEW SPECS →
+                                </motion.button>
+                            </div>
+                        </div>
+                    )
+                    )}
                 </div>
 
             </div>

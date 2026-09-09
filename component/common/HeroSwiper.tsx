@@ -77,11 +77,11 @@ export default function HeroSwiper({ models, features, setTab }: Props) {
             >
               MODELS
             </h2>
-            <ul className="flex flex-row lg:flex-col gap-2 justify-between mt-0.5">
+            <ul className="flex flex-row lg:flex-col gap-2 justify-between mt-2">
               {models.slice(1).map((e, idx) => (
                 <li
                   key={e.title}
-                  className={`text-center font-bold text-xs leading-3 tracking-[1.2px] py-2 px-2 lg:px-4 cursor-pointer ${activeModel === idx
+                  className={`text-center font-bold text-xs leading-3 tracking-[1.2px] py-2 px-3.5 lg:px-4 cursor-pointer ${activeModel === idx
                       ? "bg-white text-black"
                       : "text-white"
                     }`}
