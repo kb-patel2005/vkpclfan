@@ -1,16 +1,37 @@
 import {
   NativeSelect,
   NativeSelectOption,
-} from "@/components/ui/native-select"
+} from "@/components/ui/native-select";
 
-export function SelectBox({items}:{items:Array<string>}) {
+export function SelectBox({
+  items,
+  name,
+  value,
+  onChange,
+  className,
+}: {
+  items: Array<string>
+  name?: string
+  value?: string
+  onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void
+  className?: string
+}) {
   return (
-    <NativeSelect>
-      <NativeSelectOption value="">Select status</NativeSelectOption>
-      <NativeSelectOption value="todo">Todo</NativeSelectOption>
-      <NativeSelectOption value="in-progress">In Progress</NativeSelectOption>
-      <NativeSelectOption value="done">Done</NativeSelectOption>
-      <NativeSelectOption value="cancelled">Cancelled</NativeSelectOption>
+    <NativeSelect
+      name={name}
+      value={value}
+      onChange={onChange}
+      className={`${className} border-none outline-none ring-0 rounded-[0px]`}
+      required
+    >
+      <NativeSelectOption value="" className="border-none">Product Interest</NativeSelectOption>
+      {items.map((item) => (
+        <NativeSelectOption className="outline-none" key={item} value={item}>
+          {item}
+        </NativeSelectOption>
+      ))}
     </NativeSelect>
   )
 }
+
+

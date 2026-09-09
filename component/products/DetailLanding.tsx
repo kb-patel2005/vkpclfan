@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
+import { SelectBox } from '../common/SelectBox';
 
 const features = [
     {
@@ -200,7 +201,7 @@ Message: ${formData.message}`;
                     <div className='bg-[#09273A] h-full lg:p-8 px-4 py-2'>
                         <h2 className='text-white font-extrabold text-sm leading-6 pb-2 lg:pb-8'>Related Products</h2>
                         <div className='flex flex-col lg:gap-2'>
-                            <h2 className='text-black font-bold text-[12px] leading-3 tracking-[1.2px] py-2 px-4 bg-white cursor-pointer text-center' onClick={() => {setHeroimage(models[0].url); setActiveModel("Model")}}>MODELS</h2>
+                            <h2 className='text-black font-bold text-[12px] leading-3 tracking-[1.2px] py-2 px-4 bg-white cursor-pointer text-center' onClick={() => { setHeroimage(models[0].url); setActiveModel("Model") }}>MODELS</h2>
                             <ul className='flex flex-row lg:flex-col gap-2'>
                                 {models.slice(1).map((e) => (
                                     <li className={`text-center font-bold text-[10px] leading-3 tracking-[1.2px] py-2 px-4 cursor-pointer ${activeModel == e.title ? "bg-white text-black" : "text-white "} `} onClick={() => { setHeroimage(e.url); setActiveModel(e.title) }} key={e.title}>{e.title}</li>
@@ -467,6 +468,17 @@ Message: ${formData.message}`;
                                             <option value="Heavy Duty">Heavy Duty</option>
                                             <option value="Low Maintenance">Low Maintenance</option>
                                         </select>
+                                        {/* <SelectBox
+                                            name='interest'
+                                            onChange={handleChange}
+                                            value={formData.interest}
+                                            items={[
+                                                "High Airflow",
+                                                "Heavy Duty",
+                                                "Low Maintenance",
+                                            ]}
+                                            className="relative bg-[#F1F1F1]"
+                                        /> */}
                                         <svg
                                             className="absolute right-2 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none"
                                             xmlns="http://www.w3.org/2000/svg"
