@@ -319,7 +319,7 @@ export default function Products() {
                                 whileTap={{ scale: 0.95 }}
                                 whileHover={{ scale: 1.05 }}
                                 onClick={() => router.push('/products/exhuast-fan/#tabs')}
-                                className="w-full font-inter bg-[#09273A] hover:bg-black px-6 py-3 text-sm font-medium text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
+                                className="cursor-pointer w-full font-inter bg-[#09273A] hover:bg-black px-6 py-3 text-sm font-medium text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                             >
                                 REQUEST QUOTE
                             </motion.button>
@@ -328,7 +328,7 @@ export default function Products() {
                                 whileTap={{ scale: 0.95 }}
                                 whileHover={{ scale: 1.05 }}
                                 onClick={() => router.push("/products/exhuast-fan")}
-                                className="w-full font-inter border bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
+                                className="cursor-pointer w-full font-inter border bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                             >
                                 VIEW DETAILS →
                             </motion.button>
@@ -394,7 +394,7 @@ export default function Products() {
                                 <motion.button
                                     whileTap={{ scale: 0.95 }}
                                     whileHover={{ scale: 1.05 }}
-                                    className="w-full border bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent"
+                                    className="cursor-pointer w-full border bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent"
                                 >
                                     VIEW SPECS →
                                 </motion.button>

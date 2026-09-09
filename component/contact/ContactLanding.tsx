@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function ContactLanding() {
     return (
-        <section className='w-full flex justify-center'>
-            <div className='mx-auto max-w-7xl lg:h-[60vh]'>
-                <h1 className="font-sora text-[64px] font-bold leading-[80px] tracking-[-1.44px] uppercase">
+        <section className='mx-auto w-full flex flex-col gap-6 justify-center items-start max-w-7xl h-[70vh] lg:px-0 px-5'>
+            
+                <h1 className="font-sora text-[40px] font-bold leading-[1.15] sm:text-5xl lg:text-[64px]">
                     LET'S TALK ABOUT YOUR
                     <br />
                     <span className='text-[#FDCD2E]'>AIRFLOW REQUIREMENTS.</span>
@@ -15,7 +15,7 @@ export default function ContactLanding() {
                     manufacturing solutions, and precision ventilation systems designed for your
                     facility.
                 </p>
-            </div>
+            
         </section>
     )
 }

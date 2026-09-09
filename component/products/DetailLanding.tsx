@@ -245,7 +245,7 @@ Message: ${formData.message}`;
                             e.preventDefault();
                             setActive("Ask For a Price");
                         }}
-                        className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${active === "Ask For a Price"
+                        className={`cursor-pointer text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${active === "Ask For a Price"
                             ? "border-b-2 border-[#09273A] pb-2"
                             : ""
                             }`}
