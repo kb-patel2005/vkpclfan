@@ -131,7 +131,7 @@ export default function HeroSwiper({ models, features }: Props) {
         </div>
 
         {/* Text + features */}
-        <div className="flex flex-col gap-4 lg:w-[50%]">
+        <div className="flex flex-col gap-4 lg:w-[50%] mt-3">
           <h1 className="font-sora font-bold leading-[1.15] sm:text-5xl text-[32px]">
             Exhaust Fan Series
           </h1>
