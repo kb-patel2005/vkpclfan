@@ -336,7 +336,8 @@ export default function ApplicationsOfFan() {
         <section
             className="
                 py-8
-                lg:py-8
+                lg:pt-6
+                lg:pb-4
                 flex
                 w-full
                 flex-col
@@ -355,7 +356,7 @@ export default function ApplicationsOfFan() {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="max-w-7xl mx-auto text-center lg:mt-20 mt-5">
+                className="max-w-7xl mx-auto text-center mt-5">
 
                  <h2 className="font-sora font-bold text-4xl lg:leading-[57.6px] tracking-[-0.96px] text-[#09273A]">
                      Application of{" "}

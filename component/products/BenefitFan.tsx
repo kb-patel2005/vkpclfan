@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function BenefitFan() {
   return (
-    <section className="w-full bg-[#F8F9FA] py-10 lg:py-20 px-5 lg:px-0">
+    <section className="w-full bg-[#F8F9FA] py-10 lg:py-0 px-5 lg:px-0">
       <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}

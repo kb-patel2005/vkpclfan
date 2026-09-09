@@ -211,23 +211,28 @@ Message: ${formData.message}`;
                     </div>
                 </div>
                 <div className='flex flex-wrap gap-5 lg:w-[80%] justify-center lg:justify-between'>
-                    <div className='flex flex-col justify-center items-center gap-5 lg:gap-10'>
+                    <div className="flex flex-col items-center gap-5 lg:gap-10">
+                        {/* Main image */}
                         <img
                             src={heroimage}
-                            alt={'Exhaust fan'}
+                            alt="Exhaust fan"
                             className="w-[440px] h-[350px] object-cover transition-transform duration-500 hover:scale-105"
                         />
-                        <div className='flex gap-4 justify-center'>
+
+                        {/* Thumbnails with swipe on mobile */}
+                        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory justify-center lg:justify-between w-full">
                             {models.slice(1).map((e) => (
                                 <img
+                                    key={e.title}
                                     src={e.url}
                                     alt={e.title}
-                                    className="w-[90px] lg:w-[140px] object-cover transition-transform duration-500 hover:scale-105"
+                                    className="w-[90px] lg:w-[140px] object-cover transition-transform duration-500 hover:scale-105 snap-center cursor-pointer"
                                     onClick={() => setHeroimage(e.url)}
                                 />
                             ))}
                         </div>
                     </div>
+
                     <div className='flex flex-col gap-4 lg:w-[50%]'>
                         <h1 className='font-sora font-bold leading-[1.15] sm:text-5xl text-[32px]'>Exhaust Fan Series</h1>
 

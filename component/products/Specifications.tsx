@@ -53,7 +53,7 @@ export function Specifications() {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}  className="text-center max-w-7xl mx-auto">
-                <h2 className="font-sora font-semibold text-[40px] lg:text-5xl text-white lg:leading-[57.6px] tracking-[-0.96px]">
+                <h2 className="font-sora font-semibold text-[40px] leading-11 lg:text-5xl text-white lg:leading-[57.6px] tracking-[-0.96px]">
                     Key Component{" "}
                     <span className="text-[#FDCD2E]">Specifications</span>
                 </h2>
