@@ -2,49 +2,60 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 
-export default function GalleryImages() {
+const galleryItems = [
+    {
+        id: 1,
+        src: "/gallery1.png",
+        alt: "Image 1",
+        category: "PROJECTS",
+    },
+    {
+        id: 2,
+        src: "/images/exhaust-main.png",
+        alt: "Image 2",
+        category: "INSTALLATIONS",
+    },
+    {
+        id: 3,
+        src: "/gallery3.jpg",
+        alt: "Image 3",
+        category: "INSTALLATIONS",
+    },
+    {
+        id: 4,
+        src: "/gallery4.jpg",
+        alt: "Image 4",
+        category: "MANUFACTURING",
+    },
+]
+
+
+export default function GalleryImages({ active, isAll }: { active: string, isAll: boolean }) {
+
     return (
         <section className="w-full bg-[#09273A] py-24 lg:px-0 px-5 flex flex-col gap-10">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div className="sm:col-span-2 lg:h-[600px]">
-                    <Image
-                        src="/gallery1.png"
-                        alt="Image 1"
-                        height={500}
-                        width={500}
-                        className="w-full h-full object-cover"
-                    />
-                </div>
-                <div className="lg:h-[600px]">
-                    <Image
-                        src="/images/exhaust-main.png"
-                        alt="Image 2"
-                         height={500}
-                        width={500}
-                        className="w-full h-full object-cover"
-                    />
-                </div>
+            <div className={`${isAll ? " grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4":"flex flex-wrap" } max-w-7xl mx-auto gap-4 `}>
+                {galleryItems.map((item) => {
+                    if (item.category == active || active == "ALL") {
+                        return (
+                            <div
+                                key={item.id}
+                                className={`${(item.id === 1 || item.id === 4) && isAll ? "sm:col-span-2" : ""
+                                    } lg:h-[600px]`}
+                            >
+                                <Image
+                                    src={item.src}
+                                    alt={item.alt}
+                                    height={500}
+                                    width={500}
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>)
+                    }
+                })}
 
-                <div className="lg:h-[600px]">
-                    <Image
-                        src="/gallery3.jpg"
-                        alt="Image 3"
-                        height={500}
-                        width={500}
-                        className="w-full h-full object-cover"
-                    />
-                </div>
-                <div className="sm:col-span-2 lg:h-[600px]">
-                    <Image
-                        src="/gallery4.jpg"
-                        alt="Image 4"
-                         height={500}
-                        width={500}
-                        className="w-full h-full object-cover"
-                    />
-                </div>
             </div>
             <motion.button
                 whileTap={{ scale: 0.95 }}

@@ -199,7 +199,7 @@ Message: ${formData.message}`;
                     </ol>
                 </nav>
             </div>
-            <HeroSwiper models={models} features={features} />
+            <HeroSwiper models={models} features={features} setTab={setActive}/>
 
             <motion.div
                 initial={{ x: -100, opacity: 0 }}

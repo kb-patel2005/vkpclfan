@@ -14,9 +14,10 @@ interface Feature {
 interface Props {
   models: Model[]
   features: Feature[]
+  setTab: (val:string) => void
 }
 
-export default function HeroSwiper({ models, features }: Props) {
+export default function HeroSwiper({ models, features, setTab }: Props) {
   const [active, setActive] = useState("Description")
   const [heroimage, setHeroimage] = useState(models[0].url)
   const [activeModel, setActiveModel] = useState(-1)
@@ -161,7 +162,7 @@ export default function HeroSwiper({ models, features }: Props) {
             whileTap={{ scale: 0.95 }}
             whileHover={{ scale: 1.05 }}
             onClick={() => {
-              setActive("Ask For a Price")
+              setTab("Ask For a Price")
               document.getElementById("tabs")?.scrollIntoView({
                 behavior: "smooth",
                 block: "start",
