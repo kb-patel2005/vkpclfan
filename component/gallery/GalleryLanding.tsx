@@ -8,14 +8,14 @@ export default function GalleryLanding() {
 
     return (
 
-        <section className="relative flex w-full items-center px-5 sm:px-8 lg:px-12 h-[60vh]">
+        <section className="relative flex w-full items-center px-5 sm:px-8 lg:px-12 py-30">
 
             {/* Content */}
             <motion.div
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="mx-auto relative z-10 flex text-center flex-col gap-6"
+                className="max-w-7xl mx-auto relative z-10 flex text-center flex-col gap-6"
             >
 
                 <div className='flex gap-2 items-center w-full mx-auto justify-center'>
@@ -41,7 +41,7 @@ export default function GalleryLanding() {
                 </p>
 
                 {/* Buttons */}
-                <div className="flex gap-4 justify-center mt-10">
+                <div className="flex flex-wrap gap-4 justify-center mt-10">
                     <motion.button
                         whileTap={{ scale: 0.95 }}
                         whileHover={{ scale: 1.05 }}
