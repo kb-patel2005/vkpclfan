@@ -1,9 +1,7 @@
 'use client'
 import { motion } from 'framer-motion';
 import Link from 'next/link'
-import React, { useState } from 'react'
-
-const models = ["FLEH-1000", "FLEH - 1220", "FLEH - 1380"]
+import React, { useEffect, useState } from 'react'
 
 const features = [
     {
@@ -82,6 +80,26 @@ const data = [
     },
 ];
 
+
+const models = [
+    {
+        title: "hero",
+        url: "/images/exhaust-main.png"
+    },
+    {
+        title: "FLEH - 1000",
+        url: "/exhuast1.png"
+    },
+    {
+        title: "FLEH - 1220",
+        url: "/exhuast2.png"
+    },
+    {
+        title: "FLEH - 1380",
+        url: "/exhuast3.png"
+    },
+];
+
 const productData = {
     heading: "Product Specifications",
     description: "The Floent Exhaust Fan is engineered for powerful and efficient air extraction in industrial, commercial, agricultural, and large-scale ventilation environments. Designed with high-performance aerodynamic blades, a robust galvanized steel frame, and an efficient motor, it provides strong airflow for effective heat, humidity, fumes, dust, and stale-air removal.",
@@ -101,7 +119,47 @@ const productData = {
 
 export default function DetailLanding({ slug }: { slug: string }) {
 
+    useEffect(() => {
+        if (window.location.hash) {
+            setActive("Ask For a Price")
+        }
+    }, []);
+
     const [active, setActive] = useState("Description");
+    const [heroimage, setHeroimage] = useState(models[0].url);
+    const [activeModel, setActiveModel] = useState(models[0].title);
+
+    const [formData, setFormData] = useState({
+        name: "",
+        company: "",
+        email: "",
+        phone: "",
+        interest: "",
+        message: ""
+    });
+
+    const handleChange = (e: any) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+
+        // Build WhatsApp message
+        const text = `Inquiry Form Submission:
+Name: ${formData.name}
+Company: ${formData.company}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Interest: ${formData.interest}
+Message: ${formData.message}`;
+
+        // WhatsApp number (with country code, e.g. +91 for India)
+        const phoneNumber = "919925624342"; // 9925624342 with +91
+
+        // Open WhatsApp
+        window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`, "_blank");
+    };
 
     return (
         <section className='w-full flex flex-col gap-4 lg:gap-12 lg:px-0 px-5 pt-5 lg:pt-10 bg-[#F8F9FA]'>
@@ -142,10 +200,10 @@ export default function DetailLanding({ slug }: { slug: string }) {
                     <div className='bg-[#09273A] h-full lg:p-8 px-4 py-2'>
                         <h2 className='text-white font-extrabold text-sm leading-6 pb-2 lg:pb-8'>Related Products</h2>
                         <div className='flex flex-col lg:gap-2'>
-                            <h2 className='text-black font-bold text-[12px] leading-3 tracking-[1.2px] py-2 px-4 bg-white'>MODELS</h2>
+                            <h2 className='text-black font-bold text-[12px] leading-3 tracking-[1.2px] py-2 px-4 bg-white cursor-pointer text-center' onClick={() => {setHeroimage(models[0].url); setActiveModel("Model")}}>MODELS</h2>
                             <ul className='flex flex-row lg:flex-col gap-2'>
-                                {models.map((e) => (
-                                    <li className='text-white font-bold text-[10px] leading-3 tracking-[1.2px] py-2 px-4' key={e}>{e}</li>
+                                {models.slice(1).map((e) => (
+                                    <li className={`text-center font-bold text-[10px] leading-3 tracking-[1.2px] py-2 px-4 cursor-pointer ${activeModel == e.title ? "bg-white text-black" : "text-white "} `} onClick={() => { setHeroimage(e.url); setActiveModel(e.title) }} key={e.title}>{e.title}</li>
                                 ))}
                             </ul>
                         </div>
@@ -154,26 +212,19 @@ export default function DetailLanding({ slug }: { slug: string }) {
                 <div className='flex flex-wrap gap-5 lg:w-[80%] justify-center lg:justify-between'>
                     <div className='flex flex-col justify-center items-center gap-5 lg:gap-10'>
                         <img
-                            src={'/images/exhaust-main.png'}
+                            src={heroimage}
                             alt={'Exhaust fan'}
                             className="w-[440px] h-[350px] object-cover transition-transform duration-500 hover:scale-105"
                         />
                         <div className='flex gap-4 justify-center'>
-                            <img
-                                src={'/exhuast1.png'}
-                                alt={'Exhaust fan'}
-                                className="w-[90px] lg:w-[140px] object-cover transition-transform duration-500 hover:scale-105"
-                            />
-                            <img
-                                src={'/exhuast2.png'}
-                                alt={'Exhaust fan'}
-                                className="w-[90px] lg:w-[140px] object-cover transition-transform duration-500 hover:scale-105"
-                            />
-                            <img
-                                src={'/exhuast3.png'}
-                                alt={'Exhaust fan'}
-                                className="w-[90px] lg:w-[140px] object-cover transition-transform duration-500 hover:scale-105"
-                            />
+                            {models.slice(1).map((e) => (
+                                <img
+                                    src={e.url}
+                                    alt={e.title}
+                                    className="w-[90px] lg:w-[140px] object-cover transition-transform duration-500 hover:scale-105"
+                                    onClick={() => setHeroimage(e.url)}
+                                />
+                            ))}
                         </div>
                     </div>
                     <div className='flex flex-col gap-4 lg:w-[50%]'>
@@ -199,8 +250,12 @@ export default function DetailLanding({ slug }: { slug: string }) {
                         <motion.button
                             whileTap={{ scale: 0.95 }}
                             whileHover={{ scale: 1.05 }}
-                            onClick={(e) => {
-                                e.currentTarget.innerText = "EXPLORE PRODUCTS →";
+                            onClick={() => {
+                                setActive("Ask For a Price")
+                                document.getElementById("tabs")?.scrollIntoView({
+                                    behavior: "smooth",
+                                    block: "start"
+                                });
                             }}
                             className="w-full flex justify-center font-inter mt-6 bg-[#09273A] hover:bg-black px-6 py-3 text-sm font-medium text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                         >
@@ -208,7 +263,7 @@ export default function DetailLanding({ slug }: { slug: string }) {
                                 <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 16H12V14H4V16ZM4 12H12V10H4V12ZM2 20C1.45 20 0.979167 19.8042 0.5875 19.4125C0.195833 19.0208 0 18.55 0 18V2C0 1.45 0.195833 0.979167 0.5875 0.5875C0.979167 0.195833 1.45 0 2 0H10L16 6V18C16 18.55 15.8042 19.0208 15.4125 19.4125C15.0208 19.8042 14.55 20 14 20H2ZM9 7V2H2V18H14V7H9ZM2 2V7V2V7V18V2Z" fill="white" />
                                 </svg></span>
-                            EXPLORE PRODUCTS
+                            ASK FOR PRICE
                         </motion.button>
                     </div>
                 </div>
@@ -221,6 +276,7 @@ export default function DetailLanding({ slug }: { slug: string }) {
                 transition={{ duration: 0.8, ease: "easeOut" }} className="w-full flex flex-col gap-[26px]">
                 {/* Tabs */}
                 <div
+                    id='tabs'
                     className="max-w-7xl w-full mx-auto flex bg-white items-center gap-8 py-4 px-3 lg:px-16 overflow-x-auto whitespace-nowrap [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
                 >
                     <Link
@@ -338,106 +394,127 @@ export default function DetailLanding({ slug }: { slug: string }) {
                                 Tell us what you need, and our engineering team will get back to you within 24 hours with the right solution and pricing.
                             </p>
 
-                            <form className="mt-8 w-full">
-
+                            <form className="mt-8 w-full" onSubmit={handleSubmit}>
                                 {/* First Row */}
                                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-                                    <div className='flex flex-col gap-2'>
-                                        <p className='text-[12px] leading-4 tracking-[1.2px] font-bold'>Full Name</p>
+                                    <div className="flex flex-col gap-2">
+                                        <p className="text-[12px] leading-4 tracking-[1.2px] font-bold">Full Name</p>
                                         <input
                                             type="text"
+                                            name="name"
                                             placeholder="First Name"
+                                            value={formData.name}
+                                            onChange={handleChange}
                                             className="w-full h-[52px] px-4 border bg-[#F1F1F1] border-[#C3C5D94D] outline-none"
+                                            required
                                         />
                                     </div>
-                                    <div className='flex flex-col gap-2'>
-                                        <p className='text-[12px] leading-4 tracking-[1.2px] font-bold'>Company / Organization</p>
+                                    <div className="flex flex-col gap-2">
+                                        <p className="text-[12px] leading-4 tracking-[1.2px] font-bold">Company / Organization</p>
                                         <input
                                             type="text"
+                                            name="company"
                                             placeholder="Company / Organization"
+                                            value={formData.company}
+                                            onChange={handleChange}
                                             className="w-full h-[52px] px-4 border bg-[#F1F1F1] border-[#C3C5D94D] outline-none"
+                                            required
                                         />
                                     </div>
                                 </div>
 
                                 {/* Second Row */}
                                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-5">
-                                    <div className='flex flex-col gap-2'>
-                                        <p className='text-[12px] leading-4 tracking-[1.2px] font-bold'>Email address</p>
+                                    <div className="flex flex-col gap-2">
+                                        <p className="text-[12px] leading-4 tracking-[1.2px] font-bold">Email address</p>
                                         <input
                                             type="email"
+                                            name="email"
                                             placeholder="Email Address"
+                                            value={formData.email}
+                                            onChange={handleChange}
                                             className="w-full h-[52px] px-4 border bg-[#F1F1F1] border-[#C3C5D94D] outline-none"
+                                            required
                                         />
                                     </div>
-
-                                    <div className='flex flex-col gap-2'>
-                                        <p className='text-[12px] leading-4 tracking-[1.2px] font-bold'>Phone Number (Optional)</p>
+                                    <div className="flex flex-col gap-2">
+                                        <p className="text-[12px] leading-4 tracking-[1.2px] font-bold">Phone Number (Optional)</p>
                                         <input
                                             type="tel"
+                                            name="phone"
                                             placeholder="Phone No."
+                                            value={formData.phone}
+                                            onChange={handleChange}
                                             className="w-full h-[52px] px-4 border bg-[#F1F1F1] border-[#C3C5D94D] outline-none"
+                                            required
                                         />
                                     </div>
                                 </div>
 
                                 {/* Product Interest */}
-                                <div className='flex flex-col gap-2 mt-5'>
-                                    <p className='text-[12px] leading-4 tracking-[1.2px] font-bold'>Product Interest Area</p>
-
-                                    <div className="relative bg-[#F1F1F1] border border-[#C3C5D94D] ">
-                                        <select className="appearance-none w-full py-2.5 pl-3 pr-10">
-                                            <option value="product interest">
-                                                Product Interest
-                                            </option>
-
-                                            <option value="high-airflow">
-                                                High Airflow
-                                            </option>
-
-                                            <option value="heavy-duty">
-                                                Heavy Duty
-                                            </option>
-
-                                            <option value="low-maintenance">
-                                                Low Maintenance
-                                            </option>
+                                <div className="flex flex-col gap-2 mt-5">
+                                    <p className="text-[12px] leading-4 tracking-[1.2px] font-bold">Product Interest Area</p>
+                                    <div className="relative bg-[#F1F1F1] border border-[#C3C5D94D]" >
+                                        <select
+                                            name="interest"
+                                            value={formData.interest}
+                                            onChange={handleChange}
+                                            className="appearance-none w-full py-2.5 pl-3 pr-10"
+                                            required
+                                        >
+                                            <option value="">Product Interest</option>
+                                            <option value="High Airflow">High Airflow</option>
+                                            <option value="Heavy Duty">Heavy Duty</option>
+                                            <option value="Low Maintenance">Low Maintenance</option>
                                         </select>
-                                        <svg className="absolute right-2 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none"
-                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                            <path stroke="currentColor" stroke-width="2" d="M6 9l6 6 6-6" />
+                                        <svg
+                                            className="absolute right-2 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path stroke="currentColor" strokeWidth="2" d="M6 9l6 6 6-6" />
                                         </svg>
                                     </div>
-
                                 </div>
 
-
                                 {/* Message */}
-                                <div className='flex flex-col gap-2 mt-5 '>
-                                    <p className='text-[12px] leading-4 tracking-[1.2px] font-bold'>Project Specifications / Message</p>
-
+                                <div className="flex flex-col gap-2 mt-5">
+                                    <p className="text-[12px] leading-4 tracking-[1.2px] font-bold">Project Specifications / Message</p>
                                     <textarea
-                                        placeholder="Provide details regarding airflow volume (CFM), facility dimensions, 
-operating environment, or specific technical challenges..."
+                                        name="message"
+                                        placeholder="Provide details regarding airflow volume (CFM), facility dimensions, operating environment, or specific technical challenges..."
                                         rows={5}
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        required
                                         className="w-full px-4 py-4 border bg-[#F1F1F1] border-[#C3C5D94D] outline-none resize-none"
                                     />
                                 </div>
 
                                 {/* Submit */}
-                                <button
+                                <motion.button
+                                    whileTap={{ scale: 0.95 }}
+                                    whileHover={{ scale: 1.02 }}
                                     type="submit"
                                     className="w-full h-[52px] mt-5 px-8 py-4 bg-[#09273A] text-white flex items-center justify-center"
                                 >
-                                    <span className='mr-3'>SUBMIT INQUIRY</span>
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <span className="mr-3">SUBMIT INQUIRY</span>
+                                    <svg
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
                                         <path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z" fill="white" />
                                     </svg>
+                                </motion.button>
 
-                                </button>
-
-                                <p className='text-[11px] mt-5 leading-[16.5px] font-normal text-[#434656] text-center'>By submitting this form, you agree to our Privacy Policy regarding data collection and industrial<br />
-                                    communications.</p>
+                                <p className="text-[11px] mt-5 leading-[16.5px] font-normal text-[#434656] text-center">
+                                    By submitting this form, you agree to our Privacy Policy regarding data collection and industrial<br />
+                                    communications.
+                                </p>
                             </form>
 
                         </div>

@@ -269,7 +269,7 @@ export default function Products() {
                     </div>
                 </div>
 
-                <div className='flex mx-auto w-full max-w-7xl items-center bg-white flex-wrap lg:px-0 px-5'>
+                <div className='flex mx-auto w-full max-w-7xl items-center lg:gap-0 gap-3 bg-white flex-wrap lg:px-0 px-5'>
                     <img
                         src={'/images/exhaust-main.png'}
                         alt={'Exhaust fan'}
@@ -279,7 +279,7 @@ export default function Products() {
                         initial={{ x: -50, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.3, ease: "easeOut" }}
-                        className="relative z-10 flex flex-col gap-7 lg:text-left text-center py-3 lg:p-[48px]"
+                        className="relative z-10 flex flex-col gap-3 lg:gap-7 lg:text-left text-center py-3 lg:p-[48px]"
                     >
                         {/* Heading */}
                         <h1 className="font-sora text-[32px] font-bold leading-[1.15] sm:text-5xl ">
@@ -298,9 +298,7 @@ export default function Products() {
                             <motion.button
                                 whileTap={{ scale: 0.95 }}
                                 whileHover={{ scale: 1.05 }}
-                                onClick={(e) => {
-                                    e.currentTarget.innerText = "EXPLORE PRODUCTS →";
-                                }}
+                                onClick={()=>router.push('/products/exhuast-fan/#tabs')}
                                 className="w-full font-inter bg-[#09273A] hover:bg-black px-6 py-3 text-sm font-medium text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                             >
                                 REQUEST QUOTE

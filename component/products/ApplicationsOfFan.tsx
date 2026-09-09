@@ -199,7 +199,7 @@ function CategoryCard({
             className="
                 flex
                 h-[125px]
-                w-[140px]
+                w-[130px]
                 flex-col
                 items-center
                 justify-center
@@ -357,7 +357,7 @@ export default function ApplicationsOfFan() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="max-w-7xl mx-auto text-center lg:mt-20 mt-5">
 
-                 <h2 className="font-sora font-bold text-4xl leading-[57.6px] tracking-[-0.96px] text-[#09273A]">
+                 <h2 className="font-sora font-bold text-4xl lg:leading-[57.6px] tracking-[-0.96px] text-[#09273A]">
                      Application of{" "}
                      <span className="text-[#F4B51E]">HVLS Fans</span>
                  </h2>

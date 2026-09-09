@@ -100,7 +100,7 @@ export default function WhyChooseHVLS() {
               viewBox="0 0 804 448"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="animate-dash"
+              className="animate-dash z-5"
             >
               <path
                 d="M0.143188 4.29887C182.643 -32.2011 255.643 223.299 401.643 223.299C547.643 223.299 620.643 4.29887 803.143 40.7989M0.143188 442.299C255.643 478.799 401.643 259.799 547.643 259.799C693.643 259.799 766.643 478.799 803.143 442.299"
@@ -110,10 +110,11 @@ export default function WhyChooseHVLS() {
               />
             </svg>
 
-
           </center>
+          
+            <h1 className="top-14 font-extrabold absolute align-middle w-full hidden lg:block text-[240px] text-[#1A1C1E] opacity-[3%] z-10">MORE. US</h1>
           {features.map((item) => (
-            <div key={item.no} className={`text-left relative ${item.styling} ${item.animate}`}>
+            <div key={item.no} className={`text-left relative z-20 ${item.styling} ${item.animate}`}>
 
               <div className="relative z-10">
                 <span className="absolute -top-5 left-0 text-6xl text-[#000613]/5 leading-[60px]">
