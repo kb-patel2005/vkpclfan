@@ -41,7 +41,7 @@ export default function HeroSwiper({ models, features }: Props) {
     } else if (diff < -50) {
       // swipe right → previous image
       setActiveModel((prev) => {
-        const next = prev <= 0 ? models.length - 2 : prev - 1
+        const next = prev <= 0 ? models.length - 1 : prev - 1
         setHeroimage(models[next + 1].url)
         return next
       })
@@ -73,7 +73,7 @@ export default function HeroSwiper({ models, features }: Props) {
             >
               MODELS
             </h2>
-            <ul className="flex flex-row lg:flex-col justify-between mt-0.5">
+            <ul className="flex flex-row lg:flex-col gap-2 justify-between mt-0.5">
               {models.slice(1).map((e, idx) => (
                 <li
                   key={e.title}
@@ -100,7 +100,7 @@ export default function HeroSwiper({ models, features }: Props) {
         <div className="flex flex-col items-center">
           {/* Swipeable hero image */}
           <div
-            className="w-full lg:w-[440px] h-[300px] lg:h-[400px] overflow-hidden relative"
+            className="w-full lg:w-[440px] h-[350px] overflow-hidden relative"
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
           >
