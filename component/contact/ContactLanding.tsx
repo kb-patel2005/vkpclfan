@@ -1,8 +1,16 @@
+'use client'
+
+import { motion } from 'framer-motion'
 import React from 'react'
 
 export default function ContactLanding() {
     return (
-        <section className='mx-auto w-full flex flex-col gap-6 justify-center items-start max-w-7xl h-[70vh] lg:px-0 px-5'>
+        <motion.section
+           initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+        className='mx-auto w-full flex flex-col gap-6 justify-center items-start max-w-7xl h-[70vh] lg:px-0 px-5'>
             
                 <h1 className="font-sora text-[40px] font-bold leading-[1.15] sm:text-5xl lg:text-[64px]">
                     LET'S TALK ABOUT YOUR
@@ -16,6 +24,6 @@ export default function ContactLanding() {
                     facility.
                 </p>
             
-        </section>
+        </motion.section>
     )
 }
