@@ -9,7 +9,7 @@ import React from 'react'
 
 export default function page() {
   return (
-    <div className='bg-[#F8F9FA] '>
+    <main className='bg-[#F8F9FA] '>
         <AboutLanding/>
         <AboutCounters/>
         <Engineering/>
@@ -17,6 +17,6 @@ export default function page() {
         <Trust/>
         <LetsBuild/>
         <Footer/>
-    </div>
+    </main>
   )
 }

@@ -10,7 +10,7 @@ import React from 'react'
 
 export default function page() {
     return (
-        <div className='bg-[#F8F9FA]'>
+        <main className='bg-[#F8F9FA]'>
             <ProductsLanding />
             <Products />
             <Workflow />
@@ -19,6 +19,6 @@ export default function page() {
             <Faq />
             <Industryworkspace />
             <Footer />
-        </div>
+        </main>
     )
 }

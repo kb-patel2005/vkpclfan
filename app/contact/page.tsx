@@ -8,13 +8,13 @@ import React from 'react'
 
 export default function page() {
   return (
-    <section className='bg-[#F8F9FA]'>
+    <main className='bg-[#F8F9FA]'>
       <ContactLanding />
       <ContactDetails />
       <Reviews />
       <Faq />
       <Industryworkspace />
       <Footer />
-    </section>
+    </main>
   )
 }
