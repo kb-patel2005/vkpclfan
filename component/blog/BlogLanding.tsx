@@ -5,8 +5,11 @@ import React from 'react'
 
 export default function BlogLanding() {
     return (
-        <section className='w-full mx-auto text-center flex flex-col justify-center gap-[30px] py-20 bg-white'>
-            <h1 className=" font-sora text-[40px] font-extrabold leading-[79px] trading-[-1.44px] sm:text-5xl lg:text-[64px]">
+        <motion.section
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.3, ease: "easeOut" }} className='w-full mb-20 mx-auto text-center flex flex-col justify-center gap-[30px] py-20 bg-white lg:px-0 px-5'>
+            <h1 className=" font-sora text-[40px] font-extrabold lg:leading-[79px] leading-[42px] trading-[-1.44px] sm:text-5xl lg:text-[64px]">
                 THE SCIENCE <br />
                 BEHIND BETTER <br />
                 <span className="text-[#FDCD2E]">AIRFLOW</span>.
@@ -15,7 +18,7 @@ export default function BlogLanding() {
             {/* Description */}
             <p className="font-normal text-[#5D5D5D] font-inter leading-6 sm:text-base text-lg lg:leading-7">
                 Engineering insights, industrial intelligence and real-world
-                <br/>
+                <br />
                 knowledge shaping the future of ventilation.
             </p>
 
@@ -30,6 +33,6 @@ export default function BlogLanding() {
                     EXPLORE INSIGHTS ↓
                 </motion.button>
             </div>
-        </section>
+        </motion.section>
     )
 }

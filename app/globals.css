@@ -88,6 +88,11 @@
   font-family: var(--font-space);
 }
 
+.font-jetBrainsMono {
+  font-family: var(--font-mono);
+
+}
+
 body {
   overflow-x: hidden;
   width: 100%;

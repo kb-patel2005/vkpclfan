@@ -166,6 +166,11 @@ export default function Footer() {
                     Contact Us
                   </a>
                 </li>
+                <li>
+                  <a href="/career" className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
+                    Career
+                  </a>
+                </li>
               </ul>
 
             </div>

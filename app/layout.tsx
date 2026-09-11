@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/component/home/Navbar";
 
@@ -60,11 +60,16 @@ const space = Space_Grotesk({
   variable: "--font-space",
 });
 
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+});
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${sora.variable} ${hankenGrotesk.variable} ${manrope.variable} ${plusJakarta.variable} ${space.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${sora.variable} ${hankenGrotesk.variable} ${manrope.variable} ${plusJakarta.variable} ${jetBrainsMono.variable} ${space.variable} h-full antialiased`}
     >
       <body className={`${inter.className} min-h-full flex flex-col`}>
         <Navbar/>
