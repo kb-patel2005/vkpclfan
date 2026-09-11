@@ -162,7 +162,7 @@ export default function Footer() {
                   </a>
                 </li>
                 <li className="lg:hidden">
-                  <a href="/contact-us" className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
+                  <a href="/contact" className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
                     Contact Us
                   </a>
                 </li>
@@ -182,7 +182,7 @@ export default function Footer() {
 
               <ul className="space-y-3 text-sm">
                 <li>
-                  <a href="/contact-us" className="link-hover transition text-[#5D5D5D] text-[14px] hover:text-[#FDCD2E]">
+                  <a href="/contact" className="link-hover transition text-[#5D5D5D] text-[14px] hover:text-[#FDCD2E]">
                     Contact Us
                   </a>
                 </li>
@@ -192,7 +192,7 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="/terms-and-services" className="link-hover transition text-[#5D5D5D] text-[14px] hover:text-[#FDCD2E]">
+                  <a href="/term-conditions" className="link-hover transition text-[#5D5D5D] text-[14px] hover:text-[#FDCD2E]">
                     Terms and Services
                   </a>
                 </li>
