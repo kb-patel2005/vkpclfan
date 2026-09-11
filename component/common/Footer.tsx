@@ -187,7 +187,7 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="/privacy-policy" className="link-hover transition text-[#5D5D5D] text-[14px] hover:text-[#FDCD2E]">
+                  <a href="/privacy" className="link-hover transition text-[#5D5D5D] text-[14px] hover:text-[#FDCD2E]">
                     Privacy Policy
                   </a>
                 </li>
@@ -247,10 +247,10 @@ export default function Footer() {
             All rights reserved.
           </p>
           <div className="flex items-center gap-4 justify-center">
-            <a href="#" className="text-[13px]   hover:text-[#FDCD2E]">
+            <a href="/privacy" className="text-[13px]   hover:text-[#FDCD2E]">
               Privacy Policy
             </a>
-            <a href="#" className="text-[13px]  hover:text-[#FDCD2E]">
+            <a href="/term-conditions" className="text-[13px]  hover:text-[#FDCD2E]">
               Terms and Conditions
             </a>
           </div>
