@@ -6,6 +6,7 @@ import {
   Play,
   Users,
 } from "lucide-react";
+import Link from "next/link";
 
 import React from "react";
 
@@ -138,38 +139,38 @@ export default function Footer() {
 
               <ul className="space-y-3 text-sm">
                 <li>
-                  <a
+                  <Link
                     href="/about"
                     className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]"
                   >
                     About
-                  </a>
+                  </Link>
 
                 </li>
                 <li>
-                  <a href="/products" className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
+                  <Link href="/products" className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
                     Our Products
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/blog" className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
+                  <Link href="/blog" className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
                     Blog
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/gallery" className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
+                  <Link href="/gallery" className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
                     Gallery
-                  </a>
+                  </Link>
                 </li>
                 <li className="lg:hidden">
-                  <a href="/contact" className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
+                  <Link href="/contact" className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/career" className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
+                  <Link href="/career" className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
                     Career
-                  </a>
+                  </Link>
                 </li>
               </ul>
 
@@ -182,19 +183,19 @@ export default function Footer() {
 
               <ul className="space-y-3 text-sm">
                 <li>
-                  <a href="/contact" className="link-hover transition text-[#5D5D5D] text-[14px] hover:text-[#FDCD2E]">
+                  <Link href="/contact" className="link-hover transition text-[#5D5D5D] text-[14px] hover:text-[#FDCD2E]">
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/privacy" className="link-hover transition text-[#5D5D5D] text-[14px] hover:text-[#FDCD2E]">
+                  <Link href="/privacy" className="link-hover transition text-[#5D5D5D] text-[14px] hover:text-[#FDCD2E]">
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/term-conditions" className="link-hover transition text-[#5D5D5D] text-[14px] hover:text-[#FDCD2E]">
+                  <Link href="/term-conditions" className="link-hover transition text-[#5D5D5D] text-[14px] hover:text-[#FDCD2E]">
                     Terms and Services
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -205,17 +206,17 @@ export default function Footer() {
               </h3>
 
               {/* Email */}
-              <a
+              <Link
                 href="mailto:info@floentair.com"
                 className="mb-4 flex items-center gap-3 text-[14px] transition duration-300 hover:text-black"
               >
                 <span>
                   Email: info@floentair.com
                 </span>
-              </a>
+              </Link>
 
               {/* Phone */}
-              <a
+              <Link
                 href="tel:+919925624342"
                 className="flex items-center gap-3 mb-4 text-[14px] transition duration-300 hover:text-black"
               >
@@ -223,7 +224,7 @@ export default function Footer() {
                 <span>
                   Phone: +91 9925624342
                 </span>
-              </a>
+              </Link>
 
               <a
                 href="#"
