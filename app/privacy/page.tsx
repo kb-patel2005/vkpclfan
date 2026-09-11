@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function page() {
   return (
-    <main>
+    <main className='bg-[#F8F9FA]'>
         <Policy/>
         <Footer/>
     </main>

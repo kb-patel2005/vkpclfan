@@ -4,7 +4,11 @@ import React from 'react'
 import Image from 'next/image'
 
 import { motion } from "framer-motion";
+import { useRouter } from 'next/navigation';
 export default function Landing() {
+
+    const router = useRouter()
+
     return (
 
         <section className="relative flex h-[90vh] items-center px-5 sm:px-8 lg:px-12">
@@ -42,9 +46,7 @@ export default function Landing() {
                     <motion.button
                         whileTap={{ scale: 0.95 }}
                         whileHover={{ scale: 1.05 }}
-                        onClick={(e) => {
-                            e.currentTarget.innerText = "EXPLORE PRODUCTS →";
-                        }}
+                        onClick={()=>router.push("/products")}
                         className="w-full font-inter bg-[#09273A] hover:bg-black px-6 py-3 text-sm font-medium text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                     >
                         EXPLORE PRODUCTS
@@ -53,6 +55,7 @@ export default function Landing() {
                     <motion.button
                         whileTap={{ scale: 0.95 }}
                         whileHover={{ scale: 1.05 }}
+                        onClick={()=>router.push("/contact")}
                         className="w-full font-inter border bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                     >
                         TALK TO AN ENGINEER

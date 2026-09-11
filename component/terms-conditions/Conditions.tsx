@@ -1,17 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
-import {
-    Shield,
-    FileText,
-    Scale,
-    CreditCard,
-    CircleDollarSign,
-    Gavel,
-    BadgeCheck,
-    Phone,
-} from "lucide-react";
+import { useState, useEffect } from "react";
+
 import { motion } from "framer-motion";
 
 const sections = [
@@ -61,46 +52,44 @@ const sections = [
 export default function Conditions() {
     const [active, setActive] = useState("intro");
 
+    useEffect(() => {
+        const ids = [
+            "intro",
+            "rights",
+            "usage",
+            "payment",
+            "disclaimer",
+            "warranty",
+            "law",
+            "contact",
+        ];
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActive(entry.target.id);
+                    }
+                });
+            },
+            {
+                rootMargin: "-30% 0px -55% 0px",
+                threshold: 0,
+            }
+        );
+
+        ids.forEach((id) => {
+            const el = document.getElementById(id);
+            if (el) observer.observe(el);
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <section className="w-full bg-[#F8F9FA] flex flex-col gap-16">
-            {/* <section className="border border-[#C5C6CE] w-full max-w-7xl mx-auto bg-white">
-                <div className="grid lg:grid-cols-2 gap-10 items-center">
 
-                    <div className="p-16 ">
-                        <p className="font-medium pb-4 text-[12px] leading-[16px] tracking-[0.6px] align-middle text-[#415F8C]">
-                            DOCUMENT REF: AT-TC-24
-                        </p>
-
-
-                        <h1 className="pb-6 font-sora font-bold text-[48px] leading-[56px] text-[#1B1B1D] tracking-[-0.96px] align-middle uppercase">
-                            TERMS &
-                            CONDITIONS
-                        </h1>
-
-
-                        <p className="pb-8 font-jakarta font-normal text-[18px] leading-[32px] tracking-[0px] align-middle text-[#44474D]">
-                            Terms and Conditions of Floent AIr
-                        </p>
-
-
-                        <p className="font-medium w-fit py-2 px-4 bg-[#F5F3F5] text-[12px] leading-[16px] tracking-[0.6px] align-middle text-[#1B1B1D]">
-                            Last updated: Aug 9, 2024
-                        </p>
-
-                    </div>
-
-                    <div className="flex p-9 justify-center border-l border-l-[#C5C6CE]">
-                        <Image
-                            src="/terms-conditions.jpg"
-                            alt="Terms Illustration"
-                            width={420}
-                            height={320}
-                            className=""
-                        />
-                    </div>
-                </div>
-            </section> */}
-            <section className="border border-[#C5C6CE] w-full max-w-7xl mx-auto bg-white">
+            <section className="border border-[#C5C6CE] w-full max-w-7xl mt-15 mx-auto bg-white">
                 <motion.div
                     initial={{ x: -100, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
@@ -139,233 +128,13 @@ export default function Conditions() {
                 </motion.div>
             </section>
 
-            {/* <div className="max-w-7xl mx-auto flex flex-col lg:flex-row">
-
-                <aside className="w-full lg:w-[280px] border-r border-[#D9D9D9] bg-[#F4F5F7] lg:min-h-screen">
-                    <div className="p-6 sticky top-0 bg-[#F4F5F7]">
-                        <h3 className="text-[#071A33] font-bold text-2xl">
-                            Policy Sections
-                        </h3>
-                        <p className="text-[11px] text-[#6B7280] mt-1">
-                            Last updated Oct 2023
-                        </p>
-
-                        <nav className="mt-6 flex lg:flex-col gap-2 overflow-x-auto">
-                            {sections.map((item) => (
-                                <button
-                                    key={item.id}
-                                    onClick={() => setActive(item.id)}
-                                    className={`flex items-center gap-2 text-xs whitespace-nowrap px-3 py-2 rounded-full lg:rounded-none lg:px-0 lg:py-3 transition
-                    ${active === item.id
-                                            ? "text-[#071A33] font-semibold lg:border-l-2 border-[#071A33] lg:pl-3"
-                                            : "text-[#5D5D5D]"
-                                        }`}
-                                >
-                                    {item.icon}
-                                    {item.title}
-                                </button>
-                            ))}
-                        </nav>
-                    </div>
-                </aside>
-
-                <main className="flex-1">
-
-                    <section className="px-6 lg:px-14 py-10">
-                        <div className="flex flex-col lg:flex-row gap-8">
-                            <div className="lg:w-44">
-                                <p className="text-[10px] tracking-[2px] text-[#7A8A9A] uppercase">
-                                    Section 01
-                                </p>
-                                <h2 className="mt-2 text-[#071A33] font-bold text-xl">
-                                    Introduction
-                                </h2>
-                            </div>
-
-                            <div className="flex-1 text-[#44474D] text-[15px] leading-8">
-                                <p>
-                                    Please read these Terms and Conditions carefully before using
-                                    our services. By using our website or engaging with our
-                                    products, you agree to these terms.
-                                </p>
-
-                                <p className="mt-5">
-                                    These Terms govern your use of Austar Technologies’ website,
-                                    products, and services. We are dedicated to providing
-                                    reliable HVAC and fan design and engineering solutions.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-
-
-
-                    <section className="border-t border-[#D9D9D9] px-6 lg:px-14 py-10">
-                        <p className="text-[10px] uppercase tracking-[2px] text-[#7A8A9A]">
-                            Section 02
-                        </p>
-
-                        <h2 className="mt-2 text-[#071A33] font-bold text-2xl">
-                            Intellectual Property Rights
-                        </h2>
-
-                        <p className="mt-5 text-[#44474D] leading-8">
-                            All content, trademarks, patents, and engineering designs related
-                            to Austar Technologies' HVLS fans are the exclusive property of
-                            Austar Technologies or its licensors.
-                        </p>
-                    </section>
-
-                    
-                    
-
-                    <section className="border-t border-[#D9D9D9] px-6 lg:px-14 py-10">
-                        <p className="text-[10px] uppercase tracking-[2px] text-[#7A8A9A]">
-                            Section 03
-                        </p>
-
-                        <h2 className="mt-2 text-[#071A33] font-bold text-2xl">
-                            User Responsibilities
-                        </h2>
-
-                        <div className="mt-6 space-y-4">
-                            {[
-                                "Provide accurate information during purchase and installation.",
-                                "Use products in compliance with local safety regulations.",
-                                "Ensure installation is carried out by qualified professionals.",
-                            ].map((item) => (
-                                <div key={item} className="flex gap-3">
-                                    <BadgeCheck className="text-[#1267B1] mt-1" size={18} />
-                                    <p className="text-[#44474D]">{item}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </section>
-
-                    
-                    
-
-                    <section className="border-t border-[#D9D9D9] px-6 lg:px-14 py-10">
-                        <p className="text-[10px] uppercase tracking-[2px] text-[#7A8A9A]">
-                            Section 04
-                        </p>
-
-                        <h2 className="mt-2 text-[#071A33] font-bold text-2xl">
-                            Payment & Delivery
-                        </h2>
-
-                        <p className="mt-5 text-[#44474D] leading-8">
-                            Payment terms are established at the point of sale. We accept
-                            various forms of payment as outlined in our invoices. Delivery
-                            timelines are estimates, and Austar Technologies is not liable for
-                            delays caused by external logistics disruptions.
-                        </p>
-                    </section>
-
-
-
-
-                    <section className="px-6 lg:px-14 py-8">
-                        <div className="bg-[#07263A] text-white p-8 relative overflow-hidden">
-                            <span className="text-[10px] tracking-[2px] uppercase text-[#9CC7E5]">
-                                Section 05
-                            </span>
-
-                            <h2 className="mt-3 text-3xl font-bold">
-                                Disclaimers and Limitation of Liability
-                            </h2>
-
-                            <p className="mt-5 text-[#D8E6F2] leading-8 max-w-3xl">
-                                Austar Technologies provides its products on an “as-is” basis.
-                                While we guarantee quality and performance, we do not warrant
-                                uninterrupted services or indirect consequential damages arising
-                                from the use of our products.
-                            </p>
-
-                            <Shield
-                                size={140}
-                                className="absolute right-6 top-6 opacity-10 hidden lg:block"
-                            />
-                        </div>
-                    </section>
-
-
-
-
-                    <section className="border-t border-[#D9D9D9] px-6 lg:px-14 py-10">
-                        <p className="text-[10px] uppercase tracking-[2px] text-[#7A8A9A]">
-                            Section 06
-                        </p>
-
-                        <h2 className="mt-2 text-[#071A33] font-bold text-2xl">
-                            Warranty
-                        </h2>
-
-                        <p className="mt-5 text-[#44474D] leading-8">
-                            Our HVLS fans come with a standard manufacturer’s warranty covering
-                            defects in materials and workmanship. The warranty is void if the
-                            product has been modified, improperly installed, or poorly
-                            maintained.
-                        </p>
-                    </section>
-
-                    
-                    
-
-
-                    <section className="border-t-2 border-[#071A33] px-6 lg:px-14 py-12">
-                        <div className="grid lg:grid-cols-2 gap-10">
-
-                            <div>
-                                <span className="text-[10px] tracking-[2px] uppercase text-[#7A8A9A]">
-                                    Section 08
-                                </span>
-
-                                <h2 className="mt-3 text-[#071A33] text-3xl font-bold">
-                                    Contact Us
-                                </h2>
-
-                                <p className="mt-5 text-[#44474D] leading-8">
-                                    If you have any questions concerning these Terms and
-                                    Conditions, please contact our compliance team.
-                                </p>
-                            </div>
-
-                            <div className="border border-[#D9D9D9] p-6 bg-white">
-                                <p className="text-[11px] uppercase tracking-[2px] text-[#7A8A9A]">
-                                    Direct Line
-                                </p>
-
-                                <div className="flex items-center gap-3 mt-3">
-                                    <Phone className="text-[#1267B1]" />
-                                    <h3 className="text-3xl font-bold text-[#071A33]">
-                                        +91 78579 5757
-                                    </h3>
-                                </div>
-
-                                <div className="mt-8">
-                                    <p className="text-[11px] uppercase tracking-[2px] text-[#7A8A9A]">
-                                        Compliance Email
-                                    </p>
-
-                                    <p className="mt-2 text-lg font-semibold text-[#071A33]">
-                                        legal@floent.com
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </section>
-
-                </main>
-            </div> */}
             <section className="bg-[#F8F9FA] lg:px-0 px-5">
                 <motion.div
                     initial={{ x: -100, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
-                    viewport={{ once: true, amount: 0.3 }}
+                    viewport={{ once: true, amount: 0.05 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="max-w-7xl mx-auto flex flex-col lg:flex-row">
+                    className="max-w-7xl mx-auto flex flex-col lg:flex-row mb-20">
                     {/* LEFT SIDEBAR */}
                     <aside className="w-full lg:max-w-[300px] border-b lg:border-b-0 lg:border-l-2 h-fit border-[#C5C6CE] pt-4 pb-4 lg:pb-0 sticky lg:top-24 bg-[#F8F9FA] z-20">
 
@@ -378,12 +147,14 @@ export default function Conditions() {
                         </p>
 
                         <nav className="flex lg:flex-col overflow-x-auto lg:overflow-visible gap-2 lg:space-y-4 px-4 lg:px-0 scrollbar-hide">
-                            {sections.map((item, idx) => (
+                            {sections.map((item) => (
                                 <a
-                                    key={idx}
+                                    key={item.id}
                                     href={`#${item.id}`}
-                                    onClick={() => setActive(item.id)}
-                                    className={`${active == item.id ? "border-l-2 border-black" : ""} flex items-center pl-4 py-2 ml-0 gap-3 text-xs leading-4 font-medium tracking-[0.6px] text-[#44474D] hover:text-[#FDB913]`}
+                                    className={`flex items-center gap-3 whitespace-nowrap py-2 pl-4 pr-4 text-xs font-medium tracking-[0.6px] transition-all duration-200 ${active === item.id
+                                            ? "lg:border-l-2 border-[#09273A] text-[#09273A] bg-[#EEF2F6] lg:bg-transparent"
+                                            : "text-[#44474D] hover:text-[#FDB913]"
+                                        }`}
                                 >
                                     {item.icon}
                                     {item.title}
@@ -393,7 +164,7 @@ export default function Conditions() {
                     </aside>
 
                     {/* RIGHT CONTENT */}
-                    <main className="flex flex-col gap-16 w-full mb-20 lg:pl-5 lg:border-l border-l-[#C5C6CE]">
+                    <main className="flex flex-col gap-16 w-full lg:pl-5 lg:border-l border-l-[#C5C6CE]">
                         <p className="font-normal text-[18px] leading-[32px] tracking-[0px] align-middle">
                             Please read these Terms and Conditions carefully before using our services. By using our website or engaging with our products, you agree to these terms.
                         </p>
@@ -510,7 +281,7 @@ export default function Conditions() {
                         </section>
 
                         {/* SECTION 6 */}
-                        <section id="Overview" className="scroll-mt-28 lg:scroll-mt-32 flex flex-col gap-8">
+                        <section id="warranty" className="scroll-mt-28 lg:scroll-mt-32 flex flex-col gap-8">
                             <div className="relative border-b border-b-[#C5C6CE]">
                                 <span className="font-jetBrainsMono absolute -bottom-1.5 py-1 px-2 font-medium text-[12px] w-fit  bg-[#F8F9FA] leading-[16px] tracking-[0.6px] align-middle text-[#415F8C]">
                                     SECTION 06
@@ -527,7 +298,7 @@ export default function Conditions() {
 
 
                         {/* SECTION 7 */}
-                        <section id="Overview" className="scroll-mt-28 lg:scroll-mt-32 flex flex-col gap-8">
+                        <section id="law" className="scroll-mt-28 lg:scroll-mt-32 flex flex-col gap-8">
                             <div className="relative border-b border-b-[#C5C6CE]">
                                 <span className="font-jetBrainsMono absolute -bottom-1.5 py-1 px-2 font-medium text-[12px] w-fit  bg-[#F8F9FA] leading-[16px] tracking-[0.6px] align-middle text-[#415F8C]">
                                     SECTION 07
@@ -543,7 +314,7 @@ export default function Conditions() {
                         </section>
 
                         {/* SECTION 7 */}
-                        <section id="Overview" className="scroll-mt-28 lg:scroll-mt-32 flex flex-col gap-8">
+                        <section id= "contact" className="scroll-mt-28 lg:scroll-mt-32 flex flex-col gap-8">
                             <div className="relative border-b border-b-[#C5C6CE]">
                                 <span className="font-jetBrainsMono absolute -bottom-1.5 py-1 px-2 font-medium text-[12px] w-fit  bg-[#F8F9FA] leading-[16px] tracking-[0.6px] align-middle text-[#415F8C]">
                                     SECTION 08

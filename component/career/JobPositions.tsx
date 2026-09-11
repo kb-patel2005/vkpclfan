@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import React, { useState } from 'react'
 
 interface Job {
@@ -101,7 +102,7 @@ const JobCard = ({ job, active, setActive }: { job: Job, active: string, setActi
                     ))}
                 </ul>
             </div>
-            <button className={`${active == job.role ? "block" : "hidden"} w-[150px] font-bold text-[16px] leading-5 bg-[#FFC727] py-2 px-6`}>Apply</button>
+            <Link href={'/contact/#applicationform'} className={`${active == job.role ? "block" : "hidden"} w-[150px] font-bold text-[16px] leading-5 bg-[#FFC727] py-2 px-6`}>Apply</Link>
         </motion.div>
     )
 }

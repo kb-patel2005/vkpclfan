@@ -322,7 +322,7 @@ export default function Policy() {
     const [active, setActive] = useState("Overview")
 
     return (
-        <section className="bg-[#F8F9FA] lg:px-0 px-5">
+        <section className="lg:px-0 px-5 my-15">
             <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}

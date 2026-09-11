@@ -57,12 +57,13 @@ Message: ${formData.message}`;
 
         //     </div>
         // </section>
-        <motion.section 
-           initial={{ x: -100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-        className="w-full max-w-7xl mx-auto lg:px-0 px-5">
+        <motion.section
+            id='applicationform'
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="w-full max-w-7xl mx-auto lg:px-0 px-5">
             <div className="grid grid-cols-12 gap-6">
                 {/* Left side: 5 columns */}
                 <div className="col-span-12 lg:col-span-5 flex flex-col gap-6">
