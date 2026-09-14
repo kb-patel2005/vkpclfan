@@ -889,7 +889,7 @@ Message: ${formData.message}`;
                 <p>Ideal for ventilation and ensuring air changes as
                     per statutory requirements in various industrial
                     and commercial spaces.</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:py-10">
                     {applications.map((item, index) => (
                         <div key={index} className="flex items-start gap-3">
                             <svg
