@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 const data = [
   { num: 15, suffix: "+", title: "YEARS OF EXPERIENCE" },
@@ -36,6 +37,9 @@ function Card1({
 }
 
 export default function Industryworkspace() {
+
+  const router = useRouter()
+
   return (
     <section className="flex w-full flex-col items-center bg-[#F8F9FA] gap-4 justify-center md:gap-5 px-5 py-6 sm:px-6 lg:gap-14 lg:pt-8 pb-12">
       {/* ================= STATS ================= */}
@@ -71,7 +75,9 @@ export default function Industryworkspace() {
         <p className="max-w-2xl text-base font-normal leading-6 text-white sm:text-lg">
           Our specialists are ready to provide a custom air-flow audit for your facility.
         </p>
-        <button className="rounded-full border-2 border-white bg-transparent px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:bg-white hover:text-[#09273A] sm:px-12 sm:py-5 sm:text-base">
+        <button
+        onClick={()=>router.push("/contact")}
+        className="rounded-full border-2 border-white bg-transparent px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:bg-white hover:text-[#09273A] sm:px-12 sm:py-5 sm:text-base">
           Talk to an Expert
         </button>
       </motion.div>

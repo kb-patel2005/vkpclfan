@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 const faqs = [
     {
@@ -143,12 +144,14 @@ export function Faq() {
                     </div>
 
 
-                    <button
+                    <a href="https://wa.me/919876543210" // replace with your WhatsApp number
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="w-full rounded-full bg-[#09273A] px-8 py-4 text-sm font-semibold text-white transition hover:bg-[#123d56] sm:w-auto"
                         type="button"
                     >
                         Chat with Support
-                    </button>
+                    </a>
 
                 </div>
 

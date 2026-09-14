@@ -1,14 +1,18 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 
 export default function CaseStudy() {
+
+    const router = useRouter()
+
     return (
-        <section className='w-full lg:py-32 py-12 bg-white my-20 lg:px-0 px-5'>
+        <section className='w-full lg:py-32 py-6 bg-white my-8 lg:my-20 lg:px-0 px-5'>
             <motion.div initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className='w-full max-w-7xl mx-auto flex flex-col gap-6 border-l-[16px] pl-4 lg:pl-16 border-l-[#FDCD2E]'>
                 <span className='text-[13px] font-medium leading-4'>ENGINEERING NOTE // 001</span>
@@ -31,6 +35,7 @@ export default function CaseStudy() {
                     <motion.button
                         whileTap={{ scale: 0.95 }}
                         whileHover={{ scale: 1.05 }}
+                        onClick={()=>router.push('/products/exhuast-fan')}
                         className="w-full font-inter border border-[#00132C] bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                     >
                         READ THE FULL BRIEF
