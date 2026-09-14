@@ -458,30 +458,30 @@ Message: ${formData.message}`;
             <HeroSwiper models={models} features={features} setTab={setActive} />
 
             <div className='w-full max-w-7xl mx-auto mt-2'>
-                <h2 className='text-4xl font-bold font-sora mb-6 text-center'>features and Advantages</h2>
+                <h2 className='text-4xl font-bold font-sora mb-12 text-center'>features and Advantages</h2>
 
-                <div className="flex flex-wrap justify-between gap-5">
-                    {featuresAndAdavantage.map((item, index) => (
-                        <div
-                            key={index}
-                            className="w-[23%] min-w-[150px] flex flex-col gap-3 items-center text-center justify-center"
-                        >
-                            <div className="h-[50px] shrink-0">
-                                {item.icon}
-                            </div>
+               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+    {featuresAndAdavantage.map((item, index) => (
+        <div
+            key={index}
+            className="flex flex-col items-center text-center"
+        >
+            <div className="h-[50px] w-[50px] shrink-0 flex items-center justify-center">
+                {item.icon}
+            </div>
 
-                            <div className='flex flex-col items-center'>
-                                <h3 className="font-sora font-bold text-[20px] leading-[28px] text-[#09273A]">
-                                    {item.features}
-                                </h3>
+            <div className="mt-3 flex flex-col items-center">
+                <h3 className="font-sora font-bold text-[18px] lg:text-[20px] leading-[24px] lg:leading-[28px] text-[#09273A]">
+                    {item.features}
+                </h3>
 
-                                <p className="w-[80%] font-inter font-normal text-[14px] lg:text-[16px] leading-[22px] lg:leading-[24px] text-[#5D5D5D] mt-2">
-                                    {item.advantage}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                <p className="mt-2 max-w-[260px] font-inter font-normal text-[14px] leading-[22px] text-[#5D5D5D]">
+                    {item.advantage}
+                </p>
+            </div>
+        </div>
+    ))}
+</div>
             </div>
             <motion.div
                 initial={{ x: -100, opacity: 0 }}
@@ -889,7 +889,7 @@ Message: ${formData.message}`;
                 <p>Ideal for ventilation and ensuring air changes as
                     per statutory requirements in various industrial
                     and commercial spaces.</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
                     {applications.map((item, index) => (
                         <div key={index} className="flex items-start gap-3">
                             <svg

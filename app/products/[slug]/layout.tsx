@@ -7,6 +7,7 @@ import BenefitFan from '@/component/products/BenefitFan';
 import Manufacturer from '@/component/products/Manufacturer';
 import { Specifications } from '@/component/products/Specifications';
 import WhyChooseHVLS from '@/component/products/WhyChooseHVLS';
+import WhyFloent from '@/component/products/WhyFloent';
 import React from 'react'
 
 export default function ProductsLayout({
@@ -17,6 +18,7 @@ export default function ProductsLayout({
     return (
         <>
             <main className="flex-grow">{children}</main>
+            <WhyFloent/>
             <Manufacturer/>
             <BenefitFan/>
             <WhyChooseHVLS/>
