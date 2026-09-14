@@ -11,7 +11,7 @@ const whyChoose = [
 
 export default function WhyFloent() {
   return (
-    <section className='flex justify-between w-full max-w-7xl mx-auto items-center py-20'>
+    <section className='flex flex-wrap justify-between w-full max-w-7xl mx-auto items-center py-20 lg:px-0 px-5'>
         <div>
             <h1 className='text-5xl font-bold font-sora mb-12 '>Why Floent?</h1>
             <ul className='flex flex-col gap-4'>
