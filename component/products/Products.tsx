@@ -247,9 +247,9 @@ export default function Products() {
 
                 <div className='flex mx-auto w-full max-w-7xl items-center lg:gap-0 gap-3 bg-white flex-wrap lg:px-0 px-5'>
                     <img
-                        src={'/main-exhuast.png'}
+                        src={'/product-main-image.png'}
                         alt={'Exhaust fan'}
-                        className="lg:h-[435px] object-center lg:w-[45%] transition-transform duration-500 hover:scale-105"
+                        className="lg:h-[435px] object-center lg:w-[35%] transition-transform duration-500 hover:scale-105"
                     />
                     <motion.div
                         initial={{ x: -50, opacity: 0 }}
@@ -263,7 +263,7 @@ export default function Products() {
                         </h1>
 
                         {/* Description */}
-                        <p className="max-w-[600px] font-medium text-[#5D5D5D] font-inter leading-6 sm:text-base text-[16px] lg:leading-7">
+                        <p className="max-w-[700px] font-medium text-[#5D5D5D] font-inter leading-6 sm:text-base text-[16px] lg:leading-7">
                             Floent Exhaust Fans efficiently remove hot air, moisture, dust, fumes, chemicals and unpleasant odors, replacing stagnant indoor air with fresh air.
                             Designed for large industrial and commercial spaces, they help prevent overheating, moisture-related damage and poor indoor air quality creating a cleaner, cooler and more comfortable environment.
                             Powerful ventilation. Better airflow. Healthier spaces.
