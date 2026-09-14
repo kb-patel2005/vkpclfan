@@ -62,54 +62,57 @@ export default function Articles() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="w-full">
-                <div
-                    className="max-w-7xl mx-auto flex bg-white items-center gap-8 my-10 py-4 lg:px-5 px-5 overflow-x-auto whitespace-nowrap [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-                >
-                    {
-                        links.map((e: string) =>
-                        (
-                            <Link
-                                href="/blog"
-                                onClick={() => setActive(e)}
-                                className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${active === e ? "border-b-2 border-[#09273A] pb-2" : ""
-                                    } `}
-                            >
-                                {e}
-                            </Link>
-                        )
-                        )
-                    }
+                <div className='bg-white w-full'>
+                    <div
+                        className="max-w-7xl mx-auto flex  items-center gap-8 my-10 py-4 lg:px-5 px-5 overflow-x-auto whitespace-nowrap [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                    >
+                        {
+                            links.map((e: string) =>
+                            (
+                                <Link
+                                    href="/blog"
+                                    onClick={() => setActive(e)}
+                                    className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${active === e ? "border-b-2 border-[#09273A] pb-2" : ""
+                                        } `}
+                                >
+                                    {e}
+                                </Link>
+                            )
+                            )
+                        }
 
+                    </div>
                 </div>
             </motion.div>
-            <div
+            <div className='bg-white w-full'>
+                <div
 
-                className="bg-white w-full max-w-7xl mx-auto">
-                <motion.div initial={{ x: -100, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }} className='relative flex h-[500px] justify-items-start items-center mt-6 w-full max-w-7xl mx-auto pt-20'>
-                    <div className='mx-auto bg-[#F1F5F9] absolute max-w-[600px] flex flex-col gap-6 p-8 lg:ml-30'>
-                        <p className='flex gap-4 text-[13px] leading-4 font-medium'>
-                            <span className='text-[#0066FF]'>01 / FEATURED STORY</span>
-                            <span>|</span>
-                            <span className='text-[#475569]'>HVLS TECHNOLOGY</span>
-                        </p>
-                        <h3 className='font-monrope font-bold text-5xl tracking-[-0.96px] leading-[52px] text-[#00132C]'>The Fluid Dynamics of
-                            Modern HVLS Systems
-                            in Logistics Hubs
-                        </h3>
-                        <p className='text-[13px] leading-4 font-bold text-[#0066FF]'>READ PROTOCOL →</p>
-                    </div>
-                    <Image
-                        src="/blogImage.jpg"
-                        alt="blog image"
-                        height={400}
-                        width={400}
-                        className='mx-auto w-full max-w-7xl h-[100%]' />
-                </motion.div>
+                    className="bg-white w-full max-w-7xl mx-auto">
+                    <motion.div initial={{ x: -100, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }} className='relative flex h-[500px] justify-items-start items-center mt-6 w-full max-w-7xl mx-auto pt-20'>
+                        <div className='mx-auto bg-[#F1F5F9] absolute max-w-[600px] flex flex-col gap-6 p-8 lg:ml-30'>
+                            <p className='flex gap-4 text-[13px] leading-4 font-medium'>
+                                <span className='text-[#0066FF]'>01 / FEATURED STORY</span>
+                                <span>|</span>
+                                <span className='text-[#475569]'>HVLS TECHNOLOGY</span>
+                            </p>
+                            <h3 className='font-monrope font-bold text-5xl tracking-[-0.96px] leading-[52px] text-[#00132C]'>The Fluid Dynamics of
+                                Modern HVLS Systems
+                                in Logistics Hubs
+                            </h3>
+                            <p className='text-[13px] leading-4 font-bold text-[#0066FF]'>READ PROTOCOL →</p>
+                        </div>
+                        <Image
+                            src="/blogImage.jpg"
+                            alt="blog image"
+                            height={400}
+                            width={400}
+                            className='mx-auto w-full max-w-7xl h-[100%]' />
+                    </motion.div>
 
-                {/* <div className='flex flex-col gap-32'>
+                    {/* <div className='flex flex-col gap-32'>
             {items.map((e: item, idx: number) => (
                 <div className={`flex flex-wrap justify-between items-center ${ idx %2 == 0 ? "flex-row":"flex-row-reverse"} w-full max-w-6xl mx-auto mt-10`} key={idx}>
 
@@ -148,68 +151,68 @@ export default function Articles() {
             ))}
             </div> */}
 
-                <motion.div initial={{ x: -100, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    viewport={{ once: true, amount: 0.1 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                     className="flex flex-col gap-8 lg:gap-24 mx-auto w-full max-w-7xl lg:px-0 px-5 py-16 lg:py-24 bg-white">
-                    {items.map((e: item, idx: number) => (
-                        <div
-                            key={idx}
-                            className="grid grid-cols-1 md:grid-rows-1 md:grid-cols-12 gap-2 lg:gap-12 items-center"
-                        >
-                            {/* Left Side (Text) */}
+                    <motion.div initial={{ x: -100, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        viewport={{ once: true, amount: 0.1 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="flex flex-col gap-8 lg:gap-24 mx-auto w-full max-w-7xl lg:px-0 px-5 py-16 lg:py-24 bg-white">
+                        {items.map((e: item, idx: number) => (
                             <div
-                                className={`flex flex-col gap-3 lg:gap-6 order-2 md:order-1 ${idx % 2 === 0
-                                    ? "md:col-start-1 md:col-end-7"
-                                    : "md:col-start-7 md:col-end-13 md:row-start-1 md:row-end-1"
-                                    }`}
+                                key={idx}
+                                className="grid grid-cols-1 md:grid-rows-1 md:grid-cols-12 gap-2 lg:gap-12 items-center"
                             >
-                                <div className="flex gap-4 items-center">
-                                    <span className="text-[#5D5D5D] text-[13px] leading-4 font-medium">
-                                        0{idx + 2}
-                                    </span>
-                                    <span className="w-fit font-bold text-[12px] leading-[16px] tracking-[1.2px] align-middle text-[#09273A] bg-[#09273A0D] py-1 px-2">
-                                        {e.tag}
-                                    </span>
+                                {/* Left Side (Text) */}
+                                <div
+                                    className={`flex flex-col gap-3 lg:gap-6 order-2 md:order-1 ${idx % 2 === 0
+                                        ? "md:col-start-1 md:col-end-7"
+                                        : "md:col-start-7 md:col-end-13 md:row-start-1 md:row-end-1"
+                                        }`}
+                                >
+                                    <div className="flex gap-4 items-center">
+                                        <span className="text-[#5D5D5D] text-[13px] leading-4 font-medium">
+                                            0{idx + 2}
+                                        </span>
+                                        <span className="w-fit font-bold text-[12px] leading-[16px] tracking-[1.2px] align-middle text-[#09273A] bg-[#09273A0D] py-1 px-2">
+                                            {e.tag}
+                                        </span>
+                                    </div>
+
+                                    <h3 className="font-manrope font-semibold text-[24px] leading-[32px] text-[#00132C]">
+                                        {e.title}
+                                    </h3>
+
+                                    <p className="font-inter font-normal text-[16px] leading-[24px] text-[#5D5D5D]">
+                                        {e.description}
+                                    </p>
+
+                                    <Link href={'/blog/exhaust-fan'} className="font-inter font-medium text-[13px] leading-[16px] uppercase underline text-[#09273A]">
+                                        {e.linkname}
+                                    </Link>
                                 </div>
 
-                                <h3 className="font-manrope font-semibold text-[24px] leading-[32px] text-[#00132C]">
-                                    {e.title}
-                                </h3>
-
-                                <p className="font-inter font-normal text-[16px] leading-[24px] text-[#5D5D5D]">
-                                    {e.description}
-                                </p>
-
-                                <Link href={'/blog/exhaust-fan'} className="font-inter font-medium text-[13px] leading-[16px] uppercase underline text-[#09273A]">
-                                    {e.linkname}
-                                </Link>
-                            </div>
-
-                            {/* Right Side (Image) */}
-                            <div
-                                className={`order-1 md:order-2 ${idx % 2 === 0
-                                    ? "md:col-start-7 md:col-end-13"
-                                    : "md:col-start-1 md:col-end-7"
-                                    } w-full`}
-                            >
-                                <div className="w-full p-2 border border-[#CBD5E1] mx-auto">
-                                    <Image
-                                        width={450}
-                                        height={450}
-                                        alt="blog images"
-                                        src={e.image}
-                                        className="border w-full border-[#0066FF33] object-cover"
-                                    />
+                                {/* Right Side (Image) */}
+                                <div
+                                    className={`order-1 md:order-2 ${idx % 2 === 0
+                                        ? "md:col-start-7 md:col-end-13"
+                                        : "md:col-start-1 md:col-end-7"
+                                        } w-full`}
+                                >
+                                    <div className="w-full p-2 border border-[#CBD5E1] mx-auto">
+                                        <Image
+                                            width={450}
+                                            height={450}
+                                            alt="blog images"
+                                            src={e.image}
+                                            className="border w-full border-[#0066FF33] object-cover"
+                                        />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
-                </motion.div>
+                        ))}
+                    </motion.div>
 
+                </div>
             </div>
-
         </section>
     )
 }
