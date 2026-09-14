@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -144,8 +144,6 @@ const TableData = ({ data }: { data: TableDatas[] }) => {
         </div>
     );
 };
-
-
 
 const MaterialCard = ({ data }: { data: Details[] }) => {
     return (
@@ -365,12 +363,34 @@ export default function ArticleDetails() {
 
     const [active, setActive] = useState("The Challenge");
 
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActive(entry.target.id);
+                    }
+                });
+            },
+            {
+                root: null,
+                rootMargin: "-20% 0px -60% 0px",
+                threshold: 0,
+            }
+        );
+
+        const sections = document.querySelectorAll(
+            "[data-article-section]"
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <article className='mb-20 w-full'>
-            <motion.div initial={{ x: -100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true, amount: 0.1 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+            <div
                 className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-6 px-5 lg:px-0">
                 {/* Left Sidebar */}
                 <div className="w-full lg:w-[260px] lg:sticky lg:top-24 h-fit shrink-0">
@@ -398,9 +418,13 @@ export default function ArticleDetails() {
                 {/* Right Content */}
                 <div className="flex-1 flex flex-col gap-12 lg:gap-16 min-w-0">
                     {data.map((section, index) => (
-                        <div
+                        <motion.div initial={{ x: 0, y: 100, opacity: 0 }}
+                            whileInView={{ x: 0, y: 0, opacity: 1 }}
+                            viewport={{ once: true, amount: 0.1 }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
                             key={index}
                             id={section.heading ? section.heading : section.darkComponenet?.id}
+                            data-article-section
                             className="flex flex-col gap-6 scroll-mt-24"
                         >
                             {section.heading && (
@@ -428,10 +452,10 @@ export default function ArticleDetails() {
                             {section.cards && <MaterialCard data={section.cards} />}
 
                             {section.supportItems && <Cards data={section.supportItems} />}
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
-            </motion.div>
+            </div>
 
         </article>
     )

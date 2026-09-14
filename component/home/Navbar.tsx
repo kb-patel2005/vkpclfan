@@ -84,7 +84,7 @@ export default function Navbar() {
 
                     {/* Get Quote */}
                     <Link
-                        href="/contact-us"
+                        href="/products/exhuast-fan#tabs"
                         className="rounded-full bg-[#09273A] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-[#FDCD2E] hover:text-[#09273A]"
                     >
                         Get Quote
@@ -140,7 +140,7 @@ export default function Navbar() {
 
                     {/* Mobile Get Quote */}
                     <Link
-                        href="/contact-us"
+                        href="/products/exhuast-fan#tabs"
                         onClick={() => setMenuOpen(false)}
                         className="mt-4 block w-full rounded-full bg-[#09273A] px-6 py-3.5 text-center text-sm font-semibold text-white"
                     >

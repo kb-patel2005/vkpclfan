@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Building2 } from "lucide-react";
+import { useRouter } from "next/navigation";
+
 import React from "react";
 
 const products = [
@@ -33,6 +35,9 @@ const products = [
 ];
 
 export default function IndustrialSolutions() {
+
+    const router = useRouter()
+
     return (
         <section className="w-full bg-white pt-5 px-6 lg:px-6 mt-5 lg:mt-6">
             <div className="mx-auto max-w-7xl">
@@ -65,9 +70,9 @@ export default function IndustrialSolutions() {
                     <div
                         
                         className="w-full lg:basis-2/5 transition
-                duration-300
-                hover:shadow-2xl
-                hover:shadow-[#FDCD2E]/60"
+                            duration-300
+                            hover:shadow-2xl
+                            hover:shadow-[#FDCD2E]/60"
                     >
                         {/* Left card content */}
                         <div className="relative h-full overflow-hidden rounded-2xl bg-white shadow-md transition hover:shadow-xl">
@@ -87,7 +92,7 @@ export default function IndustrialSolutions() {
                                         {products[0].title}
                                     </h3>
                                     <div className="flex justify-end">
-                                        <button className="rounded-xl bg-[#EDEEF0] lg:p-2 p-1.5">
+                                        <button className="rounded-xl bg-[#EDEEF0] lg:p-2 p-1.5" onClick={()=>router.push("/blog/exhaust-fan")}>
                                             <ArrowRight size={20} />
                                         </button>
                                     </div>
@@ -95,7 +100,7 @@ export default function IndustrialSolutions() {
                                 <p className=" mt-1 lg:mt-2 font-inter text-[14px] leading-normal text-[#5D5D5D]">
                                     {products[0].desc}
                                 </p>
-                                <button className="mt-2 lg:mt-3 font-semibold text-[#09273A] text-[12px] lg:block">
+                                <button className="mt-2 lg:mt-3 font-semibold text-[#09273A] text-[12px] lg:block" onClick={()=>router.push("/blog/exhaust-fan")}>
                                     EXPLORE SOLUTION →
                                 </button>
                                 
