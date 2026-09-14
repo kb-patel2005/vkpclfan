@@ -47,7 +47,7 @@ const data = [
     },
     {
         icon: WarrantyIcon,
-        title: "5-Year Warranty",
+        title: "1-Year Warranty",
         para: "MOTOR & GEARBOX",
     },
     {

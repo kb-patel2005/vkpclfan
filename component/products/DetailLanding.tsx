@@ -106,18 +106,274 @@ const productData = {
     heading: "Product Specifications",
     description: "The Floent Exhaust Fan is engineered for powerful and efficient air extraction in industrial, commercial, agricultural, and large-scale ventilation environments. Designed with high-performance aerodynamic blades, a robust galvanized steel frame, and an efficient motor, it provides strong airflow for effective heat, humidity, fumes, dust, and stale-air removal.",
     table: [
-        { parameter: "Blade Dia (mm)", value: "900", },
-        { parameter: "Voice Level (db)", value: "< 70", },
-        { parameter: "Air flow (CM/H)", value: "22000", },
-        { parameter: "Speed (rpm)", value: "560", },
-        { parameter: "Power (W)", value: "550", },
-        { parameter: "Voltage", value: "415", },
-        { parameter: "Dimension (mm) (mm) (HxW)", value: "1000 x 1000 x 400", },
-        { parameter: "Motor Type", value: "Direct Drive", },
-        { parameter: "Blade Material", value: "Stainless Steel", },
-        { parameter: "Frame Material", value: "Galvanized Steel", },
+        { parameter: "Blade Dia (mm)", "FLEH-1000": "900", "FLEH-1220": "1000", "FLEH-1380": "1250" },
+        { parameter: "Voice Level (db)", "FLEH-1000": "<70", "FLEH-1220": "<70", "FLEH-1380": "<70" },
+        { parameter: "Air flow (CM/H)", "FLEH-1000": "22000", "FLEH-1220": "38000", "FLEH-1380": "40000" },
+        { parameter: "Speed (rpm)", "FLEH-1000": "560", "FLEH-1220": "560", "FLEH-1380": "460" },
+        { parameter: "Power (W)", "FLEH-1000": "550", "FLEH-1220": "750", "FLEH-1380": "1100" },
+        { parameter: "Voltage", "FLEH-1000": "415", "FLEH-1220": "415", "FLEH-1380": "415" },
+        { parameter: "Dimension (mm) (mm) (HxW)", "FLEH-1000": "1000 x 1000 x 400", "FLEH-1220": "1220 x 1220 x 400", "FLEH-1380": "1380 x 1380 x 450" },
+        { parameter: "Motor Type", "FLEH-1000": "Direct Drive", "FLEH-1220": "Direct Drive", "FLEH-1380": "Direct Drive" },
+        { parameter: "Blade Material", "FLEH-1000": "Stainless Steel", "FLEH-1220": "Stainless Steel", "FLEH-1380": "Stainless Steel" },
+        { parameter: "Frame Material", "FLEH-1000": "Galvanized Steel", "FLEH-1220": "Galvanized Steel", "FLEH-1380": "Galvanized Steel" },
     ],
 };
+
+const featuresAndAdavantage = [
+    {
+        features: "LOW NOISE",
+        advantage: "Special blade design ensures low noise operation.",
+        icon: (
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <path
+                    d="M10 21H16L23 15V35L16 29H10V21Z"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                />
+                <path
+                    d="M29 20C31 22 31 28 29 30"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                />
+                <path
+                    d="M34 16C38 20 38 30 34 34"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                />
+                <path
+                    d="M40 13C46 19 46 31 40 37"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                />
+            </svg>
+        ),
+    },
+
+    {
+        features: "ENERGY EFFICIENT",
+        advantage: "High efficiency motor with low power consumption.",
+        icon: (
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <path
+                    d="M28 7L13 28H23L21 43L37 21H27L28 7Z"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                />
+            </svg>
+        ),
+    },
+
+    {
+        features: "ALUMINIUM IMPELLER",
+        advantage: "Corrosion resistant aluminium impeller for long life & strength",
+        icon: (
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <circle
+                    cx="25"
+                    cy="25"
+                    r="4"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                />
+                <path
+                    d="M25 21C19 19 14 15 16 11C18 7 24 10 25 21Z"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                />
+                <path
+                    d="M29 25C31 19 35 14 39 16C43 18 40 24 29 25Z"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                />
+                <path
+                    d="M25 29C31 31 36 35 34 39C32 43 26 40 25 29Z"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                />
+                <path
+                    d="M21 25C19 31 15 36 11 34C7 32 10 26 21 25Z"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                />
+            </svg>
+        ),
+    },
+
+    {
+        features: "DURABLE & RELIABLE",
+        advantage: "Galvanized steel body with strong structure for heavy duty use.",
+        icon: (
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <path
+                    d="M25 7L39 12V23C39 32 33 39 25 43C17 39 11 32 11 23V12L25 7Z"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                />
+                <path
+                    d="M18 25L23 30L33 19"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                />
+            </svg>
+        ),
+    },
+
+    {
+        features: "COPPER-WOUND MOTOR",
+        advantage: "100% copper-wound, double ball-bearing motor for durability.",
+        icon: (
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <circle
+                    cx="25"
+                    cy="25"
+                    r="14"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                />
+                <circle
+                    cx="25"
+                    cy="25"
+                    r="6"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                />
+                <path
+                    d="M25 11V16M25 34V39M11 25H16M34 25H39"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                />
+                <path
+                    d="M15 15L19 19M31 31L35 35M35 15L31 19M19 31L15 35"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                />
+            </svg>
+        ),
+    },
+
+    {
+        features: "HIGH AIRFLOW",
+        advantage: "Large air displacement delivers maximum airflow.",
+        icon: (
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <path
+                    d="M8 18H30"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                />
+                <path
+                    d="M25 13L30 18L25 23"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                />
+                <path
+                    d="M8 26H38"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                />
+                <path
+                    d="M33 21L38 26L33 31"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                />
+                <path
+                    d="M8 34H30"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                />
+                <path
+                    d="M25 29L30 34L25 39"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                />
+            </svg>
+        ),
+    },
+
+    {
+        features: "RUST RESISTANT",
+        advantage: "Built-in louvers prevent rain & dust entry and ensure smooth airflow.",
+        icon: (
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <path
+                    d="M25 8C25 8 13 21 13 29C13 35.6 18.4 41 25 41C31.6 41 37 35.6 37 29C37 21 25 8 25 8Z"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                />
+                <path
+                    d="M19 30C19 34 21.5 36.5 25 37"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                />
+                <path
+                    d="M34 15L38 11M38 15L34 11"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                />
+            </svg>
+        ),
+    },
+
+    {
+        features: "EASY MAINTENANCE",
+        advantage: "Simple installation and minimal maintenance",
+        icon: (
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <path
+                    d="M32 10C27.6 10 24 13.6 24 18C24 19.4 24.4 20.7 25 21.8L12 34.8C10.9 35.9 10.9 37.7 12 38.8C13.1 39.9 14.9 39.9 16 38.8L29 25.8C30.1 26.4 31.4 26.8 32.8 26.8C37.2 26.8 40.8 23.2 40.8 18.8"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                />
+                <path
+                    d="M33 10L40 17"
+                    stroke="#09273A"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                />
+                <circle
+                    cx="14"
+                    cy="36"
+                    r="2"
+                    fill="#09273A"
+                />
+            </svg>
+        ),
+    },
+];
+
+const workingPrincipal = "Exhaust Fan draws out polluted air from premises and replaces it with fresh air. Air is considered polluted when it contains high amounts of hot air, moisture, carbon dioxide, vaporized chemicals, dust, fungal spores and unpleasant odors. Marut Air exhaust fan combat indoor air pollution by ejecting the unclean indoor air into the outside environment and letting in clean air from the outside"
+
+const applications = [
+    "INDUSTRIAL PLANTS", "DAIRY FARMS & LIVESTOCK FARMS", "GREENHOUSE & AGRICULTURE", "WAREHOUSE & LOGISTICS", "COMMERCIAL SPACES", "FOOD PROCESSING UNITS"
+]
 
 export default function DetailLanding({ slug }: { slug: string }) {
 
@@ -199,8 +455,34 @@ Message: ${formData.message}`;
                     </ol>
                 </nav>
             </div>
-            <HeroSwiper models={models} features={features} setTab={setActive}/>
+            <HeroSwiper models={models} features={features} setTab={setActive} />
 
+            <div className='w-full max-w-7xl mx-auto mt-2'>
+                <h2 className='text-4xl font-bold font-sora mb-6 text-center'>features and Advantages</h2>
+
+                <div className="flex flex-wrap justify-between gap-5">
+                    {featuresAndAdavantage.map((item, index) => (
+                        <div
+                            key={index}
+                            className="w-[23%] min-w-[150px] flex flex-col gap-3 items-center text-center justify-center"
+                        >
+                            <div className="h-[50px] shrink-0">
+                                {item.icon}
+                            </div>
+
+                            <div className='flex flex-col items-center'>
+                                <h3 className="font-sora font-bold text-[20px] leading-[28px] text-[#09273A]">
+                                    {item.features}
+                                </h3>
+
+                                <p className="w-[80%] font-inter font-normal text-[14px] lg:text-[16px] leading-[22px] lg:leading-[24px] text-[#5D5D5D] mt-2">
+                                    {item.advantage}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
             <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
@@ -281,13 +563,14 @@ Message: ${formData.message}`;
                                 <table className="w-full border-collapse">
                                     <thead>
                                         <tr className="bg-[#09273A] text-white">
-                                            <th className="text-left px-5 py-3 font-inter font-medium text-[14px] leading-[20px] tracking-[0.14px]">
-                                                Parameter
-                                            </th>
-
-                                            <th className="text-left px-5 py-3 font-inter font-medium text-[14px] leading-[20px] tracking-[0.14px]">
-                                                Value
-                                            </th>
+                                            {Object.keys(productData.table[0]).map((key) => (
+                                                <th
+                                                    key={key}
+                                                    className="text-left px-5 py-3 font-inter font-medium text-[14px] leading-[20px] tracking-[0.14px]"
+                                                >
+                                                    {key.charAt(0).toUpperCase() + key.slice(1)}
+                                                </th>
+                                            ))}
                                         </tr>
                                     </thead>
 
@@ -301,13 +584,14 @@ Message: ${formData.message}`;
                                                         : "bg-white"
                                                 }
                                             >
-                                                <td className="px-5 py-3 font-inter font-medium text-[14px] leading-[20px] tracking-[0.14px] text-[#5D5D5D]">
-                                                    {item.parameter}
-                                                </td>
-
-                                                <td className="px-5 py-3 font-inter font-medium text-[14px] leading-[20px] tracking-[0.14px] text-[#5D5D5D]">
-                                                    {item.value}
-                                                </td>
+                                                {Object.values(item).map((value, valueIndex) => (
+                                                    <td
+                                                        key={valueIndex}
+                                                        className="px-5 py-3 font-inter font-medium text-[14px] leading-[20px] tracking-[0.14px] text-[#5D5D5D]"
+                                                    >
+                                                        {value}
+                                                    </td>
+                                                ))}
                                             </tr>
                                         ))}
                                     </tbody>
@@ -474,6 +758,164 @@ Message: ${formData.message}`;
                 </section>
             </motion.div>
 
+            <div className="w-full max-w-4xl mx-auto text-center flex flex-col gap-4">
+                <h2 className='text-4xl font-bold font-sora'>Working Principal</h2>
+                <p className="font-inter font-normal text-[16px] leading-[22px] lg:leading-[24px] text-[#5D5D5D]">
+                    {workingPrincipal}
+                </p>
+                {/* <div className='flex flex-wrap justify-between text-center'>
+                    <div className='w-[150px] flex flex-col items-center'>
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                            <path
+                                d="M8 18H30C33.3 18 36 15.3 36 12C36 9.8 34.2 8 32 8C29.8 8 28 9.8 28 12"
+                                stroke="#09273A"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                            />
+                            <path
+                                d="M8 25H38C40.2 25 42 23.2 42 21C42 18.8 40.2 17 38 17"
+                                stroke="#09273A"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                            />
+                            <path
+                                d="M8 32H27C29.2 32 31 33.8 31 36C31 38.2 29.2 40 27 40"
+                                stroke="#09273A"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                            />
+                        </svg>
+                        <p>Fresh Air</p>
+                    </div>
+
+                    <div className='w-[150px] flex flex-col items-center'>
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                            <path
+                                d="M18 11V29"
+                                stroke="#09273A"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                            />
+                            <path
+                                d="M18 29C14.7 29 12 31.7 12 35C12 38.3 14.7 41 18 41C21.3 41 24 38.3 24 35C24 32.7 22.7 30.7 20 29.7V11C20 9.9 19.1 9 18 9C16.9 9 16 9.9 16 11"
+                                stroke="#09273A"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            />
+                            <path
+                                d="M32 15H42M32 25H39M32 35H42"
+                                stroke="#09273A"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                            />
+                        </svg>
+                        <p>REMOVES HEAT</p>
+
+                    </div>
+                    <div className='w-[150px]  flex flex-col items-center'>
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                            <path
+                                d="M25 8C25 8 14 20.5 14 28C14 34.1 18.9 39 25 39C31.1 39 36 34.1 36 28C36 20.5 25 8 25 8Z"
+                                stroke="#09273A"
+                                strokeWidth="2"
+                                strokeLinejoin="round"
+                            />
+                            <path
+                                d="M20 29C20 32.3 22 34.5 25 35"
+                                stroke="#09273A"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                            />
+                            <path
+                                d="M37 12L37 18M34 15H40"
+                                stroke="#09273A"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                            />
+                        </svg>
+                        <p>
+                            CONTROLS MOISTURE
+                        </p>
+                    </div>
+                    <div className='w-[150px] flex flex-col items-center'>
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                            <path
+                                d="M9 27H31C34.3 27 37 24.3 37 21C37 17.7 34.3 15 31 15C29.3 15 27.7 15.7 26.5 17"
+                                stroke="#09273A"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                            />
+                            <path
+                                d="M9 34H27"
+                                stroke="#09273A"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                            />
+                            <circle
+                                cx="35"
+                                cy="34"
+                                r="2"
+                                stroke="#09273A"
+                                strokeWidth="2"
+                            />
+                            <circle
+                                cx="41"
+                                cy="28"
+                                r="2"
+                                stroke="#09273A"
+                                strokeWidth="2"
+                            />
+                            <circle
+                                cx="40"
+                                cy="38"
+                                r="1.5"
+                                fill="#09273A"
+                            />
+                            <circle
+                                cx="34"
+                                cy="41"
+                                r="1.5"
+                                fill="#09273A"
+                            />
+                        </svg>
+                        <p>REMOVES DUST</p>
+
+                    </div>
+                </div> */}
+            </div>
+            <div className='w-full max-w-3xl mx-auto flex flex-col gap-8 py-3'>
+                <h2 className='text-4xl font-bold font-sora text-center'>Best suited for Applications</h2>
+                <p>Ideal for ventilation and ensuring air changes as
+                    per statutory requirements in various industrial
+                    and commercial spaces.</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {applications.map((item, index) => (
+                        <div key={index} className="flex items-start gap-3">
+                            <svg
+                                width="22"
+                                height="22"
+                                viewBox="0 0 22 22"
+                                fill="none"
+                                className="shrink-0 mt-0.5"
+                            >
+                                <circle cx="11" cy="11" r="10" fill="#09273A" />
+                                <path
+                                    d="M6.5 11.2L9.5 14.2L15.5 8.2"
+                                    stroke="white"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                            </svg>
+
+                            <p className="font-inter font-medium text-[16px] leading-[24px] text-[#5D5D5D]">
+                                {item}
+                            </p>
+                        </div>
+                    ))}
+                </div>
+            </div>
 
         </section>
     )

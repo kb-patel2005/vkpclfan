@@ -211,7 +211,7 @@ export default function Footer() {
                 className="mb-4 flex items-center gap-3 text-[14px] transition duration-300 hover:text-black"
               >
                 <span>
-                  Email: info@floentair.com
+                  Email: sales@floentair.com
                 </span>
               </Link>
 

@@ -550,7 +550,7 @@ export default function Conditions() {
                             <div className="flex flex-col gap-1">
                                 <p className="font-normal text-[16px] leading-[24px] tracking-[0px] align-middle text-[#1B1B1D]"> If you have any questions or concerns about this Terms & Condition or our data practices, please contact us by</p>
                                 <p className="font-normal text-[16px] leading-[24px] tracking-[0px] align-middle text-[#1B1B1D]"> call us : +91 9925624342</p>
-                                <p className="font-normal text-[16px] leading-[24px] tracking-[0px] align-middle text-[#1B1B1D]"> Mail us : info@floentair.com</p>
+                                <p className="font-normal text-[16px] leading-[24px] tracking-[0px] align-middle text-[#1B1B1D]"> Mail us : sales@floentair.com</p>
                             </div>
                         </motion.section>
 
