@@ -89,7 +89,7 @@ Message: ${formData.message}`;
                                 </div>
                                 <div className='flex flex-col gap-1'>
                                     <p className='font-medium text-[#434656] leading-4 tracking-[0.14px]'>Engineering Inquiries</p>
-                                    <span className='font-manrope font-semibold text-lg leading-7 text-[#121B2E]'>systems@foent.industrial</span>
+                                    <span className='font-manrope font-semibold text-lg leading-7 text-[#121B2E]'>sales@floentair.com</span>
                                 </div>
                             </div>
                             <div className='flex gap-4'>
@@ -99,8 +99,8 @@ Message: ${formData.message}`;
                                     </svg>
                                 </div>
                                 <div className='flex flex-col gap-1'>
-                                    <p className='font-medium text-[#434656] leading-4 tracking-[0.14px]'>Global Support HQ</p>
-                                    <span className='font-manrope font-semibold text-lg leading-7 text-[#121B2E]'>+847297599</span>
+                                    <p className='font-medium text-[#434656] leading-4 tracking-[0.14px]'>WhatsApp Technical Support</p>
+                                    <span className='font-manrope font-semibold text-lg leading-7 text-[#121B2E]'>+91 9925624342</span>
                                 </div>
                             </div>
                         </div>
