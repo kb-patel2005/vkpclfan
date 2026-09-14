@@ -86,19 +86,19 @@ const data = [
 const models = [
     {
         title: "hero",
-        url: "/images/exhaust-main.png"
+        url: "/whyChooseFloent.png"
     },
     {
         title: "FLEH - 1000",
-        url: "/exhuast1.png"
+        url: "/image1.jpeg"
     },
     {
         title: "FLEH - 1220",
-        url: "/exhuast2.png"
+        url: "/image2.jpeg"
     },
     {
         title: "FLEH - 1380",
-        url: "/exhuast3.png"
+        url: "/image3.jpeg"
     },
 ];
 
@@ -460,28 +460,28 @@ Message: ${formData.message}`;
             <div className='w-full max-w-7xl mx-auto mt-2'>
                 <h2 className='text-4xl font-bold font-sora mb-12 text-center'>features and Advantages</h2>
 
-               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
-    {featuresAndAdavantage.map((item, index) => (
-        <div
-            key={index}
-            className="flex flex-col items-center text-center"
-        >
-            <div className="h-[50px] w-[50px] shrink-0 flex items-center justify-center">
-                {item.icon}
-            </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+                    {featuresAndAdavantage.map((item, index) => (
+                        <div
+                            key={index}
+                            className="flex flex-col items-center text-center"
+                        >
+                            <div className="h-[50px] w-[50px] shrink-0 flex items-center justify-center">
+                                {item.icon}
+                            </div>
 
-            <div className="mt-3 flex flex-col items-center">
-                <h3 className="font-sora font-bold text-[18px] lg:text-[20px] leading-[24px] lg:leading-[28px] text-[#09273A]">
-                    {item.features}
-                </h3>
+                            <div className="mt-3 flex flex-col items-center">
+                                <h3 className="font-sora font-bold text-[18px] lg:text-[20px] leading-[24px] lg:leading-[28px] text-[#09273A]">
+                                    {item.features}
+                                </h3>
 
-                <p className="mt-2 max-w-[260px] font-inter font-normal text-[14px] leading-[22px] text-[#5D5D5D]">
-                    {item.advantage}
-                </p>
-            </div>
-        </div>
-    ))}
-</div>
+                                <p className="mt-2 max-w-[260px] font-inter font-normal text-[14px] leading-[22px] text-[#5D5D5D]">
+                                    {item.advantage}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
             <motion.div
                 initial={{ x: -100, opacity: 0 }}

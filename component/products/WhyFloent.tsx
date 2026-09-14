@@ -42,7 +42,7 @@ export default function WhyFloent() {
             </ul>
         </div>
         <div>
-            <Image src={'/whyChooseFloent.png'} width={750} height={500} alt='floent fan'/>
+            <Image src={'/whyChooseFloent.png'} width={600} height={500} alt='floent fan'/>
         </div>
     </section>
   )

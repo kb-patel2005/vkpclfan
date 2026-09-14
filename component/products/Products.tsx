@@ -247,9 +247,9 @@ export default function Products() {
 
                 <div className='flex mx-auto w-full max-w-7xl items-center lg:gap-0 gap-3 bg-white flex-wrap lg:px-0 px-5'>
                     <img
-                        src={'/exhaust3.png'}
+                        src={'/main-exhuast.png'}
                         alt={'Exhaust fan'}
-                        className="lg:h-[435px] object-cover lg:w-[45%] transition-transform duration-500 hover:scale-105"
+                        className="lg:h-[435px] object-center lg:w-[45%] transition-transform duration-500 hover:scale-105"
                     />
                     <motion.div
                         initial={{ x: -50, opacity: 0 }}

@@ -30,7 +30,7 @@ export default function BenefitFan() {
 
         {/* Right Image */}
         <img
-          src="/benefit.jpg"
+          src="/manufacuring.png"
           alt="benefit of exhaust fan"
           className="w-full h-[280px] object-cover lg:object-fill lg:w-[60%] lg:h-[670px]"
         />
