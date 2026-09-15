@@ -173,7 +173,7 @@ export default function Workflow() {
         </motion.div>
 
         {/* CTA */}
-        <div className="mx-auto mt-30 flex w-full lg:max-w-3xl flex-col items-center justify-between gap-4 rounded-3xl lg:rounded-full bg-white py-6 px-10 shadow-[#09273A1A] shadow-xl md:flex-row">
+        <div className="mx-auto mt-30 flex w-full lg:max-w-3xl flex-col items-center justify-between gap-4 rounded-3xl lg:rounded-full bg-white py-6 px-10 shadow-[#09273A1A] shadow-xl sm:flex-row">
           <div className="flex items-center gap-4">
             <Lightbulb className="text-[#09273A]" />
 
@@ -186,7 +186,7 @@ export default function Workflow() {
             href="https://wa.me/919876543210" // replace with your WhatsApp number
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-[#062C49] px-8 py-3 text-white hover:bg-[#0B3C63] transition w-full md:w-auto">
+            className="rounded-full text-center bg-[#062C49] px-8 py-3 text-white hover:bg-[#0B3C63] transition w-full sm:w-auto">
             Let's Talk →
           </a>
         </div>

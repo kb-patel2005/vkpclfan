@@ -3,8 +3,9 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { SelectBox } from '../common/SelectBox';
+import { useSearch } from '@/context/SearchContext';
 
 const data = [
     {
@@ -52,19 +53,30 @@ const data = [
             </svg>
         ),
     },
-  
+
 
 ];
 
 export default function Products() {
-    const [active, setActive] = useState("all-products");
+
+    const { search, setSearch } = useSearch();
     const router = useRouter()
 
     const [showFilters, setShowFilters] = useState(false);
 
     const activeProducts = () => {
-        return data.filter((e) => e.category == active || active == "all-products")
+        return data.filter((e) => (e.category.toLowerCase().includes(search.toLowerCase())) || e.title.toLowerCase().includes(search.toLowerCase()) || search == "")
     }
+
+    useEffect(() => {
+        if (search) {
+            const el = document.getElementById("product");
+            if (el) {
+                const y = el.getBoundingClientRect().top + window.scrollY - 80; // offset 80px
+                window.scrollTo({ top: y, behavior: "smooth" });
+            }
+        }
+    }, [search]);
 
     return (
         <section className='lg:mt-20 mt-10 flex flex-col lg:gap-12 gap-4'>
@@ -80,8 +92,8 @@ export default function Products() {
                     >
                         <Link
                             href="/products"
-                            onClick={() => setActive("all-products")}
-                            className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${active === "all-products" ? "border-b-2 border-[#09273A] pb-2" : ""
+                            onClick={() => setSearch("")}
+                            className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${search === "" ? "border-b-2 border-[#09273A] pb-2" : ""
                                 } `}
                         >
                             ALL PRODUCTS
@@ -89,8 +101,11 @@ export default function Products() {
 
                         <Link
                             href="/products"
-                            onClick={() => setActive("EXHAUST FANS")}
-                            className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${active === "EXHAUST FANS" ? "border-b-2 border-[#09273A] pb-2" : ""
+                            onClick={() => {
+                                setSearch("EXHAUST FANS");
+
+                            }}
+                            className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${search === "EXHAUST FANS" ? "border-b-2 border-[#09273A] pb-2" : ""
                                 } `}
                         >
                             EXHAUST FANS
@@ -98,8 +113,8 @@ export default function Products() {
 
                         <Link
                             href="/products"
-                            onClick={() => setActive("CENTRIFUGAL FANS")}
-                            className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${active === "CENTRIFUGAL FANS" ? "border-b-2 border-[#09273A] pb-2" : ""
+                            onClick={() => setSearch("CENTRIFUGAL FANS")}
+                            className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${search === "CENTRIFUGAL FANS" ? "border-b-2 border-[#09273A] pb-2" : ""
                                 } `}
                         >
                             CENTRIFUGAL FANS
@@ -151,33 +166,14 @@ export default function Products() {
 
                                 <input type="text"
                                     placeholder="Search..."
+                                    onChange={(e) => setSearch(e.target.value)}
                                     className="pl-10 w-full py-2.5 outline-none" />
                             </div>
 
-                            {/* <div className="relative ">
-                                <select className="appearance-none w-full border border-[#C3C5D980] py-2.5 pl-3 pr-10">
-                                    <option>Application</option>
-                                    <option>Motor Power</option>
-                                    <option>Motor Power</option>
-                                </select>
-                                <svg className="absolute right-2 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none"
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-width="2" d="M6 9l6 6 6-6" />
-                                </svg>
-                            </div> */}
+
 
                             <SelectBox items={["application", "Motor Power"]} value='Application' classes='w-full  border border-[#C3C5D980] bg-white' />
-                            {/* <div className="relative">
-                                <select className="appearance-none w-full border border-[#C3C5D980] py-2.5 pl-3 pr-10">
 
-                                    <option>Motor Power</option>
-                                    <option>Motor Power</option>
-                                </select>
-                                <svg className="absolute right-2 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none"
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-width="2" d="M6 9l6 6 6-6" />
-                                </svg>
-                            </div> */}
                             <SelectBox items={["application", "Motor Power"]} classes='w-full  border border-[#C3C5D980] bg-white' value='Application' />
 
                         </div>
@@ -196,11 +192,7 @@ export default function Products() {
                     </div>
 
                     <div className="hidden lg:flex w-[80%] gap-[16px] justify-between">
-                        {/* <input
-                            type="text"
-                            placeholder="🔍 Search models or specs..."
-                            className="p-2.5 border-[#C3C5D980] border w-[60%]"
-                        /> */}
+
 
                         <div className="relative w-[60%] border-[#C3C5D980] border">
 
@@ -211,8 +203,10 @@ export default function Products() {
                             </svg>
 
 
-                            <input type="text"
+                            <input
+                                type="text"
                                 placeholder="Search..."
+                                onChange={(e) => setSearch(e.target.value)}
                                 className="pl-10 w-full py-2.5 outline-none" />
                         </div>
 
@@ -258,9 +252,9 @@ export default function Products() {
                         className="relative z-10 flex flex-col gap-3 lg:gap-7 lg:text-left text-center py-3 lg:p-[48px]"
                     >
                         {/* Heading */}
-                        <h1 className="font-sora text-[32px] font-bold leading-[1.15] sm:text-5xl ">
+                        <h2 className="font-sora text-[32px] font-bold leading-[1.15] sm:text-5xl ">
                             EXHAUST FAN
-                        </h1>
+                        </h2>
 
                         {/* Description */}
                         <p className="max-w-[700px] font-medium text-[#5D5D5D] font-inter leading-6 sm:text-base text-[16px] lg:leading-7">
@@ -294,8 +288,9 @@ export default function Products() {
 
             </motion.div>
             <div
-                className='w-full lg:px-0 px-5'>
-                <div className={`max-w-7xl mx-auto flex flex-wrap ${activeProducts().length <= 2?"lg:justify-items-start justify-items-center":"lg:justify-between justify-center"}   gap-6`}>
+                id='product'
+                className='w-full lg:px-0 px-5 scroll-padding-top'>
+                <div className={`max-w-7xl mx-auto flex flex-wrap ${activeProducts().length <= 2 ? "lg:justify-items-start justify-items-center" : "lg:justify-between justify-center"}   gap-6`}>
                     {activeProducts().length > 0 && activeProducts().map((e, index) => (
                         <div
                             key={index}

@@ -133,9 +133,9 @@ export default function Footer() {
           <div className="w-full lg:w-[60%] mt-8 flex justify-between">
             <div className="lg:mt-0 lg:pr-6 lg:w-[33%]">
 
-              <h3 className="mb-5 text-[16px] leading-6 font-bold tracking-wider text-[#191C1D]">
+              <h2 className="mb-5 text-[16px] leading-6 font-bold tracking-wider text-[#191C1D]">
                 Quick Links
-              </h3>
+              </h2>
 
               <ul className="space-y-3 text-sm">
                 <li>
@@ -177,9 +177,9 @@ export default function Footer() {
             </div>
 
             <div className="hidden lg:block lg:w-[33%]">
-              <h3 className="mb-5 text-[16px] font-bold tracking-wider text-[#191C1D]">
+              <h2 className="mb-5 text-[16px] font-bold tracking-wider text-[#191C1D]">
                 Quick Links
-              </h3>
+              </h2>
 
               <ul className="space-y-3 text-sm">
                 <li>
@@ -201,9 +201,9 @@ export default function Footer() {
             </div>
             <div className="lg:mt-0 w-[50%] lg:w-[33%]">
 
-              <h3 className="mb-5 text-[16px] leading-6 font-bold tracking-wider text-[#191C1D]">
+              <h2 className="mb-5 text-[16px] leading-6 font-bold tracking-wider text-[#191C1D]">
                 Contact Sales
-              </h3>
+              </h2>
 
               {/* Email */}
               <Link

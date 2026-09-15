@@ -14,11 +14,11 @@ export default function Engineering() {
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className='lg:w-[60%]'>
-                    <h1 className="font-sora text-[35px] lg:text-[40px] font-bold leading-[38px] lg:leading-[48px] tracking-normal mb-4">
+                    <h2 className="font-sora text-[35px] lg:text-[40px] font-bold leading-[38px] lg:leading-[48px] tracking-normal mb-4">
                         Engineering That
                         <br />
                         Moves More Than Air.
-                    </h1>
+                    </h2>
                     {/* <h1 className="font-sora text-[40px] font-bold leading-[1.15] sm:text-5xl lg:text-[64px]">
                         Engineering That
                         <br />
@@ -49,7 +49,7 @@ export default function Engineering() {
                     transition={{ duration: 1, ease: "easeOut" }}
                     className='flex flex-col gap-6 lg:w-[35%]'>
                     <p className="text-[16px] font-normal leading-[24px] tracking-normal text-[#475569]">
-                        AUSTAR HVLS FANS are manufactured by Austar Technologies having a manufacturing facility at well known industrial city Ahmedabad Gujarat INDIA.
+                        Floent HVLS FANS are manufactured by Austar Technologies having a manufacturing facility at well known industrial city Ahmedabad Gujarat INDIA.
                         <br />
                         Austar Technologies entered into manufacturing HVLS fans in the year 2017 after two years of designs development and testing of various sizes and options. Austar Technologies have a dedicated manufacturing facility for HVLS Fans of 20000 Square Feet Area and have a manufacturing capacity of 300 Fans per month.
                     </p>

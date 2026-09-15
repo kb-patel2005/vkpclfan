@@ -22,15 +22,15 @@ function Card1({
         <div className="flex flex-col gap-2 px-4 justify-center items-center hover:scale-105 transition">
             {typeof num === "string" ? (
                 // <h2 className="font-jakarta text-[56px] lg:w-[250px] font-extrabold leading-[56px] tracking-[-1.68px] text-center">
-                <h2 className="font-jakarta text-[45px] lg:w-[250px] font-extrabold leading-[56px] tracking-[-1.68px] text-center">
+                <span className="font-jakarta text-[45px] lg:w-[250px] font-extrabold leading-[56px] tracking-[-1.68px] text-center">
                     {num}
-                </h2>
+                </span>
             ) : (
                 // <h2 className="font-jakarta text-[56px] w-[250px] font-extrabold leading-[56px] tracking-[-1.68px] text-center">
-                <h2 className="font-jakarta text-[45px] font-extrabold leading-[56px] tracking-[-1.68px] text-center">
+                <span className="font-jakarta text-[45px] font-extrabold leading-[56px] tracking-[-1.68px] text-center">
                     <CountUp end={num} duration={2} />
                     {suffix}
-                </h2>
+                </span>
             )}
 
             <p className="font-space text-[11px] text-[#75777E] pt-2 font-medium leading-[11px] tracking-[1.1px] text-center uppercase">

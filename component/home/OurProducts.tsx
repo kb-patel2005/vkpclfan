@@ -51,9 +51,9 @@ export default function IndustrialSolutions() {
                         Our Products
                     </span>
 
-                    <h1 className="mt-[15px] font-sora lg:text-[42px] text-[33px] font-bold leading-tight text-[#14324A] lg:text-[64px] lg:leading-[70.4px]">
+                    <h2 className="mt-[15px] font-sora lg:text-[42px] text-[33px] font-bold leading-tight text-[#14324A] lg:text-[64px] lg:leading-[70.4px]">
                         Industrial Precision Solutions
-                    </h1>
+                    </h2>
 
                     <p
                         className="mx-auto mt-[15px] max-w-2xl font-inter text-lg font-normal text-[#5D5D5D]"
@@ -115,7 +115,7 @@ export default function IndustrialSolutions() {
                         <div className="grid grid-cols-1 gap-2 lg:gap-4 sm:grid-cols-2">
                             {products.slice(1).map((item, index) => (
                                 <div
-                                    
+                                    key={index}
                                     className="relative overflow-hidden rounded-2xl bg-white shadow-md transition duration-300 hover:shadow-2xl hover:shadow-[#FDCD2E]/60 hover:shadow-xl align-middle">
                                     <div className="absolute left-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow backdrop-blur-sm">
                                         <Building2 size={22} className="text-[#09273A]" />

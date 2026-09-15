@@ -13,7 +13,7 @@ export default function WhyFloent() {
   return (
     <section className='flex flex-wrap justify-between w-full max-w-7xl mx-auto items-center pt-5 lg:py-10 lg:px-0 px-5'>
         <div>
-            <h1 className='text-5xl font-bold font-sora mb-6 lg:mb-12 '>Why Floent?</h1>
+            <h2 className='text-5xl font-bold font-sora mb-6 lg:mb-12 '>Why Floent?</h2>
             <ul className='flex flex-col gap-4'>
                  {whyChoose.map((item, index) => (
                         <div key={index} className="flex items-start gap-3">

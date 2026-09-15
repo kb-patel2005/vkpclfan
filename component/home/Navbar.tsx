@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X, Search } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { useSearch } from "@/context/SearchContext";
 
 const navLinks = [
     {
@@ -30,6 +32,23 @@ const navLinks = [
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const { search, setSearch } = useSearch()
+    const [onProduct, setOnProduct] = useState(false)
+    const router = useRouter();
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const value = e.target.value;
+        setSearch(value);
+
+        if (value.trim().length > 0 && !onProduct) {
+            setOnProduct(true);
+        }
+
+        if (onProduct) {
+            router.push(`/products/#product`);
+        }
+
+    };
 
     return (
         <header className="sticky top-0 z-50 w-full bg-white">
@@ -78,6 +97,8 @@ export default function Navbar() {
                         <input
                             type="text"
                             placeholder="Search"
+                            value={search}
+                            onChange={handleChange}
                             className="w-full bg-transparent text-sm text-[#09273A] outline-none placeholder:text-[#999]"
                         />
                     </div>
@@ -134,6 +155,8 @@ export default function Navbar() {
                         <input
                             type="text"
                             placeholder="Search"
+                            value={search}
+                            onChange={handleChange}
                             className="w-full bg-transparent text-sm outline-none placeholder:text-[#999]"
                         />
                     </div>

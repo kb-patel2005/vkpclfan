@@ -73,9 +73,9 @@ export function Faq() {
                     SUPPORT CENTER
                 </div>
 
-                <h1 className="text-4xl font-bold text-[#09273A] sm:text-5xl">
+                <h2 className="text-4xl font-bold text-[#09273A] sm:text-5xl">
                     Frequently Asked Questions
-                </h1>
+                </h2>
 
                 <p className="text-base font-normal text-[#5D5D5D] sm:text-lg">
                     Accurate solutions for your industrial air-movement needs.
@@ -147,7 +147,7 @@ export function Faq() {
                     <a href="https://wa.me/919876543210" // replace with your WhatsApp number
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full rounded-full bg-[#09273A] px-8 py-4 text-sm font-semibold text-white transition hover:bg-[#123d56] sm:w-auto"
+                        className="w-full rounded-full text-center bg-[#09273A] px-8 py-4 text-sm font-semibold text-white transition hover:bg-[#123d56] sm:w-auto"
                         type="button"
                     >
                         Chat with Support

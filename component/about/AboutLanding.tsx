@@ -2,8 +2,11 @@
 import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 export default function AboutLanding() {
+
+    const router = useRouter()
     return (
         <section className='w-full h-auto py-10 lg:py-20 max-lg:px-5'>
             <div className='max-w-7xl flex flex-wrap lg:gap-[48px] lg:gap-3 gap-8 mx-auto justify-between items-center'>
@@ -13,7 +16,7 @@ export default function AboutLanding() {
                     transition={{ duration: 0.3, ease: "easeOut" }}
                     className='flex flex-col lg:w-[50%] gap-16'>
                     <div className='flex flex-col gap-3'>
-                        <p className='font-sora text-[12px] tracking-[3.2px] font-normal leading-6 flex items-center'> <p className='mr-2'>— </p><p>ENGINEERED FOR PERFORMANCE</p></p>
+                        <p className='font-sora text-[12px] tracking-[3.2px] font-normal leading-6 flex items-center'> <span className='mr-2'>— </span><span>ENGINEERED FOR PERFORMANCE</span></p>
                         {/* <h1 className='font-sora font-extrabold text-[64px] leading-[70.4px] tracking-[-1.28px] text-[#0F172A]'>Powering
                             Industries.
                             <br />
@@ -45,13 +48,13 @@ export default function AboutLanding() {
                         <motion.button
                             whileTap={{ scale: 0.95 }}
                             whileHover={{ scale: 1.05 }}
-
+                            onClick={()=>router.push('/blog')}
                             className="w-full font-inter bg-[#09273A] hover:bg-black px-6 py-3 text-sm font-medium text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                         >EXPLORE OUR STORY →</motion.button>
                         <motion.button
                             whileTap={{ scale: 0.95 }}
                             whileHover={{ scale: 1.05 }}
-
+                            onClick={()=>router.push("/products")}
                             className="w-full font-inter border bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                         >VIEW PRODUCTS</motion.button>
                     </div>

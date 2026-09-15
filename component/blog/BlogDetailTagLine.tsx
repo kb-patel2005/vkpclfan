@@ -12,9 +12,9 @@ export default function BlogDetailTagLine() {
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className='text-center py-20 lg:mx-0 mx-5'>
+            className='text-center py-5 lg:py-20 lg:mx-0 mx-5'>
 
-            <h1 className='font-semibold text-[32px] leading-10 lg:whitespace-pre-line'>"{tag}"</h1>
+            <h2 className='font-semibold text-[32px] leading-10 lg:whitespace-pre-line'>"{tag}"</h2>
         </motion.section>
     )
 }

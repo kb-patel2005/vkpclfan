@@ -45,9 +45,9 @@ const Card = ({ data }: { data: CardDetail }) => {
     return (
         <div className='p-8 border-l-4 border-[#09273A] flex flex-col gap-3 bg-white min-w-[320px] w-[32%]'>
             <span>{data.icon}</span>
-            <h1 className="font-manrope pt-3 font-bold text-[24px] leading-[32px] tracking-[0px] align-middle text-[rgba(9,39,58,1)]">
+            <h2 className="font-manrope pt-3 font-bold text-[24px] leading-[32px] tracking-[0px] align-middle text-[rgba(9,39,58,1)]">
                 {data.title}
-            </h1>
+            </h2>
             <p className="font-inter font-normal text-[16px] leading-[24px] tracking-[0px] align-middle text-[rgba(93,93,93,1)]">
                 {data.description}
             </p>
@@ -79,7 +79,7 @@ export default function WhyAeroCore() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className='flex flex-wrap justify-center gap-3 lg:justify-between'>
                 {cards.map((e: CardDetail, idx: number) => (
-                    <Card data={e} />
+                    <Card data={e} key={idx} />
                 ))}
             </motion.div>
         </section>

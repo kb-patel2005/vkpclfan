@@ -64,11 +64,11 @@ export default function HeroSwiper({ models, features, setTab }: Props) {
       {/* Sidebar */}
       <div className="w-full lg:w-[15%]">
         <div className="bg-[#09273A] h-full lg:p-8 px-4 py-2">
-          <h2 className="text-white font-extrabold text-sm leading-6 pb-2 lg:pb-8">
+          <p className="text-white font-extrabold text-sm leading-6 pb-2 lg:pb-8">
             Related Products
-          </h2>
+          </p>
           <div className="flex flex-col lg:gap-2">
-            <h2
+            <span
               className="text-black font-bold text-[12px] leading-3 tracking-[1.2px] py-2 px-4 bg-white cursor-pointer text-center"
               onClick={() => {
                 setHeroimage(models[0].url)
@@ -76,7 +76,7 @@ export default function HeroSwiper({ models, features, setTab }: Props) {
               }}
             >
               MODELS
-            </h2>
+            </span>
             <ul className="flex flex-row lg:flex-col lg:gap-2 gap-0 justify-between mt-2">
               {models.slice(1).map((e, idx) => (
                 <li
@@ -151,9 +151,9 @@ export default function HeroSwiper({ models, features, setTab }: Props) {
                 className="flex items-center gap-2 p-3 bg-white border border-[#C3C5D94D] min-w-0"
               >
                 {feature.icon}
-                <p className="font-inter font-medium text-[14px] leading-[20px] tracking-[0.14px] text-[#09273A] truncate">
+                <h2 className="font-inter font-medium text-[14px] leading-[20px] tracking-[0.14px] text-[#09273A] truncate">
                   {feature.label}
-                </p>
+                </h2>
               </div>
             ))}
           </div>

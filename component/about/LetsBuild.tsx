@@ -1,9 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 import React from 'react'
 
 export default function LetsBuild() {
+
+    const router = useRouter()
+
     return (
 
         <motion.section 
@@ -27,7 +31,7 @@ export default function LetsBuild() {
             <motion.button
                 whileTap={{ scale: 0.95 }}
                 whileHover={{ scale: 1.05 }}
-
+                onClick={()=>router.push('/contact')}
                 className="font-inter bg-[#09273A] hover:bg-black px-4 py-3 text-sm font-medium text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
             >LET'S BUILD A BETTER SYSTEM</motion.button>
         </motion.section>

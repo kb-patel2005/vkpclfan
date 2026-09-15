@@ -36,27 +36,12 @@ Phone: ${formData.phone}
 Interest: ${formData.interest}
 Message: ${formData.message}`;
 
-        // WhatsApp number (with country code, e.g. +91 for India)
         const phoneNumber = "919925624342"; // 9925624342 with +91
 
-        // Open WhatsApp
         window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`, "_blank");
     };
 
     return (
-        // <section className='w-full max-w-7xl mx-auto'>
-        //     <div></div>
-        //     <div className='bg-white'>
-        //         <h2 className="font-sora font-bold text-[32px] leading-[40px] text-[#09273A]">
-        //             Ask For a Price
-        //         </h2>
-        //         <p className="font-inter font-normal text-[#434656] text-[16px] leading-[24px] tracking-[0px] align-middle">
-        //             Tell us what you need, and our engineering team will get back to you within 24 hours with the right solution and pricing.
-        //         </p>
-
-
-        //     </div>
-        // </section>
         <motion.section
             id='applicationform'
             initial={{ x: -100, opacity: 0 }}
@@ -68,7 +53,7 @@ Message: ${formData.message}`;
                 {/* Left side: 5 columns */}
                 <div className="col-span-12 lg:col-span-5 flex flex-col gap-6">
                     <div className="bg-white flex flex-col gap-6 p-8 border-l-4 border-l-[#09273A]">
-                        <p className='text-xs leading-4 tracking-[1.2px] font-bold'>DIRECT COMMUNICATION</p>
+                        <h2 className='text-xs leading-4 tracking-[1.2px] font-bold'>DIRECT COMMUNICATION</h2>
                         <div className='flex flex-col gap-6'>
                             <div className='flex gap-4'>
                                 <div>
@@ -106,7 +91,7 @@ Message: ${formData.message}`;
                         </div>
                     </div>
                     <div className="bg-white flex flex-col p-8 border-l-4 border-l-[#09273A] gap-6">
-                        <p className='text-xs leading-4 tracking-[1.2px] font-bold'>HEADQUARTERS</p>
+                        <h2 className='text-xs leading-4 tracking-[1.2px] font-bold'>HEADQUARTERS</h2>
                         <div className='flex gap-4'>
                             <div>
                                 <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -202,18 +187,7 @@ Message: ${formData.message}`;
                         <div className="flex flex-col gap-2 mt-5">
                             <p className="text-[12px] leading-4 tracking-[1.2px] font-bold">Product Interest Area</p>
                             <div className="relative bg-[#F1F1F1] border border-[#C3C5D94D]" >
-                                {/* <select
-                                            name="interest"
-                                            value={formData.interest}
-                                            onChange={handleChange}
-                                            className="appearance-none w-full py-2.5 pl-3 pr-10"
-                                            required
-                                        >
-                                            <option value="">Product Interest</option>
-                                            <option value="High Airflow">High Airflow</option>
-                                            <option value="Heavy Duty">Heavy Duty</option>
-                                            <option value="Low Maintenance">Low Maintenance</option>
-                                        </select> */}
+                        
                                 <SelectBox
                                     items={["High Airflow", "Heavy Duty", "Low Maintenance"]}
                                     classes="w-full bg-[#F1F1F1] border-[#C3C5D94D] outline-none bg-[#F1F1F1]"
@@ -221,18 +195,6 @@ Message: ${formData.message}`;
                                     onChange={(val) => valueChange(val)}
                                 />
 
-
-                                {/* <SelectBox
-                                            name='interest'
-                                            onChange={handleChange}
-                                            value={formData.interest}
-                                            items={[
-                                                "High Airflow",
-                                                "Heavy Duty",
-                                                "Low Maintenance",
-                                            ]}
-                                            className="relative bg-[#F1F1F1]"
-                                        /> */}
                                 <svg
                                     className="absolute right-2 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none"
                                     xmlns="http://www.w3.org/2000/svg"

@@ -330,7 +330,7 @@ function CategoryAutoSlideTrack() {
 }
 
 
-export default function ApplicationsOfFan() {
+export default function ApplicationsOfFan({ title }: { title: string }) {
 
     return (
         <section
@@ -358,14 +358,17 @@ export default function ApplicationsOfFan() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="max-w-7xl mx-auto text-center mt-5">
 
-                 <h2 className="font-sora font-bold text-4xl lg:leading-[57.6px] tracking-[-0.96px] text-[#09273A]">
-                     Application of{" "}
-                     <span className="text-[#F4B51E]">HVLS Fans</span>
-                 </h2>
+                <h2 className="font-sora font-bold text-4xl lg:leading-[57.6px] tracking-[-0.96px] text-[#09273A]">
+                    Application of{" "}
+                    <span className="text-[#F4B51E]">{title
+                        .split("-") 
+                        .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // capitalize each
+                        .join(" ")}</span>
+                </h2>
 
-                 <p className="mt-3 text-lg leading-[28.8px]  [text-[#43474E]">
-                     Engineered to transform any large space.
-                 </p>
+                <p className="mt-3 text-lg leading-[28.8px]  [text-[#43474E]">
+                    Engineered to transform any large space.
+                </p>
 
             </motion.div>
 

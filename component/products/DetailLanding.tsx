@@ -384,8 +384,6 @@ export default function DetailLanding({ slug }: { slug: string }) {
     }, []);
 
     const [active, setActive] = useState("Description");
-    const [heroimage, setHeroimage] = useState(models[0].url);
-    const [activeModel, setActiveModel] = useState(-1);
 
     const [formData, setFormData] = useState({
         name: "",
@@ -433,24 +431,28 @@ Message: ${formData.message}`;
                     aria-label="Breadcrumb"
                     className="mx-auto max-w-7xl px-4 pt-3 text-sm"
                 >
-                    <ol className="flex items-center gap-2 text-slate-500 flex-wrap">
+                    <ol className="flex flex-wrap items-center gap-2 text-slate-500">
                         <li>
                             <Link href="/" className="hover:text-[#FF4D30]">
                                 Home
                             </Link>
                         </li>
 
-                        <li>{`>`}</li>
+                        <li aria-hidden="true">&gt;</li>
 
                         <li>
                             <Link href="/products" className="hover:text-[#FF4D30]">
-                                products
+                                Products
                             </Link>
                         </li>
 
-                        <li>{`>`}</li>
-                        <li>
-                            <li className="font-semibold text-slate-800">{slug}</li>
+                        <li aria-hidden="true">&gt;</li>
+
+                        <li
+                            className="font-semibold text-slate-800 capitalize"
+                            aria-current="page"
+                        >
+                            {slug}
                         </li>
                     </ol>
                 </nav>

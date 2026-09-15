@@ -103,12 +103,12 @@ export default function Trust() {
                             Driven by Trust.
                         </span>
                     </h1> */}
-                    <h1 className='font-sora text-[40px] font-bold leading-12 lg:leading-[70.4px] tracking-[-1.6px] sm:text-5xl lg:text-[64px] text-[#0F172A]'>
+                    <h2 className='font-sora text-[40px] font-bold leading-12 lg:leading-[70.4px] tracking-[-1.6px] sm:text-5xl lg:text-[64px] text-[#0F172A]'>
                         Built on Quality.<br />
                         <span className="text-[#FFB800]">
                             Driven by Trust.
                         </span>
-                    </h1>
+                    </h2>
 
                     {/* <p className="font-jakarta text-[18px] font-normal leading-[29.25px] tracking-[0px] text-[#44474D]">
                         At Austar Technologies, we combine international quality

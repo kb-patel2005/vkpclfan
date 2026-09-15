@@ -70,9 +70,9 @@ const JobCard = ({ job, active, setActive }: { job: Job, active: string, setActi
                         </span>
 
                     </div>
-                    <h3 className="font-sora mt-2 font-semibold text-[24px] leading-8 tracking-[0px] align-middle text-[#09273A]">
+                    <h2 className="font-sora mt-2 font-semibold text-[24px] leading-8 tracking-[0px] align-middle text-[#09273A]">
                         {job.role}
-                    </h3>
+                    </h2>
 
                 </div>
                 <motion.button
@@ -88,7 +88,7 @@ const JobCard = ({ job, active, setActive }: { job: Job, active: string, setActi
                 <h3 className="text-[#09273A] font-inter font-bold text-[14px] leading-8 tracking-[0px] align-middle"> Job Responsibilities </h3>
                 <ul>
                     {job.responsibilities.map((e) => (
-                        <li className="font-inter font-normal text-[14px] leading-8 tracking-[0px] align-middle text-[#09273A]">{e}</li>
+                        <li key={e} className="font-inter font-normal text-[14px] leading-8 tracking-[0px] align-middle text-[#09273A]">{e}</li>
                     ))}
                 </ul>
             </div>
@@ -98,7 +98,7 @@ const JobCard = ({ job, active, setActive }: { job: Job, active: string, setActi
                 </h3>
                 <ul>
                     {job.requirements.map((e) => (
-                        <li className="font-inter font-normal text-[14px] leading-8 tracking-[0px] align-middle text-[#09273A]">{e}</li>
+                        <li key={e} className="font-inter font-normal text-[14px] leading-8 tracking-[0px] align-middle text-[#09273A]">{e}</li>
                     ))}
                 </ul>
             </div>
@@ -123,8 +123,8 @@ export default function JobPositions() {
                 <span className='font-medium text-sm leading-5 tracking-[0.14px] text-[#5D5D5D]'>3 POSITIONS AVAILABLE</span>
             </motion.div>
             <div className='flex flex-col gap-3 justify-between w-full max-w-7xl mx-auto'>
-                {jobs.map((e) =>
-                    (<JobCard job={e} active={active} setActive={(e) => setActive(e)} />)
+                {jobs.map((e,idx:number) =>
+                    (<JobCard job={e} key={idx} active={active} setActive={(e) => setActive(e)} />)
                 )}
             </div>
         </section>

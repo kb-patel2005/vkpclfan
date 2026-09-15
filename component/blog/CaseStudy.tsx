@@ -16,10 +16,10 @@ export default function CaseStudy() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className='w-full max-w-7xl mx-auto flex flex-col gap-6 border-l-[16px] pl-4 lg:pl-16 border-l-[#FDCD2E]'>
                 <span className='text-[13px] font-medium leading-4'>ENGINEERING NOTE // 001</span>
-                <h1 className=" font-sora text-[40px] leading-11 font-extrabold lg:leading-[90px] trading-[-3.36px] sm:text-5xl lg:text-[64px] text-[#09273A]">
+                <h2 className=" font-sora text-[40px] leading-11 font-extrabold lg:leading-[90px] trading-[-3.36px] sm:text-5xl lg:text-[64px] text-[#09273A]">
                     FAN SIZE ISN'T <br />
                     THE WHOLE STORY.
-                </h1>
+                </h2>
 
                 {/* Description */}
                 <p className="font-normal max-w-xl text-[#5D5D5D] font-inter leading-6 sm:text-base text-lg lg:leading-7">

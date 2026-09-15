@@ -23,9 +23,9 @@ function Card1({
 }) {
   return (
     <div className="w-full rounded-3xl bg-[#09273A] p-7 sm:w-[285px] lg:p-8 hover:scale-105 transition">
-      <h2 className="text-[40px] font-sora font-bold leading-none text-[#DCE2F6]">
+      <span className="text-[40px] font-sora font-bold leading-none text-[#DCE2F6]">
         <CountUp end={num} duration={2} enableScrollSpy scrollSpyOnce />{suffix}
-      </h2>
+      </span>
       <p
         className="mt-2 text-[12px] font-semibold tracking-wide text-[#C5C5D9]"
         style={{ letterSpacing: "1.2px" }}
@@ -68,18 +68,26 @@ export default function Industryworkspace() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="flex w-full max-w-7xl flex-col gap-8 items-center justify-center rounded-[30px] bg-[#09273A] px-6 py-12 text-center sm:px-10 sm:py-16 lg:rounded-[40px] lg:px-24 lg:py-24"
       >
-        <h1 className="text-[36px] font-bold leading-[1.1] font-sora text-white sm:text-[46px] lg:text-[64px]">
+        <h2 className="text-[36px] font-bold leading-[1.1] font-sora text-white sm:text-[46px] lg:text-[64px]">
           Ready to Optimize Your{" "}
           <span className="text-[#FDCD2E]">Industrial Workspace?</span>
-        </h1>
+        </h2>
         <p className="max-w-2xl text-base font-normal leading-6 text-white sm:text-lg">
           Our specialists are ready to provide a custom air-flow audit for your facility.
         </p>
-        <button
-        onClick={()=>router.push("/contact")}
-        className="rounded-full border-2 border-white bg-transparent px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:bg-white hover:text-[#09273A] sm:px-12 sm:py-5 sm:text-base">
-          Talk to an Expert
-        </button>
+        <div className="flex flex-wrap gap-4 lg:gap-6 justify-center">
+          <button
+            onClick={() => router.push("/products/exhuast-fan#tabs")}
+            className="w-full sm:w-auto rounded-full border-2 border-white bg-white px-8 py-4 text-sm font-semibold text-black transition duration-300 hover:bg-transparent hover:text-white sm:px-12 sm:py-5 sm:text-base">
+            Get Your Free Quote
+          </button>
+          <button
+            onClick={() => router.push("/contact")}
+            className="w-full sm:w-auto rounded-full border-2 border-white bg-transparent px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:bg-white hover:text-[#09273A] sm:px-12 sm:py-5 sm:text-base">
+            Talk to an Expert
+          </button>
+
+        </div>
       </motion.div>
     </section>
   );

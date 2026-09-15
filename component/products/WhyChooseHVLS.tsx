@@ -112,7 +112,7 @@ export default function WhyChooseHVLS() {
 
           </center>
           
-            <h1 className="top-14 font-extrabold absolute align-middle w-full hidden lg:block text-[240px] text-[#1A1C1E] opacity-[3%] z-10">MORE. US</h1>
+            <p className="top-14 font-extrabold absolute align-middle w-full hidden lg:block text-[240px] text-[#1A1C1E] opacity-[3%] z-10">MORE. US</p>
           {features.map((item) => (
             <div key={item.no} className={`text-left relative z-20 ${item.styling} ${item.animate}`}>
 

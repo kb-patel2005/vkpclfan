@@ -18,16 +18,6 @@ export default function ProductsLayout({
     return (
         <>
             <main className="flex-grow">{children}</main>
-            <WhyFloent/>
-            <Manufacturer/>
-            <BenefitFan/>
-            <WhyChooseHVLS/>
-            <Specifications/>
-            <ApplicationsOfFan/>
-            <Reviews />
-            <Faq />
-            <Industryworkspace />
-            <Footer />
         </>
     );
 }

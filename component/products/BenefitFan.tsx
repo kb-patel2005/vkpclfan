@@ -15,10 +15,10 @@ export default function BenefitFan() {
 
         {/* Left Content */}
         <div className="w-full lg:w-[35%] flex flex-col gap-4 lg:gap-6">
-          <h1 className="font-sora font-bold text-[32px] leading-[40px] lg:text-[40px] lg:leading-[48px]">
+          <h2 className="font-sora font-bold text-[32px] leading-[40px] lg:text-[40px] lg:leading-[48px]">
             Benefits of Industrial{" "}
             <span className="text-[#FDCD2E]">Exhaust Fan</span>
-          </h1>
+          </h2>
 
           <p className="font-sora text-[16px] leading-6 text-[#475569]">
             An industrial exhaust fan provides powerful and efficient ventilation for factories, warehouses, agricultural facilities, commercial buildings, and other large spaces. It helps remove excess heat, humidity, fumes, dust, odors, and stale air, improving overall air quality and creating a cooler, healthier working environment. With high airflow performance and energy-efficient operation, it can reduce heat buildup and ventilation costs compared to conventional cooling solutions.</p>

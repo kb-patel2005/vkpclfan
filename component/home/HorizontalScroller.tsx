@@ -24,7 +24,7 @@ function CityCard({
                 overflow-hidden
             "
         >
-            <h1
+            <h3
                 className="
                     font-hanken
                     text-2xl
@@ -35,7 +35,7 @@ function CityCard({
                 "
             >
                 {data}
-            </h1>
+            </h3>
         </article>
     );
 }
@@ -132,7 +132,7 @@ export default function HorizontalScroller() {
         >
             {/* ================= TITLE ================= */}
 
-            <h1
+            <h2
                 className="
                     font-inter
                     pt-8
@@ -145,7 +145,7 @@ export default function HorizontalScroller() {
                 }}
             >
                 TRUSTED BY GLOBAL LEADERS
-            </h1>
+            </h2>
 
             {/* ================= AUTO SCROLLER ================= */}
 

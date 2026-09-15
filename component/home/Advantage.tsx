@@ -147,9 +147,9 @@ export function Advantage() {
                 </svg>
               </div>
               <div className="min-w-0">
-                <h4 className="text-[14px] font-semibold leading-5 text-[#09273A] sm:text-[15px] sm:leading-6 lg:text-[16px]">
+                <h2 className="text-[14px] font-semibold leading-5 text-[#09273A] sm:text-[15px] sm:leading-6 lg:text-[16px]">
                   Cloud Management Integrated
-                </h4>
+                </h2>
                 <p className="mt-1 text-[12px] font-normal leading-5 text-[#5D5D5D] sm:text-[13px] lg:text-sm">
                   Control entire fleets from a single terminal.
                 </p>

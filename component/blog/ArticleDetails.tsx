@@ -47,14 +47,14 @@ const Heading = ({ text, idx }: { text: string, idx: number }) => {
     return (
         <div className='flex gap-4 items-baseline pb-2 border-b border-b-[#C5C6CE]'>
             <span className='text-[#75777E] font-medium text-xs tracking-[1.2px] font-jetBrainsMono'>0{idx}</span>
-            <h1 className='font-semibold text-[32px] leading-[38.4px] text-[#09273A]'>{text}</h1>
+            <h2 className='font-semibold text-[32px] leading-[38.4px] text-[#09273A]'>{text}</h2>
         </div>
     )
 }
 
 const SubHeading = ({ text }: { text: string }) => {
     return (
-        <h2 className='font-semibold text-2xl leading-[31.2px]'>{text}</h2>
+        <h3 className='font-semibold text-2xl leading-[31.2px]'>{text}</h3>
     )
 }
 
@@ -77,9 +77,9 @@ const Cards = ({ data }: { data: Support[] }) => {
                 >
                     {/* Value */}
                     {item.type === "text" ? (
-                        <h3 className="font-sora  leading-none text-[#09273A]">
+                        <span className="font-sora  leading-none text-[#09273A]">
                             {item.value}
-                        </h3>
+                        </span>
                     ) : (
                         <div
                             className="w-8 h-8 flex items-center justify-center"
@@ -211,9 +211,9 @@ const LifeSpan = ({ data }: { data: LifeSpan }) => {
                     {data.title}
                 </span>
 
-                <h4 className="font-normal text-[16px] leading-[28px] tracking-[0px] align-middle text-[#09273A]">
+                <h3 className="font-normal text-[16px] leading-[28px] tracking-[0px] align-middle text-[#09273A]">
                     {data.tag}
-                </h4>
+                </h3>
             </div>
             <div>
                 {data.icon}
@@ -391,7 +391,7 @@ export default function ArticleDetails() {
     return (
         <article className='mb-20 w-full'>
             <div
-                className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-6 px-5 lg:px-0">
+                className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row gap-5 px-5 lg:px-0">
                 {/* Left Sidebar */}
                 <div className="w-full lg:w-[260px] lg:sticky lg:top-24 h-fit shrink-0">
                     <p className="font-semibold text-xs tracking-[1.2px] pb-6">
@@ -416,7 +416,7 @@ export default function ArticleDetails() {
                 </div>
 
                 {/* Right Content */}
-                <div className="flex-1 flex flex-col gap-12 lg:gap-16 min-w-0">
+                <div className="flex-1 flex flex-col gap-4 lg:gap-16 min-w-0">
                     {data.map((section, index) => (
                         <motion.div initial={{ x: 0, y: 100, opacity: 0 }}
                             whileInView={{ x: 0, y: 0, opacity: 1 }}

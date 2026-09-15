@@ -87,9 +87,9 @@ export default function Features() {
                             </div>
 
                             {/* Title */}
-                            <h2 className="text-[16px] font-medium leading-7 text-[#09273A]">
+                            <h3 className="text-[16px] font-medium leading-7 text-[#09273A]">
                                 {item.title}
-                            </h2>
+                            </h3>
 
                             {/* Description */}
                             <p className="text-[10px] text-[#44474D99] opacity-60">

@@ -227,7 +227,7 @@ export default function Floentfan() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="max-w-4xl">
 
-                <h1
+                <h2
                     className="
                     font-inter
                         text-center
@@ -241,7 +241,7 @@ export default function Floentfan() {
                         Floent Fans
                     </span>{" "}
                     for Every Large Space
-                </h1>
+                </h2>
 
                 <p
                     className="

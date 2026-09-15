@@ -70,6 +70,7 @@ export default function Articles() {
                             links.map((e: string) =>
                             (
                                 <Link
+                                    key={e}
                                     href="/blog"
                                     onClick={() => setActive(e)}
                                     className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${active === e ? "border-b-2 border-[#09273A] pb-2" : ""
@@ -85,9 +86,7 @@ export default function Articles() {
                 </div>
             </motion.div>
             <div className='bg-white w-full'>
-                <div
-
-                    className="bg-white w-full max-w-7xl mx-auto">
+                <div className="bg-white w-full max-w-7xl mx-auto">
                     <motion.div initial={{ x: -100, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         viewport={{ once: true, amount: 0.3 }}
@@ -98,10 +97,10 @@ export default function Articles() {
                                 <span>|</span>
                                 <span className='text-[#475569]'>HVLS TECHNOLOGY</span>
                             </p>
-                            <h3 className='font-monrope font-bold text-5xl tracking-[-0.96px] leading-[52px] text-[#00132C]'>The Fluid Dynamics of
+                            <h2 className='font-monrope font-bold text-5xl tracking-[-0.96px] leading-[52px] text-[#00132C]'>The Fluid Dynamics of
                                 Modern HVLS Systems
                                 in Logistics Hubs
-                            </h3>
+                            </h2>
                             <p className='text-[13px] leading-4 font-bold text-[#0066FF]'>READ PROTOCOL →</p>
                         </div>
                         <Image
@@ -177,9 +176,9 @@ export default function Articles() {
                                         </span>
                                     </div>
 
-                                    <h3 className="font-manrope font-semibold text-[24px] leading-[32px] text-[#00132C]">
+                                    <h2 className="font-manrope font-semibold text-[24px] leading-[32px] text-[#00132C]">
                                         {e.title}
-                                    </h3>
+                                    </h2>
 
                                     <p className="font-inter font-normal text-[16px] leading-[24px] text-[#5D5D5D]">
                                         {e.description}
@@ -197,14 +196,16 @@ export default function Articles() {
                                         : "md:col-start-1 md:col-end-7"
                                         } w-full`}
                                 >
-                                    <div className="w-full p-2 border border-[#CBD5E1] mx-auto">
-                                        <Image
-                                            width={450}
-                                            height={450}
-                                            alt="blog images"
-                                            src={e.image}
-                                            className="border w-full border-[#0066FF33] object-cover"
-                                        />
+                                    <div>
+                                        <div className="w-full p-2 border border-[#CBD5E1] mx-auto">
+                                            <Image
+                                                width={400}
+                                                height={450}
+                                                alt="blog images"
+                                                src={e.image}
+                                                className="border w-full border-[#0066FF33] object-cover"
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             </div>

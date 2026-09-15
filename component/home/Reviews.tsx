@@ -143,9 +143,9 @@ export default function Reviews() {
                     CLIENT FEEDBACK
                 </div>
 
-                <h1 className="text-4xl font-sora font-bold text-[#09273A] sm:text-5xl">
+                <h2 className="text-4xl font-sora font-bold text-[#09273A] sm:text-5xl">
                     Trusted in the Field
-                </h1>
+                </h2>
 
             </div>
 

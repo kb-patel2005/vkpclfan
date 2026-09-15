@@ -75,9 +75,9 @@ export default function AboutCards() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="mx-auto max-w-7xl flex flex-col gap-4 lg:gap-8 
                 ">
-                <h1 className="border-l-4 border-[#0058BE] pl-4 font-jakarta text-[40px] font-bold leading-[48px] tracking-[-0.8px]">
+                <h2 className="border-l-4 border-[#0058BE] pl-4 font-jakarta text-[40px] font-bold leading-[48px] tracking-[-0.8px]">
                     Our Story
-                </h1>
+                </h2>
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-3 max-w-7xl mx-auto pt-2">
                     {cards.map((card) => (
                         <div
