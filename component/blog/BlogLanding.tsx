@@ -1,9 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 import React from 'react'
 
 export default function BlogLanding() {
+  
     return (
         <motion.section
             initial={{ x: -50, opacity: 0 }}
@@ -28,6 +30,15 @@ export default function BlogLanding() {
                 <motion.button
                     whileTap={{ scale: 0.95 }}
                     whileHover={{ scale: 1.05 }}
+                    onClick={
+                        () => {
+                            const el = document.getElementById("insights");
+                            if (el) {
+                                const y = el.getBoundingClientRect().top + window.scrollY - 80; // offset for header
+                                window.scrollTo({ top: y, behavior: "smooth" });
+                            }
+                        }
+                    }
                     className="w-full font-inter border border-[#00132C] bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                 >
                     EXPLORE INSIGHTS ↓

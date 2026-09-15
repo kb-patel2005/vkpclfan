@@ -57,6 +57,7 @@ export default function Articles() {
     return (
         <section className='lg:mb-20 w-full'>
             <motion.div
+                id="insights"
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true, amount: 0.3 }}
