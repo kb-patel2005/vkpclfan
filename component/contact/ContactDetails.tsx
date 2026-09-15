@@ -105,14 +105,23 @@ Message: ${formData.message}`;
                             </div>
                         </div>
                         <div className='relative'>
-                            <div className='absolute bottom-4 left-4 py-1 px-2 text-sm leading-5 tracking-[0.14px] font-medium bg-white'>N 41.77° / W -87.77°</div>
-                            <div className='absolute bottom-4 right-4 bg-[#071B3A] p-2 rounded-[2px]'>
+                            {/* <div className='absolute bottom-4 left-4 py-1 px-2 text-sm leading-5 tracking-[0.14px] font-medium bg-white'>N 41.77° / W -87.77°</div> */}
+                            {/* <div className='absolute bottom-4 right-4 bg-[#071B3A] p-2 rounded-[2px]'>
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2 18C1.45 18 0.979167 17.8042 0.5875 17.4125C0.195833 17.0208 0 16.55 0 16V2C0 1.45 0.195833 0.979167 0.5875 0.5875C0.979167 0.195833 1.45 0 2 0H9V2H2V16H16V9H18V16C18 16.55 17.8042 17.0208 17.4125 17.4125C17.0208 17.8042 16.55 18 16 18H2ZM6.7 12.7L5.3 11.3L14.6 2H11V0H18V7H16V3.4L6.7 12.7Z" fill="white" />
                                 </svg>
 
-                            </div>
-                            <Image src="/map.jpg" alt="map" height={300} width={300} className='w-full h-[250px]' />
+                            </div> */}
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3687.123456789!2d72.571362!3d23.022505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b1f123456%3A0xabcdef123456!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1699999999999"
+                                width="100%"
+                                height="250"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                            />
+
                         </div>
                     </div>
                 </div>
@@ -187,7 +196,7 @@ Message: ${formData.message}`;
                         <div className="flex flex-col gap-2 mt-5">
                             <p className="text-[12px] leading-4 tracking-[1.2px] font-bold">Product Interest Area</p>
                             <div className="relative bg-[#F1F1F1] border border-[#C3C5D94D]" >
-                        
+
                                 <SelectBox
                                     items={["High Airflow", "Heavy Duty", "Low Maintenance"]}
                                     classes="w-full bg-[#F1F1F1] border-[#C3C5D94D] outline-none bg-[#F1F1F1]"

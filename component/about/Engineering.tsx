@@ -49,12 +49,12 @@ export default function Engineering() {
                     transition={{ duration: 1, ease: "easeOut" }}
                     className='flex flex-col gap-6 lg:w-[35%]'>
                     <p className="text-[16px] font-normal leading-[24px] tracking-normal text-[#475569]">
-                        Floent HVLS FANS are manufactured by Austar Technologies having a manufacturing facility at well known industrial city Ahmedabad Gujarat INDIA.
+                        Floent HVLS FANS are manufactured by floent Technologies having a manufacturing facility at well known industrial city Ahmedabad Gujarat INDIA.
                         <br />
-                        Austar Technologies entered into manufacturing HVLS fans in the year 2017 after two years of designs development and testing of various sizes and options. Austar Technologies have a dedicated manufacturing facility for HVLS Fans of 20000 Square Feet Area and have a manufacturing capacity of 300 Fans per month.
+                        Floent Technologies entered into manufacturing HVLS fans in the year 2017 after two years of designs development and testing of various sizes and options. Floent Technologies have a dedicated manufacturing facility for HVLS Fans of 20000 Square Feet Area and have a manufacturing capacity of 300 Fans per month.
                     </p>
                     <p className="text-[16px] font-normal leading-[24px] tracking-normal text-[#475569]">
-                        Austar Technologies believes in service Indian market Premium Quality Products at Affordable Cost and life long service back up. Austar Technologies is continuously winning customer appreciation and growing business month by month.
+                        Floent Technologies believes in service Indian market Premium Quality Products at Affordable Cost and life long service back up. Floent Technologies is continuously winning customer appreciation and growing business month by month.
                     </p>
                     <p className=" text-[16px] font-normal leading-[24px] tracking-normal text-[#475569]">
                         We specialize in providing advance HVLS Fans that deliver superior air circulation solutions for industrial and commercial spaces. With a focus on energy efficiency and innovative design, we offer a complete range of products, including Geared HVLS Fans and Gearless HVLS Fans . Our Industrial HVLS Fans are engineered to reduce energy consumption while making sure optimal airflow across large areas, making them the perfect choice for warehouses, factories, and other expansive environments.

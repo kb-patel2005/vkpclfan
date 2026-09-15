@@ -111,14 +111,14 @@ export default function Trust() {
                     </h2>
 
                     {/* <p className="font-jakarta text-[18px] font-normal leading-[29.25px] tracking-[0px] text-[#44474D]">
-                        At Austar Technologies, we combine international quality
+                        At Floent Technologies, we combine international quality
                         standards with reliable service and strong support to deliver
                         HVLS fans that our customers can depend on—every single
                         time.
                     </p> */}
 
                     <p className="max-w-[600px] font-medium font-inter leading-6 sm:text-base text-[16px] lg:leading-7 text-[#475569]">
-                        At Austar Technologies, we combine international quality
+                        At Floent Technologies, we combine international quality
                         standards with reliable service and strong support to deliver
                         HVLS fans that our customers can depend on—every single
                         time.

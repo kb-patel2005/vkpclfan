@@ -21,7 +21,7 @@ const cards = [
         number: "01",
         title: "Founded in 2017",
         description:
-            "Austar Technologies started manufacturing high-performance HVLS fans after years of dedicated research and development in aerodynamic engineering.",
+            "Floent Technologies started manufacturing high-performance HVLS fans after years of dedicated research and development in aerodynamic engineering.",
     },
     {
         icon: (
