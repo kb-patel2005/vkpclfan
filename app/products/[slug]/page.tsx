@@ -17,9 +17,9 @@ export default async function page({ params }: { params: Promise<{ slug: string 
     <>
       <DetailLanding slug={slug} />
       <WhyFloent />
-      <Manufacturer title={slug} />
-      <BenefitFan />
-      <WhyChooseHVLS />
+      <Manufacturer title={slug}/>
+      <BenefitFan title={slug}/>
+      <WhyChooseHVLS title={slug} />
       <Specifications />
       <ApplicationsOfFan title={slug} />
       <Reviews />

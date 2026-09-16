@@ -9,26 +9,31 @@ import React from "react";
 const products = [
     {
         title: "Exhaust Fan",
+        slug:"exhuast-fan",
         desc: "Exhaust Fan draws out polluted air from the premises and replaces it with fresh air.",
         img: "/images/exhaust-main.png",
     },
     {
         title: "HVLS Fan",
+        slug:"HVLS-fan",
         desc: "German Geared Motors, 5 Aero Blades & Die-Cast Hub.",
         img: "/images/hvls.jpg",
     },
     {
         title: "Exhaust Fan",
+        slug:"exhuast-fan",
         desc: "Portable cooling for flexible workstations.",
         img: "/images/exhaust-small.jpg",
     },
     {
         title: "Industrial Air Cooler",
+        slug:"exhuast-fan",
         desc: "Powerful Cooling for Enhanced Worker Comfort in High-Temperature Regions.",
         img: "/images/cooler.jpg",
     },
     {
         title: "Mobile Fan",
+        slug:"exhuast-fan",
         desc: "Evaporative cooling technology delivers refreshing relief in sweltering temperatures.",
         img: "/images/mobile.jpg",
     },
@@ -92,7 +97,7 @@ export default function IndustrialSolutions() {
                                         {products[0].title}
                                     </h3>
                                     <div className="flex justify-end">
-                                        <button className="rounded-xl bg-[#EDEEF0] lg:p-2 p-1.5" onClick={()=>router.push("/blog/exhaust-fan")}>
+                                        <button className="rounded-xl bg-[#EDEEF0] lg:p-2 p-1.5" onClick={()=>router.push("/products/exhuast-fan")}>
                                             <ArrowRight size={20} />
                                         </button>
                                     </div>
@@ -100,7 +105,7 @@ export default function IndustrialSolutions() {
                                 <p className=" mt-1 lg:mt-2 font-inter text-[14px] leading-normal text-[#5D5D5D]">
                                     {products[0].desc}
                                 </p>
-                                <button className="mt-2 lg:mt-3 font-semibold text-[#09273A] text-[12px] lg:block" onClick={()=>router.push("/blog/exhaust-fan")}>
+                                <button className="mt-2 lg:mt-3 font-semibold text-[#09273A] text-[12px] lg:block" onClick={()=>router.push("/products/exhuast-fan")}>
                                     EXPLORE SOLUTION →
                                 </button>
                                 
@@ -132,7 +137,7 @@ export default function IndustrialSolutions() {
                                             <h3 className="font-sora text-[20px] font-semibold text-[#14324A]">
                                             {item.title}
                                         </h3>
-                                            <button className="rounded-xl bg-[#EDEEF0] p-2">
+                                            <button className="rounded-xl bg-[#EDEEF0] p-2" onClick={()=>router.push(`/products/${item.slug}`)}>
                                                 <ArrowRight size={20} />
                                             </button>
                                         </div>

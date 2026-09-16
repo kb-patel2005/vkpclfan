@@ -1,31 +1,33 @@
 'use client'
 
+import { benefits } from '@/Mockdata/Mockdata'
 import { motion } from 'framer-motion'
 import React from 'react'
 
-export default function BenefitFan() {
+export default function BenefitFan({ title}: { title: string }) {
   return (
     <section className="w-full bg-[#F8F9FA] py-10 lg:py-0 px-5 lg:px-0">
       <motion.div
-                initial={{ x: -100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.8, ease: "easeOut" }} 
-         className="flex flex-col lg:flex-row max-w-7xl mx-auto gap-8 lg:gap-6">
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="flex flex-col lg:flex-row max-w-7xl mx-auto gap-8 lg:gap-6">
 
         {/* Left Content */}
         <div className="w-full lg:w-[35%] flex flex-col gap-4 lg:gap-6">
           <h2 className="font-sora font-bold text-[32px] leading-[40px] lg:text-[40px] lg:leading-[48px]">
             Benefits of Industrial{" "}
-            <span className="text-[#FDCD2E]">Exhaust Fan</span>
+            <span className="text-[#FDCD2E]">{title.split("-").join(" ")}</span>
           </h2>
 
-          <p className="font-sora text-[16px] leading-6 text-[#475569]">
-            An industrial exhaust fan provides powerful and efficient ventilation for factories, warehouses, agricultural facilities, commercial buildings, and other large spaces. It helps remove excess heat, humidity, fumes, dust, odors, and stale air, improving overall air quality and creating a cooler, healthier working environment. With high airflow performance and energy-efficient operation, it can reduce heat buildup and ventilation costs compared to conventional cooling solutions.</p>
+          {benefits.get(title).map((e: string, idx: number) => (
+            <p className="font-sora text-[16px] leading-6 text-[#475569]" key={idx}>
+              {e}
+            </p>
 
-          <p className="font-sora text-[16px] leading-6 text-[#475569]">
-            Designed for demanding industrial applications, the Floent Exhaust Fan combines durable construction, efficient airflow, and reliable performance for continuous operation. Its low-maintenance design helps reduce operating and maintenance requirements while ensuring long-lasting ventilation. Ideal for factories, warehouses, workshops, poultry farms, and commercial spaces, it provides an effective and cost-efficient solution for maintaining proper air circulation and comfortable indoor conditions.
-          </p>
+          ))}
+       
         </div>
 
         {/* Right Image */}

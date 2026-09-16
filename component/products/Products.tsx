@@ -10,6 +10,7 @@ import { useSearch } from '@/context/SearchContext';
 const data = [
     {
         title: "HVLS FAN",
+        slug: "HVLS-fan",
         desc: "CENTRIFUGAL EXHAUST",
         leftone: "AIRFLOW",
         leftdata: "15,000 CFM",
@@ -26,6 +27,7 @@ const data = [
     {
         title: "EXHAUST FAN",
         desc: "WAREHOUSE CEILING FAN",
+        slug: "exhuast-fan",
         leftone: "DIAMETER",
         leftdata: "15,000 CFM",
         rightone: "COVERAGE",
@@ -41,6 +43,7 @@ const data = [
     {
         title: "AIR CIRCULATOR",
         desc: "WAREHOUSE CEILING FAN",
+        slug: "exhuast-fan",
         leftone: "DIAMETER",
         leftdata: "15,000 CFM",
         rightone: "COVERAGE",
@@ -194,7 +197,7 @@ export default function Products() {
                     <div className="hidden lg:flex w-[80%] gap-[16px] justify-between">
 
 
-                        <div className="relative w-[60%] border-[#C3C5D980] border">
+                        <div className="relative w-[60%] border-[#C3C5D980] border flex items-center justify-center">
 
                             <svg
                                 className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none"
@@ -345,6 +348,7 @@ export default function Products() {
                                 <motion.button
                                     whileTap={{ scale: 0.95 }}
                                     whileHover={{ scale: 1.05 }}
+                                    onClick={() => router.push(`/products/${e.slug}`)}
                                     className="cursor-pointer w-full border bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent"
                                 >
                                     VIEW SPECS →

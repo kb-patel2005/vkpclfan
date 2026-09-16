@@ -6,7 +6,8 @@ import { motion } from 'framer-motion'
 
 export default function Engineering() {
     return (
-        <section className='w-full pt-6 lg:py-20 pb-6 lg:pb-[50px] bg-white max-lg:px-5'>
+        <section
+        className='w-full pt-6 lg:py-20 pb-6 lg:pb-[50px] bg-white max-lg:px-5'>
             <div className='flex flex-wrap mx-auto max-w-7xl gap-2 justify-center lg:justify-between items-center'>
                 <motion.div
                     initial={{ x: -100, opacity: 0 }}

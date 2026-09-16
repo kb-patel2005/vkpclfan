@@ -41,8 +41,13 @@
 //     </div>
 //   )
 // }
+
 "use client"
 
+import {
+  NativeSelect,
+  NativeSelectOption,
+} from "@/components/ui/native-select"
 import { useState } from "react"
 import { ChevronDown } from "lucide-react"
 
@@ -95,3 +100,56 @@ export function SelectBox({
     </div>
   )
 }
+
+// export function NativeSelectDemo() {
+//   return (
+//     <NativeSelect>
+//       <NativeSelectOption value="">Select status</NativeSelectOption>
+//       <NativeSelectOption value="todo">Todo</NativeSelectOption>
+//       <NativeSelectOption value="in-progress">In Progress</NativeSelectOption>
+//       <NativeSelectOption value="done">Done</NativeSelectOption>
+//       <NativeSelectOption value="cancelled">Cancelled</NativeSelectOption>
+//     </NativeSelect>
+//   )
+// }
+
+// "use client"
+
+// import {
+//   NativeSelect,
+//   NativeSelectOption,
+// } from "@/components/ui/native-select"
+
+// export function SelectBox({
+//   items,
+//   placeholder,
+//   onChange,
+//   value,
+//   classes,
+// }: {
+//   items: string[]
+//   placeholder?: string
+//   onChange?: (val: string) => void
+//   value?: string
+//   classes?: string
+// }) {
+//   return (
+//     <NativeSelect
+//       value={value}
+//       onChange={(e) => onChange?.(e.target.value)}
+//       className={`w-full py-3 pl-4 pr-10 text-left rounded-[0px] focus:outline-none ${classes || ""}`}
+//     >
+//       {/* Placeholder option */}
+//       <NativeSelectOption value="">
+//         {placeholder || "Select option"}
+//       </NativeSelectOption>
+
+//       {/* Dynamic options */}
+//       {items.map((item) => (
+//         <NativeSelectOption key={item} value={item}>
+//           {item}
+//         </NativeSelectOption>
+//       ))}
+//     </NativeSelect>
+//   )
+// }

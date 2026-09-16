@@ -1,3 +1,5 @@
+'use client'
+
 import {
   BriefcaseBusiness,
   Camera,
@@ -7,6 +9,7 @@ import {
   Users,
 } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 import React from "react";
 
@@ -91,6 +94,8 @@ const socialLinks = [
 ];
 
 export default function Footer() {
+
+  const router = useRouter()
   return (
     <footer className="text-[#5D5D5D] bg-white">
       <div className="mx-auto max-w-7xl px-5 py-8 md:px-6 lg:px-0">
@@ -103,7 +108,16 @@ export default function Footer() {
             <img
               src="/floent.png"
               alt="Floent Fans"
-              className="mb-6 h-18 w-18 bg-white object-contain"
+              onClick={() => {
+                if (window.location.pathname == "/") {
+                  // Already on home → scroll to top
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                } else {
+                  // Navigate to home
+                  router.push("/");
+                }
+              }}
+              className="mb-6 h-18 w-18 bg-white object-contain cursor-pointer"
             />
 
             {/* Description */}

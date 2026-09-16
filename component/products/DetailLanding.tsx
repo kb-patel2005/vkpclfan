@@ -4,84 +4,54 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { SelectBox } from '../common/SelectBox';
 import HeroSwiper from '../common/HeroSwiper';
+import { application, featureandadv, features, specification, title_description } from '@/Mockdata/Mockdata';
 
-const features = [
-    {
-        label: "High Airflow",
-        icon: (
-            <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M9.5 17C8.66667 17 7.95833 16.7083 7.375 16.125C6.79167 15.5417 6.5 14.8333 6.5 14H8.5C8.5 14.2833 8.59583 14.5208 8.7875 14.7125C8.97917 14.9042 9.21667 15 9.5 15C9.78333 15 10.0208 14.9042 10.2125 14.7125C10.4042 14.5208 10.5 14.2833 10.5 14C10.5 13.7167 10.4042 13.4792 10.2125 13.2875C10.0208 13.0958 9.78333 13 9.5 13H0V11H9.5C10.3333 11 11.0417 11.2917 11.625 11.875C12.2083 12.4583 12.5 13.1667 12.5 14C12.5 14.8333 12.2083 15.5417 11.625 16.125C11.0417 16.7083 10.3333 17 9.5 17ZM0 7V5H13.5C13.9333 5 14.2917 4.85833 14.575 4.575C14.8583 4.29167 15 3.93333 15 3.5C15 3.06667 14.8583 2.70833 14.575 2.425C14.2917 2.14167 13.9333 2 13.5 2C13.0667 2 12.7083 2.14167 12.425 2.425C12.1417 2.70833 12 3.06667 12 3.5H10C10 2.51667 10.3375 1.6875 11.0125 1.0125C11.6875 0.3375 12.5167 0 13.5 0C14.4833 0 15.3125 0.3375 15.9875 1.0125C16.6625 1.6875 17 2.51667 17 3.5C17 4.48333 16.6625 5.3125 15.9875 5.9875C15.3125 6.6625 14.4833 7 13.5 7H0ZM16.5 15V13C16.9333 13 17.2917 12.8583 17.575 12.575C17.8583 12.2917 18 11.9333 18 11.5C18 11.0667 17.8583 10.7083 17.575 10.425C17.2917 10.1417 16.9333 10 16.5 10H0V8H16.5C17.4833 8 18.3125 8.3375 18.9875 9.0125C19.6625 9.6875 20 10.5167 20 11.5C20 12.4833 19.6625 13.3125 18.9875 13.9875C18.3125 14.6625 17.4833 15 16.5 15Z"
-                    fill="#09273A"
-                />
-            </svg>
-        ),
-    },
-    {
-        label: "Text",
-        icon: (
-            <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M6.55 16.2L11.725 10H7.725L8.45 4.325L3.825 11H7.3L6.55 16.2ZM4 20L5 13H0L9 0H11L10 8H16L6 20H4Z"
-                    fill="#09273A"
-                />
-            </svg>
-        ),
-    },
-    {
-        label: "Heavy Duty",
-        icon: (
-            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M16.4 18.025L10.925 12.55L13.025 10.45L18.5 15.925L16.4 18.025ZM2.6 18.025L0.5 15.925L7.4 9.025L5.7 7.325L5 8.025L3.725 6.75V8.8L3.025 9.5L0 6.475L0.7 5.775H2.75L1.5 4.525L5.05 0.975C5.38333 0.641667 5.74167 0.4 6.125 0.25C6.50833 0.1 6.9 0.025 7.3 0.025C7.7 0.025 8.09167 0.1 8.475 0.25C8.85833 0.4 9.21667 0.641667 9.55 0.975L7.25 3.275L8.5 4.525L7.8 5.225L9.5 6.925L11.75 4.675C11.6833 4.49167 11.6292 4.3 11.5875 4.1C11.5458 3.9 11.525 3.7 11.525 3.5C11.525 2.51667 11.8625 1.6875 12.5375 1.0125C13.2125 0.3375 14.0417 0 15.025 0C15.275 0 15.5125 0.025 15.7375 0.075C15.9625 0.125 16.1917 0.2 16.425 0.3L13.95 2.775L15.75 4.575L18.225 2.1C18.3417 2.33333 18.4208 2.5625 18.4625 2.7875C18.5042 3.0125 18.525 3.25 18.525 3.5C18.525 4.48333 18.1875 5.3125 17.5125 5.9875C16.8375 6.6625 16.0083 7 15.025 7C14.825 7 14.625 6.98333 14.425 6.95C14.225 6.91667 14.0333 6.85833 13.85 6.775L2.6 18.025Z"
-                    fill="#09273A"
-                />
-            </svg>
-        ),
-    },
-    {
-        label: "Low Maintenance",
-        icon: (
-            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M7.3 20L6.9 16.8C6.68333 16.7167 6.47917 16.6167 6.2875 16.5C6.09583 16.3833 5.90833 16.2583 5.725 16.125L2.75 17.375L0 12.625L2.575 10.675C2.55833 10.5583 2.55 10.4458 2.55 10.3375C2.55 10.2292 2.55 10.1167 2.55 10C2.55 9.88333 2.55 9.77083 2.55 9.6625C2.55 9.55417 2.55833 9.44167 2.575 9.325L0 7.375L2.75 2.625L5.725 3.875C5.90833 3.74167 6.1 3.61667 6.3 3.5C6.5 3.38333 6.7 3.28333 6.9 3.2L7.3 0H12.8L13.2 3.2C13.4167 3.28333 13.6208 3.38333 13.8125 3.5C14.0042 3.61667 14.1917 3.74167 14.375 3.875L17.35 2.625L20.1 7.375L17.525 9.325C17.5417 9.44167 17.55 9.55417 17.55 9.6625C17.55 9.77083 17.55 9.88333 17.55 10C17.55 10.1167 17.5333 10.2292 17.5 10.3375L20.075 12.625L17.325 17.375L14.375 16.125C14.1917 16.2583 14 16.3833 13.8 16.5C13.6 16.6167 13.4 16.7167 13.2 16.8L12.8 20H7.3Z"
-                    fill="#09273A"
-                />
-            </svg>
-        ),
-    },
-];
-
-const data = [
-    {
-        heading: "Product Specifications",
-
-        description:
-            "This fan is designed for high-performance airflow and reliable operation in demanding environments.",
-
-        table: [
-            {
-                parameter: "Motor Power",
-                value: "123",
-            },
-            {
-                parameter: "Airflow",
-                value: "2456",
-            },
-            {
-                parameter: "Speed",
-                value: "1200 RPM",
-            },
-            {
-                parameter: "Voltage",
-                value: "230V",
-            },
-        ],
-
-        url: "https://example.com/product",
-    },
-];
-
+// const features = [
+//     {
+//         label: "High Airflow",
+//         icon: (
+//             <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+//                 <path
+//                     d="M9.5 17C8.66667 17 7.95833 16.7083 7.375 16.125C6.79167 15.5417 6.5 14.8333 6.5 14H8.5C8.5 14.2833 8.59583 14.5208 8.7875 14.7125C8.97917 14.9042 9.21667 15 9.5 15C9.78333 15 10.0208 14.9042 10.2125 14.7125C10.4042 14.5208 10.5 14.2833 10.5 14C10.5 13.7167 10.4042 13.4792 10.2125 13.2875C10.0208 13.0958 9.78333 13 9.5 13H0V11H9.5C10.3333 11 11.0417 11.2917 11.625 11.875C12.2083 12.4583 12.5 13.1667 12.5 14C12.5 14.8333 12.2083 15.5417 11.625 16.125C11.0417 16.7083 10.3333 17 9.5 17ZM0 7V5H13.5C13.9333 5 14.2917 4.85833 14.575 4.575C14.8583 4.29167 15 3.93333 15 3.5C15 3.06667 14.8583 2.70833 14.575 2.425C14.2917 2.14167 13.9333 2 13.5 2C13.0667 2 12.7083 2.14167 12.425 2.425C12.1417 2.70833 12 3.06667 12 3.5H10C10 2.51667 10.3375 1.6875 11.0125 1.0125C11.6875 0.3375 12.5167 0 13.5 0C14.4833 0 15.3125 0.3375 15.9875 1.0125C16.6625 1.6875 17 2.51667 17 3.5C17 4.48333 16.6625 5.3125 15.9875 5.9875C15.3125 6.6625 14.4833 7 13.5 7H0ZM16.5 15V13C16.9333 13 17.2917 12.8583 17.575 12.575C17.8583 12.2917 18 11.9333 18 11.5C18 11.0667 17.8583 10.7083 17.575 10.425C17.2917 10.1417 16.9333 10 16.5 10H0V8H16.5C17.4833 8 18.3125 8.3375 18.9875 9.0125C19.6625 9.6875 20 10.5167 20 11.5C20 12.4833 19.6625 13.3125 18.9875 13.9875C18.3125 14.6625 17.4833 15 16.5 15Z"
+//                     fill="#09273A"
+//                 />
+//             </svg>
+//         ),
+//     },
+//     {
+//         label: "Text",
+//         icon: (
+//             <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+//                 <path
+//                     d="M6.55 16.2L11.725 10H7.725L8.45 4.325L3.825 11H7.3L6.55 16.2ZM4 20L5 13H0L9 0H11L10 8H16L6 20H4Z"
+//                     fill="#09273A"
+//                 />
+//             </svg>
+//         ),
+//     },
+//     {
+//         label: "Heavy Duty",
+//         icon: (
+//             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+//                 <path
+//                     d="M16.4 18.025L10.925 12.55L13.025 10.45L18.5 15.925L16.4 18.025ZM2.6 18.025L0.5 15.925L7.4 9.025L5.7 7.325L5 8.025L3.725 6.75V8.8L3.025 9.5L0 6.475L0.7 5.775H2.75L1.5 4.525L5.05 0.975C5.38333 0.641667 5.74167 0.4 6.125 0.25C6.50833 0.1 6.9 0.025 7.3 0.025C7.7 0.025 8.09167 0.1 8.475 0.25C8.85833 0.4 9.21667 0.641667 9.55 0.975L7.25 3.275L8.5 4.525L7.8 5.225L9.5 6.925L11.75 4.675C11.6833 4.49167 11.6292 4.3 11.5875 4.1C11.5458 3.9 11.525 3.7 11.525 3.5C11.525 2.51667 11.8625 1.6875 12.5375 1.0125C13.2125 0.3375 14.0417 0 15.025 0C15.275 0 15.5125 0.025 15.7375 0.075C15.9625 0.125 16.1917 0.2 16.425 0.3L13.95 2.775L15.75 4.575L18.225 2.1C18.3417 2.33333 18.4208 2.5625 18.4625 2.7875C18.5042 3.0125 18.525 3.25 18.525 3.5C18.525 4.48333 18.1875 5.3125 17.5125 5.9875C16.8375 6.6625 16.0083 7 15.025 7C14.825 7 14.625 6.98333 14.425 6.95C14.225 6.91667 14.0333 6.85833 13.85 6.775L2.6 18.025Z"
+//                     fill="#09273A"
+//                 />
+//             </svg>
+//         ),
+//     },
+//     {
+//         label: "Low Maintenance",
+//         icon: (
+//             <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+//                 <path
+//                     d="M7.3 20L6.9 16.8C6.68333 16.7167 6.47917 16.6167 6.2875 16.5C6.09583 16.3833 5.90833 16.2583 5.725 16.125L2.75 17.375L0 12.625L2.575 10.675C2.55833 10.5583 2.55 10.4458 2.55 10.3375C2.55 10.2292 2.55 10.1167 2.55 10C2.55 9.88333 2.55 9.77083 2.55 9.6625C2.55 9.55417 2.55833 9.44167 2.575 9.325L0 7.375L2.75 2.625L5.725 3.875C5.90833 3.74167 6.1 3.61667 6.3 3.5C6.5 3.38333 6.7 3.28333 6.9 3.2L7.3 0H12.8L13.2 3.2C13.4167 3.28333 13.6208 3.38333 13.8125 3.5C14.0042 3.61667 14.1917 3.74167 14.375 3.875L17.35 2.625L20.1 7.375L17.525 9.325C17.5417 9.44167 17.55 9.55417 17.55 9.6625C17.55 9.77083 17.55 9.88333 17.55 10C17.55 10.1167 17.5333 10.2292 17.5 10.3375L20.075 12.625L17.325 17.375L14.375 16.125C14.1917 16.2583 14 16.3833 13.8 16.5C13.6 16.6167 13.4 16.7167 13.2 16.8L12.8 20H7.3Z"
+//                     fill="#09273A"
+//                 />
+//             </svg>
+//         ),
+//     },
+// ];
 
 const models = [
     {
@@ -102,22 +72,22 @@ const models = [
     },
 ];
 
-const productData = {
-    heading: "Product Specifications",
-    description: "The Floent Exhaust Fan is engineered for powerful and efficient air extraction in industrial, commercial, agricultural, and large-scale ventilation environments. Designed with high-performance aerodynamic blades, a robust galvanized steel frame, and an efficient motor, it provides strong airflow for effective heat, humidity, fumes, dust, and stale-air removal.",
-    table: [
-        { parameter: "Blade Dia (mm)", "FLEH-1000": "900", "FLEH-1220": "1000", "FLEH-1380": "1250" },
-        { parameter: "Voice Level (db)", "FLEH-1000": "<70", "FLEH-1220": "<70", "FLEH-1380": "<70" },
-        { parameter: "Air flow (CM/H)", "FLEH-1000": "22000", "FLEH-1220": "38000", "FLEH-1380": "40000" },
-        { parameter: "Speed (rpm)", "FLEH-1000": "560", "FLEH-1220": "560", "FLEH-1380": "460" },
-        { parameter: "Power (W)", "FLEH-1000": "550", "FLEH-1220": "750", "FLEH-1380": "1100" },
-        { parameter: "Voltage", "FLEH-1000": "415", "FLEH-1220": "415", "FLEH-1380": "415" },
-        { parameter: "Dimension (mm) (mm) (HxW)", "FLEH-1000": "1000 x 1000 x 400", "FLEH-1220": "1220 x 1220 x 400", "FLEH-1380": "1380 x 1380 x 450" },
-        { parameter: "Motor Type", "FLEH-1000": "Direct Drive", "FLEH-1220": "Direct Drive", "FLEH-1380": "Direct Drive" },
-        { parameter: "Blade Material", "FLEH-1000": "Stainless Steel", "FLEH-1220": "Stainless Steel", "FLEH-1380": "Stainless Steel" },
-        { parameter: "Frame Material", "FLEH-1000": "Galvanized Steel", "FLEH-1220": "Galvanized Steel", "FLEH-1380": "Galvanized Steel" },
-    ],
-};
+// const productData = {
+//     heading: "Product Specifications",
+//     description: "The Floent Exhaust Fan is engineered for powerful and efficient air extraction in industrial, commercial, agricultural, and large-scale ventilation environments. Designed with high-performance aerodynamic blades, a robust galvanized steel frame, and an efficient motor, it provides strong airflow for effective heat, humidity, fumes, dust, and stale-air removal.",
+//     table: [
+//         { parameter: "Blade Dia (mm)", "FLEH-1000": "900", "FLEH-1220": "1000", "FLEH-1380": "1250" },
+//         { parameter: "Voice Level (db)", "FLEH-1000": "<70", "FLEH-1220": "<70", "FLEH-1380": "<70" },
+//         { parameter: "Air flow (CM/H)", "FLEH-1000": "22000", "FLEH-1220": "38000", "FLEH-1380": "40000" },
+//         { parameter: "Speed (rpm)", "FLEH-1000": "560", "FLEH-1220": "560", "FLEH-1380": "460" },
+//         { parameter: "Power (W)", "FLEH-1000": "550", "FLEH-1220": "750", "FLEH-1380": "1100" },
+//         { parameter: "Voltage", "FLEH-1000": "415", "FLEH-1220": "415", "FLEH-1380": "415" },
+//         { parameter: "Dimension (mm) (mm) (HxW)", "FLEH-1000": "1000 x 1000 x 400", "FLEH-1220": "1220 x 1220 x 400", "FLEH-1380": "1380 x 1380 x 450" },
+//         { parameter: "Motor Type", "FLEH-1000": "Direct Drive", "FLEH-1220": "Direct Drive", "FLEH-1380": "Direct Drive" },
+//         { parameter: "Blade Material", "FLEH-1000": "Stainless Steel", "FLEH-1220": "Stainless Steel", "FLEH-1380": "Stainless Steel" },
+//         { parameter: "Frame Material", "FLEH-1000": "Galvanized Steel", "FLEH-1220": "Galvanized Steel", "FLEH-1380": "Galvanized Steel" },
+//     ],
+// };
 
 const featuresAndAdavantage = [
     {
@@ -371,9 +341,9 @@ const featuresAndAdavantage = [
 
 const workingPrincipal = "Exhaust Fan draws out polluted air from premises and replaces it with fresh air. Air is considered polluted when it contains high amounts of hot air, moisture, carbon dioxide, vaporized chemicals, dust, fungal spores and unpleasant odors. Marut Air exhaust fan combat indoor air pollution by ejecting the unclean indoor air into the outside environment and letting in clean air from the outside"
 
-const applications = [
-    "INDUSTRIAL PLANTS", "DAIRY FARMS & LIVESTOCK FARMS", "GREENHOUSE & AGRICULTURE", "WAREHOUSE & LOGISTICS", "COMMERCIAL SPACES", "FOOD PROCESSING UNITS"
-]
+// const applications = [
+//     "INDUSTRIAL PLANTS", "DAIRY FARMS & LIVESTOCK FARMS", "GREENHOUSE & AGRICULTURE", "WAREHOUSE & LOGISTICS", "COMMERCIAL SPACES", "FOOD PROCESSING UNITS"
+// ]
 
 export default function DetailLanding({ slug }: { slug: string }) {
 
@@ -426,6 +396,7 @@ Message: ${formData.message}`;
 
     return (
         <section className='w-full flex flex-col gap-4 lg:gap-12 lg:px-0 px-5 pt-5 lg:pt-10 bg-[#F8F9FA]'>
+            {/* nav */}
             <div>
                 <nav
                     aria-label="Breadcrumb"
@@ -457,13 +428,15 @@ Message: ${formData.message}`;
                     </ol>
                 </nav>
             </div>
-            <HeroSwiper models={models} features={features} setTab={setActive} />
+            {/* models */}
+            <HeroSwiper models={models} features={features.get(slug)} setTab={setActive} title={title_description.get(slug)[0]} description={title_description.get(slug)[1]} />
 
+            {/* fetures and adva */}
             <div className='w-full max-w-7xl mx-auto mt-2'>
                 <h2 className='text-4xl font-bold font-sora mb-12 text-center'>features and Advantages</h2>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
-                    {featuresAndAdavantage.map((item, index) => (
+                    {featureandadv.get(slug).map((item: any, index: number) => (
                         <div
                             key={index}
                             className="flex flex-col items-center text-center"
@@ -485,57 +458,61 @@ Message: ${formData.message}`;
                     ))}
                 </div>
             </div>
+
+            {/************Tabs*************************/}
             <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeOut" }} className="w-full flex flex-col gap-[26px]">
                 {/* Tabs */}
-                <div
-                    id='tabs'
-                    className="max-w-7xl w-full mx-auto flex bg-white items-center gap-8 py-4 px-3 lg:px-16 overflow-x-auto whitespace-nowrap [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-                >
-                    <Link
-                        href="/products/abc"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            setActive("Description");
-                        }}
-                        className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${active === "Description"
-                            ? "border-b-2 border-[#09273A] pb-2"
-                            : ""
-                            }`}
+                <div className='w-full'>
+                    <div
+                        id='tabs'
+                        className="max-w-7xl w-full mx-auto flex bg-white items-center gap-8 py-4 px-3 lg:px-16 overflow-x-auto whitespace-nowrap [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
                     >
-                        DESCRIPTION
-                    </Link>
+                        <Link
+                            href="/products/abc"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                setActive("Description");
+                            }}
+                            className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${active === "Description"
+                                ? "border-b-2 border-[#09273A] pb-2"
+                                : ""
+                                }`}
+                        >
+                            DESCRIPTION
+                        </Link>
 
-                    <Link
-                        href="/products/abc"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            setActive("Product specifications");
-                        }}
-                        className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${active === "Product specifications"
-                            ? "border-b-2 border-[#09273A] pb-2"
-                            : ""
-                            }`}
-                    >
-                        SPECIFICATIONS
-                    </Link>
+                        <Link
+                            href="/products/abc"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                setActive("Product specifications");
+                            }}
+                            className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${active === "Product specifications"
+                                ? "border-b-2 border-[#09273A] pb-2"
+                                : ""
+                                }`}
+                        >
+                            SPECIFICATIONS
+                        </Link>
 
-                    <Link
-                        href="/products/abc"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            setActive("Ask For a Price");
-                        }}
-                        className={`cursor-pointer text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${active === "Ask For a Price"
-                            ? "border-b-2 border-[#09273A] pb-2"
-                            : ""
-                            }`}
-                    >
-                        ASK FOR A PRICE
-                    </Link>
+                        <Link
+                            href="/products/abc"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                setActive("Ask For a Price");
+                            }}
+                            className={`cursor-pointer text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${active === "Ask For a Price"
+                                ? "border-b-2 border-[#09273A] pb-2"
+                                : ""
+                                }`}
+                        >
+                            ASK FOR A PRICE
+                        </Link>
+                    </div>
                 </div>
 
                 {/* Content */}
@@ -549,7 +526,7 @@ Message: ${formData.message}`;
                             </h2>
 
                             <p className="mt-4 font-inter font-light text-[16px] leading-[24px] text-[#09273A]">
-                                {productData.description}
+                                {specification.get(slug).description}
                             </p>
                         </div>
                     )}
@@ -565,7 +542,7 @@ Message: ${formData.message}`;
                                 <table className="w-full border-collapse">
                                     <thead>
                                         <tr className="bg-[#09273A] text-white">
-                                            {Object.keys(productData.table[0]).map((key) => (
+                                            {Object.keys(specification.get(slug).table[0]).map((key) => (
                                                 <th
                                                     key={key}
                                                     className="text-left px-5 py-3 font-inter font-medium text-[14px] leading-[20px] tracking-[0.14px]"
@@ -577,7 +554,7 @@ Message: ${formData.message}`;
                                     </thead>
 
                                     <tbody>
-                                        {productData.table.map((item, index) => (
+                                        {specification.get(slug).table.map((item: Object, index: number) => (
                                             <tr
                                                 key={index}
                                                 className={
@@ -765,126 +742,7 @@ Message: ${formData.message}`;
                 <p className="font-inter font-normal text-[16px] leading-[22px] lg:leading-[24px] text-[#5D5D5D]">
                     {workingPrincipal}
                 </p>
-                {/* <div className='flex flex-wrap justify-between text-center'>
-                    <div className='w-[150px] flex flex-col items-center'>
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
-                            <path
-                                d="M8 18H30C33.3 18 36 15.3 36 12C36 9.8 34.2 8 32 8C29.8 8 28 9.8 28 12"
-                                stroke="#09273A"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                            />
-                            <path
-                                d="M8 25H38C40.2 25 42 23.2 42 21C42 18.8 40.2 17 38 17"
-                                stroke="#09273A"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                            />
-                            <path
-                                d="M8 32H27C29.2 32 31 33.8 31 36C31 38.2 29.2 40 27 40"
-                                stroke="#09273A"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                            />
-                        </svg>
-                        <p>Fresh Air</p>
-                    </div>
 
-                    <div className='w-[150px] flex flex-col items-center'>
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
-                            <path
-                                d="M18 11V29"
-                                stroke="#09273A"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                            />
-                            <path
-                                d="M18 29C14.7 29 12 31.7 12 35C12 38.3 14.7 41 18 41C21.3 41 24 38.3 24 35C24 32.7 22.7 30.7 20 29.7V11C20 9.9 19.1 9 18 9C16.9 9 16 9.9 16 11"
-                                stroke="#09273A"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                            <path
-                                d="M32 15H42M32 25H39M32 35H42"
-                                stroke="#09273A"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                            />
-                        </svg>
-                        <p>REMOVES HEAT</p>
-
-                    </div>
-                    <div className='w-[150px]  flex flex-col items-center'>
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
-                            <path
-                                d="M25 8C25 8 14 20.5 14 28C14 34.1 18.9 39 25 39C31.1 39 36 34.1 36 28C36 20.5 25 8 25 8Z"
-                                stroke="#09273A"
-                                strokeWidth="2"
-                                strokeLinejoin="round"
-                            />
-                            <path
-                                d="M20 29C20 32.3 22 34.5 25 35"
-                                stroke="#09273A"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                            />
-                            <path
-                                d="M37 12L37 18M34 15H40"
-                                stroke="#09273A"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                            />
-                        </svg>
-                        <p>
-                            CONTROLS MOISTURE
-                        </p>
-                    </div>
-                    <div className='w-[150px] flex flex-col items-center'>
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
-                            <path
-                                d="M9 27H31C34.3 27 37 24.3 37 21C37 17.7 34.3 15 31 15C29.3 15 27.7 15.7 26.5 17"
-                                stroke="#09273A"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                            />
-                            <path
-                                d="M9 34H27"
-                                stroke="#09273A"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                            />
-                            <circle
-                                cx="35"
-                                cy="34"
-                                r="2"
-                                stroke="#09273A"
-                                strokeWidth="2"
-                            />
-                            <circle
-                                cx="41"
-                                cy="28"
-                                r="2"
-                                stroke="#09273A"
-                                strokeWidth="2"
-                            />
-                            <circle
-                                cx="40"
-                                cy="38"
-                                r="1.5"
-                                fill="#09273A"
-                            />
-                            <circle
-                                cx="34"
-                                cy="41"
-                                r="1.5"
-                                fill="#09273A"
-                            />
-                        </svg>
-                        <p>REMOVES DUST</p>
-
-                    </div>
-                </div> */}
             </div>
             <div className='w-full max-w-3xl mx-auto flex flex-col gap-8 py-3'>
                 <h2 className='text-4xl font-bold font-sora text-center'>Best suited for Applications</h2>
@@ -892,7 +750,7 @@ Message: ${formData.message}`;
                     per statutory requirements in various industrial
                     and commercial spaces.</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:py-10">
-                    {applications.map((item, index) => (
+                    {application.get(slug).map((item: string, index: number) => (
                         <div key={index} className="flex items-start gap-3">
                             <svg
                                 width="22"

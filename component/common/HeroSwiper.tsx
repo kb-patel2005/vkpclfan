@@ -15,9 +15,11 @@ interface Props {
   models: Model[]
   features: Feature[]
   setTab: (val:string) => void
+  title: string
+  description:string
 }
 
-export default function HeroSwiper({ models, features, setTab }: Props) {
+export default function HeroSwiper({ models, features, setTab,title, description }: Props) {
   const [active, setActive] = useState("Description")
   const [heroimage, setHeroimage] = useState(models[0].url)
   const [activeModel, setActiveModel] = useState(-1)
@@ -134,14 +136,12 @@ export default function HeroSwiper({ models, features, setTab }: Props) {
         {/* Text + features */}
         <div className="flex flex-col gap-4 lg:w-[50%] mt-3">
           <h1 className="font-sora font-bold leading-[1.15] sm:text-5xl text-[32px]">
-            Exhaust Fan Series
+            {title}
           </h1>
 
           <p className="font-inter font-normal text-[16px] leading-[28px] tracking-[0px] text-[#09273A]">
-            Built for demanding operating conditions, the Floent Exhaust Fan
-            offers reliable performance, durable construction, low maintenance,
-            and energy-efficient ventilation, helping maintain a cooler, cleaner,
-            and better-ventilated environment.
+            
+            {description}
           </p>
 
           <div className="grid grid-cols-2 gap-3">

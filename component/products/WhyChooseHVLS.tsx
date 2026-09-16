@@ -72,7 +72,7 @@ const features = [
   },
 ];
 
-export default function WhyChooseHVLS() {
+export default function WhyChooseHVLS({title}:{title:string}) {
   return (
     <section className="bg-[#F8F9FA] pb-8 lg:pb-15 lg:pt-16 px-5">
       <motion.div
@@ -81,8 +81,11 @@ export default function WhyChooseHVLS() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}  className="max-w-7xl mx-auto text-center">
         <span className="text-[12px] text-[#09273A] leading-4 font-semibold tracking-[1.2px] bg-[#09273A1A] px-4 py-1.5 rounded-full">
-          WHY CHOOSE HVLS
-        </span>
+          WHY CHOOSE {" "}{title
+                        .split("-")
+                        .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // capitalize each
+                        .join(" ")}</span>{" "}
+        
 
         <h2 className="mt-5 font-sora font-bold lg:leading-14 tracking-[-0.96px] text-5xl text-[#09273A]">
           Big Smart <span className="text-[#FDCD2E]">Energy</span>

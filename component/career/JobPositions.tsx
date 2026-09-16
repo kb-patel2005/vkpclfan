@@ -102,7 +102,7 @@ const JobCard = ({ job, active, setActive }: { job: Job, active: string, setActi
                     ))}
                 </ul>
             </div>
-            <Link href={'/contact/#applicationform'} className={`${active == job.role ? "block" : "hidden"} w-[150px] font-bold text-[16px] leading-5 bg-[#FFC727] py-2 px-6`}>Apply</Link>
+            <Link href={'/contact/#applicationform'} className={`${active == job.role ? "block" : "hidden"} w-[150px] font-bold text-center text-[16px] leading-5 bg-[#FFC727] py-2 px-6`}>Apply</Link>
         </motion.div>
     )
 }
