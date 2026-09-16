@@ -175,9 +175,9 @@ export default function Products() {
 
 
 
-                            <SelectBox items={["application", "Motor Power"]} value='Application' classes='w-full  border border-[#C3C5D980] bg-white' />
+                            <SelectBox items={["application", "Motor Power"]} value='Application' classes='w-full  border border-[#C3C5D980] bg-white' bg="#FFFFFF"/>
 
-                            <SelectBox items={["application", "Motor Power"]} classes='w-full  border border-[#C3C5D980] bg-white' value='Application' />
+                            <SelectBox items={["application", "Motor Power"]} classes='w-full  border border-[#C3C5D980] bg-white' value='Application' bg="#FFFFFF"/>
 
                         </div>
                     )}
@@ -224,7 +224,7 @@ export default function Products() {
                                 <path stroke="currentColor" stroke-width="2" d="M6 9l6 6 6-6" />
                             </svg>
                         </div> */}
-                        <SelectBox items={["application", "Motor Power"]} classes='w-64 border border-[#C3C5D980]' value='Application' />
+                        <SelectBox items={["application", "Motor Power"]} classes='w-64 border border-[#C3C5D980]' value='Application' bg="#FFFFFF" />
 
                         {/* <div className="relative w-64">
                             <select className="appearance-none w-full border border-[#C3C5D980] py-2.5 pl-3 pr-10">
@@ -237,7 +237,7 @@ export default function Products() {
                                 <path stroke="currentColor" stroke-width="2" d="M6 9l6 6 6-6" />
                             </svg>
                         </div> */}
-                        <SelectBox items={["Application", "Motor power", "Motor Power"]} classes='w-64 border border-[#C3C5D980] bg-white' value="application" />
+                        <SelectBox items={["Application", "Motor power", "Motor Power"]} classes='w-64 border border-[#C3C5D980] bg-white' value="application" bg="#FFFFFF"/>
 
                     </div>
                 </div>

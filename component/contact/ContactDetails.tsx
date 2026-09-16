@@ -199,19 +199,13 @@ Message: ${formData.message}`;
 
                                 <SelectBox
                                     items={["High Airflow", "Heavy Duty", "Low Maintenance"]}
-                                    classes="w-full bg-[#F1F1F1] border-[#C3C5D94D] outline-none bg-[#F1F1F1]"
+                                    classes="w-full bg-[#F1F1F1] border-none outline-none bg-[#F1F1F1]"
                                     value={formData.interest}
                                     onChange={(val) => valueChange(val)}
+                                    bg='#F1F1F1'
                                 />
 
-                                <svg
-                                    className="absolute right-2 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path stroke="currentColor" strokeWidth="2" d="M6 9l6 6 6-6" />
-                                </svg>
+                              
                             </div>
                         </div>
 

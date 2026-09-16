@@ -42,14 +42,108 @@
 //   )
 // }
 
+// "use client"
+
+// import {
+//   NativeSelect,
+//   NativeSelectOption,
+// } from "@/components/ui/native-select"
+// import { useState } from "react"
+// import { ChevronDown } from "lucide-react"
+
+// export function SelectBox({
+//   items,
+//   placeholder,
+//   onChange,
+//   value,
+//   classes,
+// }: {
+//   items: string[]
+//   placeholder?: string
+//   onChange?: (val: string) => void
+//   value?: string
+//   classes?: string
+// }) {
+//   const [open, setOpen] = useState(false)
+
+//   const handleSelect = (item: string) => {
+//     onChange?.(item)
+//     setOpen(false)
+//   }
+
+//   return (
+//     <div className={`relative ${classes || ""}`}>
+//       {/* Trigger */}
+//       <button
+//         type="button"
+//         onClick={() => setOpen(!open)}
+//         className="w-full py-3 pl-4 pr-10 text-left rounded-[0px] focus:outline-none"
+//       >
+//         {value || placeholder || "Select option"}
+//         <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none" />
+//       </button>
+
+//       {/* Dropdown */}
+//       {open && (
+//         <ul className="absolute mt-1 w-full border border-[#C3C5D980] bg-white shadow-lg z-10">
+//           {items.map((item) => (
+//             <li
+//               key={item}
+//               onClick={() => handleSelect(item)}
+//               className="px-3 py-2 hover:bg-gray-100 cursor-pointer"
+//             >
+//               {item}
+//             </li>
+//           ))}
+//         </ul>
+//       )}
+//     </div>
+//   )
+// }
+
+// "use client"
+
+// import React from "react"
+// import Select from "react-select"
+
+// export function SelectBox({
+//   items,
+//   placeholder,
+//   onChange,
+//   value,
+//   classes,
+// }: {
+//   items: string[]
+//   placeholder?: string
+//   onChange?: (val: string) => void
+//   value?: string
+//   classes?: string
+// }) {
+//   // Convert items into react-select options
+//   const options = items.map((item) => ({
+//     value: item,
+//     label: item,
+//   }))
+
+//   // Find the selected option
+//   const selectedOption = options.find((opt) => opt.value === value) || null
+
+//   return (
+//     <Select
+//       options={options}
+//       value={selectedOption}
+//       onChange={(opt) => onChange?.(opt?.value || "")}
+//       placeholder={placeholder || "Select option"}
+//       className={`${classes} border-0 `}
+//       classNamePrefix="react-select"
+//     />
+//   )
+// }
+
 "use client"
 
-import {
-  NativeSelect,
-  NativeSelectOption,
-} from "@/components/ui/native-select"
-import { useState } from "react"
-import { ChevronDown } from "lucide-react"
+import React from "react"
+import Select from "react-select"
 
 export function SelectBox({
   items,
@@ -57,49 +151,55 @@ export function SelectBox({
   onChange,
   value,
   classes,
+  bg,
 }: {
   items: string[]
   placeholder?: string
   onChange?: (val: string) => void
   value?: string
   classes?: string
+  bg: string
 }) {
-  const [open, setOpen] = useState(false)
+  const options = items.map((item) => ({
+    value: item,
+    label: item,
+  }))
 
-  const handleSelect = (item: string) => {
-    onChange?.(item)
-    setOpen(false)
-  }
+  const selectedOption = options.find((opt) => opt.value === value) || null
 
   return (
-    <div className={`relative ${classes || ""}`}>
-      {/* Trigger */}
-      <button
-        type="button"
-        onClick={() => setOpen(!open)}
-        className="w-full py-3 pl-4 pr-10 text-left rounded-[0px] focus:outline-none"
-      >
-        {value || placeholder || "Select option"}
-        <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none" />
-      </button>
-
-      {/* Dropdown */}
-      {open && (
-        <ul className="absolute mt-1 w-full border border-[#C3C5D980] bg-white shadow-lg z-10">
-          {items.map((item) => (
-            <li
-              key={item}
-              onClick={() => handleSelect(item)}
-              className="px-3 py-2 hover:bg-gray-100 cursor-pointer"
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
+    <Select
+      options={options}
+      value={selectedOption}
+      instanceId="my-select"
+      onChange={(opt) => onChange?.(opt?.value || "")}
+      placeholder={placeholder || "Select option"}
+      className={`${classes} border-none `}
+      classNamePrefix="react-select"
+      styles={{
+        control: (base) => ({
+          ...base,
+          minHeight: "48px", // 👈 increase height here
+          height: "48px",
+          borderRadius: "0px",
+          paddingLeft: "12px",
+          background: bg,
+        }),
+        valueContainer: (base) => ({
+          ...base,
+          height: "48px",
+          padding: "0 6px",
+        }),
+        indicatorsContainer: (base) => ({
+          ...base,
+          height: "48px",
+        }),
+      }}
+    />
   )
 }
+
+
 
 // export function NativeSelectDemo() {
 //   return (

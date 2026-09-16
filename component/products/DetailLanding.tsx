@@ -667,6 +667,7 @@ Message: ${formData.message}`;
                                             classes="w-full bg-[#F1F1F1] border-[#C3C5D94D] outline-none bg-[#F1F1F1]"
                                             value={formData.interest}
                                             onChange={(val) => valueChange(val)}
+                                            bg='#F1F1F1'
                                         />
 
 
