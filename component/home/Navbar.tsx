@@ -77,6 +77,16 @@ export default function Navbar() {
                             <Link
                                 key={item.name}
                                 href={item.href}
+                                onClick={
+                                    (e) => {
+                                        if (window.location.pathname === item.href) {
+                                            // Prevent Next.js from reloading the same route
+                                            e.preventDefault();
+                                            // Scroll to top smoothly
+                                            window.scrollTo({ top: 0, behavior: "smooth" });
+                                        }
+                                    }
+                                }
                                 className="text-[16px] font-normal text-[#474747] transition-colors duration-200 hover:text-[#FDCD2E]"
                             >
                                 {item.name}
@@ -137,7 +147,17 @@ export default function Navbar() {
                             <Link
                                 key={item.name}
                                 href={item.href}
-                                onClick={() => setMenuOpen(false)}
+                                onClick={
+                                    (e) => {
+                                        if (window.location.pathname === item.href) {
+                                            // Prevent Next.js from reloading the same route
+                                            e.preventDefault();
+                                            // Scroll to top smoothly
+                                            window.scrollTo({ top: 0, behavior: "smooth" });
+                                        }
+                                        setMenuOpen(false);
+                                    }
+                                }
                                 className="border-b border-gray-100 py-4 text-[15px] font-medium text-[#09273A] transition hover:text-[#FDCD2E]"
                             >
                                 {item.name}
@@ -170,7 +190,8 @@ export default function Navbar() {
                         Get Quote
                     </Link>
                 </div>
-            )}
-        </header>
+            )
+            }
+        </header >
     );
 }

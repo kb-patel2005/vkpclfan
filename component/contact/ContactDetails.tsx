@@ -100,7 +100,8 @@ Message: ${formData.message}`;
                             </div>
                             <div className='flex flex-col gap-1'>
                                 <p className='font-medium text-[#121B2E] leading-4 text-[16px]'>Floent Air industrial fans</p>
-                                <div className='font-manrope font-medium text-[16px] leading-6 text-[#434656]'>Ahmedabad-gujrat-india</div>
+                                <div className='font-manrope font-medium text-[16px] leading-6 text-[#434656]'>B/4, Swagat Industrial Park, Indore Highway, Near Bakrol Branch Post Office, Bakrol, Ahmedabad, Gujarat - 382430
+                </div>
                             </div>
                         </div>
                         <div className='relative'>
