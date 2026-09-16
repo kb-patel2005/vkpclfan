@@ -108,6 +108,9 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
+  if (typeof window !== 'undefined'){
+    return null
+  }
   return (
     <html
       lang="en"

@@ -241,7 +241,8 @@ export default function Footer() {
               </Link>
 
               <a
-                href="#"
+                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14691.939332681713!2d72.7180670395508!3d22.987585199999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e62cb3b4c0421%3A0xe93c09df584e5486!2sSwagat%20Industial%20Park!5e0!3m2!1sen!2sin!4v1789544203394!5m2!1sen!2sin"
+                target="_blank"
                 className="flex items-center gap-3 text-[14px] transition duration-300 hover:text-black"
               >
                 <span>
