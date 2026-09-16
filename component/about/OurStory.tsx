@@ -68,7 +68,7 @@ const cards = [
 export default function AboutCards() {
     return (
         <section
-        id="story" className="w-full bg-[#F8F9FA] pb-8 lg:pb-8 pt-5 lg:pt-10 max-lg:px-5">
+        id="story" className="w-full bg-[#F8F9FA] pb-8 lg:pb-8 pt-5 lg:pt-10 max-lg:px-5 scroll-mt-15">
             <motion.div
                 initial={{ x: 0, y: 100, opacity: 0 }}
                 whileInView={{ x: 0, y: 0, opacity: 1 }}

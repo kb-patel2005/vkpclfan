@@ -245,7 +245,7 @@ export default function Footer() {
                 className="flex items-center gap-3 text-[14px] transition duration-300 hover:text-black"
               >
                 <span>
-                  Address: xyz.pvt.ltd, 123, abc street, Ahmedabad, Gujarat, India
+                  B/4, Swagat Industrial Park, Indore Highway, Near Bakrol Branch Post Office, Bakrol, Ahmedabad, Gujarat - 382430
                 </span>
               </a>
 

@@ -11,8 +11,8 @@ const whyChoose = [
 
 export default function WhyFloent() {
   return (
-    <section className='flex flex-wrap justify-between w-full max-w-7xl mx-auto items-center pt-5 lg:py-10 lg:px-0 px-5'>
-        <div>
+    <section className='flex flex-wrap justify-center sm:justify-center md:justify-center lg:justify-between w-full max-w-7xl mx-auto items-center pt-5 lg:py-10 lg:px-0 px-5'>
+        <div className='lg:w-[50%]'>
             <h2 className='text-5xl font-bold font-sora mb-6 lg:mb-12 '>Why Floent?</h2>
             <ul className='flex flex-col gap-4'>
                  {whyChoose.map((item, index) => (
@@ -41,7 +41,7 @@ export default function WhyFloent() {
                     ))}
             </ul>
         </div>
-        <div>
+        <div className='lg:w-[50%]'>
             <Image src={'/whyChooseFloent.png'} width={600} height={500} alt='floent fan'/>
         </div>
     </section>

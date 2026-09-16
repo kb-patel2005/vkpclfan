@@ -53,37 +53,37 @@ export default function Navbar() {
     return (
         <header className="sticky top-0 z-50 w-full bg-white">
             <nav className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 lg:px-0">
-
-                {/* LOGO */}
-                <div className="flex shrink-0 items-center">
-                    <Link
-                        href="/"
-                        onClick={() => setMenuOpen(false)}
-                    >
-                        <Image
-                            src="/floent.png"
-                            alt="Floent Fans"
-                            width={59}
-                            height={49}
-                            priority
-                            className="h-auto w-[59px] object-contain"
-                        />
-                    </Link>
-                </div>
-
-                {/* DESKTOP NAV */}
-                <div className="hidden items-center gap-7 lg:flex">
-                    {navLinks.map((item) => (
+                <div className="flex justify-between w-[67%]">
+                    {/* LOGO */}
+                    <div className="flex shrink-0 items-center">
                         <Link
-                            key={item.name}
-                            href={item.href}
-                            className="text-[16px] font-normal text-[#474747] transition-colors duration-200 hover:text-[#FDCD2E]"
+                            href="/"
+                            onClick={() => setMenuOpen(false)}
                         >
-                            {item.name}
+                            <Image
+                                src="/floent.png"
+                                alt="Floent Fans"
+                                width={59}
+                                height={49}
+                                priority
+                                className="h-auto w-[59px] object-contain"
+                            />
                         </Link>
-                    ))}
-                </div>
+                    </div>
 
+                    {/* DESKTOP NAV */}
+                    <div className="hidden items-center gap-7 lg:flex">
+                        {navLinks.map((item) => (
+                            <Link
+                                key={item.name}
+                                href={item.href}
+                                className="text-[16px] font-normal text-[#474747] transition-colors duration-200 hover:text-[#FDCD2E]"
+                            >
+                                {item.name}
+                            </Link>
+                        ))}
+                    </div>
+                </div>
                 {/* DESKTOP ACTIONS */}
                 <div className="hidden items-center gap-3 lg:flex">
 

@@ -17,8 +17,8 @@ export default function EngineeringEnvironment() {
 
                 className=' relative flex flex-col gap-4 w-full justify-center max-w-5xl mx-auto py-12 bg-[linear-gradient(180deg,#D9E0E7_4.17%,rgba(217,224,231,0)_4.17%),linear-gradient(90deg,#D9E0E7_4.17%,rgba(217,224,231,0)_4.17%)]'>
 
-                <h2 className='text-[32px] font-semibold leading-[38.4px] lg:whitespace-pre-line  text-center align-middle'>{heading}</h2>
-                <p className="font-normal text-[16px] leading-[24px] tracking-[0px] text-center align-middle text-[#44474D] lg:whitespace-pre-line">
+                <h2 className='text-[32px] font-semibold leading-[38.4px] lg:whitespace-pre-line  text-center align-middle px-4 lg:px-0'>{heading}</h2>
+                <p className="font-normal text-[16px] leading-[24px] tracking-[0px] text-center align-middle text-[#44474D] lg:whitespace-pre-line px-4 lg:px-0">
                     {desc}
                 </p>
                 <div className='text-center align-middle flex justify-center'>
