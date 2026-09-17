@@ -3,9 +3,11 @@
 import React, { useState } from 'react'
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useGallery } from '@/context/GalleryContext';
 
-export default function GalleryLanding({ setActives, setIsAll }: { setActives: (val: string) => void, setIsAll: (val: boolean) => void }) {
+export default function GalleryLanding() {
 
+    const {active, setActive, isAll, setIsAll} = useGallery();
 
     return (
 
@@ -46,7 +48,7 @@ export default function GalleryLanding({ setActives, setIsAll }: { setActives: (
                     <motion.button
                         whileTap={{ scale: 0.95 }}
                         whileHover={{ scale: 1.05 }}
-                        onClick={() => {setActives("ALL"); setIsAll(true);}}
+                        onClick={() => {setActive("ALL"); setIsAll(true);}}
                         className="w-full font-bold text-xs leading-4 tracking-[1.2px] bg-[#09273A] hover:bg-black px-6 py-3 text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                     >
                         ALL
@@ -55,7 +57,7 @@ export default function GalleryLanding({ setActives, setIsAll }: { setActives: (
                     <motion.button
                         whileTap={{ scale: 0.95 }}
                         whileHover={{ scale: 1.05 }}
-                        onClick={() => {setActives("INSTALLATIONS"); setIsAll(false)}}
+                        onClick={() => {setActive("INSTALLATIONS"); setIsAll(false)}}
                         className="w-full font-bold text-xs leading-4 tracking-[1.2px] border-[0.5px] border-[#09273A] bg-[#09273A1F] px-6 py-3  text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                     >
                         INSTALLATIONS
@@ -64,7 +66,7 @@ export default function GalleryLanding({ setActives, setIsAll }: { setActives: (
                     <motion.button
                         whileTap={{ scale: 0.95 }}
                         whileHover={{ scale: 1.05 }}
-                        onClick={() => {setActives("MANUFACTURING"); setIsAll(false)}}
+                        onClick={() => {setActive("MANUFACTURING"); setIsAll(false)}}
                         className="w-full font-bold text-xs leading-4 tracking-[1.2px] border-[0.5px] border-[#09273A] bg-[#09273A1F] px-6 py-3  text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                     >
                         MANUFACTURING
@@ -73,7 +75,7 @@ export default function GalleryLanding({ setActives, setIsAll }: { setActives: (
                     <motion.button
                         whileTap={{ scale: 0.95 }}
                         whileHover={{ scale: 1.05 }}
-                        onClick={() => {setActives("PROJECTS"); setIsAll(false)}}
+                        onClick={() => {setActive("PROJECTS"); setIsAll(false)}}
 
                         className="w-full font-bold text-xs leading-4 tracking-[1.2px] border-[0.5px] border-[#09273A] bg-[#09273A1F] px-6 py-3  text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                     >

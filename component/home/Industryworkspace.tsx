@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import React from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const data = [
   { num: 15, suffix: "+", title: "YEARS OF EXPERIENCE" },
@@ -38,7 +39,7 @@ function Card1({
 
 export default function Industryworkspace() {
 
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <section className="flex w-full flex-col items-center bg-[#F8F9FA] gap-4 justify-center md:gap-5 px-5 py-6 sm:px-6 lg:gap-14 lg:pt-8 pb-12">
@@ -76,16 +77,16 @@ export default function Industryworkspace() {
           Our specialists are ready to provide a custom air-flow audit for your facility.
         </p>
         <div className="flex flex-wrap gap-4 lg:gap-6 justify-center">
-          <button
-            onClick={() => router.push("/products/exhuast-fan#tabs")}
-            className="w-full sm:w-auto rounded-full border-2 border-white bg-white px-8 py-4 text-sm font-semibold text-black transition duration-300 hover:bg-transparent hover:text-white sm:px-12 sm:py-5 sm:text-base">
+          <Link
+          href={'/products/exhuast-fan/#tabs'}
+            className="w-full text-center sm:w-auto rounded-full border-2 border-white bg-white px-8 py-4 text-sm font-semibold text-black transition duration-300 hover:bg-transparent hover:text-white sm:px-12 sm:py-5 sm:text-base" >
             Get Your Free Quote
-          </button>
-          <button
-            onClick={() => router.push("/contact")}
-            className="w-full sm:w-auto rounded-full border-2 border-white bg-transparent px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:bg-white hover:text-[#09273A] sm:px-12 sm:py-5 sm:text-base">
+          </Link>
+          <Link
+          href={"/contact"}
+            className="w-full text-center sm:w-auto rounded-full border-2 border-white bg-transparent px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:bg-white hover:text-[#09273A] sm:px-12 sm:py-5 sm:text-base" >
             Talk to an Expert
-          </button>
+          </Link>
 
         </div>
       </motion.div>

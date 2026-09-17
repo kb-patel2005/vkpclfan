@@ -1,5 +1,6 @@
 'use client'
 
+import { useGallery } from '@/context/GalleryContext'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React, { useState } from 'react'
@@ -32,7 +33,10 @@ const galleryItems = [
 ]
 
 
-export default function GalleryImages({ active, isAll }: { active: string, isAll: boolean }) {
+export default function GalleryImages() {
+
+
+  const { active, setActive, isAll, setIsAll } = useGallery();
 
     return (
         <section className="w-full bg-[#09273A] py-24 lg:px-0 px-5 flex flex-col gap-10">

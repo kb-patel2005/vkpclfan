@@ -13,6 +13,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 
 import { Space_Grotesk } from "next/font/google";
 import { SearchProvider } from "@/context/SearchContext";
+import { GalleryProvider } from "@/context/GalleryContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -65,7 +66,7 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      "Floent | Industries solutions",
+      "Floent | Airflow Industries",
     template: "%s | Floent",
   },
 
@@ -75,54 +76,39 @@ export const metadata: Metadata = {
     },
   ],
 
-  creator: "AAVORide",
+  creator: "Floent",
 
-  publisher: "AAVORide",
+  publisher: "floent",
 
-  category: "Transportation",
+  icons: {
+    icon: [
+      { url: "/floent.png", type: "image/png" },
+    ],
 
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-video-preview": -1,
-      "max-snippet": -1,
-    },
-  },
-
-  alternates: {
-  },
-
-  openGraph: {
-
-    locale: "en_IN",
-
-    type: "website",
-
-
+    apple: "/floent.png",
   },
 
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
-  if (typeof window !== 'undefined'){
+  if (typeof window !== 'undefined') {
     return null
   }
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${sora.variable} ${hankenGrotesk.variable} ${manrope.variable} ${plusJakarta.variable} ${jetBrainsMono.variable} ${space.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
 
-      <body className={`${inter.className} min-h-full flex flex-col`}>
-        <SearchProvider>
-          <Navbar />
-          {children}
-          <MobileBottomDiv />
-        </SearchProvider>
+      <body className={`${inter.className} min-h-full flex flex-col`} suppressHydrationWarning>
+        <GalleryProvider>
+          <SearchProvider>
+            <Navbar />
+            {children}
+            <MobileBottomDiv />
+          </SearchProvider>
+        </GalleryProvider>
       </body>
     </html>
   );
