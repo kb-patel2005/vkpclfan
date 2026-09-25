@@ -145,7 +145,7 @@ export default function HeroSwiper({ models, features, setTab,title, description
           </p>
 
           <div className="grid grid-cols-2 gap-3">
-            {features.map((feature, index) => (
+            {features?.map((feature, index) => (
               <div
                 key={index}
                 className="flex items-center gap-2 p-3 bg-white border border-[#C3C5D94D] min-w-0"

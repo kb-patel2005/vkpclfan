@@ -11,6 +11,8 @@ import Reviews from "@/component/home/Reviews";
 import Workflow from "@/component/home/Workflow";
 import Image from "next/image";
 import { Metadata } from "next/types";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 
 export const metadata: Metadata = {
   title: "Industrial HVLS & Exhaust Fan",

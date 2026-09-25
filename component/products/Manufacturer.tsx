@@ -21,7 +21,7 @@ export default function Manufacturer({ title }: { title: string }) {
 
                     Manufacturer
                 </h2>
-                {manufacturer.get(title).map((e: string, idx: number) => (
+                {manufacturer.get(title)?.map((e: string, idx: number) => (
                     <p
                         key={idx}
                         className="lg:text-center text-[#5D5D5D] font-inter leading-6 text-[16px] lg:text-[19px] lg:leading-7">{e}</p>

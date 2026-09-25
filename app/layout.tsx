@@ -1,6 +1,11 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
 import Navbar from "@/component/home/Navbar";
 
 import { Manrope } from "next/font/google";
@@ -14,6 +19,8 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import { Space_Grotesk } from "next/font/google";
 import { SearchProvider } from "@/context/SearchContext";
 import { GalleryProvider } from "@/context/GalleryContext";
+
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
