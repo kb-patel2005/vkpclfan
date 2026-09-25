@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
+import { submodel } from "@/Mockdata/Model"
+import { useRouter } from "next/navigation"
 
 interface Model {
   url: string
@@ -17,16 +19,17 @@ interface Props {
   setTab: (val:string) => void
   title: string
   description:string
+  slug:string
 }
 
-export default function HeroSwiper({ models, features, setTab,title, description }: Props) {
+export default function HeroSwiper({ models, features, setTab,title, description,slug }: Props) {
   const [active, setActive] = useState("Description")
   const [heroimage, setHeroimage] = useState(models[0].url)
   const [activeModel, setActiveModel] = useState(-1)
   const [touchStartX, setTouchStartX] = useState<number | null>(null)
-
+  const router = useRouter()
   const [currentIndex, setCurrentIndex] = useState(0) // start at models[0]
-
+  
   const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     setTouchStartX(e.touches[0].clientX)
   }
@@ -37,11 +40,9 @@ export default function HeroSwiper({ models, features, setTab,title, description
     const diff = touchStartX - touchEndX
 
     if (diff > 50) {
-      // swipe left → next image
       setCurrentIndex((prev) => (prev + 1) % models.length)
       setHeroimage(models[(currentIndex + 1) % models.length].url)
     } else if (diff < -50) {
-      // swipe right → previous image
       setCurrentIndex((prev) =>
         prev === 0 ? models.length - 1 : prev - 1
       )
@@ -80,16 +81,17 @@ export default function HeroSwiper({ models, features, setTab,title, description
               MODELS
             </span>
             <ul className="flex flex-row lg:flex-col lg:gap-2 gap-0 justify-between mt-2">
-              {models.slice(1).map((e, idx) => (
+              {submodel.get(slug).map((e:any, idx:number) => (
                 <li
                   key={e.title}
-                  className={`text-center font-bold text-[9px] lg:text-xs leading-3 tracking-[1.2px] py-2 px-2 cursor-pointer ${activeModel === idx
+                  className={`text-center font-bold text-[9px] lg:text-xs leading-3 tracking-[1.2px] py-2 px-2 cursor-pointer ${e.slug === slug
                       ? "bg-white text-black"
                       : "text-white"
                     }`}
                   onClick={() => {
-                    setHeroimage(e.url)
-                    setActiveModel(idx)
+                    setHeroimage(models[0].url)
+                    setActiveModel(idx);
+                    router.push(`/products/${e.slug}`)
                   }}
                 >
                   {e.title}

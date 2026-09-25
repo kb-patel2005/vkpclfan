@@ -6,6 +6,7 @@ import { SelectBox } from '../common/SelectBox';
 import HeroSwiper from '../common/HeroSwiper';
 import { application, featureandadv, features, principal, specification, title_description, whyshould } from '@/Mockdata/Mockdata';
 import Image from 'next/image';
+import { categoryOfFan, model } from '@/Mockdata/Model';
 
 const models = [
     {
@@ -381,7 +382,7 @@ Message: ${formData.message}`;
                 </nav>
             </div>
             {/* models */}
-            <HeroSwiper models={models} features={features.get("HVLS-fan")} setTab={setActive} title={title_description.get("HVLS-fan")[0]} description={title_description.get("HVLS-fan")[1]} />
+            <HeroSwiper models={model.get(slug)} features={features.get(slug)} setTab={setActive} title={title_description.get(slug)[0]} slug={slug} description={title_description.get(slug)[1]} />
 
             {/* fetures and adva */}
             <div className='w-full max-w-7xl mx-auto mt-2'>
@@ -410,6 +411,43 @@ Message: ${formData.message}`;
                     ))}
                 </div>
             </div>
+
+            {categoryOfFan.get(slug) &&
+                (
+                    <div className='w-full'>
+                        <div className="flex flex-col md:flex-row items-center gap-8 mb-12 mx-auto max-w-7xl">
+                            {/* Left side: text */}
+                            <div className="flex-1">
+                                <div className='flex gap-2 items-center mb-4'>
+                                    <span className='w-5 h-0.5 bg-[#fdcd2e]'></span> <span className='tracking-[3px] text-[12px] font-bold'>THE RANGE</span>
+                                </div>
+                                <h2 className="text-4xl font-bold mb-4">{categoryOfFan.get(slug).heading} <span className='text-[#fdcd2e]'>MANUFACTURER</span> </h2>
+
+                                <p className="text-gray-700 mb-6">{categoryOfFan.get(slug).description}</p>
+
+                                <ul className="space-y-4">
+                                    {categoryOfFan.get(slug).list.map((item: string, i: number) => (
+                                        <li key={i} className="flex items-center gap-2">
+                                            <span className="bg-[#fdcd2e]/15 text-[#fdcd2e] px-2 py-1 text-[12px] rounded-full">✔</span>
+                                            <span>{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            {/* Right side: image */}
+                            <div className="flex-1">
+                                <img
+                                    src={categoryOfFan.get(slug).image}
+                                    alt={categoryOfFan.get(slug).heading}
+                                    className="rounded-lg shadow-lg w-full object-cover"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+
 
             {/************Tabs*************************/}
             <motion.div
@@ -874,7 +912,7 @@ Message: ${formData.message}`;
                             <div className='w-5 h-0.5 bg-[#fdcd2e]'></div>
                             <div className='text-[12px] tracking-[1.2px] text-[#fdcd2e] font-bold'> SUITABLE FOR</div>
                         </div>
-                        <h3 className='text-white text-3xl font-bold'>WHERE THE <span className='text-[#fdcd2e]'>{generateFanCodes(slug.split("-"))}</span> FITS</h3>
+                        <h3 className='text-white text-3xl font-bold uppercase'>WHERE THE <span className='text-[#fdcd2e]'>{generateFanCodes(slug.split("-"))}</span> FITS</h3>
                         <div className='text-[#8D9AAB]'>Facility types where this diameter and drive type is a routine specification.</div>
                     </div>
                     <div>
@@ -932,7 +970,7 @@ Message: ${formData.message}`;
                     <h2 className='text-4xl font-bold font-sora text-center'>Why Should You Buy an Industrial {slug.split("-").slice(-2).join(" ")}?</h2>
                     {
                         whyshould.get(slug).map((e: string, idx: number) => (
-                            <p className='font-inter font-normal text-[16px] leading-[22px] lg:leading-[24px] text-[#5D5D5D]'>{e}</p>
+                            <p className='font-inter font-normal text-[16px] leading-[22px] lg:leading-[24px] text-[#5D5D5D]' key={idx}>{e}</p>
                         ))
                     }
                 </div>

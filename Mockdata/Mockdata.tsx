@@ -1,8 +1,8 @@
 /***************** Title and description ********************************/
 const exhaustfan_title_desc = ["Exhaust Fan Series", "Built for demanding operating conditions, the Floent Exhaust Fan offers reliable performance, durable construction, low maintenance, and energy - efficient ventilation, helping maintain a cooler, cleaner, and better - ventilated environment."]
 const hvlsfan_title_desc = ["Big Industrial HVLS Fan",
-    "Austar Technologies is the largest industrial HVLS fan manufacturer in India, specializing in high-performance geared HVLS fans and gearless HVLS fans. We offer a complete range of energy-efficient solutions, customized to meet specific industry requirements for maximum airflow, durability, and cost-effectiveness."
-]
+    "Floent Technologies is the largest industrial HVLS fan manufacturer in India, specializing in high-performance geared HVLS fans and gearless HVLS fans. We offer a complete range of energy-efficient solutions, customized to meet specific industry requirements for maximum airflow, durability, and cost-effectiveness."
+];
 const hvls_geared_12_title_desc = [
     "12 Feet Geared HVLS Fan Manufacturer",
     "12 ft diameter HVLS fan with 5 blades, delivering 135,000 CFM airflow powered by a 0.75 KW motor. Covers up to 6,500 ft² with noise levels between 60–65 dB."
@@ -10,20 +10,74 @@ const hvls_geared_12_title_desc = [
 
 
 export const title_description = new Map();
-title_description.set("exhuast-fan", exhaustfan_title_desc);
-title_description.set("HVLS-fan", hvlsfan_title_desc)
-title_description.set("12-feet-geared-HVLS-fan", hvls_geared_12_title_desc)
-title_description.set("16-feet-geared-HVLS-fan", hvls_geared_12_title_desc)
-title_description.set("18-feet-geared-HVLS-fan", hvls_geared_12_title_desc)
-title_description.set("20-feet-geared-HVLS-fan", hvls_geared_12_title_desc)
-title_description.set("24-feet-geared-HVLS-fan", hvls_geared_12_title_desc)
 
-title_description.set("8-feet-gearless-HVLS-fan", hvls_geared_12_title_desc);
-title_description.set("10-feet-gearless-HVLS-fan", hvls_geared_12_title_desc);
-title_description.set("12-feet-gearless-HVLS-fan", hvls_geared_12_title_desc);
-title_description.set("16-feet-gearless-HVLS-fan", hvls_geared_12_title_desc);
-title_description.set("20-feet-gearless-HVLS-fan", hvls_geared_12_title_desc);
-title_description.set("24-feet-gearless-HVLS-fan", hvls_geared_12_title_desc);
+// Exhaust Fan
+title_description.set("exhuast-fan", [
+  "Industrial Exhaust Fan",
+  "Exhaust fans are designed for ventilation in factories, warehouses, and commercial spaces, ensuring air quality by removing heat, fumes, dust, and humidity."
+]);
+
+title_description.set("HVLS-gearless-fan", [
+  "Big Industrial HVLS Fan",
+  "Floent Technologies is the largest industrial HVLS fan manufacturer in India, specializing in high-performance geared HVLS fans and gearless HVLS fans. We offer a complete range of energy-efficient solutions, customized to meet specific industry requirements for maximum airflow, durability, and cost-effectiveness."
+]);
+
+title_description.set("12-feet-geared-HVLS-fan", [
+  "12 Feet Geared HVLS Fan Manufacturer",
+  "12 ft diameter HVLS fan with 5 blades, delivering 135,000 CFM airflow powered by a 0.75 KW motor. Covers up to 6,500 ft² with noise levels between 60–65 dB."
+]);
+
+title_description.set("16-feet-geared-HVLS-fan", [
+  "16 Feet Geared HVLS Fan Manufacturer",
+  "16 ft diameter HVLS fan with 5 blades, delivering 185,000 CFM airflow powered by a 1.0 KW motor. Covers up to 10,000 ft² with noise levels between 60–65 dB."
+]);
+
+title_description.set("18-feet-geared-HVLS-fan", [
+  "18 Feet Geared HVLS Fan Manufacturer",
+  "18 ft diameter HVLS fan with 5 blades, delivering 200,000 CFM airflow powered by a 1.1 KW motor. Covers up to 13,000 ft² with noise levels between 60–65 dB."
+]);
+
+title_description.set("20-feet-geared-HVLS-fan", [
+  "20 Feet Geared HVLS Fan Manufacturer",
+  "20 ft diameter HVLS fan with 5 blades, delivering 350,000 CFM airflow powered by a 1.5 KW motor. Covers up to 16,000 ft² with noise levels between 60–65 dB."
+]);
+
+title_description.set("24-feet-geared-HVLS-fan", [
+  "24 Feet Geared HVLS Fan Manufacturer",
+  "24 ft diameter HVLS fan with 5 blades, delivering 390,000 CFM airflow powered by a 2.0 KW motor. Covers up to 20,000 ft² with noise levels between 60–65 dB."
+]);
+
+// Gearless HVLS Fans
+title_description.set("8-feet-gearless-HVLS-fan", [
+  "8 Feet Gearless HVLS Fan Manufacturer",
+  "8 ft diameter gearless HVLS fan delivering 95,000 CFM airflow powered by a 0.5 KW motor. Covers up to 2,500 ft² with ultra-low noise levels."
+]);
+
+title_description.set("10-feet-gearless-HVLS-fan", [
+  "10 Feet Gearless HVLS Fan Manufacturer",
+  "10 ft diameter gearless HVLS fan delivering 120,000 CFM airflow powered by a 0.6 KW motor. Covers up to 4,000 ft² with ultra-low noise levels."
+]);
+
+title_description.set("12-feet-gearless-HVLS-fan", [
+  "12 Feet Gearless HVLS Fan Manufacturer",
+  "12 ft diameter gearless HVLS fan delivering 180,000 CFM airflow powered by a 0.75 KW motor. Covers up to 6,500 ft² with ultra-low noise levels."
+]);
+
+title_description.set("16-feet-gearless-HVLS-fan", [
+  "16 Feet Gearless HVLS Fan Manufacturer",
+  "16 ft diameter gearless HVLS fan delivering 355,000 CFM airflow powered by a 1.2 KW motor. Covers up to 10,000 ft² with ultra-low noise levels."
+]);
+
+title_description.set("20-feet-gearless-HVLS-fan", [
+  "20 Feet Gearless HVLS Fan Manufacturer",
+  "20 ft diameter gearless HVLS fan delivering 410,000 CFM airflow powered by a 1.5 KW motor. Covers up to 16,000 ft² with ultra-low noise levels."
+]);
+
+title_description.set("24-feet-gearless-HVLS-fan", [
+  "24 Feet Gearless HVLS Fan Manufacturer",
+  "24 ft diameter gearless HVLS fan delivering 485,000 CFM airflow powered by a 2.0 KW motor. Covers up to 20,000 ft² with ultra-low noise levels."
+]);
+
 
 /**************** Features ******************************/
 const exhaustFan_features = [
@@ -122,7 +176,13 @@ const hvls_features = [
 ];
 export const features = new Map();
 features.set("exhuast-fan", exhaustFan_features);
-features.set("HVLS-fan", hvls_features)
+features.set("HVLS-gearless-fan", hvls_features);
+
+
+features.set("8-feet-gearless-HVLS-fan",hvls_features);
+features.set("10-feet-gearless-HVLS-fan", hvls_features);
+// specification.set("12-feet-gearless-HVLS-fan", hvls_12ft_gearless);
+features.set("16-feet-gearless-HVLS-fan", hvls_features);
 /****************************************************************/
 
 const models = [
@@ -778,7 +838,7 @@ const hvls_24ft = {
             type: "paragraph",
             heading: "FL245 — 24 Feet HVLS Fan",
             data: [
-                "The FL245 is the largest geared fan Austar builds — a 24 ft sweep for the biggest sheds on site, where one fan has to do the work of a hundred conventional ceiling fans. Air volume is 390,000 CFM at a maximum of 50 rpm, variable from zero, and the fan weighs about 150 kg. Drive is an inline helical geared unit with an induction motor, Nord or SEW German make, rated 1.5 KW at 270 Nm and IE2 efficiency — IE3 is available on special request. Five cambered aerofoil blades are rolled in Aluminium 6063 T6 to a 220 mm section with two ribs. Speed is set from a Danfoss VFD in an IP54 powder coated steel cabinet, wall mounted 4 to 5 ft from floor level and BMS compatible. Noise sits at 60 to 65 dB."
+                "The FL245 is the largest geared fan Floent builds — a 24 ft sweep for the biggest sheds on site, where one fan has to do the work of a hundred conventional ceiling fans. Air volume is 390,000 CFM at a maximum of 50 rpm, variable from zero, and the fan weighs about 150 kg. Drive is an inline helical geared unit with an induction motor, Nord or SEW German make, rated 1.5 KW at 270 Nm and IE2 efficiency — IE3 is available on special request. Five cambered aerofoil blades are rolled in Aluminium 6063 T6 to a 220 mm section with two ribs. Speed is set from a Danfoss VFD in an IP54 powder coated steel cabinet, wall mounted 4 to 5 ft from floor level and BMS compatible. Noise sits at 60 to 65 dB."
             ]
         },
         {
@@ -1366,7 +1426,7 @@ const hvls_16ft_gearless = {
             description:
                 "The extension tube, motor and hub assembly hang from an anti-fall mounting bracket, so the assembly is still held even if the motor or extension tube bolts fail."
             , icon: (
-                <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M12 2 4 5v7c0 5 3.4 8.9 8 10 4.6-1.1 8-5 8-10V5l-8-3z"></path>
                 </svg>
             ),
@@ -1376,7 +1436,7 @@ const hvls_16ft_gearless = {
             description:
                 "A single piece hub carries all six blades, and a safety ring interlocks the blades to each other so no blade is retained by its own fixing alone.",
             icon: (
-                <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <circle cx="12" cy="12" r="3"></circle>
                     <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path>
                 </svg>
@@ -1588,7 +1648,7 @@ const hvls_24ft_gearless = {
             type: "paragraph",
             heading: "FLGL246 — Gearless 24 Feet HVLS Fan",
             data: [
-                "The FLGL246 is the largest direct drive fan Austar builds, and the highest air delivery figure on the whole price list. A direct driven PMSM outer rotor motor, air and liquid cooled and made in India, is rated 1.2 KW at 350 Nm and turns the 24 ft sweep (7.2 m) at anything from zero to 50 rpm, moving 485,000 CFM. The motor runs N45SH grade magnets, Class H insulation and aluminium top and bottom plates rather than sheet metal. Six cambered aerofoil blades are rolled in Aluminium 6063 T6 to a 190 mm section with two ribs. Supply is three phase 415 V, 50 Hz, and the fan weighs about 130 kg. Noise stays below 40 dB, which is what puts this range into showrooms, halls and food and pharma floors."
+                "The FLGL246 is the largest direct drive fan Floent builds, and the highest air delivery figure on the whole price list. A direct driven PMSM outer rotor motor, air and liquid cooled and made in India, is rated 1.2 KW at 350 Nm and turns the 24 ft sweep (7.2 m) at anything from zero to 50 rpm, moving 485,000 CFM. The motor runs N45SH grade magnets, Class H insulation and aluminium top and bottom plates rather than sheet metal. Six cambered aerofoil blades are rolled in Aluminium 6063 T6 to a 190 mm section with two ribs. Supply is three phase 415 V, 50 Hz, and the fan weighs about 130 kg. Noise stays below 40 dB, which is what puts this range into showrooms, halls and food and pharma floors."
             ]
         },
         {
@@ -1719,23 +1779,23 @@ const hvls_24ft_gearless = {
 
 export const specification = new Map();
 specification.set("exhuast-fan", exhaustfan_Specification);
-specification.set("HVLS-fan", hvlsfan_Specification);
+specification.set("HVLS-gearless-fan", hvlsfan_Specification);
 
 //geared
 // Geared HVLS Fans
-specification.set("12-feet-geared-HVLS-fan", hvls_12ft);
-specification.set("16-feet-geared-HVLS-fan", hvls_16ft);
-specification.set("18-feet-geared-HVLS-fan", hvls_18ft);
-specification.set("20-feet-geared-HVLS-fan", hvls_20ft);
-specification.set("24-feet-geared-HVLS-fan", hvls_24ft);
+// specification.set("12-feet-geared-HVLS-fan", hvls_12ft);
+// specification.set("16-feet-geared-HVLS-fan", hvls_16ft);
+// specification.set("18-feet-geared-HVLS-fan", hvls_18ft);
+// specification.set("20-feet-geared-HVLS-fan", hvls_20ft);
+// specification.set("24-feet-geared-HVLS-fan", hvls_24ft);
 
 // Gearless HVLS Fans
 specification.set("8-feet-gearless-HVLS-fan", hvls_8ft_gearless);
 specification.set("10-feet-gearless-HVLS-fan", hvls_10ft_gearless);
-specification.set("12-feet-gearless-HVLS-fan", hvls_12ft_gearless);
+// specification.set("12-feet-gearless-HVLS-fan", hvls_12ft_gearless);
 specification.set("16-feet-gearless-HVLS-fan", hvls_16ft_gearless);
-specification.set("20-feet-gearless-HVLS-fan", hvls_20ft_gearless);
-specification.set("24-feet-gearless-HVLS-fan", hvls_24ft_gearless);
+// specification.set("20-feet-gearless-HVLS-fan", hvls_20ft_gearless);
+// specification.set("24-feet-gearless-HVLS-fan", hvls_24ft_gearless);
 
 /************************************************************************/
 
@@ -2155,21 +2215,21 @@ const featuresandAdvhvls = [
 
 export const featureandadv = new Map();
 featureandadv.set("exhuast-fan", featuresAndAdavantageexhuastfan);
-featureandadv.set("HVLS-fan", featuresandAdvhvls);
+featureandadv.set("HVLS-gearless-fan", featuresandAdvhvls);
 
-featureandadv.set("12-feet-geared-HVLS-fan", featuresandAdvhvls);
-featureandadv.set("16-feet-geared-HVLS-fan", featuresandAdvhvls);
-featureandadv.set("18-feet-geared-HVLS-fan", featuresandAdvhvls);
-featureandadv.set("20-feet-geared-HVLS-fan", featuresandAdvhvls);
-featureandadv.set("24-feet-geared-HVLS-fan", featuresandAdvhvls);
+// featureandadv.set("12-feet-geared-HVLS-fan", featuresandAdvhvls);
+// featureandadv.set("16-feet-geared-HVLS-fan", featuresandAdvhvls);
+// featureandadv.set("18-feet-geared-HVLS-fan", featuresandAdvhvls);
+// featureandadv.set("20-feet-geared-HVLS-fan", featuresandAdvhvls);
+// featureandadv.set("24-feet-geared-HVLS-fan", featuresandAdvhvls);
 
 // Gearless HVLS Fans
 featureandadv.set("8-feet-gearless-HVLS-fan", featuresandAdvhvls);
 featureandadv.set("10-feet-gearless-HVLS-fan", featuresandAdvhvls);
-featureandadv.set("12-feet-gearless-HVLS-fan", featuresandAdvhvls);
+// featureandadv.set("12-feet-gearless-HVLS-fan", featuresandAdvhvls);
 featureandadv.set("16-feet-gearless-HVLS-fan", featuresandAdvhvls);
-featureandadv.set("20-feet-gearless-HVLS-fan", featuresandAdvhvls);
-featureandadv.set("24-feet-gearless-HVLS-fan", featuresandAdvhvls);
+// featureandadv.set("20-feet-gearless-HVLS-fan", featuresandAdvhvls);
+// featureandadv.set("24-feet-gearless-HVLS-fan", featuresandAdvhvls);
 
 /********************************Working principal ***********************************/
 
@@ -2181,21 +2241,21 @@ const hvls_fan_Principal = [
 
 export const principal = new Map();
 principal.set("exhuast-fan", exhaust_fan_Principal);
-principal.set("HVLS-fan", hvls_fan_Principal);
+principal.set("HVLS-gearless-fan", hvls_fan_Principal);
 
-principal.set("12-feet-geared-HVLS-fan", hvls_fan_Principal);
-principal.set("16-feet-geared-HVLS-fan", hvls_fan_Principal);
-principal.set("18-feet-geared-HVLS-fan", hvls_fan_Principal);
-principal.set("20-feet-geared-HVLS-fan", hvls_fan_Principal);
-principal.set("24-feet-geared-HVLS-fan", hvls_fan_Principal);
+// principal.set("12-feet-geared-HVLS-fan", hvls_fan_Principal);
+// principal.set("16-feet-geared-HVLS-fan", hvls_fan_Principal);
+// principal.set("18-feet-geared-HVLS-fan", hvls_fan_Principal);
+// principal.set("20-feet-geared-HVLS-fan", hvls_fan_Principal);
+// principal.set("24-feet-geared-HVLS-fan", hvls_fan_Principal);
 
 // Gearless HVLS Fans
 principal.set("8-feet-gearless-HVLS-fan", hvls_fan_Principal);
 principal.set("10-feet-gearless-HVLS-fan", hvls_fan_Principal);
-principal.set("12-feet-gearless-HVLS-fan", hvls_fan_Principal);
+// principal.set("12-feet-gearless-HVLS-fan", hvls_fan_Principal);
 principal.set("16-feet-gearless-HVLS-fan", hvls_fan_Principal);
-principal.set("20-feet-gearless-HVLS-fan", hvls_fan_Principal);
-principal.set("24-feet-gearless-HVLS-fan", hvls_fan_Principal);
+// principal.set("20-feet-gearless-HVLS-fan", hvls_fan_Principal);
+// principal.set("24-feet-gearless-HVLS-fan", hvls_fan_Principal);
 /************************Applications***********************************/
 
 export const application = new Map();
@@ -2234,7 +2294,13 @@ const hvlsApplication = [
 ]
 
 application.set("exhuast-fan", exhuastApplication);
-application.set("HVLS-fan", hvlsApplication);
+application.set("HVLS-gearless-fan", hvlsApplication);
+
+
+application.set("8-feet-gearless-HVLS-fan", hvlsApplication);
+application.set("10-feet-gearless-HVLS-fan", hvlsApplication);
+// principal.set("12-feet-gearless-HVLS-fan", hvls_fan_Principal);
+application.set("16-feet-gearless-HVLS-fan", hvlsApplication);
 /*************************Manufacturer *********************************/
 const exhuastManufacturer = [
     "Floent Technologies is a leading manufacturer of high-performance industrial exhaust fans, designed to provide powerful air extraction and efficient ventilation for factories, warehouses, agricultural facilities, commercial spaces, and other large environments. Our exhaust fans are engineered for effective removal of heat, humidity, fumes, dust, and stale air, helping create a cooler, cleaner, and more comfortable workspace.",
@@ -2251,69 +2317,69 @@ const hvlsManufacturer = [
 
 //geared
 const manu_12ft = [
-    "Austar Technologies is a leading 12 Feet Geared HVLS fan manufacturer, offering high-quality, energy-efficient solutions for industrial and commercial spaces. Our HVLS Fan is designed for optimal air circulation and ventilation, ensuring a comfortable environment while reducing energy costs. With a geared mechanism, it operates smoothly at variable speeds, reaching a maximum of 10 RPM.",
-    "This 12 feet HVLS fan features 5 aero blades, designed for maximum airflow efficiency. Available in matte black and customizable colors, it complements various industrial and commercial interiors. Whether for warehouses, factories, or gymnasiums, Austar Technologies provides CE-certified HVLS fans with long-lasting performance. Our fans are engineered to deliver low-speed, high-volume airflow, ensuring better cooling and air quality. With a strong manufacturing process and lifetime support, assure reliable, durable, and cost-effective industrial HVLS fan solutions for various applications."
+    "Floent Technologies is a leading 12 Feet Geared HVLS fan manufacturer, offering high-quality, energy-efficient solutions for industrial and commercial spaces. Our HVLS Fan is designed for optimal air circulation and ventilation, ensuring a comfortable environment while reducing energy costs. With a geared mechanism, it operates smoothly at variable speeds, reaching a maximum of 10 RPM.",
+    "This 12 feet HVLS fan features 5 aero blades, designed for maximum airflow efficiency. Available in matte black and customizable colors, it complements various industrial and commercial interiors. Whether for warehouses, factories, or gymnasiums, Floent Technologies provides CE-certified HVLS fans with long-lasting performance. Our fans are engineered to deliver low-speed, high-volume airflow, ensuring better cooling and air quality. With a strong manufacturing process and lifetime support, assure reliable, durable, and cost-effective industrial HVLS fan solutions for various applications."
 ]
 
 const manu_16ft = [
-    "Austar Technologies is a trusted 16 feet geared HVLS fan manufacturer, offering high-quality, energy-efficient solutions for industrial and commercial spaces. Our HVLS Fan is designed for optimal air circulation, ensuring a comfortable environment while reducing energy costs. With a geared mechanism, it operates smoothly at variable speeds up to 10 RPM, providing consistent airflow across large areas.",
-    "This 16 feet HVLS fan features 5 aeroblades, engineered for maximum efficiency. Available in matte black and customizable colors, it blends well with different industrial and commercial settings. Whether for warehouses, manufacturing units, or shopping malls, Austar Technologies provides CE-certified HVLS fans built for long-lasting performance. Designed for low-speed, high-volume airflow, our HVLS fans improve ventilation, reduce humidity, and eliminate hot spots. With a tough manufacturing process and lifetime support, ensures durable, cost-effective HVLS fan solutions for diverse applications."
+    "Floent Technologies is a trusted 16 feet geared HVLS fan manufacturer, offering high-quality, energy-efficient solutions for industrial and commercial spaces. Our HVLS Fan is designed for optimal air circulation, ensuring a comfortable environment while reducing energy costs. With a geared mechanism, it operates smoothly at variable speeds up to 10 RPM, providing consistent airflow across large areas.",
+    "This 16 feet HVLS fan features 5 aeroblades, engineered for maximum efficiency. Available in matte black and customizable colors, it blends well with different industrial and commercial settings. Whether for warehouses, manufacturing units, or shopping malls, Floent Technologies provides CE-certified HVLS fans built for long-lasting performance. Designed for low-speed, high-volume airflow, our HVLS fans improve ventilation, reduce humidity, and eliminate hot spots. With a tough manufacturing process and lifetime support, ensures durable, cost-effective HVLS fan solutions for diverse applications."
 ]
 
 const manu_18ft = [
-    "Austar Technologies is a leading 18 feet geared HVLS fan manufacturer, offering high-performance industrial ceiling fans designed for efficient airflow and energy savings. Our HVLS fans are built to provide maximum ventilation, assuring a comfortable and productive environment for factories, warehouses, gymnasiums, commercial spaces, and other large facilities. The 18 feet HVLS fan features a geared system with 2 rib blades, delivering consistent air circulation at speeds of up to 70 RPM. With variable speed control (0 to 70 RPM), it offers customized airflow to suit different requirements. This big industrial fan is available in Matt Black and other customizable colors, ensuring seamless integration with various interiors.",
-    "Engineered for silent operation, this HVLS industrial ceiling fan minimizes noise while improving air quality, reducing heat buildup, and lowering cooling costs. Built from high-quality materials, it is long-lasting, low-maintenance, and assured by Austar Technologies' commitment to outstanding performance and lifetime service. With CE-certified manufacturing, safety, longevity, and international quality standards. Whether for commercial or industrial applications, our 18 feet HVLS fan ensures cost-effective cooling, optimized airflow, and reduced energy consumption, making it an ideal solution for large spaces."
+    "Floent Technologies is a leading 18 feet geared HVLS fan manufacturer, offering high-performance industrial ceiling fans designed for efficient airflow and energy savings. Our HVLS fans are built to provide maximum ventilation, assuring a comfortable and productive environment for factories, warehouses, gymnasiums, commercial spaces, and other large facilities. The 18 feet HVLS fan features a geared system with 2 rib blades, delivering consistent air circulation at speeds of up to 70 RPM. With variable speed control (0 to 70 RPM), it offers customized airflow to suit different requirements. This big industrial fan is available in Matt Black and other customizable colors, ensuring seamless integration with various interiors.",
+    "Engineered for silent operation, this HVLS industrial ceiling fan minimizes noise while improving air quality, reducing heat buildup, and lowering cooling costs. Built from high-quality materials, it is long-lasting, low-maintenance, and assured by Floent Technologies' commitment to outstanding performance and lifetime service. With CE-certified manufacturing, safety, longevity, and international quality standards. Whether for commercial or industrial applications, our 18 feet HVLS fan ensures cost-effective cooling, optimized airflow, and reduced energy consumption, making it an ideal solution for large spaces."
 ]
 
 const manu_20ft = [
-    "Austar Technologies is a leading 20 feet geared HVLS fan manufacturer, offering high-performance industrial ceiling fans for factories, warehouses, gymnasiums, commercial buildings, and other large spaces. Designed for maximum airflow efficiency, our HVLS fans ensure better ventilation, reduced energy costs, and improved working conditions. This 20 Feet HVLS Fan is equipped with 2 Rib Blades and operates at a maximum speed of 50 RPM (variable from 0 to 60 RPM), allowing for customized airflow as per the facility’s needs. The geared mechanism ensures smooth and silent operation, making it suitable for industrial and commercial applications. It is available in matt black and customizable colors and integrates well into various environments.",
+    "Floent Technologies is a leading 20 feet geared HVLS fan manufacturer, offering high-performance industrial ceiling fans for factories, warehouses, gymnasiums, commercial buildings, and other large spaces. Designed for maximum airflow efficiency, our HVLS fans ensure better ventilation, reduced energy costs, and improved working conditions. This 20 Feet HVLS Fan is equipped with 2 Rib Blades and operates at a maximum speed of 50 RPM (variable from 0 to 60 RPM), allowing for customized airflow as per the facility’s needs. The geared mechanism ensures smooth and silent operation, making it suitable for industrial and commercial applications. It is available in matt black and customizable colors and integrates well into various environments.",
     "Our Geared HVLS industrial ceiling fans are built with durability and low maintenance in mind, ensuring long-lasting performance with minimal upkeep. With CE-certified components and international quality standards, it guarantees superior safety, reliability, and efficiency. These energy-efficient fans help lower cooling costs, improve air circulation, and create a comfortable environment by eliminating hot spots and reducing humidity. Ideal for large-scale facilities, the 20 Feet HVLS Fan enhances productivity and operational efficiency while delivering cost-effective cooling solutions."
 ]
 
 const manu_24ft = [
-    "Austar Technologies is a leading 24 Feet Geared HVLS Fan Manufacturer, providing high-performance industrial ceiling fans designed for large spaces such as warehouses, factories, gymnasiums, commercial buildings, and public spaces. Our 24 feet HVLS fans deliver superior airflow efficiency, ensuring better ventilation, reduced humidity, and significant energy savings. This large industrial fan features 2 rib blades and operates at a maximum speed of 50 RPM (variable from 0 to 50 RPM), ensuring optimal air circulation with minimal energy consumption. The geared mechanism ensures smooth operation, reducing noise levels while maintaining efficient performance. Available in matt black and customizable colors, it blends seamlessly with different industrial and commercial interiors.",
+    "Floent Technologies is a leading 24 Feet Geared HVLS Fan Manufacturer, providing high-performance industrial ceiling fans designed for large spaces such as warehouses, factories, gymnasiums, commercial buildings, and public spaces. Our 24 feet HVLS fans deliver superior airflow efficiency, ensuring better ventilation, reduced humidity, and significant energy savings. This large industrial fan features 2 rib blades and operates at a maximum speed of 50 RPM (variable from 0 to 50 RPM), ensuring optimal air circulation with minimal energy consumption. The geared mechanism ensures smooth operation, reducing noise levels while maintaining efficient performance. Available in matt black and customizable colors, it blends seamlessly with different industrial and commercial interiors.",
     "Austar’s HVLS fans are engineered for durability, low maintenance, and long-lasting performance. With CE-certified components and advanced technology, we ensure top-notch safety, reliability, and efficiency. Our 24 feet HVLS fan significantly lowers cooling costs, enhances worker comfort, and improves overall productivity by eliminating hot spots and stale air pockets. Known for its robust build and energy efficiency, this HVLS industrial ceiling fan is an ideal choice for businesses looking to optimize airflow, reduce operational costs, and create a comfortable indoor environment."
 ]
 
 //gearless
 const manu_12ft_gl = [
-    "Austar Technologies is a trusted 12 feet gearless HVLS fan manufacturer, offering high-performance, energy-efficient solutions for industrial and commercial applications. Our 12 feet gearless HVLS fans are designed to enhance air circulation, reduce humidity, and create a comfortable indoor environment in warehouses, factories, gymnasiums, and large public spaces. This gearless HVLS fan features 3 Rib Blades and operates at a maximum speed of 100 RPM (variable from 0 to 100 RPM), ensuring whisper-quiet, efficient airflow while minimizing energy consumption. The gearless mechanism eliminates friction, reducing wear and tear, extending lifespan, and ensuring low maintenance costs.",
-    "With a sleek glossy black finish and customizable color options, our 12 Feet Gearless HVLS Fan seamlessly integrates into various interiors. Built with high-strength, CE-certified components, it guarantees safety, durability, and exceptional performance. Austar Technologies' HVLS ceiling fans help businesses optimize cooling efficiency, significantly lowering HVAC energy costs while maintaining consistent temperature control. These fans prevent air stratification, reduce heat stress, and improve air quality, making them an ideal choice for industries, commercial buildings, and large open spaces."
+    "Floent Technologies is a trusted 12 feet gearless HVLS fan manufacturer, offering high-performance, energy-efficient solutions for industrial and commercial applications. Our 12 feet gearless HVLS fans are designed to enhance air circulation, reduce humidity, and create a comfortable indoor environment in warehouses, factories, gymnasiums, and large public spaces. This gearless HVLS fan features 3 Rib Blades and operates at a maximum speed of 100 RPM (variable from 0 to 100 RPM), ensuring whisper-quiet, efficient airflow while minimizing energy consumption. The gearless mechanism eliminates friction, reducing wear and tear, extending lifespan, and ensuring low maintenance costs.",
+    "With a sleek glossy black finish and customizable color options, our 12 Feet Gearless HVLS Fan seamlessly integrates into various interiors. Built with high-strength, CE-certified components, it guarantees safety, durability, and exceptional performance. Floent Technologies' HVLS ceiling fans help businesses optimize cooling efficiency, significantly lowering HVAC energy costs while maintaining consistent temperature control. These fans prevent air stratification, reduce heat stress, and improve air quality, making them an ideal choice for industries, commercial buildings, and large open spaces."
 ]
 
 const manu_16ft_gl = [
-    "Austar Technologies is a leading 16 feet gearless HVLS fan manufacturer, providing high-efficiency, energy-saving ventilation solutions for industrial and commercial spaces. Our 16 feet gearless HVLS fan is engineered for optimal air circulation, ensuring a cool, comfortable environment in warehouses, factories, gymnasiums, shopping malls, and other large areas. Equipped with 3 Rib Blades, this gearless HVLS fan operates at a maximum speed of 70 RPM (variable from 0 to 70 RPM), delivering uniform airflow with minimal power consumption. The gearless technology eliminates friction, reducing mechanical wear and maintenance costs, ensuring a longer lifespan and quieter operation.",
+    "Floent Technologies is a leading 16 feet gearless HVLS fan manufacturer, providing high-efficiency, energy-saving ventilation solutions for industrial and commercial spaces. Our 16 feet gearless HVLS fan is engineered for optimal air circulation, ensuring a cool, comfortable environment in warehouses, factories, gymnasiums, shopping malls, and other large areas. Equipped with 3 Rib Blades, this gearless HVLS fan operates at a maximum speed of 70 RPM (variable from 0 to 70 RPM), delivering uniform airflow with minimal power consumption. The gearless technology eliminates friction, reducing mechanical wear and maintenance costs, ensuring a longer lifespan and quieter operation.",
     "With a glossy black finish and customizable color options, this industrial HVLS fan seamlessly integrates into various commercial and industrial settings. CE-certified and built with premium materials, Austar’s 16 feet gearless HVLS fan guarantees reliability, durability, and maximum performance. By reducing heat buildup and improving air quality, this HVLS ceiling fan helps lower energy costs and enhances workplace productivity. It also reduces humidity, condensation, and airborne contaminants, making it an ideal choice for factories, commercial spaces, and large open areas."
 ]
 
 const manu_20ft_gl = [
-    "Austar Technologies is a trusted 20 feet gearless HVLS fan manufacturer, offering high-performance, energy-efficient ventilation solutions for industrial and commercial spaces. Our gearless HVLS fan is designed to provide superior airflow, reduced energy consumption, and enhanced workplace comfort in factories, warehouses, shopping malls, airports, and large commercial buildings. Equipped with 3 Rib Blades, this HVLS ceiling fan operates at a maximum speed of 50 RPM (variable from 0 to 50 RPM), ensuring consistent air circulation with minimal energy usage. The gearless motor technology reduces mechanical friction, leading to whisper-quiet operation, lower maintenance costs, and an extended lifespan.",
-    "With a glossy black finish and customizable color options, This 20 feet HVLS fan complements a variety of industrial and commercial designs. CE-certified and built with international-quality materials, Austar’s gearless HVLS fan guarantees safety, durability, and reliability. This large industrial fan effectively eliminates heat buildup, maintains uniform airflow, and enhances air quality, preventing humidity and condensation issues. It also significantly reduces the strain on HVAC systems, leading to lower operational costs and improved energy efficiency. Ideal for large-scale applications, Austar 20 feet gearless HVLS fan is a smart investment for businesses looking to optimize cooling, enhance comfort, and cut energy expenses."
+    "Floent Technologies is a trusted 20 feet gearless HVLS fan manufacturer, offering high-performance, energy-efficient ventilation solutions for industrial and commercial spaces. Our gearless HVLS fan is designed to provide superior airflow, reduced energy consumption, and enhanced workplace comfort in factories, warehouses, shopping malls, airports, and large commercial buildings. Equipped with 3 Rib Blades, this HVLS ceiling fan operates at a maximum speed of 50 RPM (variable from 0 to 50 RPM), ensuring consistent air circulation with minimal energy usage. The gearless motor technology reduces mechanical friction, leading to whisper-quiet operation, lower maintenance costs, and an extended lifespan.",
+    "With a glossy black finish and customizable color options, This 20 feet HVLS fan complements a variety of industrial and commercial designs. CE-certified and built with international-quality materials, Austar’s gearless HVLS fan guarantees safety, durability, and reliability. This large industrial fan effectively eliminates heat buildup, maintains uniform airflow, and enhances air quality, preventing humidity and condensation issues. It also significantly reduces the strain on HVAC systems, leading to lower operational costs and improved energy efficiency. Ideal for large-scale applications, Floent 20 feet gearless HVLS fan is a smart investment for businesses looking to optimize cooling, enhance comfort, and cut energy expenses."
 ]
 
 const manu_24ft_gl = [
-    "Austar Technologies is a leading 24 feet gearless HVLS fan manufacturer, providing high-performance, energy-efficient ventilation for large industrial and commercial spaces. Our gearless HVLS fans are designed to enhance airflow, improve indoor air quality, and reduce energy consumption, making them ideal for factories, warehouses, malls, airports, railway stations, and large buildings. With a gearless motor system, this 24ft HVLS fan ensures whisper-quiet operation, minimal maintenance, and long-lasting durability. Equipped with 3 rib blades, it operates at a maximum speed of 50 RPM (variable from 0 to 50 RPM), delivering uniform air circulation while consuming less power.",
-    "The glossy black finish gives a modern, aesthetic look, and customizable color options ensure seamless integration into any industrial or commercial setting. Designed with international-quality components, this CE-certified HVLS fan offers high reliability, enhanced safety, and cost-effective cooling solutions. By reducing heat buildup, eliminating humidity, and decreasing HVAC dependency, the 24ft gearless HVLS fan significantly lowers energy costs while maintaining a comfortable working environment. With Austar Technologies, you get a high-quality, durable, and efficient cooling solution that ensures maximum airflow and superior comfort."
+    "Floent Technologies is a leading 24 feet gearless HVLS fan manufacturer, providing high-performance, energy-efficient ventilation for large industrial and commercial spaces. Our gearless HVLS fans are designed to enhance airflow, improve indoor air quality, and reduce energy consumption, making them ideal for factories, warehouses, malls, airports, railway stations, and large buildings. With a gearless motor system, this 24ft HVLS fan ensures whisper-quiet operation, minimal maintenance, and long-lasting durability. Equipped with 3 rib blades, it operates at a maximum speed of 50 RPM (variable from 0 to 50 RPM), delivering uniform air circulation while consuming less power.",
+    "The glossy black finish gives a modern, aesthetic look, and customizable color options ensure seamless integration into any industrial or commercial setting. Designed with international-quality components, this CE-certified HVLS fan offers high reliability, enhanced safety, and cost-effective cooling solutions. By reducing heat buildup, eliminating humidity, and decreasing HVAC dependency, the 24ft gearless HVLS fan significantly lowers energy costs while maintaining a comfortable working environment. With Floent Technologies, you get a high-quality, durable, and efficient cooling solution that ensures maximum airflow and superior comfort."
 ]
 
 export const manufacturer = new Map();
 manufacturer.set("exhuast-fan", exhuastManufacturer);
-manufacturer.set("HVLS-fan", hvlsManufacturer);
+manufacturer.set("HVLS-gearless-fan", hvlsManufacturer);
 
 //geared
-manufacturer.set("12-feet-geared-HVLS-fan", manu_12ft);
-manufacturer.set("16-feet-geared-HVLS-fan", manu_16ft);
-manufacturer.set("18-feet-geared-HVLS-fan", manu_18ft);
-manufacturer.set("20-feet-geared-HVLS-fan", manu_20ft);
-manufacturer.set("24-feet-geared-HVLS-fan", manu_24ft);
+// manufacturer.set("12-feet-geared-HVLS-fan", manu_12ft);
+// manufacturer.set("16-feet-geared-HVLS-fan", manu_16ft);
+// manufacturer.set("18-feet-geared-HVLS-fan", manu_18ft);
+// manufacturer.set("20-feet-geared-HVLS-fan", manu_20ft);
+// manufacturer.set("24-feet-geared-HVLS-fan", manu_24ft);
 
 //gearless
 // manufacturer.set("8-feet-gearless-HVLS-fan", hvls_8ft_gearless);
 // manufacturer.set("10-feet-gearless-HVLS-fan", hvls_10ft_gearless);
-manufacturer.set("12-feet-gearless-HVLS-fan", manu_12ft_gl);
+// manufacturer.set("12-feet-gearless-HVLS-fan", manu_12ft_gl);
 manufacturer.set("16-feet-gearless-HVLS-fan", manu_16ft_gl);
-manufacturer.set("20-feet-gearless-HVLS-fan", manu_20ft_gl);
-manufacturer.set("24-feet-gearless-HVLS-fan", manu_24ft_gl);
+// manufacturer.set("20-feet-gearless-HVLS-fan", manu_20ft_gl);
+// manufacturer.set("24-feet-gearless-HVLS-fan", manu_24ft_gl);
 
 /************************Benefits **********************************/
 const exhaustbenifits = {
@@ -2363,15 +2429,15 @@ const benefit_16ft = {
 
 const benefit_18ft = {
     paragraph: [
-        "Austar Technologies is a leading 18 feet geared HVLS fan manufacturer, offering high-performance industrial ceiling fans designed for efficient airflow and energy savings. Our HVLS fans are built to provide maximum ventilation, assuring a comfortable and productive environment for factories, warehouses, gymnasiums, commercial spaces, and other large facilities. The 18 feet HVLS fan features a geared system with 2 rib blades, delivering consistent air circulation at speeds of up to 70 RPM. With variable speed control (0 to 70 RPM), it offers customized airflow to suit different requirements. This big industrial fan is available in Matt Black and other customizable colors, ensuring seamless integration with various interiors.",
-        "Engineered for silent operation, this HVLS industrial ceiling fan minimizes noise while improving air quality, reducing heat buildup, and lowering cooling costs. Built from high-quality materials, it is long-lasting, low-maintenance, and assured by Austar Technologies' commitment to outstanding performance and lifetime service. With CE-certified manufacturing, safety, longevity, and international quality standards. Whether for commercial or industrial applications, our 18 feet HVLS fan ensures cost-effective cooling, optimized airflow, and reduced energy consumption, making it an ideal solution for large spaces."
+        "Floent Technologies is a leading 18 feet geared HVLS fan manufacturer, offering high-performance industrial ceiling fans designed for efficient airflow and energy savings. Our HVLS fans are built to provide maximum ventilation, assuring a comfortable and productive environment for factories, warehouses, gymnasiums, commercial spaces, and other large facilities. The 18 feet HVLS fan features a geared system with 2 rib blades, delivering consistent air circulation at speeds of up to 70 RPM. With variable speed control (0 to 70 RPM), it offers customized airflow to suit different requirements. This big industrial fan is available in Matt Black and other customizable colors, ensuring seamless integration with various interiors.",
+        "Engineered for silent operation, this HVLS industrial ceiling fan minimizes noise while improving air quality, reducing heat buildup, and lowering cooling costs. Built from high-quality materials, it is long-lasting, low-maintenance, and assured by Floent Technologies' commitment to outstanding performance and lifetime service. With CE-certified manufacturing, safety, longevity, and international quality standards. Whether for commercial or industrial applications, our 18 feet HVLS fan ensures cost-effective cooling, optimized airflow, and reduced energy consumption, making it an ideal solution for large spaces."
     ]
 }
 
 const benefit_20ft = {
     paragraph: [
         "A 20 feet industrial HVLS ceiling fan provides optimal air circulation, assuring even airflow distribution across large areas. It significantly reduces humidity, prevents heat buildup, and creates a comfortable and healthy workspace. This high-volume, low-speed fan consumes minimal energy, making it a cost-effective alternative to traditional cooling solutions. It enhances HVAC system efficiency, reducing the need for excessive air conditioning and cutting down on energy expenses.",
-        "Engineered for silent operation, it minimizes noise pollution, making it ideal for factories, warehouses, airports, railway stations, and auditoriums. Its high-durability construction ensures long service life with minimal maintenance requirements. The sleek design and customizable color options make it a perfect fit for industrial and commercial environments, offering both functionality and aesthetic appeal. With Austar Technologies’ commitment to quality, this 20 feet HVLS ceiling fan guarantees exceptional performance, energy efficiency, and long-term reliability."
+        "Engineered for silent operation, it minimizes noise pollution, making it ideal for factories, warehouses, airports, railway stations, and auditoriums. Its high-durability construction ensures long service life with minimal maintenance requirements. The sleek design and customizable color options make it a perfect fit for industrial and commercial environments, offering both functionality and aesthetic appeal. With Floent Technologies’ commitment to quality, this 20 feet HVLS ceiling fan guarantees exceptional performance, energy efficiency, and long-term reliability."
     ]
 }
 
@@ -2407,24 +2473,24 @@ const benefit_20ft_gl = {
 const benefit_24ft_gl = {
     paragraph: [
         "The 24 feet gearless HVLS ceiling fan is a powerful, energy-efficient cooling solution designed for large industrial and commercial applications. Its gearless motor technology ensures silent operation, minimal mechanical wear, and long-lasting durability, making it a low-maintenance and cost-effective investment. This industrial HVLS ceiling fan delivers steady and uniform airflow, reducing hot spots, humidity, and condensation while enhancing workplace comfort. By improving air circulation, it also minimizes dust accumulation and airborne contaminants, creating a healthier indoor environment.",
-        "One of the biggest advantages of the 24ft HVLS fan is its ability to reduce HVAC energy costs, as it improves air distribution and reduces the need for high-powered air conditioning. The sleek glossy black finish and customizable colors ensure it complements various industrial and commercial settings. With international-quality materials, CE certification, and advanced airflow technology, the Austar 24ft Gearless HVLS Fan provides superior cooling, energy savings, and long-term performance for large-scale operations."
+        "One of the biggest advantages of the 24ft HVLS fan is its ability to reduce HVAC energy costs, as it improves air distribution and reduces the need for high-powered air conditioning. The sleek glossy black finish and customizable colors ensure it complements various industrial and commercial settings. With international-quality materials, CE certification, and advanced airflow technology, the Floent 24ft Gearless HVLS Fan provides superior cooling, energy savings, and long-term performance for large-scale operations."
     ]
 }
 
 export const benefits = new Map();
 benefits.set("exhuast-fan", exhaustbenifits);
-benefits.set("HVLS-fan", hvlsbenefits);
+benefits.set("HVLS-gearless-fan", hvlsbenefits);
 
-benefits.set("12-feet-geared-HVLS-fan", benefit_12ft);
-benefits.set("16-feet-geared-HVLS-fan", benefit_16ft);
-benefits.set("18-feet-geared-HVLS-fan", benefit_18ft);
-benefits.set("20-feet-geared-HVLS-fan", benefit_20ft);
-benefits.set("24-feet-geared-HVLS-fan", benefit_24ft);
+// benefits.set("12-feet-geared-HVLS-fan", benefit_12ft);
+// benefits.set("16-feet-geared-HVLS-fan", benefit_16ft);
+// benefits.set("18-feet-geared-HVLS-fan", benefit_18ft);
+// benefits.set("20-feet-geared-HVLS-fan", benefit_20ft);
+// benefits.set("24-feet-geared-HVLS-fan", benefit_24ft);
 
-benefits.set("12-feet-gearless-HVLS-fan", benefit_12ft_gl);
+// benefits.set("12-feet-gearless-HVLS-fan", benefit_12ft_gl);
 benefits.set("16-feet-gearless-HVLS-fan", benefit_16ft_gl);
-benefits.set("20-feet-gearless-HVLS-fan", benefit_20ft_gl);
-benefits.set("24-feet-gearless-HVLS-fan", benefit_24ft_gl);
+// benefits.set("20-feet-gearless-HVLS-fan", benefit_20ft_gl);
+// benefits.set("24-feet-gearless-HVLS-fan", benefit_24ft_gl);
 
 /********************why should you ************************/
 
@@ -2436,19 +2502,19 @@ const whyshouldhvls = [
 
 export const whyshould = new Map()
 
-whyshould.set("HVLS-fan", whyshouldhvls)
+whyshould.set("HVLS-gearless-fan", whyshouldhvls)
 
 
-whyshould.set("12-feet-geared-HVLS-fan", whyshouldhvls);
-whyshould.set("16-feet-geared-HVLS-fan", whyshouldhvls);
-whyshould.set("18-feet-geared-HVLS-fan", whyshouldhvls);
-whyshould.set("20-feet-geared-HVLS-fan", whyshouldhvls);
-whyshould.set("24-feet-geared-HVLS-fan", whyshouldhvls);
+// whyshould.set("12-feet-geared-HVLS-fan", whyshouldhvls);
+// whyshould.set("16-feet-geared-HVLS-fan", whyshouldhvls);
+// whyshould.set("18-feet-geared-HVLS-fan", whyshouldhvls);
+// whyshould.set("20-feet-geared-HVLS-fan", whyshouldhvls);
+// whyshould.set("24-feet-geared-HVLS-fan", whyshouldhvls);
 
 
 whyshould.set("8-feet-gearless-HVLS-fan", whyshouldhvls);
 whyshould.set("10-feet-gearless-HVLS-fan", whyshouldhvls);
-whyshould.set("12-feet-gearless-HVLS-fan", whyshouldhvls);
+// whyshould.set("12-feet-gearless-HVLS-fan", whyshouldhvls);
 whyshould.set("16-feet-gearless-HVLS-fan", whyshouldhvls);
-whyshould.set("20-feet-gearless-HVLS-fan", whyshouldhvls);
-whyshould.set("24-feet-gearless-HVLS-fan", whyshouldhvls);
+// whyshould.set("20-feet-gearless-HVLS-fan", whyshouldhvls);
+// whyshould.set("24-feet-gearless-HVLS-fan", whyshouldhvls);
