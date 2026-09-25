@@ -237,7 +237,7 @@ const hvlsfan_Specification = {
             type: "paragraph",
             heading: "Description",
             data: [
-                "AUSTAR ASGL series Fan are Gearless Type HVLS Fans driven by latest technology Permanent Magnet Synchronous Motor, with five Aero Blades and die casted Blade mounting clamps. ASGL Series Fans have Noise level advantage and efficiency advantages against AS series Fans. Are controlled through Variable Frequency Drive for Reverse / Forward and speed adjustment features. Complies to international safety standards. Available in Standard Matt Black color and customized color options."
+                "Floent ASGL series Fan are Gearless Type HVLS Fans driven by latest technology Permanent Magnet Synchronous Motor, with five Aero Blades and die casted Blade mounting clamps. ASGL Series Fans have Noise level advantage and efficiency advantages against AS series Fans. Are controlled through Variable Frequency Drive for Reverse / Forward and speed adjustment features. Complies to international safety standards. Available in Standard Matt Black color and customized color options."
             ]
         }
     ],
