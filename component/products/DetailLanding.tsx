@@ -906,7 +906,7 @@ Message: ${formData.message}`;
                 </section>
             </motion.div>
             <div className='w-full bg-[#09273a] py-20'>
-                <div className='flex flex-col gap-5 mx-auto w-full max-w-7xl'>
+                <div className='flex flex-col gap-5 mx-auto w-full max-w-7xl lg:px-0 px-5'>
                     <div className='flex flex-col gap-3'>
                         <div className='flex gap-2 items-center'>
                             <div className='w-5 h-0.5 bg-[#fdcd2e]'></div>
