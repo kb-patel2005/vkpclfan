@@ -81,7 +81,7 @@ export default function HeroSwiper({ models, features, setTab,title, description
               MODELS
             </span>
             <ul className="flex flex-row lg:flex-col lg:gap-2 gap-0 justify-between mt-2">
-              {submodel.get(slug).map((e:any, idx:number) => (
+              {submodel.get(slug)?.map((e:any, idx:number) => (
                 <li
                   key={e.title}
                   className={`text-center font-bold text-[9px] lg:text-xs leading-3 tracking-[1.2px] py-2 px-2 cursor-pointer ${e.slug === slug
