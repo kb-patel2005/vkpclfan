@@ -237,7 +237,7 @@ const hvlsfan_Specification = {
             type: "paragraph",
             heading: "Description",
             data: [
-                "Floent ASGL series Fan are Gearless Type HVLS Fans driven by latest technology Permanent Magnet Synchronous Motor, with five Aero Blades and die casted Blade mounting clamps. ASGL Series Fans have Noise level advantage and efficiency advantages against AS series Fans. Are controlled through Variable Frequency Drive for Reverse / Forward and speed adjustment features. Complies to international safety standards. Available in Standard Matt Black color and customized color options."
+                "Floent ASGL series Fan are Gearless Type HVLS Fans driven by latest technology Permanent Magnet Synchronous Motor, with five Aero Blades and die casted Blade mounting clamps. FLGL Series Fans have Noise level advantage and efficiency advantages against FL series Fans. Are controlled through Variable Frequency Drive for Reverse / Forward and speed adjustment features. Complies to international safety standards. Available in Standard Matt Black color and customized color options."
             ]
         }
     ],
@@ -2233,7 +2233,7 @@ featureandadv.set("16-feet-gearless-HVLS-fan", featuresandAdvhvls);
 
 /********************************Working principal ***********************************/
 
-const exhaust_fan_Principal = ["Exhaust Fan draws out polluted air from premises and replaces it with fresh air. Air is considered polluted when it contains high amounts of hot air, moisture, carbon dioxide, vaporized chemicals, dust, fungal spores and unpleasant odors. Marut Air exhaust fan combat indoor air pollution by ejecting the unclean indoor air into the outside environment and letting in clean air from the outside"];
+const exhaust_fan_Principal = ["Exhaust Fan draws out polluted air from premises and replaces it with fresh air. Air is considered polluted when it contains high amounts of hot air, moisture, carbon dioxide, vaporized chemicals, dust, fungal spores and unpleasant odors. Floent Air exhaust fan combat indoor air pollution by ejecting the unclean indoor air into the outside environment and letting in clean air from the outside"];
 const hvls_fan_Principal = [
     "HVLS fans operate on the premise that cool flowing air separates the boundary layer surrounding the body that is saturated with moisture and speeds up evaporation to generate a cooling effect. As they rotate, ceiling fans create a column of air. Along the floor, this air column flows downward and outward. This thick wall of horizontally flowing air, also known as a horizontal floor jet, is related to a fan's diameter and, to a lesser extent, its speed. The floor jet moves outward until it encounters a side wall or other vertical surface after it reaches its maximum capacity.",
     "Industrial Jumbo ceiling fan, or another name commonly known as HVLS (High Volume Low Speed), causes high volume of wind movement and low ground. Before colliding with the ground and changing direction to become a 'floor jet', moving around 360 degrees in all directions, also helping to push dust from the nook or corner out of the area."
@@ -2281,7 +2281,7 @@ const hvlsApplication = [
         type: "paragraph",
         data: [
             "Accurate solution proposition. Both Small Size HVLS fans and Jumbo Ceiling Fan Manufactured by us are ideal for commercial and industrial spaced such as warehouses, factories, food courts, schools, indoor stadiums and gymnasiums.",
-            "Marut Air HVLS Fans are a wise purchase for any company or industry that wants to maintain comfortable Interior temperature and Fresh Air Quality. Our High Volume Low Speed Fan comes with the advantage of high energy efficiency and high volume air circulation. All our projects are individually calculated, taking into account all aspects for maximum coverage, effective operation, and reliability, depending on the particular conditions of your premises."
+            "Floent Air HVLS Fans are a wise purchase for any company or industry that wants to maintain comfortable Interior temperature and Fresh Air Quality. Our High Volume Low Speed Fan comes with the advantage of high energy efficiency and high volume air circulation. All our projects are individually calculated, taking into account all aspects for maximum coverage, effective operation, and reliability, depending on the particular conditions of your premises."
         ]
     },
     // {
@@ -2310,9 +2310,9 @@ const exhuastManufacturer = [
 const hvlsManufacturer = [
     "HVLS Fans also known as High Volume Low Speed Fan or Jumbo ceiling fan is intended for usage in big warehouses, factories, and other commercial and industrial applications.",
     "Our HVLS Fans are best to replace wall-mounted fans because they are widely renowned for evenly distributing air over vast areas. Since we are aware of the enormous demand, we are producing top-notch goods.",
-    "Marut Air Ventilation Services one of the leading HVLS Fans manufacturer offers a broad selection of industrial fans with a variety of customisations and specifications to best satisfy customer needs.",
+    "Floent Air Ventilation Services one of the leading HVLS Fans manufacturer offers a broad selection of industrial fans with a variety of customisations and specifications to best satisfy customer needs.",
     "An Energy Efficient Innovative solution for Large Spaces for Efficient and Effective Air Circulation.",
-    "The Marut Air High Volume Low Speed (HVLS) Fans are built to ensure efficient air movement in big commercial and industrial buildings. Made from the latest technologies like the gearless motor and aluminum blades, our HVLS fans generate large volumes of air using less power than any ordinary system of ventilation. Whether it is a manufacturing plant, a warehouse, a logistics hub, a shopping mall, a gymnasium, agriculture area, or even an aircraft hangar, the HVLS fans from Marut Air create an ideal environment for all types of uses throughout the year."
+    "The Floent Air High Volume Low Speed (HVLS) Fans are built to ensure efficient air movement in big commercial and industrial buildings. Made from the latest technologies like the gearless motor and aluminum blades, our HVLS fans generate large volumes of air using less power than any ordinary system of ventilation. Whether it is a manufacturing plant, a warehouse, a logistics hub, a shopping mall, a gymnasium, agriculture area, or even an aircraft hangar, the HVLS fans from Floent Air create an ideal environment for all types of uses throughout the year."
 ];
 
 //geared
@@ -2420,7 +2420,7 @@ const hvlsbenefits = {
     //     "Reduced HVAC Costs"
     // ]
     paragraph: [
-        "Marut Air HVLS Fans offer top-notch performance and reliability in the long term. Thanks to their energy-efficient performance, they minimize electricity usage and provide much better air coverage than several conventional ceiling fans. A gearless PMSM motor allows for noiseless operation, low maintenance needs, and longevity. With good air distribution, workers can benefit from increased comfort, minimized fatigue, and good working conditions, which may be helpful when increasing productivity.",
+        "Floent Air HVLS Fans offer top-notch performance and reliability in the long term. Thanks to their energy-efficient performance, they minimize electricity usage and provide much better air coverage than several conventional ceiling fans. A gearless PMSM motor allows for noiseless operation, low maintenance needs, and longevity. With good air distribution, workers can benefit from increased comfort, minimized fatigue, and good working conditions, which may be helpful when increasing productivity.",
         "The fans offered by us can be used in places with high ceiling heights and large areas that usually find it difficult to maintain continuous air flow. They not only enhance the process of ventilation and reduce moisture but also ensure an improved indoor climate."
     ]
 };
@@ -2527,8 +2527,8 @@ benefits.set("10-feet-gearless-HVLS-fan", benefit_10ft_gl);
 
 const whyshouldhvls = [
     "Big commercial and industrial buildings experience problems like poor air circulation, an increase in indoor temperature, and higher energy costs. The ordinary ceiling fans or other methods of ventilation may require the installation of several units that use much energy and increase maintenance requirements. An Industrial HVLS fan is a better alternative with its energy efficiency and uniform airflow through big areas.",
-    "The Marut Air HVLS Fans are meant to increase comfort levels in workplaces and assist companies in minimizing their operational expenses. In addition, the energy-efficient design makes it possible for the fan to provide adequate ventilation, prevent heat accumulation, and ensure that workers enjoy comfort in the place of work. Good air circulation may also assist in keeping conditions constant in warehouses, industrial facilities, logistics parks, textile plants, food processing facilities, and other large facilities.",
-    "Durability and reliable performance make the Marut Air HVLS Fans an excellent choice for those businesses that aim at increasing productivity, cut down on energy usage, and attain operational efficiency in the long run."
+    "The Floent Air HVLS Fans are meant to increase comfort levels in workplaces and assist companies in minimizing their operational expenses. In addition, the energy-efficient design makes it possible for the fan to provide adequate ventilation, prevent heat accumulation, and ensure that workers enjoy comfort in the place of work. Good air circulation may also assist in keeping conditions constant in warehouses, industrial facilities, logistics parks, textile plants, food processing facilities, and other large facilities.",
+    "Durability and reliable performance make the Floent Air HVLS Fans an excellent choice for those businesses that aim at increasing productivity, cut down on energy usage, and attain operational efficiency in the long run."
 ]
 
 export const whyshould = new Map()
