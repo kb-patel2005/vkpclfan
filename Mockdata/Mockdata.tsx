@@ -2342,6 +2342,18 @@ const manu_24ft = [
 ]
 
 //gearless
+
+const manu_8ft_gl = [
+  "Floent Technologies is a leading 8 feet gearless HVLS fan manufacturer, delivering efficient and cost‑effective ventilation solutions for compact industrial and commercial spaces. Our 8 feet gearless HVLS fan is designed for optimal airflow in smaller warehouses, gyms, retail outlets, and offices. Equipped with 3 Rib Blades, this fan operates at a maximum speed of 90 RPM (variable from 0 to 90 RPM), ensuring consistent air circulation with minimal energy consumption. The gearless technology eliminates friction, reducing mechanical wear and maintenance costs, while ensuring quieter operation and longer service life.",
+  "Finished in glossy black with customizable color options, this 8 feet gearless HVLS fan integrates seamlessly into modern commercial and industrial environments. CE‑certified and built with premium materials, Austar’s 8 feet gearless HVLS fan guarantees durability, reliability, and performance. By reducing heat buildup and improving air quality, it helps lower energy costs and enhances comfort in smaller spaces, making it an ideal choice for gyms, retail stores, and compact industrial facilities."
+];
+
+const manu_10ft_gl = [
+  "Floent Technologies is a trusted 10 feet gearless HVLS fan manufacturer, offering advanced ventilation solutions for mid‑sized industrial and commercial spaces. Our 10 feet gearless HVLS fan is engineered for balanced airflow, creating a cooler and more comfortable environment in warehouses, factories, shopping malls, and gyms. Equipped with 3 Rib Blades, this fan operates at a maximum speed of 80 RPM (variable from 0 to 80 RPM), delivering uniform airflow with low power consumption. The gearless technology eliminates the need for a gearbox, reducing friction, mechanical wear, and maintenance costs, while ensuring quieter operation.",
+  "With a sleek glossy black finish and customizable color options, this 10 feet gearless HVLS fan blends into diverse industrial and commercial settings. CE‑certified and manufactured with high‑quality materials, Austar’s 10 feet gearless HVLS fan ensures durability, efficiency, and long‑term performance. By reducing humidity, condensation, and airborne contaminants, it improves air quality and workplace productivity, making it a reliable choice for factories, gyms, and medium‑sized open areas."
+];
+
+
 const manu_12ft_gl = [
     "Floent Technologies is a trusted 12 feet gearless HVLS fan manufacturer, offering high-performance, energy-efficient solutions for industrial and commercial applications. Our 12 feet gearless HVLS fans are designed to enhance air circulation, reduce humidity, and create a comfortable indoor environment in warehouses, factories, gymnasiums, and large public spaces. This gearless HVLS fan features 3 Rib Blades and operates at a maximum speed of 100 RPM (variable from 0 to 100 RPM), ensuring whisper-quiet, efficient airflow while minimizing energy consumption. The gearless mechanism eliminates friction, reducing wear and tear, extending lifespan, and ensuring low maintenance costs.",
     "With a sleek glossy black finish and customizable color options, our 12 Feet Gearless HVLS Fan seamlessly integrates into various interiors. Built with high-strength, CE-certified components, it guarantees safety, durability, and exceptional performance. Floent Technologies' HVLS ceiling fans help businesses optimize cooling efficiency, significantly lowering HVAC energy costs while maintaining consistent temperature control. These fans prevent air stratification, reduce heat stress, and improve air quality, making them an ideal choice for industries, commercial buildings, and large open spaces."
@@ -2374,8 +2386,8 @@ manufacturer.set("HVLS-gearless-fan", hvlsManufacturer);
 // manufacturer.set("24-feet-geared-HVLS-fan", manu_24ft);
 
 //gearless
-// manufacturer.set("8-feet-gearless-HVLS-fan", hvls_8ft_gearless);
-// manufacturer.set("10-feet-gearless-HVLS-fan", hvls_10ft_gearless);
+manufacturer.set("8-feet-gearless-HVLS-fan", manu_8ft_gl);
+manufacturer.set("10-feet-gearless-HVLS-fan", manu_10ft_gl);
 // manufacturer.set("12-feet-gearless-HVLS-fan", manu_12ft_gl);
 manufacturer.set("16-feet-gearless-HVLS-fan", manu_16ft_gl);
 // manufacturer.set("20-feet-gearless-HVLS-fan", manu_20ft_gl);
@@ -2448,6 +2460,23 @@ const benefit_24ft = {
     ]
 }
 
+const benefit_8ft_gl = {
+  paragraph: [
+    "The 8 feet gearless HVLS ceiling fan is designed for smaller industrial and commercial spaces, offering efficient air movement with very low energy consumption. Its compact size makes it ideal for gyms, retail outlets, and offices where consistent airflow is needed without high operating costs.",
+    "With gearless motor technology, the fan runs quietly below 40 dB and requires minimal maintenance, ensuring smooth operation and long service life. It eliminates friction and mechanical wear, making it a reliable choice for noise‑sensitive environments.",
+    "By improving air circulation and reducing humidity, the 8ft gearless HVLS fan enhances comfort, prevents stale air buildup, and lowers cooling costs. Built with CE‑certified components and customizable finishes, it combines durability, safety, and modern aesthetics for smaller commercial and industrial interiors."
+  ]
+};
+
+const benefit_10ft_gl = {
+  paragraph: [
+    "The 10 feet gearless HVLS ceiling fan provides balanced airflow for mid‑sized industrial and commercial spaces, delivering effective cooling with low energy consumption. It is well suited for warehouses, gyms, and shopping areas where reliable ventilation is essential.",
+    "Its gearless motor ensures quiet operation below 40 dB, reduced mechanical wear, and minimal maintenance requirements. The fan’s smooth performance and long lifespan make it a cost‑effective solution for facilities seeking sustainable ventilation.",
+    "By reducing strain on HVAC systems, the 10ft gearless HVLS fan lowers cooling expenses while maintaining consistent temperature balance. CE‑certified and available in customizable colors, it offers durability, safety, and aesthetic appeal alongside superior air circulation."
+  ]
+};
+
+
 const benefit_12ft_gl = {
     paragraph: [
         "A 12 feet gearless HVLS ceiling fan offers powerful air circulation with minimal energy consumption, reducing electricity costs while enhancing workplace comfort. The gearless design ensures whisper-quiet operation, making it suitable for factories, gyms, and commercial spaces. These large-diameter fans create consistent airflow, preventing hot spots and stale air buildup. By maintaining optimal temperature balance, they improve employee productivity and reduce heat-related discomfort.",
@@ -2489,6 +2518,8 @@ benefits.set("HVLS-gearless-fan", hvlsbenefits);
 
 // benefits.set("12-feet-gearless-HVLS-fan", benefit_12ft_gl);
 benefits.set("16-feet-gearless-HVLS-fan", benefit_16ft_gl);
+benefits.set("8-feet-gearless-HVLS-fan", benefit_8ft_gl);
+benefits.set("10-feet-gearless-HVLS-fan", benefit_10ft_gl);
 // benefits.set("20-feet-gearless-HVLS-fan", benefit_20ft_gl);
 // benefits.set("24-feet-gearless-HVLS-fan", benefit_24ft_gl);
 
