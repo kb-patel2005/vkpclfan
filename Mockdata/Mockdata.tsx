@@ -995,7 +995,7 @@ const hvls_8ft_gearless = {
         }
     ],
     table: [
-        { label: "Model", value: "ASGL086" },
+        { label: "Model", value: "FLGL086" },
         { label: "Diameter", value: "8 feet (2.4 m)" },
         { label: "Blade Quantity", value: "6" },
         { label: "Blade Material", value: "Aluminium 6063 T6, cambered aerofoil, 190 mm section, 2 ribs, Matt Black (customisable to RAL)" },
