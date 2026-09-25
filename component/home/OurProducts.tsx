@@ -15,7 +15,7 @@ const products = [
     },
     {
         title: "HVLS Fan",
-        slug: "HVLS-fan",
+        slug: "HVLS-gearless-fan",
         desc: "German Geared Motors, 5 Aero Blades & Die-Cast Hub.",
         img: "/images/hvls.jpg",
     },
