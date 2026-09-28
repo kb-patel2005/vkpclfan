@@ -16,7 +16,7 @@ const data = [
         leftdata: "15,000 CFM",
         rightone: "POWER",
         rightdata: "5 HP",
-        category: "CENTRIFUGAL FANS",
+        category: "HVLS FANS",
         img: "/images/hvls.jpg",
         icon: (
             <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -242,7 +242,7 @@ export default function Products() {
     const [showFilters, setShowFilters] = useState(false);
 
     const activeProducts = () => {
-        return data.filter((e) => (e.category.toLowerCase().includes(search.toLowerCase())) || e.title.toLowerCase().includes(search.toLowerCase()) || search == "")
+        return (data.filter((e) => (e.category.toLowerCase().includes(search.toLowerCase())) || e.title.toLowerCase().includes(search.toLowerCase()) || search == ""))
     }
 
     useEffect(() => {
@@ -290,11 +290,11 @@ export default function Products() {
 
                         <Link
                             href="/products"
-                            onClick={() => setSearch("CENTRIFUGAL FANS")}
-                            className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${search === "CENTRIFUGAL FANS" ? "border-b-2 border-[#09273A] pb-2" : ""
+                            onClick={() => setSearch("HVLS FANS")}
+                            className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${search === "HVLS FANS" ? "border-b-2 border-[#09273A] pb-2" : ""
                                 } `}
                         >
-                            CENTRIFUGAL FANS
+                            HVLS FANS
                         </Link>
                     </div>
                 </div>

@@ -964,7 +964,9 @@ Message: ${formData.message}`;
                 {/* Right side: Text */}
                 <div className="flex flex-col gap-4 text-left">
                     <h2 className="text-4xl font-bold font-sora">
-                        How do {slug.split("-").slice(-2).join(" ")} work?
+                        How do {slug.split("-").slice(-2).
+                            map(word => word.charAt(0).toUpperCase() + word.slice(1)) // capitalize each
+                            .join(" ")} work?
                     </h2>
                     {principal.get(slug)?.map((e: string, idx: number) => (
                         <p
@@ -980,7 +982,9 @@ Message: ${formData.message}`;
             {/* why should */}
             {
                 whyshould.get(slug) && <div className='w-full max-w-7xl mx-auto flex flex-col gap-8 py-3'>
-                    <h2 className='text-4xl font-bold font-sora text-center'>Why Should You Buy an Industrial {slug.split("-").slice(-2).join(" ")}?</h2>
+                    <h2 className='text-4xl font-bold font-sora text-center'>Why Should You Buy an Industrial {slug.split("-").slice(-2).
+                        map(word => word.charAt(0).toUpperCase() + word.slice(1)) // capitalize each
+                        .join(" ")}?</h2>
                     {
                         whyshould.get(slug).map((e: string, idx: number) => (
                             <p className='font-inter font-normal text-[16px] leading-[22px] lg:leading-[24px] text-[#5D5D5D]' key={idx}>{e}</p>
@@ -992,7 +996,9 @@ Message: ${formData.message}`;
             {application.get(slug) && (
                 <div className="w-full max-w-7xl mx-auto flex flex-col gap-8 py-3">
                     <h2 className="text-4xl font-bold font-sora text-center">
-                        {slug.split("-").slice(-2).join(" ")} Applications in Different Industries
+                        {slug.split("-").slice(-2).
+                            map(word => word.charAt(0).toUpperCase() + word.slice(1)) // capitalize each
+                            .join(" ")} Applications in Different Industries
                     </h2>
 
                     {application.get(slug).map((section: any, idx: number) => (

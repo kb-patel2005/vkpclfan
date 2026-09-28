@@ -58,7 +58,16 @@ export default function Navbar() {
                     <div className="flex shrink-0 items-center">
                         <Link
                             href="/"
-                            onClick={() => setMenuOpen(false)}
+                            onClick={() => {
+                                if (window.location.pathname == "/") {
+                                    // Already on home → scroll to top
+                                    window.scrollTo({ top: 0, behavior: "smooth" });
+                                } else {
+                                    // Navigate to home
+                                    router.push("/");
+                                }
+                                setMenuOpen(false)
+                            }}
                         >
                             <Image
                                 src="/floent.png"

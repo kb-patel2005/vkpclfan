@@ -155,6 +155,13 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/about"
+                    onClick={() => {
+                      if (window.location.pathname == "/about") {
+                        // Already on home → scroll to top
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }
+                    }}
+
                     className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]"
                   >
                     About
@@ -162,27 +169,61 @@ export default function Footer() {
 
                 </li>
                 <li>
-                  <Link href="/products" className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
+                  <Link href="/products"
+                    onClick={() => {
+                      if (window.location.pathname == "/products") {
+                        // Already on home → scroll to top
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }
+                    }}
+                    className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
                     Our Products
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog" className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
+                  <Link href="/blog"
+                    onClick={() => {
+                      if (window.location.pathname == "/blog") {
+                        // Already on home → scroll to top
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }
+                    }}
+                    className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
                     Blog
                   </Link>
                 </li>
                 <li>
-                  <Link href="/gallery" className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
+                  <Link href="/gallery"
+                    onClick={() => {
+                      if (window.location.pathname == "/gallery") {
+                        // Already on home → scroll to top
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }
+                    }}
+                    className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
                     Gallery
                   </Link>
                 </li>
                 <li className="lg:hidden">
-                  <Link href="/contact" className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
+                  <Link href="/contact"
+                    onClick={() => {
+                      if (window.location.pathname == "/contact") {
+                        // Already on home → scroll to top
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }
+                    }} className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
                     Contact Us
                   </Link>
                 </li>
                 <li>
-                  <Link href="/career" className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
+                  <Link href="/career"
+                    onClick={() => {
+                      if (window.location.pathname == "/career") {
+                        // Already on home → scroll to top
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }
+                    }}
+                    className="link-hover transition font-normal text-[#5D5D5D] text-[14px] duration-500 hover:text-[#FDCD2E]">
                     Career
                   </Link>
                 </li>
@@ -197,17 +238,38 @@ export default function Footer() {
 
               <ul className="space-y-3 text-sm">
                 <li>
-                  <Link href="/contact" className="link-hover transition text-[#5D5D5D] text-[14px] hover:text-[#FDCD2E]">
+                  <Link href="/contact"
+                    onClick={() => {
+                      if (window.location.pathname == "/contact") {
+                        // Already on home → scroll to top
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }
+                    }}
+                    className="link-hover transition text-[#5D5D5D] text-[14px] hover:text-[#FDCD2E]">
                     Contact Us
                   </Link>
                 </li>
                 <li>
-                  <Link href="/privacy" className="link-hover transition text-[#5D5D5D] text-[14px] hover:text-[#FDCD2E]">
+                  <Link href="/privacy"
+                    onClick={() => {
+                      if (window.location.pathname == "/privacy") {
+                        // Already on home → scroll to top
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }
+                    }}
+                    className="link-hover transition text-[#5D5D5D] text-[14px] hover:text-[#FDCD2E]">
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link href="/term-conditions" className="link-hover transition text-[#5D5D5D] text-[14px] hover:text-[#FDCD2E]">
+                  <Link href="/term-conditions"
+                    onClick={() => {
+                      if (window.location.pathname == "/term-conditions") {
+                        // Already on home → scroll to top
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }
+                    }}
+                    className="link-hover transition text-[#5D5D5D] text-[14px] hover:text-[#FDCD2E]">
                     Terms and Services
                   </Link>
                 </li>
@@ -274,6 +336,6 @@ export default function Footer() {
         </div>
 
       </div>
-    </footer>
+    </footer >
   );
 }
