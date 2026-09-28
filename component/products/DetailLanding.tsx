@@ -399,18 +399,18 @@ Message: ${formData.message}`;
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
                     {featureandadv.get(newSlug)?.map((item: any, index: number) => (
-                        <motion.div
+                        <div
                             key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="flex flex-col items-center text-center 
-                 transform transition duration-500 ease-in-out 
-                 hover:bg-[#fdcd2e] p-2 rounded-2xl hover:scale-110"
+                            className="flex flex-col items-center text-center
+             transform transition duration-500 ease-in-out 
+             p-2 rounded-2xl 
+             hover:scale-110 hover:shadow-lg hover:shadow-[#fdcd2e] hover:bg-transparent
+             animate-fadeIn"
                         >
                             <div className="h-[50px] w-[50px] shrink-0 flex items-center justify-center">
                                 {item.icon}
                             </div>
+
                             <div className="mt-3 flex flex-col items-center">
                                 <h3 className="font-sora font-bold text-[18px] lg:text-[20px] leading-[24px] lg:leading-[28px] text-[#09273A]">
                                     {item.features}
@@ -419,7 +419,8 @@ Message: ${formData.message}`;
                                     {item.advantage}
                                 </p>
                             </div>
-                        </motion.div>
+                        </div>
+
                     ))}
                 </div>
             </div>
