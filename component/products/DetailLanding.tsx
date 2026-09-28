@@ -1,4 +1,5 @@
 'use client'
+
 import { motion } from 'framer-motion';
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
@@ -7,6 +8,7 @@ import HeroSwiper from '../common/HeroSwiper';
 import { application, featureandadv, features, principal, specification, title_description, whyshould } from '@/Mockdata/Mockdata';
 import Image from 'next/image';
 import { categoryOfFan, model } from '@/Mockdata/Model';
+import { useSlug } from '@/context/SlugContext';
 
 const models = [
     {
@@ -300,13 +302,18 @@ const generateFanCodes = (arr: Array<string>): string => {
 
 export default function DetailLanding({ slug }: { slug: string }) {
 
+    const { newSlug, setNewSlug } = useSlug();
+
+    const [data, setData] = useState(specification.get(slug));
+
     useEffect(() => {
         if (window.location.hash) {
-            setActive("Ask For a Price")
+            setActive("Ask For a Price");
         }
-    }, []);
+        setNewSlug(slug); // update context
+        setData(specification.get(slug)); // use slug directly
+    }, [slug]);
 
-    const data = specification.get(slug);
 
     const [active, setActive] = useState("Description");
 
@@ -347,6 +354,8 @@ Message: ${formData.message}`;
         window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`, "_blank");
     };
 
+    if (!newSlug || !data) return (<h1></h1>);
+
     return (
         <section className='w-full flex flex-col gap-4 lg:gap-12 lg:px-0 px-5 pt-5 lg:pt-10 bg-[#F8F9FA]'>
             {/* nav */}
@@ -376,43 +385,46 @@ Message: ${formData.message}`;
                             className="font-semibold text-slate-800 capitalize"
                             aria-current="page"
                         >
-                            {slug}
+                            {newSlug}
                         </li>
                     </ol>
                 </nav>
             </div>
             {/* models */}
-            <HeroSwiper models={model.get(slug)} features={features.get(slug)} setTab={setActive} title={title_description.get(slug)[0]} slug={slug} description={title_description.get(slug)[1]} />
+            <HeroSwiper models={model.get(slug)} features={features.get(newSlug)} setTab={setActive} title={title_description.get(newSlug)?.[0]} slug={slug} description={title_description.get(newSlug)?.[1]} />
 
             {/* fetures and adva */}
             <div className='w-full max-w-7xl mx-auto mt-2'>
                 <h2 className='text-4xl font-bold font-sora mb-12 text-center'>features and Advantages</h2>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
-                    {featureandadv.get(slug)?.map((item: any, index: number) => (
-                        <div
+                    {featureandadv.get(newSlug)?.map((item: any, index: number) => (
+                        <motion.div
                             key={index}
-                            className="flex flex-col items-center text-center"
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            className="flex flex-col items-center text-center 
+                 transform transition duration-500 ease-in-out 
+                 hover:bg-[#fdcd2e] p-2 rounded-2xl hover:scale-110"
                         >
                             <div className="h-[50px] w-[50px] shrink-0 flex items-center justify-center">
                                 {item.icon}
                             </div>
-
                             <div className="mt-3 flex flex-col items-center">
                                 <h3 className="font-sora font-bold text-[18px] lg:text-[20px] leading-[24px] lg:leading-[28px] text-[#09273A]">
                                     {item.features}
                                 </h3>
-
                                 <p className="mt-2 max-w-[260px] font-inter font-normal text-[14px] leading-[22px] text-[#5D5D5D]">
                                     {item.advantage}
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
 
-            {categoryOfFan.get(slug) &&
+            {categoryOfFan.get(newSlug) &&
                 (
                     <div className='w-full'>
                         <div className="flex flex-col md:flex-row items-center gap-8 mb-12 mx-auto max-w-7xl">
@@ -421,9 +433,9 @@ Message: ${formData.message}`;
                                 <div className='flex gap-2 items-center mb-4'>
                                     <span className='w-5 h-0.5 bg-[#fdcd2e]'></span> <span className='tracking-[3px] text-[12px] font-bold'>THE RANGE</span>
                                 </div>
-                                <h2 className="text-4xl font-bold mb-4">{categoryOfFan.get(slug).heading} <span className='text-[#fdcd2e]'>MANUFACTURER</span> </h2>
+                                <h2 className="text-4xl font-bold mb-4">{categoryOfFan.get(newSlug)?.heading} <span className='text-[#fdcd2e]'>MANUFACTURER</span> </h2>
 
-                                <p className="text-gray-700 mb-6">{categoryOfFan.get(slug).description}</p>
+                                <p className="text-gray-700 mb-6">{categoryOfFan.get(newSlug)?.description}</p>
 
                                 <ul className="space-y-4">
                                     {categoryOfFan.get(slug).list.map((item: string, i: number) => (
@@ -559,7 +571,7 @@ Message: ${formData.message}`;
                                 Description
                             </h2> */}
 
-                            {data.description.map((section: any, idx: number) => (
+                            {specification.get(newSlug).description.map((section: any, idx: number) => (
                                 <div key={idx} className="">
                                     <h3 className="font-sora font-bold uppercase text-[20px] leading-[28px] text-[#09273A] mb-3">
                                         {section.heading}
@@ -608,7 +620,7 @@ Message: ${formData.message}`;
                                 <table className="w-full border-collapse">
                                     <thead>
                                         <tr className="bg-[#09273A] text-white">
-                                            {Object.keys(data.table[0]).map((key) => (
+                                            {Object.keys(specification.get(newSlug).table[0]).map((key) => (
                                                 <th
                                                     key={key}
                                                     className="text-left px-5 py-3 font-inter font-medium text-[14px] leading-[20px] tracking-[0.14px]"
@@ -620,7 +632,7 @@ Message: ${formData.message}`;
                                     </thead>
 
                                     <tbody>
-                                        {data.table.map((item: Object, index: number) => (
+                                        {specification.get(newSlug).table.map((item: Object, index: number) => (
                                             <tr
                                                 key={index}
                                                 className={
@@ -648,7 +660,7 @@ Message: ${formData.message}`;
                     {/* SAFETY */}
                     {active === "Safety features" && (
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                            {data.safety.map((card: any, idx: number) => (
+                            {specification.get(newSlug).safety.map((card: any, idx: number) => (
                                 <div
                                     key={idx}
                                     className="flex flex-col justify-center border rounded-lg p-6 shadow-md bg-white 
@@ -676,7 +688,7 @@ Message: ${formData.message}`;
                     {/* WARRENTY */}
                     {active === "warrenty" && (
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {data.warrenty.map((card: any, idx: number) => (
+                            {specification.get(newSlug).warrenty.map((card: any, idx: number) => (
                                 <div
                                     key={idx}
                                     className="flex flex-col justify-center border rounded-lg p-6 shadow-md bg-white 
@@ -708,7 +720,7 @@ Message: ${formData.message}`;
                                 Description
                             </h2> */}
 
-                            {data.installation.map((section: any, idx: number) => (
+                            {specification.get(newSlug).installation.map((section: any, idx: number) => (
                                 <div key={idx} className="">
                                     <h3 className="font-sora font-bold uppercase text-[20px] leading-[28px] mb-3">
                                         {section.heading}

@@ -2,6 +2,7 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { submodel } from "@/Mockdata/Model"
 import { useRouter } from "next/navigation"
+import { useSlug } from "@/context/SlugContext"
 
 interface Model {
   url: string
@@ -23,6 +24,8 @@ interface Props {
 }
 
 export default function HeroSwiper({ models, features, setTab,title, description,slug }: Props) {
+
+  const {newSlug, setNewSlug} =useSlug();
   const [active, setActive] = useState("Description")
   const [heroimage, setHeroimage] = useState(models[0].url)
   const [activeModel, setActiveModel] = useState(-1)
@@ -75,23 +78,25 @@ export default function HeroSwiper({ models, features, setTab,title, description
               className="text-black font-bold text-[12px] leading-3 tracking-[1.2px] py-2 px-4 bg-white cursor-pointer text-center"
               onClick={() => {
                 setHeroimage(models[0].url)
-                setActiveModel(-1)
+                // setActiveModel(-1)
+                setNewSlug(slug)
               }}
             >
               MODELS
             </span>
             <ul className="flex flex-row lg:flex-col lg:gap-2 gap-0 justify-between mt-2">
-              {submodel.get(slug)?.map((e:any, idx:number) => (
+              {submodel.get(newSlug)?.map((e:any, idx:number) => (
                 <li
                   key={e.title}
-                  className={`text-center font-bold text-[9px] lg:text-xs leading-3 tracking-[1.2px] py-2 px-2 cursor-pointer ${e.slug === slug
+                  className={`text-center font-bold text-[9px] lg:text-xs leading-3 tracking-[1.2px] py-2 px-2 cursor-pointer ${e.slug === newSlug
                       ? "bg-white text-black"
                       : "text-white"
                     }`}
                   onClick={() => {
                     setHeroimage(models[0].url)
                     setActiveModel(idx);
-                    router.push(`/products/${e.slug}`)
+                    // router.push(`/products/${e.slug}`)
+                    setNewSlug(e.slug);
                   }}
                 >
                   {e.title}

@@ -1,5 +1,6 @@
 'use client'
 
+import { useSlug } from "@/context/SlugContext";
 import { motion } from "framer-motion";
 
 
@@ -72,7 +73,10 @@ const features = [
   },
 ];
 
-export default function WhyChooseHVLS({title}:{title:string}) {
+export default function WhyChooseHVLS() {
+
+  const {newSlug} = useSlug();
+
   return (
     <section className="bg-[#F8F9FA] pb-8 lg:pb-15 lg:pt-16 px-5">
       <motion.div
@@ -81,7 +85,7 @@ export default function WhyChooseHVLS({title}:{title:string}) {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}  className="max-w-7xl mx-auto text-center">
         <span className="text-[12px] text-[#09273A] leading-4 font-semibold tracking-[1.2px] bg-[#09273A1A] px-4 py-1.5 rounded-full">
-          WHY CHOOSE {" "}{title
+          WHY CHOOSE {" "}{newSlug
                         .split("-")
                         .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // capitalize each
                         .join(" ")}</span>{" "}

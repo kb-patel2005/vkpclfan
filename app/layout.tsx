@@ -19,6 +19,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import { Space_Grotesk } from "next/font/google";
 import { SearchProvider } from "@/context/SearchContext";
 import { GalleryProvider } from "@/context/GalleryContext";
+import { SlugProvider } from "@/context/SlugContext";
 
 
 
@@ -109,13 +110,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
 
       <body className={`${inter.className} min-h-full flex flex-col`} suppressHydrationWarning>
-        <GalleryProvider>
-          <SearchProvider>
-            <Navbar />
-            {children}
-            <MobileBottomDiv />
-          </SearchProvider>
-        </GalleryProvider>
+        <SlugProvider>
+          <GalleryProvider>
+            <SearchProvider>
+              <Navbar />
+              {children}
+              <MobileBottomDiv />
+            </SearchProvider>
+          </GalleryProvider>
+        </SlugProvider>
       </body>
     </html>
   );

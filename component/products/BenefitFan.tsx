@@ -1,10 +1,15 @@
 'use client'
 
+import { useSlug } from '@/context/SlugContext';
 import { benefits } from '@/Mockdata/Mockdata'
 import { motion } from 'framer-motion'
 import React from 'react'
 
-export default function BenefitFan({ title }: { title: string }) {
+export default function BenefitFan() {
+
+
+  const { newSlug } = useSlug();
+
   return (
     <section className="w-full bg-[#F8F9FA] py-10 lg:py-0 px-5 lg:px-0">
       <motion.div
@@ -18,10 +23,10 @@ export default function BenefitFan({ title }: { title: string }) {
         <div className="w-full lg:w-[35%] flex flex-col gap-4 lg:gap-6">
           <h2 className="font-sora font-bold text-[32px] leading-[40px] lg:text-[40px] lg:leading-[48px]">
             Advantages of Industrial{" "}
-            <span className="text-[#FDCD2E]">{title.split("-").join(" ")}</span>
+            <span className="text-[#FDCD2E]">{newSlug.split("-").join(" ")}</span>
           </h2>
 
-          {benefits.get(title)&&Object.entries(benefits.get(title)).map(([key, value], idx) => {
+          {benefits.get(newSlug) && Object.entries(benefits.get(newSlug)).map(([key, value], idx) => {
             if (key === "paragraph" && Array.isArray(value)) {
               // Render paragraphs
               return (

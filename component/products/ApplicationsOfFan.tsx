@@ -108,6 +108,7 @@
 
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { useSlug } from "@/context/SlugContext";
 
 const datas = [
     {
@@ -330,7 +331,9 @@ function CategoryAutoSlideTrack() {
 }
 
 
-export default function ApplicationsOfFan({ title }: { title: string }) {
+export default function ApplicationsOfFan() {
+
+    const {newSlug} =useSlug()
 
     return (
         <section
@@ -360,7 +363,7 @@ export default function ApplicationsOfFan({ title }: { title: string }) {
 
                 <h2 className="font-sora font-bold text-4xl lg:leading-[57.6px] tracking-[-0.96px] text-[#09273A]">
                     Application of{" "}
-                    <span className="text-[#F4B51E]">{title
+                    <span className="text-[#F4B51E]">{newSlug
                         .split("-") 
                         .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // capitalize each
                         .join(" ")}</span>
