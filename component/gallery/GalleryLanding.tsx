@@ -4,10 +4,15 @@ import React, { useState } from 'react'
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useGallery } from '@/context/GalleryContext';
+import { useRouter } from 'next/navigation';
 
 export default function GalleryLanding() {
 
-    const {active, setActive, isAll, setIsAll} = useGallery();
+    const { active, setActive, isAll, setIsAll } = useGallery();
+    const router = useRouter();
+
+    const activeCss = "w-[48%] font-bold text-[10px] leading-4 tracking-[1.2px] bg-[#09273A] hover:bg-black px-3 text-center py-3 text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
+    const unactive = "w-[48%] font-bold text-[10px] text-center leading-4 tracking-[1.2px] border-[0.5px] border-[#09273A] bg-[#09273A1F] px-3 py-3  text-black transition hover:bg-[#FDCD2E] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
 
     return (
 
@@ -44,12 +49,22 @@ export default function GalleryLanding() {
                 </p>
 
                 {/* Buttons */}
-                <div className="flex flex-wrap gap-4 justify-center mt-10">
+                <div className="flex flex-wrap gap-2 lg:gap-4 justify-center mt-10">
                     <motion.button
                         whileTap={{ scale: 0.95 }}
                         whileHover={{ scale: 1.05 }}
-                        onClick={() => {setActive("ALL"); setIsAll(true);}}
-                        className="w-full font-bold text-xs leading-4 tracking-[1.2px] bg-[#09273A] hover:bg-black px-6 py-3 text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
+                        onClick={() => {
+                            setActive("ALL");
+                            setIsAll(true);
+
+                            // Scroll to the element in another component
+                            const galleryEl = document.getElementById("gallery");
+                            if (galleryEl) {
+                                galleryEl.scrollIntoView({ behavior: "smooth" });
+                            }
+                        }}
+                        // className={`w-full font-bold text-xs leading-4 tracking-[1.2px] bg-[#09273A] hover:bg-black px-6 py-3 text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]`}
+                        className={`${active ==  "ALL" ? activeCss : unactive}`}
                     >
                         ALL
                     </motion.button>
@@ -57,8 +72,16 @@ export default function GalleryLanding() {
                     <motion.button
                         whileTap={{ scale: 0.95 }}
                         whileHover={{ scale: 1.05 }}
-                        onClick={() => {setActive("INSTALLATIONS"); setIsAll(false)}}
-                        className="w-full font-bold text-xs leading-4 tracking-[1.2px] border-[0.5px] border-[#09273A] bg-[#09273A1F] px-6 py-3  text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
+                        onClick={() => {
+                            setActive("INSTALLATIONS");
+                            setIsAll(false);
+                            const galleryEl = document.getElementById("gallery");
+                            if (galleryEl) {
+                                galleryEl.scrollIntoView({ behavior: "smooth" });
+                            }
+                        }}
+                        className={`${active ==  "INSTALLATIONS" ? activeCss : unactive}`}
+                        // className="w-full font-bold text-xs leading-4 tracking-[1.2px] border-[0.5px] border-[#09273A] bg-[#09273A1F] px-6 py-3  text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                     >
                         INSTALLATIONS
                     </motion.button>
@@ -66,8 +89,16 @@ export default function GalleryLanding() {
                     <motion.button
                         whileTap={{ scale: 0.95 }}
                         whileHover={{ scale: 1.05 }}
-                        onClick={() => {setActive("MANUFACTURING"); setIsAll(false)}}
-                        className="w-full font-bold text-xs leading-4 tracking-[1.2px] border-[0.5px] border-[#09273A] bg-[#09273A1F] px-6 py-3  text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
+                        onClick={() => {
+                            setActive("MANUFACTURING");
+                            setIsAll(false)
+                            const galleryEl = document.getElementById("gallery");
+                            if (galleryEl) {
+                                galleryEl.scrollIntoView({ behavior: "smooth" });
+                            }
+                        }}
+                        className={`${active ==  "MANUFACTURING" ? activeCss : unactive}`}
+                        //className="w-full font-bold text-xs leading-4 tracking-[1.2px] border-[0.5px] border-[#09273A] bg-[#09273A1F] px-6 py-3  text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                     >
                         MANUFACTURING
                     </motion.button>
@@ -75,9 +106,17 @@ export default function GalleryLanding() {
                     <motion.button
                         whileTap={{ scale: 0.95 }}
                         whileHover={{ scale: 1.05 }}
-                        onClick={() => {setActive("PROJECTS"); setIsAll(false)}}
+                        onClick={() => {
+                            setActive("PROJECTS");
+                            setIsAll(false);
+                            const galleryEl = document.getElementById("gallery");
+                            if (galleryEl) {
+                                galleryEl.scrollIntoView({ behavior: "smooth" });
+                            }
+                        }}
+                        className={`${active ==  "PROJECTS" ? activeCss : unactive}`}
 
-                        className="w-full font-bold text-xs leading-4 tracking-[1.2px] border-[0.5px] border-[#09273A] bg-[#09273A1F] px-6 py-3  text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
+                        // className="w-full font-bold text-xs leading-4 tracking-[1.2px] border-[0.5px] border-[#09273A] bg-[#09273A1F] px-6 py-3  text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                     >
                         PROJECTS
                     </motion.button>

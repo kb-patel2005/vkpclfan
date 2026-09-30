@@ -52,7 +52,7 @@ Message: ${formData.message}`;
             <div className="grid grid-cols-12 gap-6">
                 {/* Left side: 5 columns */}
                 <div className="col-span-12 lg:col-span-5 flex flex-col gap-6">
-                    <div className="bg-white flex flex-col gap-6 p-8 border-l-4 border-l-[#09273A]">
+                    <div className="bg-white flex flex-col gap-6 p-5 lg:p-8 border-l-4 border-l-[#09273A]">
                         <h2 className='text-xs leading-4 tracking-[1.2px] font-bold'>DIRECT COMMUNICATION</h2>
                         <div className='flex flex-col gap-6'>
                             <div className='flex gap-4'>
@@ -63,7 +63,7 @@ Message: ${formData.message}`;
                                 </div>
                                 <div className='flex flex-col gap-1'>
                                     <p className='font-medium text-[#434656] leading-4 tracking-[0.14px]'>Global Support HQ</p>
-                                    <div className='font-manrope font-bold text-2xl leading-8 text-[#121B2E]'>+1 (800) 555-0199</div>
+                                    <div className='font-manrope font-bold text-2xl leading-8 text-[#121B2E]'>+91 9925624342</div>
                                 </div>
                             </div>
                             <div className='flex gap-4'>
@@ -90,7 +90,7 @@ Message: ${formData.message}`;
                             </div>
                         </div>
                     </div>
-                    <div className="bg-white flex flex-col p-8 border-l-4 border-l-[#09273A] gap-6">
+                    <div className="bg-white flex flex-col p-5 lg:p-8 border-l-4 border-l-[#09273A] gap-6">
                         <h2 className='text-xs leading-4 tracking-[1.2px] font-bold'>HEADQUARTERS</h2>
                         <div className='flex gap-4'>
                             <div>
@@ -118,6 +118,7 @@ Message: ${formData.message}`;
                                 style={{ border: 0 }}
                                 allowFullScreen
                                 loading="lazy"
+                                className='lg:h-[250px] h-[200px]'
                                 referrerPolicy="no-referrer-when-downgrade"
                             />
 

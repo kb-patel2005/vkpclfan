@@ -455,7 +455,7 @@ export default function Products() {
                                 whileTap={{ scale: 0.95 }}
                                 whileHover={{ scale: 1.05 }}
                                 onClick={() => router.push("/products/exhuast-fan")}
-                                className="cursor-pointer w-full font-inter border bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
+                                className="cursor-pointer w-full font-inter border bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-[#FDCD2E] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                             >
                                 VIEW DETAILS →
                             </motion.button>
@@ -474,7 +474,7 @@ export default function Products() {
                             className="relative w-full sm:w-[48%] lg:w-[32%] lg:min-h-[520px] rounded-sm border border-gray-200 bg-white overflow-hidden shadow-[0px_4px_12px_0px_#071B3A0D]"
                         >
                             {/* Icon */}
-                            <div className="h-10 w-10 absolute top-3 left-3 rounded-md bg-white flex items-center justify-center z-10">
+                            <div className="h-10 w-10 absolute top-3 left-3 rounded-md bg-white hover:bg-[#FDCD2E] flex items-center justify-center z-10">
                                 {e.icon}
                             </div>
 
@@ -523,7 +523,7 @@ export default function Products() {
                                     whileTap={{ scale: 0.95 }}
                                     whileHover={{ scale: 1.05 }}
                                     onClick={() => router.push(`/products/${e.slug}`)}
-                                    className="cursor-pointer w-full border bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent"
+                                    className="cursor-pointer w-full border hover:bg-[#FDCD2E] bg-white px-6 py-3 text-sm font-medium text-black transition"
                                 >
                                     VIEW SPECS →
                                 </motion.button>

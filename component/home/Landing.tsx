@@ -56,7 +56,7 @@ export default function Landing() {
                         whileTap={{ scale: 0.95 }}
                         whileHover={{ scale: 1.05 }}
                         onClick={()=>router.push("/contact")}
-                        className="w-full font-inter border bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
+                        className="w-full font-inter border bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-[#FDCD2E] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                     >
                         TALK TO AN ENGINEER
                     </motion.button>

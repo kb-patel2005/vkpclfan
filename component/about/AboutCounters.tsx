@@ -20,7 +20,7 @@ function Card1({
   title: string;
 }) {
   return (
-    <div className="flex flex-col gap-2 px-4 justify-center items-center hover:scale-105 transition">
+    <div className="flex flex-col gap-2 px-4 lg:py-0 py-2 rounded-2xl justify-center items-center hover:scale-105 hover:shadow-2xl hover:shadow-[#fdcd2e] transition">
       {typeof num === "string" ? (
         // <h2 className="font-jakarta text-[56px] lg:w-[250px] font-extrabold leading-[56px] tracking-[-1.68px] text-center">
         <h2 className="font-jakarta text-[45px] lg:w-[250px] font-extrabold leading-[56px] tracking-[-1.68px] text-center">
@@ -28,7 +28,7 @@ function Card1({
         </h2>
       ) : (
         // <h2 className="font-jakarta text-[56px] w-[250px] font-extrabold leading-[56px] tracking-[-1.68px] text-center">
-        <h2 className="font-jakarta text-[45px] w-[250px] font-extrabold leading-[56px] tracking-[-1.68px] text-center">
+        <h2 className="font-jakarta text-[45px] lg:w-[250px] font-extrabold leading-[56px] tracking-[-1.68px] text-center">
           <CountUp end={num} duration={2} />
           {suffix}
         </h2>
@@ -52,7 +52,7 @@ export default function AboutCounters() {
           {data.map((item, index) => (
             <div
               key={index}
-              className={`flex justify-center w-full sm:w-1/2 lg:w-auto ${index !== 0 ? "lg:border-l border-[#C5C6CD]" : ""
+              className={`flex justify-center w-1/2 lg:w-auto ${index !== 0 ? "lg:border-l border-[#C5C6CD]" : ""
                 }`}
             >
               <Card1

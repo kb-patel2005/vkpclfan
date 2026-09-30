@@ -60,7 +60,7 @@ export default function AboutLanding() {
                             whileTap={{ scale: 0.95 }}
                             whileHover={{ scale: 1.05 }}
                             onClick={() => router.push("/products")}
-                            className="w-full font-inter border bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
+                            className="w-full font-inter border hover:bg-[#FDCD2E] hover:text-[#09273A] bg-white px-6 py-3 text-sm font-medium text-black transition sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                         >VIEW PRODUCTS</motion.button>
                     </div>
                 </motion.div>

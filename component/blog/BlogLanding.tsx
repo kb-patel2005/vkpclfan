@@ -39,7 +39,7 @@ export default function BlogLanding() {
                             }
                         }
                     }
-                    className="w-full font-inter border border-[#00132C] bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-transparent sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
+                    className="w-full font-inter border border-[#00132C] bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-[#FDCD2E] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                 >
                     EXPLORE INSIGHTS ↓
                 </motion.button>

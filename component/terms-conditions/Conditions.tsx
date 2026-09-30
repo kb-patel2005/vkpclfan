@@ -195,7 +195,7 @@ export default function Conditions() {
                             Terms and Conditions of Floent AIr
                         </p>
 
-                        <p className="font-medium w-fit py-2 px-4 bg-[#F5F3F5] text-[12px] leading-[16px] tracking-[0.6px] align-middle text-[#1B1B1D]">
+                        <p className="font-medium w-fit py-2 px-4 bg-[#F5F3F5] text-[12px] leading-[16px] tracking-[0.6px] align-middle text-[#1B1B1D] hover:bg-[#FDCD2E]">
                             Last updated: Aug 9, 2024
                         </p>
                     </div>

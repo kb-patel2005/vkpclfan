@@ -39,8 +39,8 @@ export default function GalleryImages() {
   const { active, setActive, isAll, setIsAll } = useGallery();
 
     return (
-        <section className="w-full bg-[#09273A] py-24 lg:px-0 px-5 flex flex-col gap-10">
-            <div className={`${isAll ? " grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4":"flex flex-wrap" } max-w-7xl mx-auto gap-4 `}>
+        <section className="w-full bg-[#09273A] py-24 lg:px-0 px-5 flex flex-col gap-10" id="gallery">
+            <div className={`${isAll ? " grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4":"flex flex-wrap justify-center" } max-w-7xl mx-auto gap-4 `}>
                 {galleryItems.map((item) => {
                     if (item.category == active || active == "ALL") {
                         return (
@@ -64,7 +64,11 @@ export default function GalleryImages() {
             <motion.button
                 whileTap={{ scale: 0.95 }}
                 whileHover={{ scale: 1.05 }}
-                className="mx-auto font-inter border tracking-[1.2px]  px-8 py-4 leading-4 text-xs font-medium text-white transition hover:bg-transparent"
+                onClick={()=>{
+                    setIsAll(true)
+                    setActive("ALL")
+                }}
+                className="mx-auto font-inter border tracking-[1.2px] hover:bg-[#FDCD2E] hover:text-[#09273A] px-8 py-4 leading-4 text-xs font-medium text-white transition"
             >
                 LOAD MORE PROJECTS
             </motion.button>

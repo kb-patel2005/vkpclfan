@@ -80,7 +80,7 @@ export default function Features() {
                             className="flex flex-col items-center rounded-lg p-0 md:p-3 lg:p-4 text-center transition hover:scale-105 cursor-pointer"
                         >
                             {/* Icon */}
-                            <div className="flex h-12 w-16 mb-4 items-center justify-center rounded-full bg-white opacity-80">
+                            <div className="hover:bg-[#FDCD2E] flex h-12 w-16 mb-4 items-center justify-center rounded-full bg-white opacity-80">
                                 <div className=" rounded-full">
                                     <Icon />
                                 </div>

@@ -212,9 +212,9 @@ export default function Policy() {
                     {/* HERO */}
                     <section
                         id="Overview"
-                        className="scroll-mt-28 lg:scroll-mt-32 px-5 sm:px-6 lg:px-14 py-10 lg:py-14 bg-white border border-[#5D5D5D]"
+                        className="scroll-mt-28 lg:scroll-mt-32 px-5 sm:px-6 lg:px-14 py-10 lg:py-14 bg-white border border-[#5D5D5D] hover:shadow-lg hover:shadow-[#FDCD2E] transition"
                     >
-                        <p className="font-jetBrainsMono font-medium text-[12px] bg-[#EEF2F6] py-1 px-3 w-fit leading-[16px] tracking-[0.6px] align-middle text-[#415F8C]">
+                        <p className="font-jetBrainsMono font-medium text-[12px] bg-[#EEF2F6] py-1 px-3 w-fit leading-[16px] tracking-[0.6px] align-middle text-[#415F8C] hover:bg-[#FDCD2E] transition">
                             CONFIDENTIAL & PROPRIETARY
                         </p>
                         <div className="flex flex-wrap items-center justify-between gap-10">
@@ -255,7 +255,11 @@ export default function Policy() {
                     </div>
 
                     {/* SECTION 01 */}
-                    <section
+                    <motion.section
+                        initial={{ x: 0, y: 100, opacity: 0 }}
+                        whileInView={{ x: 0, y: 0, opacity: 1 }}
+                        viewport={{ once: true, amount: 0.05 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
                         id="information-collect"
                         className="scroll-mt-28 lg:py-8 lg:scroll-mt-32"
                     >
@@ -272,7 +276,7 @@ export default function Policy() {
 
                             </div>
 
-                            <div className="lg:col-span-9 p-6 sm:p-8 lg:p-12 flex flex-col gap-6 bg-white border border-[#5D5D5D]">
+                            <div className="lg:col-span-9 p-6 sm:p-8 lg:p-12 flex flex-col gap-6 bg-white border border-[#5D5D5D] hover:shadow-2xl hover:shadow-[#FDCD2E] transition">
 
                                 <p className="font-normal text-[16px] leading-[28px] tracking-[0px] text-[#1B1B1D]">
                                     We systematically index specific data points to optimize our infrastructure
@@ -305,10 +309,14 @@ export default function Policy() {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </motion.section>
 
                     {/* SECTION 02 */}
-                    <section
+                    <motion.section
+                        initial={{ x: 0, y: 100, opacity: 0 }}
+                        whileInView={{ x: 0, y: 0, opacity: 1 }}
+                        viewport={{ once: true, amount: 0.05 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
                         id="how-we-use"
                         className="scroll-mt-28 lg:py-8 lg:scroll-mt-32"
                     >
@@ -324,7 +332,7 @@ export default function Policy() {
 
                             </div>
 
-                            <div className="lg:col-span-9 p-6 sm:p-8 lg:p-12 flex flex-col gap-6 bg-white border border-[#5D5D5D]">
+                            <div className="lg:col-span-9 p-6 sm:p-8 lg:p-12 flex flex-col gap-6 bg-white border border-[#5D5D5D] hover:shadow-2xl hover:shadow-[#FDCD2E] transition">
 
                                 <p className="font-normal text-[16px] leading-[28px] tracking-[0px] text-[#1B1B1D]">
                                     We use the collected information to:
@@ -372,10 +380,14 @@ export default function Policy() {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </motion.section>
 
                     {/* SECTION 03 */}
-                    <section
+                    <motion.section
+                        initial={{ x: 0, y: 100, opacity: 0 }}
+                        whileInView={{ x: 0, y: 0, opacity: 1 }}
+                        viewport={{ once: true, amount: 0.05 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
                         id="sharing-information"
                         className="scroll-mt-28 lg:py-8 lg:scroll-mt-32"
                     >
@@ -391,7 +403,7 @@ export default function Policy() {
 
                             </div>
 
-                            <div className="lg:col-span-9 p-6 sm:p-8 lg:p-12 flex flex-col gap-6 bg-white border border-[#5D5D5D]">
+                            <div className="lg:col-span-9 p-6 sm:p-8 lg:p-12 flex flex-col gap-6 bg-white border border-[#5D5D5D] hover:shadow-2xl hover:shadow-[#FDCD2E] transition">
 
                                 <p className="font-normal text-[16px] leading-[28px] tracking-[0px] text-[#1B1B1D]">
 
@@ -427,11 +439,15 @@ export default function Policy() {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </motion.section>
 
 
                     {/* SECTION 04 */}
-                    <section
+                    <motion.section
+                        initial={{ x: 0, y: 100, opacity: 0 }}
+                        whileInView={{ x: 0, y: 0, opacity: 1 }}
+                        viewport={{ once: true, amount: 0.05 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
                         id="tracking-tools"
                         className="scroll-mt-28 lg:py-8 lg:scroll-mt-32"
                     >
@@ -447,7 +463,7 @@ export default function Policy() {
 
                             </div>
 
-                            <div className="lg:col-span-9 p-6 sm:p-8 lg:p-12 flex flex-col gap-6 bg-white border border-[#5D5D5D]">
+                            <div className="lg:col-span-9 p-6 sm:p-8 lg:p-12 flex flex-col gap-6 bg-white border border-[#5D5D5D] hover:shadow-2xl hover:shadow-[#FDCD2E] transition">
 
                                 <p className="font-normal text-[16px] leading-[28px] tracking-[0px] text-[#1B1B1D]">
                                     We use various tools to collect and analyze data about your interactions with our Site:
@@ -476,14 +492,18 @@ export default function Policy() {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </motion.section>
 
                     {/* SECTION 04 */}
-                    <section
+                    <motion.section
+                        initial={{ x: 0, y: 100, opacity: 0 }}
+                        whileInView={{ x: 0, y: 0, opacity: 1 }}
+                        viewport={{ once: true, amount: 0.05 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
                         id=""
                         className="py-4 lg:py-12 border-y border-[#5D5D5D]  sm:px-6 lg:px-[76px] flex flex-col gap-6 lg:gap-8"
                     >
-                        <div className="border-2 border-[#071A33] py-4 px-8 text-center">
+                        <div className="border-2 border-[#071A33] py-4 px-8 text-center hover:shadow-2xl hover:shadow-[#FDCD2E] transition">
                             <h3 className="font-jakarata font-bold text-[24px] sm:text-[30px] lg:text-[36px] leading-tight tracking-[-0.36px] text-center align-middle uppercase text-[#071A33]">
                                 WE DO NOT SELL YOUR PERSONAL
                                 INFORMATION
@@ -493,14 +513,18 @@ export default function Policy() {
                             floent Technologies strictly prohibits the monetization of user data. Information is only distributed to authorized service providers bound by strict confidentiality agreements, or when legally compelled by authoritative bodies.
                         </p>
 
-                    </section>
+                    </motion.section>
 
                     {/* DARK SECURITY */}
-                    <section
+                    <motion.section
+                        initial={{ x: 0, y: 100, opacity: 0 }}
+                        whileInView={{ x: 0, y: 0, opacity: 1 }}
+                        viewport={{ once: true, amount: 0.05 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
                         id="data-security"
                         className="scroll-mt-28 lg:py-8 lg:scroll-mt-32"
                     >
-                        <div className="relative bg-[#07263A] p-6 sm:p-8 lg:p-[64px] overflow-hidden">
+                        <div className="relative bg-[#07263A] p-6 sm:p-8 lg:p-[64px] overflow-hidden hover:shadow-2xl hover:shadow-[#FDCD2E] transition">
                             <div className="flex flex-col gap-4">
                                 <span className="font-jakarata opacity-30 font-bold text-[80px] leading-[80px] tracking-[0px] align-middle text-[#EAF3FA]">
                                     O5
@@ -523,10 +547,14 @@ export default function Policy() {
                             </div>
 
                         </div>
-                    </section>
+                    </motion.section>
 
                     {/* RIGHTS */}
-                    <section
+                    <motion.section
+                        initial={{ x: 0, y: 100, opacity: 0 }}
+                        whileInView={{ x: 0, y: 0, opacity: 1 }}
+                        viewport={{ once: true, amount: 0.05 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
                         id="user-rights"
                         className="scroll-mt-28 lg:py-8 lg:scroll-mt-32"
                     >
@@ -555,7 +583,7 @@ export default function Policy() {
                                     </svg>
                                 ), "Deletion", "You can request that we delete your personal information, subject to legal obligations."],
                             ].map(([icon, title, desc], idx) => (
-                                <div key={idx} className="p-5 sm:p-6 bg-white border border-[#E8E8E8]">
+                                <div key={idx} className="p-5 sm:p-6 bg-white border border-[#E8E8E8] hover:shadow-md hover:shadow-[#FDCD2E] transition">
                                     <h4 className="font-bold text-[18px] leading-[32px] tracking-[0px] align-middle text-[#071A33] flex items-center gap-3">
                                         {icon} {title}
                                     </h4>
@@ -567,10 +595,14 @@ export default function Policy() {
                                 </div>
                             ))}
                         </div>
-                    </section>
+                    </motion.section>
 
                     {/* COOKIES AND TRACKING TECHNOLOGIES */}
-                    <section
+                    <motion.section
+                        initial={{ x: 0, y: 100, opacity: 0 }}
+                        whileInView={{ x: 0, y: 0, opacity: 1 }}
+                        viewport={{ once: true, amount: 0.05 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
                         id="cookies"
                         className="scroll-mt-28 lg:py-8 lg:scroll-mt-32"
                     >
@@ -583,16 +615,20 @@ export default function Policy() {
                                     Cookies & Tracking Technologies
                                 </h3>
                             </div>
-                            <div className="lg:col-span-9 p-6 sm:p-8 lg:p-12 flex flex-col gap-6 bg-white border border-[#5D5D5D]">
+                            <div className="lg:col-span-9 p-6 sm:p-8 lg:p-12 flex flex-col gap-6 bg-white border border-[#5D5D5D] hover:shadow-2xl hover:shadow-[#FDCD2E] transition">
                                 <p className="font-normal text-[16px] leading-[28px] tracking-[0px] text-[#1B1B1D]">
                                     We use cookies and similar tracking technologies to enhance your experience on our Site. Cookies are small files placed on your device that help us understand your preferences and improve our services. You can manage your cookie preferences through your browser settings.
                                 </p>
                             </div>
                         </div>
-                    </section>
+                    </motion.section>
 
                     {/* THIRD PARTY LINKS */}
-                    <section
+                    <motion.section
+                            initial={{ x: 0, y: 100, opacity: 0 }}
+                            whileInView={{ x: 0, y: 0, opacity: 1 }}
+                            viewport={{ once: true, amount: 0.05 }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
                         id="third-party-links"
                         className="scroll-mt-28 lg:py-8 lg:scroll-mt-32"
                     >
@@ -605,15 +641,19 @@ export default function Policy() {
                                     Third-Party Links
                                 </h3>
                             </div>
-                            <div className="lg:col-span-9 p-6 sm:p-8 lg:p-12 flex flex-col gap-6 bg-white border border-[#5D5D5D]">
+                            <div className="lg:col-span-9 p-6 sm:p-8 lg:p-12 flex flex-col gap-6 bg-white border border-[#5D5D5D] hover:shadow-2xl hover:shadow-[#FDCD2E] transition">
                                 <p className="font-normal text-[16px] leading-[28px] tracking-[0px] text-[#1B1B1D]">
                                     Our Site may contain links to third-party websites. We are not responsible for the privacy practices or content of these external sites. We encourage you to review the privacy policies of any third-party sites you visit.    </p>
                             </div>
                         </div>
-                    </section>
+                    </motion.section>
 
                     {/* Changes to This Privacy Policy */}
-                    <section
+                    <motion.section
+                            initial={{ x: 0, y: 100, opacity: 0 }}
+                            whileInView={{ x: 0, y: 0, opacity: 1 }}
+                            viewport={{ once: true, amount: 0.05 }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
                         id="changes-policy"
                         className="scroll-mt-28 lg:py-8 lg:scroll-mt-32"
                     >
@@ -626,16 +666,20 @@ export default function Policy() {
                                     Changes to This Privacy Policy
                                 </h3>
                             </div>
-                            <div className="lg:col-span-9 p-6 sm:p-8 lg:p-12 flex flex-col gap-6 bg-white border border-[#5D5D5D]">
+                            <div className="lg:col-span-9 p-6 sm:p-8 lg:p-12 flex flex-col gap-6 bg-white border border-[#5D5D5D] hover:shadow-2xl hover:shadow-[#FDCD2E] transition">
                                 <p className="font-normal text-[16px] leading-[28px] tracking-[0px] text-[#1B1B1D]">
                                     We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any significant changes by posting the revised policy on our Site with an updated effective date.
                                 </p>
                             </div>
                         </div>
-                    </section>
+                    </motion.section>
 
                     {/* CONTACT */}
-                    <section
+                    <motion.section
+                            initial={{ x: 0, y: 100, opacity: 0 }}
+                            whileInView={{ x: 0, y: 0, opacity: 1 }}
+                            viewport={{ once: true, amount: 0.05 }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
                         id="contact"
                         className="scroll-mt-28 lg:scroll-mt-32 lg:border-t-4 lg:pt-16 border-[#071A33]"
                     >
@@ -656,7 +700,7 @@ export default function Policy() {
 
                             </div>
 
-                            <div className="lg:col-span-5 border border-gray-300 p-5 sm:p-6 w-full lg:w-1/2 min-w-[250px]">
+                            <div className="lg:col-span-5 border border-gray-300 p-5 sm:p-6 w-full lg:w-1/2 min-w-[250px] hover:shadow-2xl hover:shadow-[#FDCD2E] transition">
                                 <p className="font-medium text-[12px] leading-[16px] tracking-[0.6px] align-middle text-[#415F8C] pb-2">
                                     DIRECT LINE
                                 </p>
@@ -677,7 +721,7 @@ export default function Policy() {
 
                             </div>
                         </div>
-                    </section>
+                    </motion.section>
                 </main>
             </motion.div>
         </section>

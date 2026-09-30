@@ -88,7 +88,7 @@ export default function IndustrialSolutions() {
                                     className="h-full object-cover transition-transform duration-500 hover:scale-110"
                                 />
                             </div>
-                            <div className="absolute top-5 left-4 z-10 flex items-center justify-center bg-white px-3 py-1">
+                            <div className="absolute top-5 left-4 z-10 flex items-center justify-center hover:bg-[#FDCD2E] bg-white px-3 py-1">
                                 <span className="text-xs font-medium text-[#09273A]">• Best Seller</span>
                             </div>
                             <div className="absolute bottom-3 left-3 right-3 rounded-2xl border border-white/20 bg-white/70 p-4 backdrop-blur-[20px]">
@@ -96,8 +96,8 @@ export default function IndustrialSolutions() {
                                     <h3 className="font-sora text-[20px] lg:text-[32px] font-semibold text-[#14324A]">
                                         {products[0].title}
                                     </h3>
-                                    <div className="flex justify-end">
-                                        <button className="rounded-xl bg-[#EDEEF0] lg:p-2 p-1.5" onClick={() => router.push("/products/exhuast-fan")}>
+                                    <div className="flex justify-end ">
+                                        <button className="rounded-xl hover:bg-[#FDCD2E] bg-[#EDEEF0] lg:p-2 p-1.5" onClick={() => router.push("/products/exhuast-fan")}>
                                             <ArrowRight size={20} />
                                         </button>
                                     </div>
@@ -122,7 +122,7 @@ export default function IndustrialSolutions() {
                                 <div
                                     key={index}
                                     className="relative overflow-hidden rounded-2xl bg-white shadow-md transition duration-300 hover:shadow-2xl hover:shadow-[#FDCD2E]/60 hover:shadow-xl align-middle">
-                                    <div className="absolute left-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow backdrop-blur-sm">
+                                    <div className="absolute left-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full hover:bg-[#FDCD2E] bg-white/90 shadow backdrop-blur-sm">
                                         <Building2 size={22} className="text-[#09273A]" />
                                     </div>
                                     <div className="h-[260px] w-full overflow-hidden">
@@ -137,7 +137,7 @@ export default function IndustrialSolutions() {
                                             <h3 className="font-sora text-[20px] font-semibold text-[#14324A]">
                                                 {item.title}
                                             </h3>
-                                            <motion.button className="rounded-xl bg-[#EDEEF0] p-2" onClick={() => router.push(`/products/${item.slug}`)}>
+                                            <motion.button className="rounded-xl bg-[#EDEEF0] p-2 hover:bg-[#FDCD2E]" onClick={() => router.push(`/products/${item.slug}`)}>
                                                 <ArrowRight size={20} />
                                             </motion.button>
                                         </div>
@@ -158,9 +158,9 @@ export default function IndustrialSolutions() {
                     className="overflow-hidden"
                 >
                     <img
-                        src="/images/factory2.png"
+                        src="/factory2.png"
                         alt="Factory"
-                        className="mx-auto w-full max-w-6xl object-contain"
+                        className="mx-auto pb-6 lg:pb-15 w-full max-w-6xl object-contain"
                     />
                 </div>
             </div>

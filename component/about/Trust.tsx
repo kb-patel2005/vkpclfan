@@ -226,7 +226,7 @@ export default function Trust() {
                     <div className="relative mt-6 flex h-[135.67px] w-full items-center gap-6 overflow-hidden rounded-[28px] border border-[#06245C1A] p-8 lg:w-[624.8px] shadow-sm transition duration-300 hover:shadow-2xl hover:shadow-[#FDCD2E]/60">
 
                         {/* Icon */}
-                        <div className="flex h-[69.67px] w-[63.67px] shrink-0 items-center justify-center rounded-[16px] bg-[#06245C0D] px-4 pt-4 pb-[22px]">
+                        <div className="flex hover:bg-[#FDCD2E] h-[69.67px] w-[63.67px] shrink-0 items-center justify-center rounded-[16px] bg-[#06245C0D] px-4 pt-4 pb-[22px]">
                             <svg
                                 width="32"
                                 height="32"

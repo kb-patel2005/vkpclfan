@@ -70,7 +70,7 @@ const Cards = ({ data }: { data: Support[] }) => {
             {data.map((item, index) => (
                 <div
                     key={index}
-                    className={`flex w-[100px] lg:w-[23%] flex-col items-center justify-center gap-3 ${index !== data.length - 1
+                    className={` flex w-[100px] p-2 hover:scale-105 transition lg:w-[23%] flex-col items-center justify-center gap-3 ${index !== data.length - 1
                         ? "lg:border-r border-[#C5C6CE]"
                         : ""
                         }`}
@@ -151,7 +151,7 @@ const MaterialCard = ({ data }: { data: Details[] }) => {
             {data.map((e, idx) => (
                 <div
                     key={idx}
-                    className="relative flex flex-col gap-2 pt-8 pb-6 px-6 w-full sm:w-[48%] lg:w-[30%] border border-[#C5C6CE]"
+                    className="relative flex flex-col gap-2 pt-8 pb-6 px-6 w-full sm:w-[48%] lg:w-[30%] hover:shadow-2xl hover:scale-105 transition hover:shadow-[#FDCD2E] border border-[#C5C6CE]"
                 >
                     {/* Top Accent Bar */}
                     <div className="h-2 w-8 bg-[#09273A] absolute top-0 left-0"></div>
@@ -224,7 +224,7 @@ const LifeSpan = ({ data }: { data: LifeSpan }) => {
 
 const Category = ({ text }: { text: string }) => {
     return (
-        <span className="w-fit font-medium text-[12px] leading-[16px] tracking-[1.2px] align-middle text-[#09273A] py-1 px-2 bg-[#F8F9FB] border border-[#C5C6CE]">
+        <span className="w-fit font-medium text-[12px] leading-[16px] tracking-[1.2px] align-middle text-[#09273A] hover:bg-[#FDCD2E] py-1 px-2 bg-[#F8F9FB] border border-[#C5C6CE]">
             {text}
         </span>
     )
@@ -393,7 +393,7 @@ export default function ArticleDetails() {
             <div
                 className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row gap-5 px-5 lg:px-0">
                 {/* Left Sidebar */}
-                <div className="w-full lg:w-[260px] lg:sticky lg:top-24 h-fit shrink-0">
+                <div className="lg:block hidden w-full lg:w-[260px] lg:sticky lg:top-24 h-fit shrink-0">
                     <p className="font-semibold text-xs tracking-[1.2px] pb-6">
                         IN THIS ARTICLE
                     </p>
