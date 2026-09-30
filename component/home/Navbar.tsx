@@ -215,7 +215,7 @@ export default function Navbar() {
                                 setActive("Ask For a Price");
                                 if (element) {
                                     const navHeight = document.querySelector("nav")?.offsetHeight || 0;
-                                    const y = element.getBoundingClientRect().top + window.pageYOffset - 400;
+                                    const y = element.getBoundingClientRect().top + window.pageYOffset - 450;
                                     window.scrollTo({ top: y, behavior: "smooth" });
                                 }
 
