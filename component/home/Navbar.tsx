@@ -162,7 +162,7 @@ export default function Navbar() {
 
             {/* MOBILE MENU */}
             {menuOpen && (
-                <div className="border-t border-gray-100 bg-white px-5 py-5 shadow-lg lg:hidden">
+                <nav className="border-t border-gray-100 bg-white px-5 py-5 shadow-lg lg:hidden">
 
                     {/* Navigation */}
                     <div className="flex flex-col">
@@ -215,7 +215,7 @@ export default function Navbar() {
                                 setActive("Ask For a Price");
                                 if (element) {
                                     const navHeight = document.querySelector("nav")?.offsetHeight || 0;
-                                    const y = element.getBoundingClientRect().top + window.pageYOffset - 450;
+                                    const y = element.getBoundingClientRect().top + window.pageYOffset;
                                     window.scrollTo({ top: y, behavior: "smooth" });
                                 }
 
@@ -229,7 +229,7 @@ export default function Navbar() {
                         Get Quote
                     </button>
 
-                </div>
+                </nav>
             )
             }
         </header >
