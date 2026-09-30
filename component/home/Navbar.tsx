@@ -207,25 +207,28 @@ export default function Navbar() {
                     {/* Mobile Get Quote */}
                     <button
                         onClick={() => {
-                            if (window.location.pathname == "/products/exhaust-fan") {
-                                setMenuOpen(false)
-
+                            setMenuOpen(false);
+                            if (
+                                window.location.pathname === "/products/exhaust-fan"
+                            ) {
                                 const element = document.getElementById("tabs");
-                                setActive("Ask For a Price")
+                                setActive("Ask For a Price");
                                 if (element) {
-                                    element.scrollIntoView({ behavior: "smooth", block: "start" });
+                                    const navHeight = document.querySelector("nav")?.offsetHeight || 0;
+                                    const y = element.getBoundingClientRect().top + window.pageYOffset - 400;
+                                    window.scrollTo({ top: y, behavior: "smooth" });
                                 }
-                            } else {
-                                setMenuOpen(false)
-                                router.push("/products/exhaust-fan#tabs")
-                            }
 
+                            } else {
+                                router.push("/products/exhaust-fan#tabs");
+                            }
 
                         }}
                         className="mt-4 block hover:bg-[#FDCD2E] hover:text-[#09273A] transition w-full rounded-full bg-[#09273A] px-6 py-3.5 text-center text-sm font-semibold text-white"
                     >
                         Get Quote
                     </button>
+
                 </div>
             )
             }

@@ -10,6 +10,7 @@ import Image from 'next/image';
 import { categoryOfFan, model } from '@/Mockdata/Model';
 import { useSlug } from '@/context/SlugContext';
 import { useQuote } from '@/context/QuoteContext';
+import { usePathname, useSearchParams } from 'next/navigation';
 
 const models = [
     {
@@ -304,22 +305,27 @@ const generateFanCodes = (arr: Array<string>): string => {
 export default function DetailLanding({ slug }: { slug: string }) {
 
     const { newSlug, setNewSlug } = useSlug();
-    const {active,setActive} = useQuote();
-
+    const { active, setActive } = useQuote();
     const [data, setData] = useState(specification.get(slug));
+    const pathname = usePathname();
+    const searchParams = useSearchParams();
 
     useEffect(() => {
-        if (window.location.hash) {
+        // Check if hash is present in URL
+        if (typeof window !== "undefined" && window.location.hash === "#tabs") {
             setActive("Ask For a Price");
+            const element = document.getElementById("tabs");
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        } else if (active === "") {
+            setActive("Description");
         }
 
-        setNewSlug(slug); 
-        active == "" ? setActive("Description") : "";// update context
-        setData(specification.get(slug)); // use slug directly
-    }, [slug]);
+        setNewSlug(slug);
+        setData(specification.get(slug));
+    }, [pathname, searchParams, slug, active]);
 
-
-   
 
     const [formData, setFormData] = useState({
         name: "",
@@ -406,10 +412,10 @@ Message: ${formData.message}`;
                         <div
                             key={index}
                             className="flex flex-col items-center text-center
-             transform transition duration-500 ease-in-out 
-             p-2 rounded-2xl 
-             hover:scale-110 hover:shadow-lg hover:shadow-[#fdcd2e] hover:bg-transparent
-             animate-fadeIn"
+                                transform transition duration-500 ease-in-out 
+                                p-2 rounded-2xl 
+                                hover:scale-110 hover:shadow-lg hover:shadow-[#fdcd2e] hover:bg-transparent
+                                animate-fadeIn"
                         >
                             <div className="h-[50px] w-[50px] shrink-0 flex items-center justify-center">
                                 {item.icon}
@@ -476,7 +482,7 @@ Message: ${formData.message}`;
                 <div className='w-full'>
                     <div
                         id='tabs'
-                        className={`max-w-7xl w-full mx-auto flex ${ (window.location.pathname== `/products/${newSlug}`) ? "lg:scroll-mt-0 scroll-mt-110": "" }  bg-white items-center gap-8 py-4 px-3 lg:px-16 overflow-x-auto whitespace-nowrap [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden`}
+                        className={`max-w-7xl w-full mx-auto flex scroll-m-0 bg-white items-center gap-8 py-4 px-3 lg:px-16 overflow-x-auto whitespace-nowrap `}
                     >
                         <Link
                             href="/products/abc"
