@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { hover, motion } from 'framer-motion';
 import { useGallery } from '@/context/GalleryContext';
 import { useRouter } from 'next/navigation';
 
@@ -50,9 +50,7 @@ export default function GalleryLanding() {
 
                 {/* Buttons */}
                 <div className="flex flex-wrap gap-2 lg:gap-4 justify-center mt-10">
-                    <motion.button
-                        whileTap={{ scale: 0.95 }}
-                        whileHover={{ scale: 1.05 }}
+                    <button
                         onClick={() => {
                             setActive("ALL");
                             setIsAll(true);
@@ -64,10 +62,10 @@ export default function GalleryLanding() {
                             }
                         }}
                         // className={`w-full font-bold text-xs leading-4 tracking-[1.2px] bg-[#09273A] hover:bg-black px-6 py-3 text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]`}
-                        className={`${active ==  "ALL" ? activeCss : unactive}`}
+                        className={`${active ==  "ALL" ? activeCss : unactive} hover:scale-105 transition`}
                     >
                         ALL
-                    </motion.button>
+                    </button>
 
                     <motion.button
                         whileTap={{ scale: 0.95 }}

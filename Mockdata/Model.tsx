@@ -8,11 +8,26 @@ export const gearlessHVLS = {
         "Wider speed band with high torque at low RPM",
         "Reduced maintenance schedule and fewer wear parts"
     ],
-    image:"/images/hvls.jpg"
+    image: "/images/hvls.jpg"
 }
 
+export const exhaustFan = {
+    heading: "EXHAUST FANS",
+    description: "Our exhaust fans are designed for efficient air circulation, low noise operation, and durable performance. Built with high‑quality materials, they ensure long‑lasting reliability in industrial and commercial spaces.",
+    list: [
+        "Direct driven PMSM motor — no gearbox, no gear oil, no oil leakage",
+        "Noise level below 40 dB, suited to noise-sensitive spaces",
+        "Glossy black Aluminium 6063 aerofoil blades, custom colours available",
+        "Wider speed band with high torque at low RPM",
+        "Reduced maintenance schedule and fewer wear parts"
+    ],
+    image: "/product-main-image.png"
+}
+
+
 export const categoryOfFan = new Map();
-categoryOfFan.set("HVLS-gearless-fan",gearlessHVLS);
+categoryOfFan.set("HVLS-gearless-fan", gearlessHVLS);
+categoryOfFan.set("exhaust-fan", exhaustFan);
 
 
 /***************Models ***************************/
@@ -33,10 +48,16 @@ const gearlessFans = [
     //   { title: "FLGL246", slug: "24-feet-gearless-HVLS-fan" }
 ];
 
+const exhaustFans =[
+    { title: "FLEH-1000", slug: "FLEH-1000-Exhaust-fan" },
+    { title: "FLEH-1220", slug: "FLEH-1220-Exhaust-fan" },
+    { title: "FLEH-1380", slug: "FLEH-1380-Exhaust-fan" },
+]
 
 export const submodel = new Map()
 
 submodel.set("HVLS-gearless-fan", gearlessFans)
+submodel.set("exhaust-fan", exhaustFans)
 
 // submodel.set("12-feet-geared-HVLS-fan", gearedModel)
 // submodel.set("16-feet-geared-HVLS-fan", gearedModel)
@@ -51,6 +72,11 @@ submodel.set("10-feet-gearless-HVLS-fan", gearlessFans);
 submodel.set("16-feet-gearless-HVLS-fan", gearlessFans);
 // submodel.set("20-feet-gearless-HVLS-fan", gearlessFans);
 // submodel.set("24-feet-gearless-HVLS-fan", gearlessFans);
+
+
+submodel.set("FLEH-1000-Exhaust-fan", exhaustFans);
+submodel.set("FLEH-1220-Exhaust-fan", exhaustFans);
+submodel.set("FLEH-1380-Exhaust-fan", exhaustFans);
 
 const fl = [
     {
@@ -72,7 +98,13 @@ const fl = [
 ];
 export const model = new Map();
 
-model.set("exhuast-fan", fl);
+model.set("exhaust-fan", fl);
+
+
+model.set("FLEH-1000-Exhaust-fan", fl);
+model.set("FLEH-1220-Exhaust-fan", fl);
+model.set("FLEH-1380-Exhaust-fan", fl);
+
 model.set("HVLS-gearless-fan", fl);
 // model.set("12-feet-geared-HVLS-fan", fl)
 // model.set("16-feet-geared-HVLS-fan", fl)

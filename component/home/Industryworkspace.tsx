@@ -5,6 +5,7 @@ import CountUp from "react-countup";
 import React from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { useQuote } from "@/context/QuoteContext";
 
 const data = [
   { num: 15, suffix: "+", title: "YEARS OF EXPERIENCE" },
@@ -40,6 +41,7 @@ function Card1({
 export default function Industryworkspace() {
 
   const router = useRouter();
+  const { active, setActive } = useQuote()
 
   return (
     <section className="flex w-full flex-col items-center bg-[#F8F9FA] gap-4 justify-center md:gap-5 px-5 py-6 sm:px-6 lg:gap-14 lg:pt-8 pb-12">
@@ -77,16 +79,33 @@ export default function Industryworkspace() {
           Our specialists are ready to provide a custom air-flow audit for your facility.
         </p>
         <div className="flex flex-wrap gap-4 lg:gap-6 justify-center">
-          <Link
-          href={'/products/exhuast-fan/#tabs'}
+          <button
+            onClick={() => {
+              if (window.location.pathname == "/products/exhaust-fan") {
+                const element = document.getElementById("tabs");
+                setActive("Ask For a Price")
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+              } else {
+                router.push("/products/exhaust-fan/#tabs")
+              }
+            }}
             className="w-full text-center sm:w-auto rounded-full border-2 border-white bg-white px-8 py-4 text-sm font-semibold text-black transition duration-300 hover:bg-transparent hover:text-white sm:px-12 sm:py-5 sm:text-base" >
             Get Your Free Quote
-          </Link>
-          <Link
-          href={"/contact"}
+          </button>
+          <button
+            onClick={() => {
+              if (window.location.pathname === "/contact") {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+              else {
+                router.push("/contact")
+              }
+            }}
             className="w-full text-center sm:w-auto rounded-full border-2 border-white bg-transparent px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:bg-white hover:text-[#09273A] sm:px-12 sm:py-5 sm:text-base" >
             Talk to an Expert
-          </Link>
+          </button>
 
         </div>
       </motion.div>

@@ -20,6 +20,7 @@ import { Space_Grotesk } from "next/font/google";
 import { SearchProvider } from "@/context/SearchContext";
 import { GalleryProvider } from "@/context/GalleryContext";
 import { SlugProvider } from "@/context/SlugContext";
+import { QuoteProvider } from "@/context/QuoteContext";
 
 
 
@@ -110,15 +111,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
 
       <body className={`${inter.className} min-h-full flex flex-col`} suppressHydrationWarning>
-        <SlugProvider>
-          <GalleryProvider>
-            <SearchProvider>
-              <Navbar />
-              {children}
-              <MobileBottomDiv />
-            </SearchProvider>
-          </GalleryProvider>
-        </SlugProvider>
+        <QuoteProvider>
+          <SlugProvider>
+            <GalleryProvider>
+              <SearchProvider>
+                <Navbar />
+                {children}
+                <MobileBottomDiv />
+              </SearchProvider>
+            </GalleryProvider>
+          </SlugProvider>
+        </QuoteProvider>
       </body>
     </html>
   );

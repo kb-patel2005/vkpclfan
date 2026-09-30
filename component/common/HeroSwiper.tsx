@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import { submodel } from "@/Mockdata/Model"
 import { useRouter } from "next/navigation"
 import { useSlug } from "@/context/SlugContext"
+import { specification } from "@/Mockdata/Mockdata"
 
 interface Model {
   url: string
@@ -21,9 +22,10 @@ interface Props {
   title: string
   description:string
   slug:string
+  setData: (value: string) => void
 }
 
-export default function HeroSwiper({ models, features, setTab,title, description,slug }: Props) {
+export default function HeroSwiper({ models, features, setTab,title, description,slug, setData }: Props) {
 
   const {newSlug, setNewSlug} =useSlug();
   const [active, setActive] = useState("Description")
@@ -80,6 +82,7 @@ export default function HeroSwiper({ models, features, setTab,title, description
                 setHeroimage(models[0].url)
                 // setActiveModel(-1)
                 setNewSlug(slug)
+                setData(specification.get(slug))
               }}
             >
               MODELS
@@ -97,6 +100,7 @@ export default function HeroSwiper({ models, features, setTab,title, description
                     setActiveModel(idx);
                     // router.push(`/products/${e.slug}`)
                     setNewSlug(e.slug);
+                    setData(specification.get(e.slug));
                   }}
                 >
                   {e.title}
@@ -165,9 +169,7 @@ export default function HeroSwiper({ models, features, setTab,title, description
             ))}
           </div>
 
-          <motion.button
-            whileTap={{ scale: 0.95 }}
-            whileHover={{ scale: 1.05 }}
+          <button
             onClick={() => {
               setTab("Ask For a Price")
               document.getElementById("tabs")?.scrollIntoView({
@@ -175,7 +177,7 @@ export default function HeroSwiper({ models, features, setTab,title, description
                 block: "start",
               })
             }}
-            className="w-full flex justify-center font-inter mt-6 bg-[#09273A] hover:bg-black px-6 py-3 text-sm font-medium text-white transition sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
+            className="w-full hover:scale-105 flex justify-center font-inter mt-6 bg-[#09273A] hover:bg-black px-6 py-3 text-sm font-medium text-white transition sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
           >
             <span className="mr-2">
               <svg
@@ -192,7 +194,7 @@ export default function HeroSwiper({ models, features, setTab,title, description
               </svg>
             </span>
             ASK FOR PRICE
-          </motion.button>
+          </button>
         </div>
       </div>
     </motion.div>

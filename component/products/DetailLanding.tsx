@@ -2,13 +2,14 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import React, { use, useEffect, useState } from 'react'
 import { SelectBox } from '../common/SelectBox';
 import HeroSwiper from '../common/HeroSwiper';
 import { application, featureandadv, features, principal, specification, title_description, whyshould } from '@/Mockdata/Mockdata';
 import Image from 'next/image';
 import { categoryOfFan, model } from '@/Mockdata/Model';
 import { useSlug } from '@/context/SlugContext';
+import { useQuote } from '@/context/QuoteContext';
 
 const models = [
     {
@@ -303,6 +304,7 @@ const generateFanCodes = (arr: Array<string>): string => {
 export default function DetailLanding({ slug }: { slug: string }) {
 
     const { newSlug, setNewSlug } = useSlug();
+    const {active,setActive} = useQuote();
 
     const [data, setData] = useState(specification.get(slug));
 
@@ -310,12 +312,14 @@ export default function DetailLanding({ slug }: { slug: string }) {
         if (window.location.hash) {
             setActive("Ask For a Price");
         }
-        setNewSlug(slug); // update context
+
+        setNewSlug(slug); 
+        setActive("Description");// update context
         setData(specification.get(slug)); // use slug directly
     }, [slug]);
 
 
-    const [active, setActive] = useState("Description");
+   
 
     const [formData, setFormData] = useState({
         name: "",
@@ -366,7 +370,7 @@ Message: ${formData.message}`;
                 >
                     <ol className="flex flex-wrap items-center gap-2 text-slate-500">
                         <li>
-                            <Link href="/" className="hover:text-[#FF4D30]">
+                            <Link href="/" className="hover:text-[#fdcd2e]">
                                 Home
                             </Link>
                         </li>
@@ -374,7 +378,7 @@ Message: ${formData.message}`;
                         <li aria-hidden="true">&gt;</li>
 
                         <li>
-                            <Link href="/products" className="hover:text-[#FF4D30]">
+                            <Link href="/products" className="hover:text-[#fdcd2e]">
                                 Products
                             </Link>
                         </li>
@@ -391,7 +395,7 @@ Message: ${formData.message}`;
                 </nav>
             </div>
             {/* models */}
-            <HeroSwiper models={model.get(slug)} features={features.get(newSlug)} setTab={setActive} title={title_description.get(newSlug)?.[0]} slug={slug} description={title_description.get(newSlug)?.[1]} />
+            <HeroSwiper setData={setData} models={model.get(slug)} features={features.get(newSlug)} setTab={setActive} title={title_description.get(newSlug)?.[0]} slug={slug} description={title_description.get(newSlug)?.[1]} />
 
             {/* fetures and adva */}
             <div className='w-full max-w-7xl mx-auto mt-2'>
@@ -467,12 +471,12 @@ Message: ${formData.message}`;
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.8, ease: "easeOut" }} className="w-full flex flex-col gap-[26px]">
+                transition={{ duration: 0.8, ease: "easeOut" }} className="w-full flex flex-col gap-[26px] ">
                 {/* Tabs */}
                 <div className='w-full'>
                     <div
                         id='tabs'
-                        className="max-w-7xl w-full mx-auto flex bg-white items-center gap-8 py-4 px-3 lg:px-16 overflow-x-auto whitespace-nowrap [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                        className="max-w-7xl w-full mx-auto flex lg:scroll-mt-0 scroll-mt-110 bg-white items-center gap-8 py-4 px-3 lg:px-16 overflow-x-auto whitespace-nowrap [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
                     >
                         <Link
                             href="/products/abc"
@@ -480,7 +484,7 @@ Message: ${formData.message}`;
                                 e.preventDefault();
                                 setActive("Description");
                             }}
-                            className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${active === "Description"
+                            className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${active == "Description"
                                 ? "border-b-2 border-[#09273A] pb-2"
                                 : ""
                                 }`}
@@ -949,7 +953,7 @@ Message: ${formData.message}`;
                 </div>
             </div>
 
-            <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 lg:gap-8 gap-3 items-center">
                 {/* Left side: Image */}
                 <div className="flex">
                     <Image
@@ -981,7 +985,7 @@ Message: ${formData.message}`;
 
             {/* why should */}
             {
-                whyshould.get(slug) && <div className='w-full max-w-7xl mx-auto flex flex-col gap-8 py-3'>
+                whyshould.get(slug) && <div className='w-full max-w-7xl mx-auto flex flex-col gap-4 lg:gap-8 py-3'>
                     <h2 className='text-4xl font-bold font-sora text-center'>Why Should You Buy an Industrial {slug.split("-").slice(-2).
                         map(word => word.charAt(0).toUpperCase() + word.slice(1)) // capitalize each
                         .join(" ")}?</h2>
@@ -994,7 +998,7 @@ Message: ${formData.message}`;
             }
 
             {application.get(slug) && (
-                <div className="w-full max-w-7xl mx-auto flex flex-col gap-8 py-3">
+                <div className="w-full max-w-7xl mx-auto flex flex-col gap-4 lg:gap-8 pb-1.5">
                     <h2 className="text-4xl font-bold font-sora text-center">
                         {slug.split("-").slice(-2).
                             map(word => word.charAt(0).toUpperCase() + word.slice(1)) // capitalize each

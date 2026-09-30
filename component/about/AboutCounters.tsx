@@ -20,7 +20,7 @@ function Card1({
   title: string;
 }) {
   return (
-    <div className="flex flex-col gap-2 px-4 lg:py-0 py-2 rounded-2xl justify-center items-center hover:scale-105 hover:shadow-2xl hover:shadow-[#fdcd2e] transition">
+    <div className="flex flex-col gap-2 px-4 lg:py-0 py-2 rounded-2xl justify-center items-center hover:scale-105  transition">
       {typeof num === "string" ? (
         // <h2 className="font-jakarta text-[56px] lg:w-[250px] font-extrabold leading-[56px] tracking-[-1.68px] text-center">
         <h2 className="font-jakarta text-[45px] lg:w-[250px] font-extrabold leading-[56px] tracking-[-1.68px] text-center">

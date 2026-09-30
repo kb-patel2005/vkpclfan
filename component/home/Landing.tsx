@@ -43,23 +43,19 @@ export default function Landing() {
 
                 {/* Buttons */}
                 <div className="flex flex-col gap-3 sm:flex-row sm:gap-5 lg:gap-8">
-                    <motion.button
-                        whileTap={{ scale: 0.95 }}
-                        whileHover={{ scale: 1.05 }}
+                    <button
                         onClick={()=>router.push("/products")}
-                        className="w-full font-inter bg-[#09273A] hover:bg-black px-6 py-3 text-sm font-medium text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
+                        className="w-full font-inter hover:scale-105 bg-[#09273A] hover:bg-black px-6 py-3 text-sm font-medium text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                     >
                         EXPLORE PRODUCTS
-                    </motion.button>
+                    </button>
 
-                    <motion.button
-                        whileTap={{ scale: 0.95 }}
-                        whileHover={{ scale: 1.05 }}
+                    <button
                         onClick={()=>router.push("/contact")}
-                        className="w-full font-inter border bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-[#FDCD2E] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
+                        className="w-full hover:scale-105 font-inter border bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-[#FDCD2E] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                     >
                         TALK TO AN ENGINEER
-                    </motion.button>
+                    </button>
                 </div>
             </motion.div>
         </section>

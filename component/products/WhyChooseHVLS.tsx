@@ -78,7 +78,7 @@ export default function WhyChooseHVLS() {
   const {newSlug} = useSlug();
 
   return (
-    <section className="bg-[#F8F9FA] pb-8 lg:pb-15 lg:pt-16 px-5">
+    <section className="bg-[#F8F9FA] pb-8 pt-5 lg:pb-15 lg:pt-16 px-5">
       <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}

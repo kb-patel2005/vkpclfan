@@ -175,7 +175,7 @@ export default function Policy() {
     }, []);
 
     return (
-        <section className="lg:px-0 px-5 my-15">
+        <section className="lg:px-0 px-5 my-6 lg:my-15">
             <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}

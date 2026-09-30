@@ -27,7 +27,7 @@ const data = [
     {
         title: "EXHAUST FAN",
         desc: "WAREHOUSE CEILING FAN",
-        slug: "exhuast-fan",
+        slug: "exhaust-fan",
         leftone: "DIAMETER",
         leftdata: "15,000 CFM",
         rightone: "COVERAGE",
@@ -43,7 +43,7 @@ const data = [
     {
         title: "AIR CIRCULATOR",
         desc: "WAREHOUSE CEILING FAN",
-        slug: "exhuast-fan",
+        slug: "exhaust-fan",
         leftone: "DIAMETER",
         leftdata: "15,000 CFM",
         rightone: "COVERAGE",
@@ -442,23 +442,19 @@ export default function Products() {
 
                         {/* Buttons */}
                         <div className="flex flex-col gap-3 sm:flex-row sm:gap-5 lg:gap-8">
-                            <motion.button
-                                whileTap={{ scale: 0.95 }}
-                                whileHover={{ scale: 1.05 }}
-                                onClick={() => router.push('/products/exhuast-fan/#tabs')}
-                                className="cursor-pointer w-full font-inter bg-[#09273A] hover:bg-black px-6 py-3 text-sm font-medium text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
+                            <button
+                                onClick={() => router.push('/products/exhaust-fan/#tabs')}
+                                className="cursor-pointer hover:scale-105 w-full font-inter bg-[#09273A] hover:bg-black px-6 py-3 text-sm font-medium text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                             >
                                 REQUEST QUOTE
-                            </motion.button>
+                            </button>
 
-                            <motion.button
-                                whileTap={{ scale: 0.95 }}
-                                whileHover={{ scale: 1.05 }}
-                                onClick={() => router.push("/products/exhuast-fan")}
-                                className="cursor-pointer w-full font-inter border bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-[#FDCD2E] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
+                            <button
+                                onClick={() => router.push("/products/exhaust-fan")}
+                                className="cursor-pointer hover:scale-105 w-full font-inter border bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-[#FDCD2E] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                             >
                                 VIEW DETAILS →
-                            </motion.button>
+                            </button>
                         </div>
                     </motion.div>
                 </div>
@@ -519,14 +515,12 @@ export default function Products() {
                                     </div>
                                 </div>
 
-                                <motion.button
-                                    whileTap={{ scale: 0.95 }}
-                                    whileHover={{ scale: 1.05 }}
+                                <button
                                     onClick={() => router.push(`/products/${e.slug}`)}
-                                    className="cursor-pointer w-full border hover:bg-[#FDCD2E] bg-white px-6 py-3 text-sm font-medium text-black transition"
+                                    className="cursor-pointer hover:scale-105 w-full border hover:bg-[#FDCD2E] bg-white px-6 py-3 text-sm font-medium text-black transition"
                                 >
                                     VIEW SPECS →
-                                </motion.button>
+                                </button>
                             </div>
                         </div>
                     )

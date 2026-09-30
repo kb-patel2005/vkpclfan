@@ -28,12 +28,10 @@ export default function LetsBuild() {
             {/* <button className="h-[64px] w-[345.95px] rounded-[4px] bg-[#09273A] px-10 py-5 font-sora text-[16px] font-normal leading-[24px] tracking-[0.8px] text-white text-center uppercase shadow-[0px_8px_30px_0px_#00548F40]">
                     LET'S BUILD A BETTER SYSTEM
                 </button> */}
-            <motion.button
-                whileTap={{ scale: 0.95 }}
-                whileHover={{ scale: 1.05 }}
+            <button
                 onClick={()=>router.push('/contact')}
-                className="font-inter bg-[#09273A] hover:bg-black px-4 py-3 text-sm font-medium text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
-            >LET'S BUILD A BETTER SYSTEM</motion.button>
+                className="font-inter hover:scale-105 cursor-pointer bg-[#09273A] hover:bg-black px-4 py-3 text-sm font-medium text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
+            >LET'S BUILD A BETTER SYSTEM</button>
         </motion.section>
     )
 }

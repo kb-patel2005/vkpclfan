@@ -224,11 +224,9 @@ Message: ${formData.message}`;
                         </div>
 
                         {/* Submit */}
-                        <motion.button
-                            whileTap={{ scale: 0.95 }}
-                            whileHover={{ scale: 1.02 }}
+                        <button
                             type="submit"
-                            className="w-full h-[52px] mt-5 px-8 py-4 bg-[#09273A] text-white flex items-center justify-center"
+                            className="w-full hover:scale-105 h-[52px] mt-5 px-8 py-4 bg-[#09273A] text-white flex items-center justify-center"
                         >
                             <span className="mr-3">SUBMIT INQUIRY</span>
                             <svg
@@ -240,7 +238,7 @@ Message: ${formData.message}`;
                             >
                                 <path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z" fill="white" />
                             </svg>
-                        </motion.button>
+                        </button>
 
                         <p className="text-[11px] mt-5 leading-[16.5px] font-normal text-[#434656] text-center">
                             By submitting this form, you agree to our Privacy Policy regarding data collection and industrial<br />

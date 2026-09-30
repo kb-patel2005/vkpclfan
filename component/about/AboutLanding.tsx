@@ -45,23 +45,19 @@ export default function AboutLanding() {
                         <button className='py-4 px-8 lg:w-auto w-[300px] bg-white text-[#0F172A] border border-[#0F172A] text-[16px] tracking-[0.8px] leading-[24px] rounded-sm'>VIEW PRODUCTS</button>
                     </div> */}
                     <div className="flex flex-col gap-3 sm:flex-row sm:gap-5 lg:gap-8">
-                        <motion.button
-                            whileTap={{ scale: 0.95 }}
-                            whileHover={{ scale: 1.05 }}
+                        <button
                             onClick={() => {
                                 const el = document.getElementById("story");
                                 if (el) {
                                     el.scrollIntoView({ behavior: "smooth" });
                                 }
                             }}
-                            className="w-full font-inter bg-[#09273A] hover:bg-black px-6 py-3 text-sm font-medium text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
-                        >EXPLORE OUR STORY →</motion.button>
-                        <motion.button
-                            whileTap={{ scale: 0.95 }}
-                            whileHover={{ scale: 1.05 }}
+                            className="w-full hover:scale-105 font-inter bg-[#09273A] hover:bg-black px-6 py-3 text-sm font-medium text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
+                        >EXPLORE OUR STORY →</button>
+                        <button
                             onClick={() => router.push("/products")}
-                            className="w-full font-inter border hover:bg-[#FDCD2E] hover:text-[#09273A] bg-white px-6 py-3 text-sm font-medium text-black transition sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
-                        >VIEW PRODUCTS</motion.button>
+                            className="w-full hover:scale-105 font-inter border hover:bg-[#FDCD2E] hover:text-[#09273A] bg-white px-6 py-3 text-sm font-medium text-black transition sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
+                        >VIEW PRODUCTS</button>
                     </div>
                 </motion.div>
                 <motion.div

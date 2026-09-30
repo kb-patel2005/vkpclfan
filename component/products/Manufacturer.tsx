@@ -15,7 +15,7 @@ export default function Manufacturer() {
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.8, ease: "easeOut" }} className='max-w-7xl mx-auto flex flex-col gap-5 lg:gap-10'>
+                transition={{ duration: 0.8, ease: "easeOut" }} className='max-w-7xl mx-auto flex flex-col gap-4 lg:gap-10'>
                 <h2 className="font-sora font-bold text-4xl lg:text-[48px] lg:leading-[56px] tracking-[-0.96px] text-center align-middle">
                     Floent{" "}
                     <span className="text-[#FDCD2E]">{newSlug
@@ -25,12 +25,13 @@ export default function Manufacturer() {
 
                     Manufacturer
                 </h2>
-                {manufacturer.get(newSlug)?.map((e: string, idx: number) => (
-                    <p
-                        key={idx}
-                        className="lg:text-center text-[#5D5D5D] font-inter leading-6 text-[16px] lg:text-[19px] lg:leading-7">{e}</p>
-                ))}
-
+                <div className='flex flex-col gap-4'>
+                    {manufacturer.get(newSlug)?.map((e: string, idx: number) => (
+                        <p
+                            key={idx}
+                            className="lg:text-center text-[#5D5D5D] font-inter leading-6 text-[16px] lg:text-[19px] lg:leading-7">{e}</p>
+                    ))}
+                </div>
             </motion.div>
         </section>
     )

@@ -11,13 +11,13 @@ export default function BenefitFan() {
   const { newSlug } = useSlug();
 
   return (
-    <section className="w-full bg-[#F8F9FA] py-10 lg:py-0 px-5 lg:px-0">
+    <section className="w-full bg-[#F8F9FA] py-5 lg:py-0 px-5 lg:px-0">
       <motion.div
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="flex flex-col lg:flex-row max-w-7xl mx-auto gap-8 lg:gap-6">
+        className="flex flex-col lg:flex-row max-w-7xl mx-auto gap-4 lg:gap-6">
 
         {/* Left Content */}
         <div className="w-full lg:w-[35%] flex flex-col gap-4 lg:gap-6">
@@ -25,12 +25,11 @@ export default function BenefitFan() {
             Advantages of Industrial{" "}
             <span className="text-[#FDCD2E]">{newSlug.split("-").join(" ")}</span>
           </h2>
-
           {benefits.get(newSlug) && Object.entries(benefits.get(newSlug)).map(([key, value], idx) => {
             if (key === "paragraph" && Array.isArray(value)) {
               // Render paragraphs
               return (
-                <div key={idx} className="space-y-4">
+                <div key={idx} className="space-y-2">
                   {value.map((line, i) => (
                     <p
                       key={i}
@@ -80,9 +79,6 @@ export default function BenefitFan() {
 
             return null;
           })}
-
-
-
         </div>
 
         {/* Right Image */}

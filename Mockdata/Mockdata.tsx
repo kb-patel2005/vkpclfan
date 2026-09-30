@@ -1,81 +1,82 @@
 /***************** Title and description ********************************/
-const exhaustfan_title_desc = ["Exhaust Fan Series", "Built for demanding operating conditions, the Floent Exhaust Fan offers reliable performance, durable construction, low maintenance, and energy - efficient ventilation, helping maintain a cooler, cleaner, and better - ventilated environment."]
-const hvlsfan_title_desc = ["Big Industrial HVLS Fan",
-    "Floent Technologies is the largest industrial HVLS fan manufacturer in India, specializing in high-performance geared HVLS fans and gearless HVLS fans. We offer a complete range of energy-efficient solutions, customized to meet specific industry requirements for maximum airflow, durability, and cost-effectiveness."
-];
-const hvls_geared_12_title_desc = [
-    "12 Feet Geared HVLS Fan Manufacturer",
-    "12 ft diameter HVLS fan with 5 blades, delivering 135,000 CFM airflow powered by a 0.75 KW motor. Covers up to 6,500 ft² with noise levels between 60–65 dB."
-]
-
-
 export const title_description = new Map();
 
 // Exhaust Fan
-title_description.set("exhuast-fan", [
-  "Industrial Exhaust Fan",
-  "Exhaust fans are designed for ventilation in factories, warehouses, and commercial spaces, ensuring air quality by removing heat, fumes, dust, and humidity."
+title_description.set("exhaust-fan", [
+    "Industrial Exhaust Fan",
+    "Exhaust fans are designed for ventilation in factories, warehouses, and commercial spaces, ensuring air quality by removing heat, fumes, dust, and humidity."
+]);
+
+
+title_description.set("FLEH-1000-Exhaust-fan", [
+    "FLEH‑1000 Industrial Exhaust Fan", "The FLEH‑1000 features a 900 mm stainless steel blade, 22000 CM/H airflow, and direct drive motor for reliable performance. With noise levels under 70 dB and a durable galvanized steel frame, it’s built for efficient, heavy‑duty ventilation."
+]);
+title_description.set("FLEH-1220-Exhaust-fan", [
+    "FLEH‑1220 Industrial Exhaust Fan", "The FLEH‑1220 is a direct drive exhaust fan with a 1000 mm stainless steel blade, delivering 38,000 CM/H airflow at 560 rpm. Built with a galvanized steel frame, it ensures durability while keeping noise levels under 70 dB, making it ideal for heavy‑duty ventilation needs."
+]);
+title_description.set("FLEH-1380-Exhaust-fan", [
+    "FLEH‑1380 Industrial Exhaust Fan", "The FLEH‑1380 is a direct drive exhaust fan with a 1250 mm stainless steel blade, delivering 40,000 CM/H airflow at 460 rpm. Built with a galvanized steel frame, it combines durability and efficiency while keeping noise levels under 70 dB, making it ideal for large‑scale ventilation applications."
 ]);
 
 title_description.set("HVLS-gearless-fan", [
-  "Big Industrial HVLS Fan",
-  "Floent Technologies is the largest industrial HVLS fan manufacturer in India, specializing in high-performance geared HVLS fans and gearless HVLS fans. We offer a complete range of energy-efficient solutions, customized to meet specific industry requirements for maximum airflow, durability, and cost-effectiveness."
+    "Big Industrial HVLS Fan",
+    "Floent Technologies is the largest industrial HVLS fan manufacturer in India, specializing in high-performance geared HVLS fans and gearless HVLS fans. We offer a complete range of energy-efficient solutions, customized to meet specific industry requirements for maximum airflow, durability, and cost-effectiveness."
 ]);
 
 title_description.set("12-feet-geared-HVLS-fan", [
-  "12 Feet Geared HVLS Fan Manufacturer",
-  "12 ft diameter HVLS fan with 5 blades, delivering 135,000 CFM airflow powered by a 0.75 KW motor. Covers up to 6,500 ft² with noise levels between 60–65 dB."
+    "12 Feet Geared HVLS Fan Manufacturer",
+    "12 ft diameter HVLS fan with 5 blades, delivering 135,000 CFM airflow powered by a 0.75 KW motor. Covers up to 6,500 ft² with noise levels between 60–65 dB."
 ]);
 
 title_description.set("16-feet-geared-HVLS-fan", [
-  "16 Feet Geared HVLS Fan Manufacturer",
-  "16 ft diameter HVLS fan with 5 blades, delivering 185,000 CFM airflow powered by a 1.0 KW motor. Covers up to 10,000 ft² with noise levels between 60–65 dB."
+    "16 Feet Geared HVLS Fan Manufacturer",
+    "16 ft diameter HVLS fan with 5 blades, delivering 185,000 CFM airflow powered by a 1.0 KW motor. Covers up to 10,000 ft² with noise levels between 60–65 dB."
 ]);
 
 title_description.set("18-feet-geared-HVLS-fan", [
-  "18 Feet Geared HVLS Fan Manufacturer",
-  "18 ft diameter HVLS fan with 5 blades, delivering 200,000 CFM airflow powered by a 1.1 KW motor. Covers up to 13,000 ft² with noise levels between 60–65 dB."
+    "18 Feet Geared HVLS Fan Manufacturer",
+    "18 ft diameter HVLS fan with 5 blades, delivering 200,000 CFM airflow powered by a 1.1 KW motor. Covers up to 13,000 ft² with noise levels between 60–65 dB."
 ]);
 
 title_description.set("20-feet-geared-HVLS-fan", [
-  "20 Feet Geared HVLS Fan Manufacturer",
-  "20 ft diameter HVLS fan with 5 blades, delivering 350,000 CFM airflow powered by a 1.5 KW motor. Covers up to 16,000 ft² with noise levels between 60–65 dB."
+    "20 Feet Geared HVLS Fan Manufacturer",
+    "20 ft diameter HVLS fan with 5 blades, delivering 350,000 CFM airflow powered by a 1.5 KW motor. Covers up to 16,000 ft² with noise levels between 60–65 dB."
 ]);
 
 title_description.set("24-feet-geared-HVLS-fan", [
-  "24 Feet Geared HVLS Fan Manufacturer",
-  "24 ft diameter HVLS fan with 5 blades, delivering 390,000 CFM airflow powered by a 2.0 KW motor. Covers up to 20,000 ft² with noise levels between 60–65 dB."
+    "24 Feet Geared HVLS Fan Manufacturer",
+    "24 ft diameter HVLS fan with 5 blades, delivering 390,000 CFM airflow powered by a 2.0 KW motor. Covers up to 20,000 ft² with noise levels between 60–65 dB."
 ]);
 
 // Gearless HVLS Fans
 title_description.set("8-feet-gearless-HVLS-fan", [
-  "8 Feet Gearless HVLS Fan Manufacturer",
-  "8 ft diameter gearless HVLS fan delivering 95,000 CFM airflow powered by a 0.5 KW motor. Covers up to 2,500 ft² with ultra-low noise levels."
+    "8 Feet Gearless HVLS Fan Manufacturer",
+    "8 ft diameter gearless HVLS fan delivering 95,000 CFM airflow powered by a 0.5 KW motor. Covers up to 2,500 ft² with ultra-low noise levels."
 ]);
 
 title_description.set("10-feet-gearless-HVLS-fan", [
-  "10 Feet Gearless HVLS Fan Manufacturer",
-  "10 ft diameter gearless HVLS fan delivering 120,000 CFM airflow powered by a 0.6 KW motor. Covers up to 4,000 ft² with ultra-low noise levels."
+    "10 Feet Gearless HVLS Fan Manufacturer",
+    "10 ft diameter gearless HVLS fan delivering 120,000 CFM airflow powered by a 0.6 KW motor. Covers up to 4,000 ft² with ultra-low noise levels."
 ]);
 
 title_description.set("12-feet-gearless-HVLS-fan", [
-  "12 Feet Gearless HVLS Fan Manufacturer",
-  "12 ft diameter gearless HVLS fan delivering 180,000 CFM airflow powered by a 0.75 KW motor. Covers up to 6,500 ft² with ultra-low noise levels."
+    "12 Feet Gearless HVLS Fan Manufacturer",
+    "12 ft diameter gearless HVLS fan delivering 180,000 CFM airflow powered by a 0.75 KW motor. Covers up to 6,500 ft² with ultra-low noise levels."
 ]);
 
 title_description.set("16-feet-gearless-HVLS-fan", [
-  "16 Feet Gearless HVLS Fan Manufacturer",
-  "16 ft diameter gearless HVLS fan delivering 355,000 CFM airflow powered by a 1.2 KW motor. Covers up to 10,000 ft² with ultra-low noise levels."
+    "16 Feet Gearless HVLS Fan Manufacturer",
+    "16 ft diameter gearless HVLS fan delivering 355,000 CFM airflow powered by a 1.2 KW motor. Covers up to 10,000 ft² with ultra-low noise levels."
 ]);
 
 title_description.set("20-feet-gearless-HVLS-fan", [
-  "20 Feet Gearless HVLS Fan Manufacturer",
-  "20 ft diameter gearless HVLS fan delivering 410,000 CFM airflow powered by a 1.5 KW motor. Covers up to 16,000 ft² with ultra-low noise levels."
+    "20 Feet Gearless HVLS Fan Manufacturer",
+    "20 ft diameter gearless HVLS fan delivering 410,000 CFM airflow powered by a 1.5 KW motor. Covers up to 16,000 ft² with ultra-low noise levels."
 ]);
 
 title_description.set("24-feet-gearless-HVLS-fan", [
-  "24 Feet Gearless HVLS Fan Manufacturer",
-  "24 ft diameter gearless HVLS fan delivering 485,000 CFM airflow powered by a 2.0 KW motor. Covers up to 20,000 ft² with ultra-low noise levels."
+    "24 Feet Gearless HVLS Fan Manufacturer",
+    "24 ft diameter gearless HVLS fan delivering 485,000 CFM airflow powered by a 2.0 KW motor. Covers up to 20,000 ft² with ultra-low noise levels."
 ]);
 
 
@@ -175,14 +176,19 @@ const hvls_features = [
     },
 ];
 export const features = new Map();
-features.set("exhuast-fan", exhaustFan_features);
+features.set("exhaust-fan", exhaustFan_features);
+
+features.set("FLEH-1000-Exhaust-fan", exhaustFan_features);
+features.set("FLEH-1220-Exhaust-fan", exhaustFan_features);
+features.set("FLEH-1380-Exhaust-fan", exhaustFan_features);
+
 features.set("HVLS-gearless-fan", hvls_features);
 
-
-features.set("8-feet-gearless-HVLS-fan",hvls_features);
+features.set("8-feet-gearless-HVLS-fan", hvls_features);
 features.set("10-feet-gearless-HVLS-fan", hvls_features);
 // specification.set("12-feet-gearless-HVLS-fan", hvls_12ft_gearless);
 features.set("16-feet-gearless-HVLS-fan", hvls_features);
+
 /****************************************************************/
 
 const models = [
@@ -1776,18 +1782,391 @@ const hvls_24ft_gearless = {
     ]
 };
 
+const exhaustfan_FLEH1000 = {
+    heading: "Product Specifications",
+    description: [
+        {
+            type: "paragraph",
+            heading: "FLEH1000 — Industrial Exhaust Fan",
+            data: [
+                "The FLEH1000 is a compact yet powerful industrial exhaust fan designed for efficient ventilation in factories, warehouses, and commercial spaces. With a 900 mm stainless steel blade driven by a 550 W direct drive motor, it delivers 22,000 CM/H airflow at 560 rpm while keeping noise levels below 70 dB. Operating on a 415 V supply, the fan ensures effective removal of heat, fumes, and dust, creating a cleaner and more comfortable environment. Its galvanized steel frame provides durability and corrosion resistance, while dimensions of 1000 × 1000 × 400 mm make installation practical in diverse settings."
+            ]
+        },
+        {
+            type: "list",
+            heading: "What Comes With It",
+            data: [
+                "Direct drive motor — 550 W, 415 V supply, 560 rpm",
+                "900 mm stainless steel blade for strong airflow",
+                "Galvanized steel frame for durability and corrosion resistance",
+                "Compact dimensions: 1000 × 1000 × 400 mm",
+                "Noise level below 70 dB for quieter operation",
+                "Energy‑efficient design for reduced operating costs",
+                "CE‑certified for safety and compliance",
+                "Suitable for factories, warehouses, kitchens, and commercial spaces"
+            ]
+        }
+    ],
+    table: [
+        { Model: "Blade Dia (mm)", "FLEH-1000": "900" },
+        { Model: "Voice Level (db)", "FLEH-1000": "<70" },
+        { Model: "Air flow (CM/H)", "FLEH-1000": "22000" },
+        { Model: "Speed (rpm)", "FLEH-1000": "560" },
+        { Model: "Power (W)", "FLEH-1000": "550" },
+        { Model: "Voltage", "FLEH-1000": "415" },
+        { Model: "Dimension (mm) (mm) (HxW)", "FLEH-1000": "1000 x 1000 x 400" },
+        { Model: "Motor Type", "FLEH-1000": "Direct Drive" },
+        { Model: "Blade Material", "FLEH-1000": "Stainless Steel" },
+        { Model: "Frame Material", "FLEH-1000": "Galvanized Steel" },
+    ],
+    safety: [
+        {
+            title: "Anti-Fall Mounting Bracket",
+            description:
+                "The extension tube, motor and hub assembly hang from an anti-fall mounting bracket, so the assembly is still held even if the motor or extension tube bolts fail."
+            , icon: (
+                <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M12 2 4 5v7c0 5 3.4 8.9 8 10 4.6-1.1 8-5 8-10V5l-8-3z"></path>
+                </svg>
+            ),
+        },
+        {
+            title: "Single Piece Hub And Safety Ring",
+            description:
+                "A single piece hub carries all six blades, and a safety ring interlocks the blades to each other so no blade is retained by its own fixing alone.",
+            icon: (
+                <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path>
+                </svg>
+            ),
+        },
+        {
+            title: "Wire Rope Restraint",
+            description: "Every bolted joint is wrapped with 8 mm diameter wire rope, and four further 8 mm ropes carry the fan in balance.",
+            icon: (
+                <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M14.7 6.3a4 4 0 0 0 5 5l-9.4 9.4a2.8 2.8 0 0 1-4-4z"></path>
+                    <path d="M6 6 3 9l3 3"></path>
+                </svg>
+            ),
+        },
+        {
+            title: "Bolted Joints",
+            description: "All nuts are self-locking Nyloc type, which eliminates any chance of loosening in service, on high tensile 10.9 grade Unbrako or TVS bolts.",
+            icon: (
+                <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="2.2"></circle>
+                    <path d="M12 9.8c0-3 .6-5.6 2.4-6.4 1.6-.7 2.9 1 2 2.8-.9 1.9-2.7 3-4.4 3.6M14.2 12c2.9 0 5.5.6 6.3 2.4.7 1.6-1 2.9-2.8 2-1.9-.9-3-2.7-3.5-4.4M12 14.2c0 3-.6 5.6-2.4 6.4-1.6.7-2.9-1-2-2.8.9-1.9 2.7-3 4.4-3.6M9.8 12c-3 0-5.6-.6-6.4-2.4-.7-1.6 1-2.9 2.8-2 1.9.9 3 2.7 3.6 4.4"></path>
+                </svg>
+            ),
+        },
+    ],
+    installation: [
+        {
+            type: "list",
+            heading: "Installation Requirements",
+            data: [
+                "Mounting location should allow free airflow, with clearance from walls or obstructions.",
+                "Blade tip clearance of at least 600 mm from any beam, duct, light fitting, or sprinkler path.",
+                "Secure mounting point on a load‑bearing wall or frame, verified during site survey — not on decorative or false structures.",
+                "Control panel wall mounted 4 to 5 ft from floor level, clear of wash‑down, oil, and heavy dust zones.",
+                "Input power three phase 415 V, 50 Hz to the motor panel.",
+                "Access equipment (scissor lift or scaffolding) available at site on the installation date."
+            ]
+        },
+        {
+            type: "paragraph",
+            heading: "What We Handle",
+            data: [
+                "Dispatch and site handling, mounting structure fitment, fan assembly and installation, control panel mounting, electrical commissioning, run testing across the full speed range, and an operator briefing at handover — all carried out by our own qualified technicians."
+            ]
+        }
+    ],
+    warrenty: [
+        {
+            title: "5 Years",
+            description: "Blades, hub, extension tube and mounting structure — replacement warranty",
+            icon: (
+                <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 2 4 5v7c0 5 3.4 8.9 8 10 4.6-1.1 8-5 8-10V5l-8-3z"></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                </svg>),
+        },
+        {
+            title: "2 Year",
+            description: "Motor, controller and VFD — replacement warranty",
+            icon: (
+                <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 2 4 5v7c0 5 3.4 8.9 8 10 4.6-1.1 8-5 8-10V5l-8-3z"></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                </svg>),
+        },
+    ]
+
+};
+
+const exhaustfan_FLEH1220 = {
+    heading: "Product Specifications",
+    description: [
+        {
+            type: "paragraph",
+            heading: "FLEH1220 — Industrial Exhaust Fan",
+            data: [
+                "The FLEH1220 Industrial Exhaust Fan is a robust direct drive unit designed for high‑capacity ventilation in large industrial and commercial environments. Equipped with a 1000 mm stainless steel blade, it delivers an impressive 38,000 CM/H airflow at 560 rpm, ensuring effective removal of heat, fumes, and dust while maintaining noise levels below 70 dB for a quieter workspace. Powered by a 750 W motor on a 415 V supply, the fan balances strong performance with energy efficiency, while its galvanized steel frame provides durability and corrosion resistance. With dimensions of 1220 × 1220 × 400 mm, the FLEH1220 is compact enough for versatile installation yet powerful enough to handle demanding ventilation needs, making it a reliable solution for continuous operation in factories, warehouses, and production facilities."
+            ]
+        },
+        {
+            type: "list",
+            heading: "What Comes With It",
+            data: [
+                "Direct drive motor — 750 W, 415 V supply, 560 rpm",
+                "1000 mm stainless steel blade for high airflow",
+                "Galvanized steel frame for durability and corrosion resistance",
+                "Compact dimensions: 1220 × 1220 × 400 mm",
+                "Noise level below 70 dB for quieter operation",
+                "Energy‑efficient design for reduced operating costs",
+                "CE‑certified for safety and compliance",
+                "Suitable for factories, warehouses, and large commercial spaces"
+            ]
+        }
+    ],
+    table: [
+        { Model: "Blade Dia (mm)", "FLEH-1220": "1000" },
+        { Model: "Voice Level (db)", "FLEH-1220": "<70" },
+        { Model: "Air flow (CM/H)", "FLEH-1220": "38000" },
+        { Model: "Speed (rpm)", "FLEH-1220": "560" },
+        { Model: "Power (W)", "FLEH-1220": "750" },
+        { Model: "Voltage", "FLEH-1220": "415" },
+        { Model: "Dimension (mm) (mm) (HxW)", "FLEH-1220": "1220 x 1220 x 400" },
+        { Model: "Motor Type", "FLEH-1220": "Direct Drive" },
+        { Model: "Blade Material", "FLEH-1220": "Stainless Steel" },
+        { Model: "Frame Material", "FLEH-1220": "Galvanized Steel" },
+    ],
+    safety: [
+        {
+            title: "Anti-Fall Mounting Bracket",
+            description:
+                "The extension tube, motor and hub assembly hang from an anti-fall mounting bracket, so the assembly is still held even if the motor or extension tube bolts fail."
+            , icon: (
+                <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M12 2 4 5v7c0 5 3.4 8.9 8 10 4.6-1.1 8-5 8-10V5l-8-3z"></path>
+                </svg>
+            ),
+        },
+        {
+            title: "Single Piece Hub And Safety Ring",
+            description:
+                "A single piece hub carries all six blades, and a safety ring interlocks the blades to each other so no blade is retained by its own fixing alone.",
+            icon: (
+                <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path>
+                </svg>
+            ),
+        },
+        {
+            title: "Wire Rope Restraint",
+            description: "Every bolted joint is wrapped with 8 mm diameter wire rope, and four further 8 mm ropes carry the fan in balance.",
+            icon: (
+                <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M14.7 6.3a4 4 0 0 0 5 5l-9.4 9.4a2.8 2.8 0 0 1-4-4z"></path>
+                    <path d="M6 6 3 9l3 3"></path>
+                </svg>
+            ),
+        },
+        {
+            title: "Bolted Joints",
+            description: "All nuts are self-locking Nyloc type, which eliminates any chance of loosening in service, on high tensile 10.9 grade Unbrako or TVS bolts.",
+            icon: (
+                <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="2.2"></circle>
+                    <path d="M12 9.8c0-3 .6-5.6 2.4-6.4 1.6-.7 2.9 1 2 2.8-.9 1.9-2.7 3-4.4 3.6M14.2 12c2.9 0 5.5.6 6.3 2.4.7 1.6-1 2.9-2.8 2-1.9-.9-3-2.7-3.5-4.4M12 14.2c0 3-.6 5.6-2.4 6.4-1.6.7-2.9-1-2-2.8.9-1.9 2.7-3 4.4-3.6M9.8 12c-3 0-5.6-.6-6.4-2.4-.7-1.6 1-2.9 2.8-2 1.9.9 3 2.7 3.6 4.4"></path>
+                </svg>
+            ),
+        },
+    ],
+    installation: [
+        {
+            type: "list",
+            heading: "Installation Requirements",
+            data: [
+                "Mounting location should allow free airflow, with clearance from walls or obstructions.",
+                "Blade tip clearance of at least 600 mm from any beam, duct, light fitting, or sprinkler path.",
+                "Secure mounting point on a load‑bearing wall or frame, verified during site survey — not on decorative or false structures.",
+                "Control panel wall mounted 4 to 5 ft from floor level, clear of wash‑down, oil, and heavy dust zones.",
+                "Input power three phase 415 V, 50 Hz to the motor panel.",
+                "Access equipment (scissor lift or scaffolding) available at site on the installation date."
+            ]
+        },
+        {
+            type: "paragraph",
+            heading: "What We Handle",
+            data: [
+                "Dispatch and site handling, mounting structure fitment, fan assembly and installation, control panel mounting, electrical commissioning, run testing across the full speed range, and an operator briefing at handover — all carried out by our own qualified technicians."
+            ]
+        }
+    ],
+    warrenty: [
+        {
+            title: "5 Years",
+            description: "Blades, hub, extension tube and mounting structure — replacement warranty",
+            icon: (
+                <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 2 4 5v7c0 5 3.4 8.9 8 10 4.6-1.1 8-5 8-10V5l-8-3z"></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                </svg>),
+        },
+        {
+            title: "2 Year",
+            description: "Motor, controller and VFD — replacement warranty",
+            icon: (
+                <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 2 4 5v7c0 5 3.4 8.9 8 10 4.6-1.1 8-5 8-10V5l-8-3z"></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                </svg>),
+        },
+    ]
+
+};
+
+const exhaustfan_fLEH1380 = {
+    heading: "Product Specifications",
+    description: [
+        {
+            type: "paragraph",
+            heading: "FLEH1380 — Industrial Exhaust Fan",
+            data: [
+                "The FLEH1380 Industrial Exhaust Fan is a heavy‑duty direct drive unit engineered for large‑scale ventilation in demanding industrial and commercial environments. Equipped with a 1250 mm stainless steel blade, it delivers an impressive 40,000 CM/H airflow at 460 rpm, ensuring effective removal of heat, fumes, and dust while maintaining noise levels below 70 dB for a quieter workspace. Powered by a 1,100 W motor on a 415 V supply, the fan combines powerful performance with energy efficiency, while its galvanized steel frame provides durability and corrosion resistance. With dimensions of 1380 × 1380 × 450 mm, the FLEH1380 is designed for versatile installation and continuous operation, making it a reliable solution for factories, warehouses, production facilities, and other large commercial spaces."
+            ]
+        },
+        {
+            type: "list",
+            heading: "What Comes With It",
+            data: [
+                "Direct drive motor — 1,100 W, 415 V supply, 460 rpm",
+                "1250 mm stainless steel blade for maximum airflow",
+                "Galvanized steel frame for durability and corrosion resistance",
+                "Dimensions: 1380 × 1380 × 450 mm",
+                "Noise level below 70 dB for quieter operation",
+                "Energy‑efficient design for reduced operating costs",
+                "CE‑certified for safety and compliance",
+                "Ideal for factories, warehouses, and large production facilities"
+            ]
+        }
+    ],
+    table: [
+        { Model: "Blade Dia (mm)", "FLEH-1380": "1250" },
+        { Model: "Voice Level (db)", "FLEH-1380": "<70" },
+        { Model: "Air flow (CM/H)", "FLEH-1380": "40000" },
+        { Model: "Speed (rpm)", "FLEH-1380": "460" },
+        { Model: "Power (W)", "FLEH-1380": "1100" },
+        { Model: "Voltage", "FLEH-1380": "415" },
+        { Model: "Dimension (mm) (mm) (HxW)", "FLEH-1380": "1380 x 1380 x 450" },
+        { Model: "Motor Type", "FLEH-1380": "Direct Drive" },
+        { Model: "Blade Material", "FLEH-1380": "Stainless Steel" },
+        { Model: "Frame Material", "FLEH-1380": "Galvanized Steel" },
+    ],
+    safety: [
+        {
+            title: "Anti-Fall Mounting Bracket",
+            description:
+                "The extension tube, motor and hub assembly hang from an anti-fall mounting bracket, so the assembly is still held even if the motor or extension tube bolts fail."
+            , icon: (
+                <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M12 2 4 5v7c0 5 3.4 8.9 8 10 4.6-1.1 8-5 8-10V5l-8-3z"></path>
+                </svg>
+            ),
+        },
+        {
+            title: "Single Piece Hub And Safety Ring",
+            description:
+                "A single piece hub carries all six blades, and a safety ring interlocks the blades to each other so no blade is retained by its own fixing alone.",
+            icon: (
+                <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path>
+                </svg>
+            ),
+        },
+        {
+            title: "Wire Rope Restraint",
+            description: "Every bolted joint is wrapped with 8 mm diameter wire rope, and four further 8 mm ropes carry the fan in balance.",
+            icon: (
+                <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M14.7 6.3a4 4 0 0 0 5 5l-9.4 9.4a2.8 2.8 0 0 1-4-4z"></path>
+                    <path d="M6 6 3 9l3 3"></path>
+                </svg>
+            ),
+        },
+        {
+            title: "Bolted Joints",
+            description: "All nuts are self-locking Nyloc type, which eliminates any chance of loosening in service, on high tensile 10.9 grade Unbrako or TVS bolts.",
+            icon: (
+                <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="2.2"></circle>
+                    <path d="M12 9.8c0-3 .6-5.6 2.4-6.4 1.6-.7 2.9 1 2 2.8-.9 1.9-2.7 3-4.4 3.6M14.2 12c2.9 0 5.5.6 6.3 2.4.7 1.6-1 2.9-2.8 2-1.9-.9-3-2.7-3.5-4.4M12 14.2c0 3-.6 5.6-2.4 6.4-1.6.7-2.9-1-2-2.8.9-1.9 2.7-3 4.4-3.6M9.8 12c-3 0-5.6-.6-6.4-2.4-.7-1.6 1-2.9 2.8-2 1.9.9 3 2.7 3.6 4.4"></path>
+                </svg>
+            ),
+        },
+    ],
+    installation: [
+        {
+            type: "list",
+            heading: "Installation Requirements",
+            data: [
+                "Mounting location should allow free airflow, with clearance from walls or obstructions.",
+                "Blade tip clearance of at least 600 mm from any beam, duct, light fitting, or sprinkler path.",
+                "Secure mounting point on a load‑bearing wall or frame, verified during site survey — not on decorative or false structures.",
+                "Control panel wall mounted 4 to 5 ft from floor level, clear of wash‑down, oil, and heavy dust zones.",
+                "Input power three phase 415 V, 50 Hz to the motor panel.",
+                "Access equipment (scissor lift or scaffolding) available at site on the installation date."
+            ]
+        },
+        {
+            type: "paragraph",
+            heading: "What We Handle",
+            data: [
+                "Dispatch and site handling, mounting structure fitment, fan assembly and installation, control panel mounting, electrical commissioning, run testing across the full speed range, and an operator briefing at handover — all carried out by our own qualified technicians."
+            ]
+        }
+    ],
+    warrenty: [
+        {
+            title: "5 Years",
+            description: "Blades, hub, extension tube and mounting structure — replacement warranty",
+            icon: (
+                <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 2 4 5v7c0 5 3.4 8.9 8 10 4.6-1.1 8-5 8-10V5l-8-3z"></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                </svg>),
+        },
+        {
+            title: "2 Year",
+            description: "Motor, controller and VFD — replacement warranty",
+            icon: (
+                <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 2 4 5v7c0 5 3.4 8.9 8 10 4.6-1.1 8-5 8-10V5l-8-3z"></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                </svg>),
+        },
+    ]
+};
 
 export const specification = new Map();
-specification.set("exhuast-fan", exhaustfan_Specification);
+specification.set("exhaust-fan", exhaustfan_Specification);
 specification.set("HVLS-gearless-fan", hvlsfan_Specification);
+specification.set("FLEH-1000-Exhaust-fan", exhaustfan_FLEH1000);
+specification.set("FLEH-1220-Exhaust-fan", exhaustfan_FLEH1220);
+specification.set("FLEH-1380-Exhaust-fan", exhaustfan_fLEH1380);
 
 //geared
-// Geared HVLS Fans
-// specification.set("12-feet-geared-HVLS-fan", hvls_12ft);
-// specification.set("16-feet-geared-HVLS-fan", hvls_16ft);
-// specification.set("18-feet-geared-HVLS-fan", hvls_18ft);
-// specification.set("20-feet-geared-HVLS-fan", hvls_20ft);
-// specification.set("24-feet-geared-HVLS-fan", hvls_24ft);
+//Geared HVLS Fans
+//specification.set("12-feet-geared-HVLS-fan", hvls_12ft);
+//specification.set("16-feet-geared-HVLS-fan", hvls_16ft);
+//specification.set("18-feet-geared-HVLS-fan", hvls_18ft);
+//specification.set("20-feet-geared-HVLS-fan", hvls_20ft);
+//specification.set("24-feet-geared-HVLS-fan", hvls_24ft);
 
 // Gearless HVLS Fans
 specification.set("8-feet-gearless-HVLS-fan", hvls_8ft_gearless);
@@ -2214,8 +2593,12 @@ const featuresandAdvhvls = [
 
 
 export const featureandadv = new Map();
-featureandadv.set("exhuast-fan", featuresAndAdavantageexhuastfan);
+featureandadv.set("exhaust-fan", featuresAndAdavantageexhuastfan);
 featureandadv.set("HVLS-gearless-fan", featuresandAdvhvls);
+
+featureandadv.set("FLEH-1000-Exhaust-fan", featuresAndAdavantageexhuastfan);
+featureandadv.set("FLEH-1220-Exhaust-fan", featuresAndAdavantageexhuastfan);
+featureandadv.set("FLEH-1380-Exhaust-fan", featuresAndAdavantageexhuastfan);
 
 // featureandadv.set("12-feet-geared-HVLS-fan", featuresandAdvhvls);
 // featureandadv.set("16-feet-geared-HVLS-fan", featuresandAdvhvls);
@@ -2233,14 +2616,20 @@ featureandadv.set("16-feet-gearless-HVLS-fan", featuresandAdvhvls);
 
 /********************************Working principal ***********************************/
 
-const exhaust_fan_Principal = ["Exhaust Fan draws out polluted air from premises and replaces it with fresh air. Air is considered polluted when it contains high amounts of hot air, moisture, carbon dioxide, vaporized chemicals, dust, fungal spores and unpleasant odors. Floent Air exhaust fan combat indoor air pollution by ejecting the unclean indoor air into the outside environment and letting in clean air from the outside"];
+const exhaust_fan_Principal = ["Exhaust Fan draws out polluted air from premises and replaces it with fresh air.Air is considered polluted when it contains high amounts of hot air, moisture, carbon dioxide, vaporized chemicals, dust, fungal spores and unpleasant odors.Marut Air exhaust fan combat indoor air pollution by ejecting the unclean indoor air into the outside environment and letting in clean air from the outside."]
+
 const hvls_fan_Principal = [
     "HVLS fans operate on the premise that cool flowing air separates the boundary layer surrounding the body that is saturated with moisture and speeds up evaporation to generate a cooling effect. As they rotate, ceiling fans create a column of air. Along the floor, this air column flows downward and outward. This thick wall of horizontally flowing air, also known as a horizontal floor jet, is related to a fan's diameter and, to a lesser extent, its speed. The floor jet moves outward until it encounters a side wall or other vertical surface after it reaches its maximum capacity.",
     "Industrial Jumbo ceiling fan, or another name commonly known as HVLS (High Volume Low Speed), causes high volume of wind movement and low ground. Before colliding with the ground and changing direction to become a 'floor jet', moving around 360 degrees in all directions, also helping to push dust from the nook or corner out of the area."
 ];
 
 export const principal = new Map();
-principal.set("exhuast-fan", exhaust_fan_Principal);
+principal.set("exhaust-fan", exhaust_fan_Principal);
+
+principal.set("FLEH-1000-Exhaust-fan", exhaust_fan_Principal);
+principal.set("FLEH-1220-Exhaust-fan", exhaust_fan_Principal);
+principal.set("FLEH-1380-Exhaust-fan", exhaust_fan_Principal);
+
 principal.set("HVLS-gearless-fan", hvls_fan_Principal);
 
 // principal.set("12-feet-geared-HVLS-fan", hvls_fan_Principal);
@@ -2275,6 +2664,47 @@ const exhuastApplication = [
     // }
 ];
 
+const exhuastApplicationFLEH1000 = [
+    {
+        type: "paragraph",
+        data: [
+            "The FLEH‑1000 industrial exhaust fan is widely used in factories, warehouses, and commercial facilities where strong ventilation is essential. With its 900 mm stainless steel blade and direct drive motor, it delivers 22,000 CM/H airflow at 560 rpm, effectively removing heat, fumes, smoke, and dust. This makes it ideal for industries such as textiles, chemicals, food processing, and pharmaceuticals, where maintaining clean air and controlling humidity is critical to worker safety and equipment protection.",
+            "Beyond heavy industry, the FLEH‑1000 is also suitable for large kitchens, gymnasiums, and shopping complexes where fresh air and low noise levels are important. Its galvanized steel frame ensures durability and corrosion resistance, while the compact dimensions (1000 × 1000 × 400 mm) allow easy installation in diverse environments. With noise levels kept under 70 dB and minimal maintenance needs due to its direct drive design, the FLEH‑1000 provides a cost‑effective solution for continuous air circulation, improved comfort, and compliance with workplace safety standards."
+        ]
+    },
+];
+
+const exhuastApplicationFLEH1220 = [
+    {
+        type: "paragraph",
+        data: [
+            "The FLEH‑1220 industrial exhaust fan is designed for high‑capacity ventilation in large factories, warehouses, and commercial facilities. With its 1000 mm stainless steel blade and direct drive motor, it delivers 38,000 CM/H airflow at 560 rpm, making it ideal for removing heat, fumes, smoke, and dust in demanding environments. Industries such as textiles, chemicals, food processing, and pharmaceuticals benefit from its ability to maintain clean air, control humidity, and protect sensitive equipment and raw materials from damage.",
+            "In addition to heavy industry, the FLEH‑1220 is well‑suited for commercial spaces like gymnasiums, shopping complexes, and large kitchens where fresh air and low noise levels are essential. Its galvanized steel frame ensures durability and corrosion resistance, while dimensions of 1220 × 1220 × 400 mm allow practical installation. Operating on a 750 W motor with a 415 V supply, the fan balances strong performance with energy efficiency. With noise levels kept under 70 dB and minimal maintenance needs due to its direct drive design, the FLEH‑1220 provides a cost‑effective solution for continuous air circulation, improved comfort, and compliance with workplace safety standards."
+        ]
+    },
+];
+
+const exhuastApplicationFLEH1380 = [
+    {
+        type: "paragraph",
+        data: [
+            "The FLEH‑1380 industrial exhaust fan is designed for large‑scale ventilation in factories, warehouses, and production facilities where maximum airflow is required. With its 1250 mm stainless steel blade and direct drive motor, it delivers 40,000 CM/H airflow at 460 rpm, effectively removing heat, fumes, smoke, and dust. This makes it highly suitable for industries such as textiles, chemicals, food processing, and pharmaceuticals, where maintaining clean air, controlling humidity, and protecting sensitive equipment are critical to smooth operations.",
+            "Beyond heavy industry, the FLEH‑1380 is also ideal for spacious commercial environments like gymnasiums, shopping complexes, and large kitchens where fresh air and low noise levels are essential. Its galvanized steel frame ensures durability and corrosion resistance, while dimensions of 1380 × 1380 × 450 mm allow practical installation. Operating on a 1,100 W motor with a 415 V supply, the fan provides powerful yet efficient performance. With noise levels kept under 70 dB and minimal maintenance needs due to its direct drive design, the FLEH‑1380 offers a cost‑effective solution for continuous air circulation, improved comfort, and compliance with workplace safety standards."
+        ]
+    },
+];
+
+const exhaust_applications =
+    [
+        {
+            type: "paragraph",
+            data:
+                [
+                    "FLEH industrial exhaust fans are widely applied in factories, warehouses, and production facilities where strong ventilation is essential. Their high airflow capacity ensures effective removal of heat, fumes, smoke, and dust, creating a safer and more comfortable environment for workers. In industries such as textiles, chemicals, food processing, and pharmaceuticals, these fans help maintain air quality by preventing the buildup of harmful particles and odors. By controlling humidity and ensuring continuous circulation, they also protect sensitive machinery and raw materials from damage, contributing to smoother operations and reduced downtime.",
+                    "Beyond heavy industry, FLEH exhaust fans are equally valuable in commercial spaces like shopping malls, gymnasiums, and large kitchens, where fresh air and low noise levels are critical. Their direct drive design minimizes maintenance needs while delivering reliable performance, making them suitable for continuous use in demanding environments. With durable stainless steel blades and galvanized steel frames, they are built to withstand long hours of operation while resisting corrosion. Whether installed for cooling, ventilation, or air purification, FLEH fans provide a cost-effective solution that enhances comfort, improves productivity, and supports compliance with workplace safety standards."
+                ]
+        }]
+
 const hvlsApplication = [
 
     {
@@ -2293,9 +2723,14 @@ const hvlsApplication = [
 
 ]
 
-application.set("exhuast-fan", exhuastApplication);
-application.set("HVLS-gearless-fan", hvlsApplication);
+application.set("exhaust-fan", exhaust_applications);
 
+application.set("FLEH-1000-Exhaust-fan", exhaust_applications);
+application.set("FLEH-1220-Exhaust-fan", exhaust_applications);
+application.set("FLEH-1380-Exhaust-fan", exhaust_applications);
+
+
+application.set("HVLS-gearless-fan", hvlsApplication);
 
 application.set("8-feet-gearless-HVLS-fan", hvlsApplication);
 application.set("10-feet-gearless-HVLS-fan", hvlsApplication);
@@ -2308,10 +2743,8 @@ const exhuastManufacturer = [
 ]
 
 const hvlsManufacturer = [
-    "HVLS Fans also known as High Volume Low Speed Fan or Jumbo ceiling fan is intended for usage in big warehouses, factories, and other commercial and industrial applications.",
-    "Our HVLS Fans are best to replace wall-mounted fans because they are widely renowned for evenly distributing air over vast areas. Since we are aware of the enormous demand, we are producing top-notch goods.",
-    "Floent Air Ventilation Services one of the leading HVLS Fans manufacturer offers a broad selection of industrial fans with a variety of customisations and specifications to best satisfy customer needs.",
-    "An Energy Efficient Innovative solution for Large Spaces for Efficient and Effective Air Circulation.",
+    "HVLS Fans also known as High Volume Low Speed Fan or Jumbo ceiling fan is intended for usage in big warehouses, factories, and other commercial and industrial applications.Our HVLS Fans are best to replace wall-mounted fans because they are widely renowned for evenly distributing air over vast areas. Since we are aware of the enormous demand, we are producing top-notch goods.",
+    "Floent Air Ventilation Services one of the leading HVLS Fans manufacturer offers a broad selection of industrial fans with a variety of customisations and specifications to best satisfy customer needs. An Energy Efficient Innovative solution for Large Spaces for Efficient and Effective Air Circulation.",
     "The Floent Air High Volume Low Speed (HVLS) Fans are built to ensure efficient air movement in big commercial and industrial buildings. Made from the latest technologies like the gearless motor and aluminum blades, our HVLS fans generate large volumes of air using less power than any ordinary system of ventilation. Whether it is a manufacturing plant, a warehouse, a logistics hub, a shopping mall, a gymnasium, agriculture area, or even an aircraft hangar, the HVLS fans from Floent Air create an ideal environment for all types of uses throughout the year."
 ];
 
@@ -2344,13 +2777,13 @@ const manu_24ft = [
 //gearless
 
 const manu_8ft_gl = [
-  "Floent Technologies is a leading 8 feet gearless HVLS fan manufacturer, delivering efficient and cost‑effective ventilation solutions for compact industrial and commercial spaces. Our 8 feet gearless HVLS fan is designed for optimal airflow in smaller warehouses, gyms, retail outlets, and offices. Equipped with 3 Rib Blades, this fan operates at a maximum speed of 90 RPM (variable from 0 to 90 RPM), ensuring consistent air circulation with minimal energy consumption. The gearless technology eliminates friction, reducing mechanical wear and maintenance costs, while ensuring quieter operation and longer service life.",
-  "Finished in glossy black with customizable color options, this 8 feet gearless HVLS fan integrates seamlessly into modern commercial and industrial environments. CE‑certified and built with premium materials, Austar’s 8 feet gearless HVLS fan guarantees durability, reliability, and performance. By reducing heat buildup and improving air quality, it helps lower energy costs and enhances comfort in smaller spaces, making it an ideal choice for gyms, retail stores, and compact industrial facilities."
+    "Floent Technologies is a leading 8 feet gearless HVLS fan manufacturer, delivering efficient and cost‑effective ventilation solutions for compact industrial and commercial spaces. Our 8 feet gearless HVLS fan is designed for optimal airflow in smaller warehouses, gyms, retail outlets, and offices. Equipped with 3 Rib Blades, this fan operates at a maximum speed of 90 RPM (variable from 0 to 90 RPM), ensuring consistent air circulation with minimal energy consumption. The gearless technology eliminates friction, reducing mechanical wear and maintenance costs, while ensuring quieter operation and longer service life.",
+    "Finished in glossy black with customizable color options, this 8 feet gearless HVLS fan integrates seamlessly into modern commercial and industrial environments. CE‑certified and built with premium materials, Austar’s 8 feet gearless HVLS fan guarantees durability, reliability, and performance. By reducing heat buildup and improving air quality, it helps lower energy costs and enhances comfort in smaller spaces, making it an ideal choice for gyms, retail stores, and compact industrial facilities."
 ];
 
 const manu_10ft_gl = [
-  "Floent Technologies is a trusted 10 feet gearless HVLS fan manufacturer, offering advanced ventilation solutions for mid‑sized industrial and commercial spaces. Our 10 feet gearless HVLS fan is engineered for balanced airflow, creating a cooler and more comfortable environment in warehouses, factories, shopping malls, and gyms. Equipped with 3 Rib Blades, this fan operates at a maximum speed of 80 RPM (variable from 0 to 80 RPM), delivering uniform airflow with low power consumption. The gearless technology eliminates the need for a gearbox, reducing friction, mechanical wear, and maintenance costs, while ensuring quieter operation.",
-  "With a sleek glossy black finish and customizable color options, this 10 feet gearless HVLS fan blends into diverse industrial and commercial settings. CE‑certified and manufactured with high‑quality materials, Austar’s 10 feet gearless HVLS fan ensures durability, efficiency, and long‑term performance. By reducing humidity, condensation, and airborne contaminants, it improves air quality and workplace productivity, making it a reliable choice for factories, gyms, and medium‑sized open areas."
+    "Floent Technologies is a trusted 10 feet gearless HVLS fan manufacturer, offering advanced ventilation solutions for mid‑sized industrial and commercial spaces. Our 10 feet gearless HVLS fan is engineered for balanced airflow, creating a cooler and more comfortable environment in warehouses, factories, shopping malls, and gyms. Equipped with 3 Rib Blades, this fan operates at a maximum speed of 80 RPM (variable from 0 to 80 RPM), delivering uniform airflow with low power consumption. The gearless technology eliminates the need for a gearbox, reducing friction, mechanical wear, and maintenance costs, while ensuring quieter operation.",
+    "With a sleek glossy black finish and customizable color options, this 10 feet gearless HVLS fan blends into diverse industrial and commercial settings. CE‑certified and manufactured with high‑quality materials, Austar’s 10 feet gearless HVLS fan ensures durability, efficiency, and long‑term performance. By reducing humidity, condensation, and airborne contaminants, it improves air quality and workplace productivity, making it a reliable choice for factories, gyms, and medium‑sized open areas."
 ];
 
 
@@ -2374,8 +2807,28 @@ const manu_24ft_gl = [
     "The glossy black finish gives a modern, aesthetic look, and customizable color options ensure seamless integration into any industrial or commercial setting. Designed with international-quality components, this CE-certified HVLS fan offers high reliability, enhanced safety, and cost-effective cooling solutions. By reducing heat buildup, eliminating humidity, and decreasing HVAC dependency, the 24ft gearless HVLS fan significantly lowers energy costs while maintaining a comfortable working environment. With Floent Technologies, you get a high-quality, durable, and efficient cooling solution that ensures maximum airflow and superior comfort."
 ]
 
+const manu_FLEH1000 = [
+    "Floent Technologies is a trusted manufacturer of the FLEH‑1000 industrial exhaust fan, delivering high‑performance ventilation solutions for factories, warehouses, and commercial spaces. Designed with a 900 mm stainless steel blade and a direct drive motor, this fan ensures powerful airflow of 22,000 CM/H at 560 rpm while maintaining noise levels below 70 dB.",
+    "Built with a galvanized steel frame for durability and corrosion resistance, the FLEH‑1000 combines strength with energy efficiency. Compact dimensions of 1000 × 1000 × 400 mm allow easy installation, while the 550 W motor operating on 415 V supply provides reliable performance. CE‑certified and engineered for long service life, Floent Technologies’ FLEH‑1000 is a cost‑effective solution for maintaining cleaner air, improved comfort, and consistent circulation in demanding industrial environments."
+];
+const manu_FLEH1220 = [
+    "Floent Technologies is a trusted manufacturer of the FLEH‑1220 industrial exhaust fan, delivering high‑capacity ventilation solutions for large factories, warehouses, and commercial spaces. Designed with a 1000 mm stainless steel blade and a direct drive motor, this fan ensures powerful airflow of 38,000 CM/H at 560 rpm while keeping noise levels below 70 dB.",
+    "Built with a galvanized steel frame for durability and corrosion resistance, the FLEH‑1220 combines strength with energy efficiency. Its dimensions of 1220 × 1220 × 400 mm allow practical installation, while the 750 W motor operating on 415 V supply provides reliable performance. CE‑certified and engineered for long service life, Floent Technologies’ FLEH‑1220 is a cost‑effective solution for maintaining cleaner air, improved comfort, and consistent circulation in demanding industrial environments."
+];
+const manu_FLEH1380 = [
+    "Floent Technologies is a trusted manufacturer of the FLEH‑1380 industrial exhaust fan, delivering powerful ventilation solutions for large factories, warehouses, and production facilities. Designed with a 1250 mm stainless steel blade and a direct drive motor, this fan ensures strong airflow of 40,000 CM/H at 460 rpm while keeping noise levels below 70 dB.",
+    "Built with a galvanized steel frame for durability and corrosion resistance, the FLEH‑1380 combines strength with efficiency. Its dimensions of 1380 × 1380 × 450 mm make installation practical, while the 1,100 W motor operating on 415 V supply provides reliable heavy‑duty performance. CE‑certified and engineered for long service life, Floent Technologies’ FLEH‑1380 is a cost‑effective solution for maintaining cleaner air, improved comfort, and consistent circulation in demanding industrial environments."
+];
+
+
 export const manufacturer = new Map();
-manufacturer.set("exhuast-fan", exhuastManufacturer);
+manufacturer.set("exhaust-fan", exhuastManufacturer);
+
+manufacturer.set("FLEH-1000-Exhaust-fan", manu_FLEH1000);
+manufacturer.set("FLEH-1220-Exhaust-fan", manu_FLEH1220);
+manufacturer.set("FLEH-1380-Exhaust-fan", manu_FLEH1380);
+
+
 manufacturer.set("HVLS-gearless-fan", hvlsManufacturer);
 
 //geared
@@ -2461,19 +2914,19 @@ const benefit_24ft = {
 }
 
 const benefit_8ft_gl = {
-  paragraph: [
-    "The 8 feet gearless HVLS ceiling fan is designed for smaller industrial and commercial spaces, offering efficient air movement with very low energy consumption. Its compact size makes it ideal for gyms, retail outlets, and offices where consistent airflow is needed without high operating costs.",
-    "With gearless motor technology, the fan runs quietly below 40 dB and requires minimal maintenance, ensuring smooth operation and long service life. It eliminates friction and mechanical wear, making it a reliable choice for noise‑sensitive environments.",
-    "By improving air circulation and reducing humidity, the 8ft gearless HVLS fan enhances comfort, prevents stale air buildup, and lowers cooling costs. Built with CE‑certified components and customizable finishes, it combines durability, safety, and modern aesthetics for smaller commercial and industrial interiors."
-  ]
+    paragraph: [
+        "The 8 feet gearless HVLS ceiling fan is designed for smaller industrial and commercial spaces, offering efficient air movement with very low energy consumption. Its compact size makes it ideal for gyms, retail outlets, and offices where consistent airflow is needed without high operating costs.",
+        "With gearless motor technology, the fan runs quietly below 40 dB and requires minimal maintenance, ensuring smooth operation and long service life. It eliminates friction and mechanical wear, making it a reliable choice for noise‑sensitive environments.",
+        "By improving air circulation and reducing humidity, the 8ft gearless HVLS fan enhances comfort, prevents stale air buildup, and lowers cooling costs. Built with CE‑certified components and customizable finishes, it combines durability, safety, and modern aesthetics for smaller commercial and industrial interiors."
+    ]
 };
 
 const benefit_10ft_gl = {
-  paragraph: [
-    "The 10 feet gearless HVLS ceiling fan provides balanced airflow for mid‑sized industrial and commercial spaces, delivering effective cooling with low energy consumption. It is well suited for warehouses, gyms, and shopping areas where reliable ventilation is essential.",
-    "Its gearless motor ensures quiet operation below 40 dB, reduced mechanical wear, and minimal maintenance requirements. The fan’s smooth performance and long lifespan make it a cost‑effective solution for facilities seeking sustainable ventilation.",
-    "By reducing strain on HVAC systems, the 10ft gearless HVLS fan lowers cooling expenses while maintaining consistent temperature balance. CE‑certified and available in customizable colors, it offers durability, safety, and aesthetic appeal alongside superior air circulation."
-  ]
+    paragraph: [
+        "The 10 feet gearless HVLS ceiling fan provides balanced airflow for mid‑sized industrial and commercial spaces, delivering effective cooling with low energy consumption. It is well suited for warehouses, gyms, and shopping areas where reliable ventilation is essential.",
+        "Its gearless motor ensures quiet operation below 40 dB, reduced mechanical wear, and minimal maintenance requirements. The fan’s smooth performance and long lifespan make it a cost‑effective solution for facilities seeking sustainable ventilation.",
+        "By reducing strain on HVAC systems, the 10ft gearless HVLS fan lowers cooling expenses while maintaining consistent temperature balance. CE‑certified and available in customizable colors, it offers durability, safety, and aesthetic appeal alongside superior air circulation."
+    ]
 };
 
 
@@ -2506,8 +2959,35 @@ const benefit_24ft_gl = {
     ]
 }
 
+const benefit_FLEH1000 = {
+    paragraph: [
+        "The FLEH‑1000 industrial exhaust fan is a reliable solution for powerful ventilation in factories, warehouses, and large commercial spaces. With its 900 mm stainless steel blade and direct drive motor, it delivers 22,000 CM/H airflow at 560 rpm, effectively removing heat, fumes, and dust while keeping noise levels under 70 dB.",
+        "Built with a durable galvanized steel frame, the fan ensures long service life and corrosion resistance. Its compact dimensions (1000 × 1000 × 400 mm) allow easy installation, while the energy‑efficient 550 W motor reduces operating costs. The FLEH‑1000 is a cost‑effective choice for maintaining cleaner air, improved comfort, and consistent circulation in demanding industrial environments."
+    ]
+}
+
+const benefit_FLEH1220 = {
+    paragraph: [
+        "The FLEH‑1220 industrial exhaust fan is designed for high‑capacity ventilation in large factories, warehouses, and commercial spaces. With its 1000 mm stainless steel blade and direct drive motor, it delivers 38,000 CM/H airflow at 560 rpm, ensuring effective removal of heat, fumes, and dust while keeping noise levels under 70 dB.",
+        "Built with a strong galvanized steel frame, the fan offers durability and corrosion resistance for long service life. Its dimensions of 1220 × 1220 × 400 mm make installation practical, while the 750 W motor running on 415 V supply balances performance with energy efficiency. The FLEH‑1220 is a cost‑effective solution for maintaining cleaner air, improved comfort, and consistent circulation in demanding industrial environments."
+    ]
+}
+
+const benefit_FLEH1380 = {
+    paragraph: [
+        "The FLEH‑1380 industrial exhaust fan is a heavy‑duty solution for large‑scale ventilation in factories, warehouses, and production facilities. With its 1250 mm stainless steel blade and direct drive motor, it delivers 40,000 CM/H airflow at 460 rpm, ensuring effective removal of heat, fumes, and dust while keeping noise levels under 70 dB.",
+        "Built with a galvanized steel frame, the fan offers strength, durability, and corrosion resistance for long service life. Its dimensions of 1380 × 1380 × 450 mm make installation practical, while the 1,100 W motor running on 415 V supply provides powerful yet efficient performance. The FLEH‑1380 is a cost‑effective choice for maintaining cleaner air, improved comfort, and consistent circulation in demanding industrial environments."
+    ]
+
+}
+
 export const benefits = new Map();
-benefits.set("exhuast-fan", exhaustbenifits);
+benefits.set("exhaust-fan", exhaustbenifits);
+
+benefits.set("FLEH-1000-Exhaust-fan", benefit_FLEH1000);
+benefits.set("FLEH-1220-Exhaust-fan", benefit_FLEH1220);
+benefits.set("FLEH-1380-Exhaust-fan", benefit_FLEH1380);
+
 benefits.set("HVLS-gearless-fan", hvlsbenefits);
 
 // benefits.set("12-feet-geared-HVLS-fan", benefit_12ft);

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Menu, X, Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useSearch } from "@/context/SearchContext";
+import { useQuote } from "@/context/QuoteContext";
 
 const navLinks = [
     {
@@ -35,6 +36,7 @@ export default function Navbar() {
     const { search, setSearch } = useSearch()
     const [onProduct, setOnProduct] = useState(false)
     const router = useRouter();
+    const { active, setActive } = useQuote();
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
@@ -123,12 +125,24 @@ export default function Navbar() {
                     </div>
 
                     {/* Get Quote */}
-                    <Link
-                        href="/products/exhuast-fan#tabs"
-                        className="rounded-full bg-[#09273A] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-[#FDCD2E] hover:text-[#09273A]"
+                    <button
+                        onClick={() => {
+                            if (window.location.pathname == "/products/exhaust-fan") {
+                                const element = document.getElementById("tabs");
+                                setActive("Ask For a Price")
+                                if (element) {
+                                    element.scrollIntoView({ behavior: "smooth", block: "start" });
+                                }
+                            } else {
+                                router.push("/products/exhaust-fan#tabs")
+                            }
+                            setMenuOpen(false)
+
+                        }}
+                        className=" block w-fit rounded-full bg-[#09273A] px-6 py-3 hover:bg-[#FDCD2E] hover:text-[#09273A] transition text-center text-sm font-semibold text-white"
                     >
                         Get Quote
-                    </Link>
+                    </button>
                 </div>
 
                 {/* MOBILE MENU BUTTON */}
@@ -191,13 +205,27 @@ export default function Navbar() {
                     </div>
 
                     {/* Mobile Get Quote */}
-                    <Link
-                        href="/products/exhuast-fan#tabs"
-                        onClick={() => setMenuOpen(false)}
-                        className="mt-4 block w-full rounded-full bg-[#09273A] px-6 py-3.5 text-center text-sm font-semibold text-white"
+                    <button
+                        onClick={() => {
+                            if (window.location.pathname == "/products/exhaust-fan") {
+                                setMenuOpen(false)
+
+                                const element = document.getElementById("tabs");
+                                setActive("Ask For a Price")
+                                if (element) {
+                                    element.scrollIntoView({ behavior: "smooth", block: "start" });
+                                }
+                            } else {
+                                setMenuOpen(false)
+                                router.push("/products/exhaust-fan#tabs")
+                            }
+
+
+                        }}
+                        className="mt-4 block hover:bg-[#FDCD2E] hover:text-[#09273A] transition w-full rounded-full bg-[#09273A] px-6 py-3.5 text-center text-sm font-semibold text-white"
                     >
                         Get Quote
-                    </Link>
+                    </button>
                 </div>
             )
             }
