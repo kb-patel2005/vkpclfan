@@ -10,7 +10,7 @@ import Image from 'next/image';
 import { categoryOfFan, model } from '@/Mockdata/Model';
 import { useSlug } from '@/context/SlugContext';
 import { useQuote } from '@/context/QuoteContext';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 
 const models = [
     {
@@ -307,24 +307,25 @@ export default function DetailLanding({ slug }: { slug: string }) {
     const { newSlug, setNewSlug } = useSlug();
     const { active, setActive } = useQuote();
     const [data, setData] = useState(specification.get(slug));
-    const pathname = usePathname();
     const searchParams = useSearchParams();
 
     useEffect(() => {
-        // Check if hash is present in URL
-        if (typeof window !== "undefined" && window.location.hash === "#tabs") {
+        setNewSlug(slug);
+        setData(specification.get(slug));
+
+        if (searchParams.get("quote") === "true") {
             setActive("Ask For a Price");
-            const element = document.getElementById("tabs");
-            if (element) {
-                element.scrollIntoView({ behavior: "smooth", block: "start" });
-            }
+
+            setTimeout(() => {
+                document.getElementById("tabs")?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                });
+            }, 100);
         } else if (active === "") {
             setActive("Description");
         }
-
-        setNewSlug(slug);
-        setData(specification.get(slug));
-    }, [pathname, searchParams, slug, active]);
+    }, [slug, searchParams]);
 
 
     const [formData, setFormData] = useState({
@@ -482,7 +483,7 @@ Message: ${formData.message}`;
                 <div className='w-full'>
                     <div
                         id='tabs'
-                        className={`max-w-7xl w-full mx-auto flex scroll-m-0 bg-white items-center gap-8 py-4 px-3 lg:px-16 overflow-x-auto whitespace-nowrap `}
+                        className={`max-w-7xl w-full mx-auto flex bg-white items-center gap-8 py-4 px-3 lg:px-16 overflow-x-auto whitespace-nowrap [-ms-overflow-style:none] `}
                     >
                         <Link
                             href="/products/abc"

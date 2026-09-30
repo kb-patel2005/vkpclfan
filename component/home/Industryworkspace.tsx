@@ -88,7 +88,7 @@ export default function Industryworkspace() {
                   element.scrollIntoView({ behavior: "smooth", block: "start" });
                 }
               } else {
-                router.push("/products/exhaust-fan/#tabs")
+                router.push("/products/exhaust-fan?quote=true")
               }
             }}
             className="w-full text-center sm:w-auto rounded-full border-2 border-white bg-white px-8 py-4 text-sm font-semibold text-black transition duration-300 hover:bg-transparent hover:text-white sm:px-12 sm:py-5 sm:text-base" >
