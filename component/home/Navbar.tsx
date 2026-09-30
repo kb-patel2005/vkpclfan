@@ -213,11 +213,7 @@ export default function Navbar() {
                             ) {
                                 const element = document.getElementById("tabs");
                                 setActive("Ask For a Price");
-                                if (element) {
-                                    const navHeight = document.querySelector("nav")?.offsetHeight || 0;
-                                    const y = element.getBoundingClientRect().top + window.pageYOffset;
-                                    window.scrollTo({ top: y, behavior: "smooth" });
-                                }
+                                
 
                             } else {
                                 router.push("/products/exhaust-fan#tabs");
