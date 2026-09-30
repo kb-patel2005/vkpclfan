@@ -501,7 +501,7 @@ export default function Policy() {
                         viewport={{ once: true, amount: 0.05 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         id=""
-                        className="py-4 lg:py-12 border-y border-[#5D5D5D]  sm:px-6 lg:px-[76px] flex flex-col gap-6 lg:gap-8"
+                        className="py-4 lg:py-12 border-y border-[#5D5D5D]  sm:px-6 lg:px-[76px] flex flex-col gap-3 lg:gap-8"
                     >
                         <div className="border-2 border-[#071A33] py-4 px-8 text-center hover:shadow-2xl hover:shadow-[#FDCD2E] transition">
                             <h3 className="font-jakarata font-bold text-[24px] sm:text-[30px] lg:text-[36px] leading-tight tracking-[-0.36px] text-center align-middle uppercase text-[#071A33]">
