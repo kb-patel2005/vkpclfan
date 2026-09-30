@@ -314,7 +314,7 @@ export default function DetailLanding({ slug }: { slug: string }) {
         }
 
         setNewSlug(slug); 
-        setActive("Description");// update context
+        active == "" ? setActive("Description") : "";// update context
         setData(specification.get(slug)); // use slug directly
     }, [slug]);
 
@@ -476,7 +476,7 @@ Message: ${formData.message}`;
                 <div className='w-full'>
                     <div
                         id='tabs'
-                        className="max-w-7xl w-full mx-auto flex lg:scroll-mt-0 scroll-mt-110 bg-white items-center gap-8 py-4 px-3 lg:px-16 overflow-x-auto whitespace-nowrap [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                        className={`max-w-7xl w-full mx-auto flex ${ (window.location.pathname== `/products/${newSlug}`) ? "lg:scroll-mt-0 scroll-mt-110": "" }  bg-white items-center gap-8 py-4 px-3 lg:px-16 overflow-x-auto whitespace-nowrap [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden`}
                     >
                         <Link
                             href="/products/abc"

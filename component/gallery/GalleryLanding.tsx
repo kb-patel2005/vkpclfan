@@ -16,7 +16,7 @@ export default function GalleryLanding() {
 
     return (
 
-        <section className="relative flex w-full items-center px-5 sm:px-8 lg:px-12 py-15 lg:py-30">
+        <section className="relative flex w-full items-center px-5 sm:px-8 lg:px-12 py-12 lg:py-30">
 
             {/* Content */}
             <motion.div

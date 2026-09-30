@@ -47,7 +47,7 @@ const features = [
         <path d="M27.6 29.7L23.0625 25.1625C22.4375 25.5625 21.775 25.9062 21.075 26.1938C20.375 26.4813 19.65 26.7125 18.9 26.8875V23.8125C19.25 23.6875 19.5938 23.5625 19.9312 23.4375C20.2687 23.3125 20.5875 23.1625 20.8875 22.9875L15.9 18V25.8L8.4 18.3H2.4V9.3H7.2L0 2.1L2.1 0L29.7 27.6L27.6 29.7ZM27.3 21L25.125 18.825C25.55 18.05 25.8687 17.2375 26.0812 16.3875C26.2937 15.5375 26.4 14.6625 26.4 13.7625C26.4 11.4125 25.7125 9.3125 24.3375 7.4625C22.9625 5.6125 21.15 4.3625 18.9 3.7125V0.6375C22 1.3375 24.525 2.90625 26.475 5.34375C28.425 7.78125 29.4 10.5875 29.4 13.7625C29.4 15.0875 29.2188 16.3625 28.8563 17.5875C28.4938 18.8125 27.975 19.95 27.3 21ZM22.275 15.975L18.9 12.6V7.725C20.075 8.275 20.9937 9.1 21.6562 10.2C22.3188 11.3 22.65 12.5 22.65 13.8C22.65 14.175 22.6187 14.5437 22.5562 14.9062C22.4937 15.2688 22.4 15.625 22.275 15.975ZM15.9 9.6L12 5.7L15.9 1.8V9.6ZM12.9 18.525V15L10.2 12.3H5.4V15.3H9.675L12.9 18.525Z" fill="#000613" />
       </svg>
     ), styling: "lg:col-span-4 lg:pt-12",
-     animate: "animate-float-up"
+    animate: "animate-float-up"
   },
   {
     no: "05",
@@ -58,7 +58,7 @@ const features = [
         <path d="M15 12V9H22.5V12H15ZM15 6V3H27V6H15ZM7.5 27C5.425 27 3.65625 26.2687 2.19375 24.8062C0.73125 23.3438 0 21.575 0 19.5C0 18.3 0.2625 17.1812 0.7875 16.1437C1.3125 15.1062 2.05 14.225 3 13.5V4.5C3 3.25 3.4375 2.1875 4.3125 1.3125C5.1875 0.4375 6.25 0 7.5 0C8.75 0 9.8125 0.4375 10.6875 1.3125C11.5625 2.1875 12 3.25 12 4.5V13.5C12.95 14.225 13.6875 15.1062 14.2125 16.1437C14.7375 17.1812 15 18.3 15 19.5C15 21.575 14.2687 23.3438 12.8062 24.8062C11.3438 26.2687 9.575 27 7.5 27ZM3 19.5H12C12 18.775 11.8438 18.1 11.5312 17.475C11.2188 16.85 10.775 16.325 10.2 15.9L9 15V4.5C9 4.075 8.85625 3.71875 8.56875 3.43125C8.28125 3.14375 7.925 3 7.5 3C7.075 3 6.71875 3.14375 6.43125 3.43125C6.14375 3.71875 6 4.075 6 4.5V15L4.8 15.9C4.225 16.325 3.78125 16.85 3.46875 17.475C3.15625 18.1 3 18.775 3 19.5Z" fill="#D97706" />
       </svg>
     ), styling: "lg:col-span-4 lg:pt-32",
-     animate: "animate-float-down"
+    animate: "animate-float-down"
   },
   {
     no: "06",
@@ -69,27 +69,27 @@ const features = [
         <path d="M0 30V11.9625L10.5 7.5V10.5L18 7.5V12H30V30H0ZM3 27H27V15H15V11.925L7.5 14.925V12L3 13.9875V27ZM13.5 24H16.5V18H13.5V24ZM7.5 24H10.5V18H7.5V24ZM19.5 24H22.5V18H19.5V24ZM30 12H22.5L24 0H28.5L30 12ZM3 27H7.5H15H27H3Z" fill="#000613" />
       </svg>
     ), styling: "lg:col-span-4 lg:pt-12",
-     animate: "animate-float-up"
+    animate: "animate-float-up"
   },
 ];
 
 export default function WhyChooseHVLS() {
 
-  const {newSlug} = useSlug();
+  const { newSlug } = useSlug();
 
   return (
     <section className="bg-[#F8F9FA] pb-8 pt-5 lg:pb-15 lg:pt-16 px-5">
       <motion.div
-                initial={{ x: -100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}  className="max-w-7xl mx-auto text-center">
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: "easeOut" }} className="max-w-7xl mx-auto text-center">
         <span className="text-[12px] text-[#09273A] leading-4 font-semibold tracking-[1.2px] bg-[#09273A1A] px-4 py-1.5 rounded-full">
           WHY CHOOSE {" "}{newSlug
-                        .split("-")
-                        .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // capitalize each
-                        .join(" ")}</span>{" "}
-        
+            .split("-")
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // capitalize each
+            .join(" ")}</span>{" "}
+
 
         <h2 className="mt-5 font-sora font-bold lg:leading-14 tracking-[-0.96px] text-5xl text-[#09273A]">
           Big Smart <span className="text-[#FDCD2E]">Energy</span>
@@ -118,8 +118,8 @@ export default function WhyChooseHVLS() {
             </svg>
 
           </center>
-          
-            <p className="top-14 font-extrabold absolute align-middle w-full hidden lg:block text-[240px] text-[#1A1C1E] opacity-[3%] z-10">MORE. US</p>
+
+          <p className="top-14 font-extrabold absolute align-middle w-full hidden lg:block text-[240px] text-[#1A1C1E] opacity-[3%] z-10">MORE. US</p>
           {features.map((item) => (
             <div key={item.no} className={`text-left relative z-20 ${item.styling} ${item.animate}`}>
 

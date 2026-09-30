@@ -75,14 +75,12 @@ const JobCard = ({ job, active, setActive }: { job: Job, active: string, setActi
                     </h2>
 
                 </div>
-                <motion.button
-                    whileTap={{ scale: 0.95 }}
-                    whileHover={{ scale: 1.05 }}
+                <button
                     onClick={() => { active == job.role ? setActive("") : setActive(job.role) }}
-                    className="w-full font-inter border border-[#09273A] bg-white px-6 py-2 text-sm font-medium text-[#09273A] transition hover:bg-transparent sm:w-auto lg:text-[14px]"
+                    className="w-full hover:scale-105 font-inter border border-[#09273A] bg-white px-6 py-2 text-sm font-medium text-[#09273A] transition hover:bg-transparent sm:w-auto lg:text-[14px]"
                 >
                     VIEW POSITION
-                </motion.button>
+                </button>
             </div>
             <div className={`${active == job.role ? "block" : "hidden"}`}>
                 <h3 className="text-[#09273A] font-inter font-bold text-[14px] leading-8 tracking-[0px] align-middle"> Job Responsibilities </h3>
