@@ -406,27 +406,27 @@ Message: ${formData.message}`;
 
             {/* fetures and adva */}
             <div className='w-full max-w-7xl mx-auto mt-2'>
-                <h2 className='text-4xl font-bold font-sora mb-12 text-center'>features and Advantages</h2>
+                <h2 className='text-4xl font-bold font-sora mb-2 lg:mb-12 text-center'>features and Advantages</h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-10">
                     {featureandadv.get(newSlug)?.map((item: any, index: number) => (
                         <div
                             key={index}
                             className="flex flex-col items-center text-center
                                 transform transition duration-500 ease-in-out 
-                                p-2 rounded-2xl 
-                                hover:scale-110 hover:shadow-lg hover:shadow-[#fdcd2e] hover:bg-transparent
+                                pb-2 rounded-2xl 
+                                hover:shadow-lg hover:shadow-[#fdcd2e] hover:bg-transparent
                                 animate-fadeIn"
                         >
                             <div className="h-[50px] w-[50px] shrink-0 flex items-center justify-center">
                                 {item.icon}
                             </div>
 
-                            <div className="mt-3 flex flex-col items-center">
+                            <div className=" mt-2 lg:mt-3 flex flex-col items-center">
                                 <h3 className="font-sora font-bold text-[18px] lg:text-[20px] leading-[24px] lg:leading-[28px] text-[#09273A]">
                                     {item.features}
                                 </h3>
-                                <p className="mt-2 max-w-[260px] font-inter font-normal text-[14px] leading-[22px] text-[#5D5D5D]">
+                                <p className="mt-1 lg:mt-2 max-w-[260px] font-inter font-normal text-[14px] leading-[22px] text-[#5D5D5D]">
                                     {item.advantage}
                                 </p>
                             </div>
@@ -439,7 +439,7 @@ Message: ${formData.message}`;
             {categoryOfFan.get(newSlug) &&
                 (
                     <div className='w-full'>
-                        <div className="flex flex-col md:flex-row items-center gap-8 mb-12 mx-auto max-w-7xl">
+                        <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12 mx-auto max-w-7xl">
                             {/* Left side: text */}
                             <div className="flex-1">
                                 <div className='flex gap-2 items-center mb-4'>
@@ -460,12 +460,16 @@ Message: ${formData.message}`;
                             </div>
 
                             {/* Right side: image */}
-                            <div className="flex-1">
-                                <img
+                            <div className="flex-1"
+                            style={{ textAlign: "-webkit-right" }}>
+                                <Image
                                     src={categoryOfFan.get(slug).image}
+                                    height={categoryOfFan.get(slug).imageHeight}
+                                    width={categoryOfFan.get(slug).imageWidth || 550}
                                     alt={categoryOfFan.get(slug).heading}
-                                    className="rounded-lg shadow-lg w-full object-cover"
+                                    className="rounded-lg shadow-lg object-cover"
                                 />
+
                             </div>
                         </div>
                     </div>

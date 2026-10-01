@@ -65,7 +65,7 @@ export default function Articles() {
                 className="w-full">
                 <div className='bg-white w-full'>
                     <div
-                        className="max-w-7xl mx-auto flex  items-center gap-8 my-10 py-4 lg:px-5 px-5 overflow-x-auto whitespace-nowrap [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                        className="max-w-7xl mx-auto flex  items-center gap-8 my-8 lg:my-10 py-4 lg:px-5 px-5 overflow-x-auto whitespace-nowrap [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
                     >
                         {
                             links.map((e: string) =>
@@ -91,7 +91,7 @@ export default function Articles() {
                     <motion.div initial={{ x: -100, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         viewport={{ once: true, amount: 0.3 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }} className='relative flex h-[500px] justify-items-start items-center mt-6 w-full max-w-7xl mx-auto pt-20'>
+                        transition={{ duration: 0.8, ease: "easeOut" }} className='relative flex h-[500px] justify-items-start items-center mt-6 w-full max-w-7xl mx-auto pt-10 lg:pt-20'>
                         <div className='mx-auto bg-[#F1F5F9] absolute max-w-[600px] flex flex-col gap-6 p-8 lg:ml-30'>
                             <p className='flex gap-4 text-[13px] leading-4 font-medium'>
                                 <span className='text-[#0066FF]'>01 / FEATURED STORY</span>
@@ -155,7 +155,7 @@ export default function Articles() {
                         whileInView={{ x: 0, opacity: 1 }}
                         viewport={{ once: true, amount: 0.1 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="flex flex-col gap-8 lg:gap-24 mx-auto w-full max-w-7xl lg:px-0 px-5 py-16 lg:py-24 bg-white">
+                        className="flex flex-col gap-8 lg:gap-24 mx-auto w-full max-w-7xl lg:px-0 px-5 py-8 lg:py-24 bg-white">
                         {items.map((e: item, idx: number) => (
                             <div
                                 key={idx}

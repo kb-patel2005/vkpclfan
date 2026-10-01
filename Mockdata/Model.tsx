@@ -8,6 +8,8 @@ export const gearlessHVLS = {
         "Wider speed band with high torque at low RPM",
         "Reduced maintenance schedule and fewer wear parts"
     ],
+    imageHeight: 400,
+    imageWidth: 700,
     image: "/images/hvls.jpg"
 }
 
@@ -21,6 +23,9 @@ export const exhaustFan = {
         "Wider speed band with high torque at low RPM",
         "Reduced maintenance schedule and fewer wear parts"
     ],
+    imageHeight: 500,
+    imageWidth: 550,
+
     image: "/product-main-image.png"
 }
 
@@ -48,7 +53,7 @@ const gearlessFans = [
     //   { title: "FLGL246", slug: "24-feet-gearless-HVLS-fan" }
 ];
 
-const exhaustFans =[
+const exhaustFans = [
     { title: "FLEH-1000", slug: "FLEH-1000-Exhaust-fan" },
     { title: "FLEH-1220", slug: "FLEH-1220-Exhaust-fan" },
     { title: "FLEH-1380", slug: "FLEH-1380-Exhaust-fan" },

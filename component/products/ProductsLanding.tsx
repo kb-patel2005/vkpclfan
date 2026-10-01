@@ -42,7 +42,7 @@ function Card1({
 
 export default function ProductsLanding() {
     return (
-        <section className='w-full min-h-fit py-20 content-center bg-white lg:px-0 px-5'>
+        <section className='w-full min-h-fit py-10 lg:py-20 content-center bg-white lg:px-0 px-5'>
             <motion.div
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}

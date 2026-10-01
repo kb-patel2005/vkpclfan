@@ -256,7 +256,7 @@ export default function Products() {
     }, [search]);
 
     return (
-        <section className='lg:mt-20 mt-10 flex flex-col lg:gap-12 gap-4'>
+        <section className='lg:mt-20 mt-4 flex flex-col lg:gap-12 gap-4'>
             <motion.div
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
