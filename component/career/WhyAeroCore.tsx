@@ -43,7 +43,7 @@ const cards: CardDetail[] = [
 
 const Card = ({ data }: { data: CardDetail }) => {
     return (
-        <div className='p-8 border-l-4 border-[#09273A] flex flex-col gap-3 bg-white min-w-[320px] w-[32%]'>
+        <div className='p-8 border-l-4 border-[#09273A] flex flex-col gap-3 bg-white min-w-[320px] lg:w-[32%] hover:scale-[1.02] transition-all duration-300 hover:shadow-lg hover:shadow-[#FDCD2E]'>
             <span>{data.icon}</span>
             <h2 className="font-manrope pt-3 font-bold text-[24px] leading-[32px] tracking-[0px] align-middle text-[rgba(9,39,58,1)]">
                 {data.title}
@@ -64,8 +64,8 @@ export default function WhyAeroCore() {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className='flex flex-col gap-4 pb-12'>
-                <h1 className="font-sora font-semibold text-[48px] leading-[56px] tracking-[-0.48px] align-middle text-[rgba(9,39,58,1)]">
+                className='flex flex-col lg:gap-4 lg:pb-12 pb-4'>
+                <h1 className="font-sora font-semibold text-[32px] lg:text-[48px] lg:leading-[56px] tracking-[-0.48px] align-middle text-[rgba(9,39,58,1)]">
                     Why Floent?
                 </h1>
                 <p className="font-inter font-normal text-[18px] leading-[28px] tracking-[0px] align-middle text-[rgba(93,93,93,1)] lg:whitespace-pre-line">

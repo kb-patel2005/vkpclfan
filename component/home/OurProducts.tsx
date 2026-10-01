@@ -117,7 +117,7 @@ export default function IndustrialSolutions() {
                     <div
                         className="w-full lg:basis-3/5"
                     >
-                        <div className="grid grid-cols-1 gap-2 lg:gap-4 sm:grid-cols-2">
+                        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                             {products.slice(1).map((item, index) => (
                                 <div
                                     key={index}

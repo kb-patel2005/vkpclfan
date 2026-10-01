@@ -77,7 +77,7 @@ const JobCard = ({ job, active, setActive }: { job: Job, active: string, setActi
                 </div>
                 <button
                     onClick={() => { active == job.role ? setActive("") : setActive(job.role) }}
-                    className="w-full hover:scale-105 font-inter border border-[#09273A] bg-white px-6 py-2 text-sm font-medium text-[#09273A] transition hover:bg-transparent sm:w-auto lg:text-[14px]"
+                    className="w-full hover:scale-105 font-inter border border-[#09273A] bg-white px-6 py-2 text-sm font-medium text-[#09273A] transition sm:w-auto lg:text-[14px] hover:bg-[#FDCD2E] hover:border-none"
                 >
                     VIEW POSITION
                 </button>
@@ -116,13 +116,13 @@ export default function JobPositions() {
     const [active, setActive] = useState("");
 
     return (
-        <section className='w-full py-20 lg:px-0 px-5'>
+        <section className='w-full py-5 lg:py-20 lg:px-0 px-5'>
             <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className='flex flex-wrap justify-between items-center px-2 w-full max-w-7xl mx-auto my-8 bg-white py-4'>
+                className='flex flex-wrap justify-between items-center px-2 w-full max-w-7xl mx-auto my-4 lg:my-8 bg-white py-4'>
                 <h1 className='font-sora font-bold text-[32px] leading-10 text-[#09273A]'> Open Positions</h1>
                 <span className='font-medium text-sm leading-5 tracking-[0.14px] text-[#5D5D5D]'>3 POSITIONS AVAILABLE</span>
             </motion.div>

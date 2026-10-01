@@ -31,7 +31,7 @@ export default function PerfectFit() {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className='w-[50%] min-w-[320px]'>
+                className='w-[50%] min-w-[350px]'>
                 <ApplicationForm />
             </motion.div>
         </section>
