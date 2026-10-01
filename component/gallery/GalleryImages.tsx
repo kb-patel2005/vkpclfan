@@ -39,7 +39,7 @@ export default function GalleryImages() {
   const { active, setActive, isAll, setIsAll } = useGallery();
 
     return (
-        <section className="w-full bg-[#09273A] lg:py-24 pt-10 pb-6 lg:px-0 px-5 flex flex-col gap-6 lg:gap-10" id="gallery">
+        <section className="w-full bg-[#09273A] lg:pt-20 pt-10 lg:pb-8 pb-7 lg:px-0 px-5 flex flex-col gap-7 lg:gap-8" id="gallery">
             <div className={`${isAll ? " grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4":"flex flex-wrap justify-center" } max-w-7xl mx-auto gap-4 `}>
                 {galleryItems.map((item) => {
                     if (item.category == active || active == "ALL") {

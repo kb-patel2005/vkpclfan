@@ -4,7 +4,7 @@ import React from 'react'
 import CountUp from 'react-countup';
 
 const data = [
-  { num: 2017, suffix: "", title: "FOUNDED" },
+  { num: 2025, suffix: "", title: "FOUNDED" },
   { num: 20, suffix: "K+", title: "SQ. FT. FACILITY" },
   { num: 300, suffix: "+", title: "SYSTEM UPTIME" },
   { num: "HVLS", suffix: "%", title: "ENERGY SAVINGS" },

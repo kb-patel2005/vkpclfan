@@ -4,12 +4,12 @@ export const title_description = new Map();
 // Exhaust Fan
 title_description.set("exhaust-fan", [
     "Industrial Exhaust Fan",
-    "Exhaust fans are designed for ventilation in factories, warehouses, and commercial spaces, ensuring air quality by removing heat, fumes, dust, and humidity."
+    "Exhaust fans are designed for ventilation in factories, warehouses, and commercial spaces, ensuring air quality by removing heat, fumes, dust, and humidity. To meet diverse industrial needs, these fans are available in different sizes, ranging from compact units for smaller workshops to large‑capacity models for expansive facilities. "    
 ]);
 
 
 title_description.set("FLEH-1000-Exhaust-fan", [
-    "FLEH‑1000 Industrial Exhaust Fan", "The FLEH‑1000 features a 900 mm stainless steel blade, 22000 CM/H airflow, and direct drive motor for reliable performance. With noise levels under 70 dB and a durable galvanized steel frame, it’s built for efficient, heavy‑duty ventilation."
+    "FLEH‑1000 Industrial Exhaust Fan", "The FLEH‑1000 is a direct drive exhaust fan with a 900 mm stainless steel blade, delivering 22,000 CM/H airflow at 560 rpm. Built with a galvanized steel frame, it ensures durability while keeping noise levels under 70 dB, making it ideal for heavy‑duty ventilation needs."
 ]);
 title_description.set("FLEH-1220-Exhaust-fan", [
     "FLEH‑1220 Industrial Exhaust Fan", "The FLEH‑1220 is a direct drive exhaust fan with a 1000 mm stainless steel blade, delivering 38,000 CM/H airflow at 560 rpm. Built with a galvanized steel frame, it ensures durability while keeping noise levels under 70 dB, making it ideal for heavy‑duty ventilation needs."

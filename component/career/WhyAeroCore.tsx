@@ -66,7 +66,7 @@ export default function WhyAeroCore() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className='flex flex-col gap-4 pb-12'>
                 <h1 className="font-sora font-semibold text-[48px] leading-[56px] tracking-[-0.48px] align-middle text-[rgba(9,39,58,1)]">
-                    Why AeroCore?
+                    Why Floent?
                 </h1>
                 <p className="font-inter font-normal text-[18px] leading-[28px] tracking-[0px] align-middle text-[rgba(93,93,93,1)] lg:whitespace-pre-line">
                     {desc}

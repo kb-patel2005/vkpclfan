@@ -3,6 +3,7 @@
 import { useSlug } from '@/context/SlugContext';
 import { benefits } from '@/Mockdata/Mockdata'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import React from 'react'
 
 export default function BenefitFan() {
@@ -20,7 +21,7 @@ export default function BenefitFan() {
         className="flex flex-col lg:flex-row max-w-7xl mx-auto gap-4 lg:gap-6">
 
         {/* Left Content */}
-        <div className="w-full lg:w-[35%] flex flex-col gap-4 lg:gap-6">
+        <div className="w-full lg:w-[65%] flex flex-col gap-4 lg:gap-6">
           <h2 className="font-sora font-bold text-[32px] leading-[40px] lg:text-[40px] lg:leading-[48px]">
             Advantages of Industrial{" "}
             <span className="text-[#FDCD2E]">{newSlug.split("-").join(" ")}</span>
@@ -82,10 +83,12 @@ export default function BenefitFan() {
         </div>
 
         {/* Right Image */}
-        <img
+        <Image
           src="/manufacuring.png"
+          height={600}
+          width={400}
           alt="benefit of exhaust fan"
-          className="w-full h-[280px] object-cover lg:object-fill lg:w-[60%] lg:h-[670px]"
+          className="w-full object-cover lg:object-fill"
         />
       </motion.div>
     </section>

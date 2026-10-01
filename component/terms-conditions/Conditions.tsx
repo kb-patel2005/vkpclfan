@@ -196,7 +196,7 @@ export default function Conditions() {
                         </p>
 
                         <p className="font-medium w-fit py-2 px-4 bg-[#F5F3F5] text-[12px] leading-[16px] tracking-[0.6px] align-middle text-[#1B1B1D] hover:bg-[#FDCD2E]">
-                            Last updated: Aug 9, 2024
+                            Last updated: Aug 9, 2026
                         </p>
                     </div>
 
@@ -224,7 +224,7 @@ export default function Conditions() {
                         </h2>
 
                         <p className="pl-4 font-inter font-medium mb-4 text-[12px] leading-[16px] tracking-[0.6px] align-middle text-[#44474D]">
-                            Last updated Oct 2023
+                            Last updated Oct 2026
                         </p>
 
                         <nav className="flex lg:flex-col overflow-x-auto lg:overflow-visible gap-2 lg:space-y-4 px-4 lg:px-0 scrollbar-hide">

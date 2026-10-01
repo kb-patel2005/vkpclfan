@@ -35,7 +35,7 @@ const socialLinks = [
 
   {
     name: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/floentair/",
     icon: (
       <svg
         width="12"
@@ -134,6 +134,7 @@ export default function Footer() {
                   key={social.name}
                   href={social.href}
                   aria-label={social.name}
+                  target="_blank"
                   className="flex h-9 w-9 items-center justify-center rounded-full transition bg-[#EDEEEF] duration-300 hover:bg-[#FDCD2E] hover:text-white"
                 >
                   {social.icon}

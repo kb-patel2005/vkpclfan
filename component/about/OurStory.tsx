@@ -19,7 +19,7 @@ const cards = [
             </svg>
         ),
         number: "01",
-        title: "Founded in 2017",
+        title: "Founded in 2025",
         description:
             "Floent Technologies started manufacturing high-performance HVLS fans after years of dedicated research and development in aerodynamic engineering.",
     },

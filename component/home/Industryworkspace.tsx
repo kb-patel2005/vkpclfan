@@ -8,7 +8,7 @@ import Link from "next/link";
 import { useQuote } from "@/context/QuoteContext";
 
 const data = [
-  { num: 15, suffix: "+", title: "YEARS OF EXPERIENCE" },
+  { num: 2, suffix: "+", title: "YEARS OF EXPERIENCE" },
   { num: 5000, suffix: "+", title: "INSTALLATIONS" },
   { num: 99.9, suffix: "%", title: "SYSTEM UPTIME" },
   { num: 45, suffix: "%", title: "ENERGY SAVINGS" },

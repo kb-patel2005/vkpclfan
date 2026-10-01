@@ -439,7 +439,7 @@ Message: ${formData.message}`;
             {categoryOfFan.get(newSlug) &&
                 (
                     <div className='w-full'>
-                        <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12 mx-auto max-w-7xl">
+                        <div className="flex flex-col md:flex-row items-center justify-between gap-4 lg:gap-8 lg:py-2.5 mx-auto max-w-7xl">
                             {/* Left side: text */}
                             <div className="flex-1">
                                 <div className='flex gap-2 items-center mb-4'>
@@ -680,14 +680,14 @@ Message: ${formData.message}`;
                                 <div
                                     key={idx}
                                     className="flex flex-col justify-center border rounded-lg p-6 shadow-md bg-white 
-                                            transform transition duration-500 hover:scale-105 hover:shadow-xl animate-fadeUp"
+                                            transform transition duration-500 hover:scale-105 hover:shadow-xl hover:shadow-[#FDCD2E] animate-fadeUp"
                                 >
                                     <div
-                                        className="p-4 rounded-lg w-fit flex items-center justify-center"
-                                        style={{
-                                            background: "linear-gradient(150deg, #2e5aa8, #1E3D75)",
-                                        }}>
-                                        <div className='h-7 w-7 text-white'>
+                                        className="p-4 rounded-lg w-fit flex items-center justify-center 
+             bg-gradient-to-br from-[#2e5aa8] to-[#1E3D75] 
+             hover:from-[#FDCD2E] hover:to-[#FDCD2E] transition-all duration-300"
+                                    >
+                                        <div className="h-7 w-7 text-white">
                                             {card.icon}
                                         </div>
                                     </div>
@@ -708,17 +708,18 @@ Message: ${formData.message}`;
                                 <div
                                     key={idx}
                                     className="flex flex-col justify-center border rounded-lg p-6 shadow-md bg-white 
-                                            transform transition duration-500 hover:scale-105 hover:shadow-xl animate-fadeUp"
+                                            transform transition duration-500 hover:scale-105 hover:shadow-xl hover:shadow-[#FDCD2E] animate-fadeUp"
                                 >
                                     <div
-                                        className="p-4 rounded-lg w-fit flex items-center justify-center"
-                                        style={{
-                                            background: "linear-gradient(150deg, #2e5aa8, #1E3D75)",
-                                        }}>
-                                        <div className='h-7 w-7 text-white'>
+                                        className="p-4 rounded-lg w-fit flex items-center justify-center 
+             bg-gradient-to-br from-[#2e5aa8] to-[#1E3D75] 
+             hover:from-[#FDCD2E] hover:to-[#FDCD2E] transition-all duration-300"
+                                    >
+                                        <div className="h-7 w-7 text-white">
                                             {card.icon}
                                         </div>
                                     </div>
+
                                     <h4 className="mt-4 font-bold text-lg text-[#09273A]">{card.title}</h4>
                                     <p className="mt-2 text-[#475569] text-[16px] leading-6">
                                         {card.description}
@@ -970,8 +971,8 @@ Message: ${formData.message}`;
                     <Image
                         src="/aboutlanding.png" // replace with your actual image path
                         alt={`How ${slug.replace("-", " ")} work`}
-                        width={600}
-                        height={600}
+                        width={530}
+                        height={500}
                         className="rounded-lg shadow-lg"
                     />
                 </div>

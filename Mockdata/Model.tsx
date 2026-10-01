@@ -9,7 +9,7 @@ export const gearlessHVLS = {
         "Reduced maintenance schedule and fewer wear parts"
     ],
     imageHeight: 400,
-    imageWidth: 700,
+    imageWidth: 550,
     image: "/images/hvls.jpg"
 }
 

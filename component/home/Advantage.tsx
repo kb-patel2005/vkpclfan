@@ -62,7 +62,7 @@ const features = [
 
 export function Advantage() {
   return (
-    <section className="w-full bg-[#F8F9FA] px-6 py-8 sm:py-10 lg:px-6 lg:py-4">
+    <section className="w-full bg-[#F8F9FA] px-6 sm:py-10 lg:px-6 lg:py-4">
         <div className="mx-auto grid max-w-7xl grid-cols-12 lg:gap-10">
 
           <motion.div
@@ -119,7 +119,7 @@ export function Advantage() {
             className="col-span-12 flex flex-col justify-center gap-3 mt-5 lg:mt-0 lg:col-span-6 lg:gap-4 "
           >
             <span className="text-[11px] font-semibold uppercase tracking-[0.6px] text-[#09273A] sm:text-xs">
-              The VENAIRA Advantage
+              The Floent Advantage
             </span>
 
             <h2 className="font-sora text-[28px] font-bold leading-9 tracking-[-0.2px] text-[#0B2B45] sm:text-[34px] sm:leading-[42px] lg:text-[40px] lg:leading-[48px] lg:tracking-[-0.4px]">

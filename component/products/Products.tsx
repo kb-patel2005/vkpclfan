@@ -411,7 +411,7 @@ export default function Products() {
                                 <path stroke="currentColor" stroke-width="2" d="M6 9l6 6 6-6" />
                             </svg>
                         </div> */}
-                        <SelectBox items={["Application", "Motor power", "Motor Power"]} classes='w-64 border border-[#C3C5D980] bg-white' value="application" bg="#FFFFFF" />
+                        <SelectBox items={["Application", "Motor power"]} classes='w-64 border border-[#C3C5D980] bg-white' value="application" bg="#FFFFFF" />
 
                     </div>
                 </div>
@@ -443,7 +443,7 @@ export default function Products() {
                         {/* Buttons */}
                         <div className="flex flex-col gap-3 sm:flex-row sm:gap-5 lg:gap-8">
                             <button
-                                onClick={() => router.push('/products/exhaust-fan/#tabs')}
+                                onClick={() => router.push('/products/exhaust-fan?quote=true')}
                                 className="cursor-pointer hover:scale-105 w-full font-inter bg-[#09273A] hover:bg-black px-6 py-3 text-sm font-medium text-white transition hover:bg-[#09273A] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                             >
                                 REQUEST QUOTE

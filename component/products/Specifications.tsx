@@ -47,7 +47,7 @@ const specs = [
 
 export function Specifications() {
     return (
-        <section className="bg-[#09273A] py-16 lg:px-0 px-5 w-full">
+        <section className="bg-[#09273A] py-8 lg:py-16 lg:px-0 px-5 w-full">
             <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
@@ -62,11 +62,11 @@ export function Specifications() {
                     Advanced safety systems built to protect your people, equipment, and operations.
                 </p>
 
-                <div className="flex flex-wrap lg:justify-around justify-center gap-8 mt-10 lg:mt-12">
+                <div className="flex flex-wrap lg:justify-around justify-center gap-6 lg:gap-8 mt-10 lg:mt-12">
                     {specs.map((item) => (
                         <div key={item.title} className="flex flex-col items-center gap-4">
                             <div className="text-3xl text-white">{item.icon}</div>
-
+                            
                             <h3 className="font-bold text-sm leading-5 tracking-[0.14px] text-white">
                                 {item.title}
                             </h3>

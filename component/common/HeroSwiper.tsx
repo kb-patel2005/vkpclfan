@@ -146,7 +146,7 @@ export default function HeroSwiper({ models, features, setTab,title, description
 
         {/* Text + features */}
         <div className="flex flex-col gap-4 lg:w-[50%] mt-3">
-          <h1 className="font-sora font-bold leading-[1.15] sm:text-5xl text-[32px]">
+          <h1 className="font-sora block font-bold leading-[1.15] sm:text-[46px] text-[32px]">
             {title}
           </h1>
 

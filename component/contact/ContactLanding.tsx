@@ -15,7 +15,7 @@ export default function ContactLanding() {
                 <h1 className="font-sora text-[40px] font-bold leading-[1.15] sm:text-5xl lg:text-[64px]">
                     LET'S TALK ABOUT YOUR
                     <br />
-                    <span className='text-[#FDCD2E]'>AIRFLOW REQUIREMENTS.</span>
+                    <span className='text-[#FDCD2E]'>FLOENT REQUIREMENTS.</span>
 
                 </h1>
                 <p className="font-inter text-[18px] font-normal leading-[28px] tracking-normal text-[#434656] max-w-[672px]">

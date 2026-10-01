@@ -100,7 +100,13 @@ const JobCard = ({ job, active, setActive }: { job: Job, active: string, setActi
                     ))}
                 </ul>
             </div>
-            <Link href={'/contact/#applicationform'} className={`${active == job.role ? "block" : "hidden"} w-[150px] font-bold text-center text-[16px] leading-5 bg-[#FFC727] py-2 px-6`}>Apply</Link>
+            <Link
+                href="mailto:sales@floentair.com"
+                className={`${active == job.role ? "block" : "hidden"} w-[150px] font-bold text-center text-[16px] leading-5 bg-[#FFC727] py-2 px-6`}
+            >
+                Apply
+            </Link>
+
         </motion.div>
     )
 }
@@ -121,7 +127,7 @@ export default function JobPositions() {
                 <span className='font-medium text-sm leading-5 tracking-[0.14px] text-[#5D5D5D]'>3 POSITIONS AVAILABLE</span>
             </motion.div>
             <div className='flex flex-col gap-3 justify-between w-full max-w-7xl mx-auto'>
-                {jobs.map((e,idx:number) =>
+                {jobs.map((e, idx: number) =>
                     (<JobCard job={e} key={idx} active={active} setActive={(e) => setActive(e)} />)
                 )}
             </div>

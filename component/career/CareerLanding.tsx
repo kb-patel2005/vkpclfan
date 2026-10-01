@@ -17,10 +17,10 @@ export default function CareerLanding() {
                 {/* <div className = "flex w-full max-w-7xl lg:mx-auto"> */}
                 <div className='w-full lg:w-[50%]'>
                     <h1 className="font-sora font-extrabold text-[40px] lg:text-[64px] lg:leading-[80px] tracking-[-1.44px] align-middle text-[rgba(9,39,58,1)] lg:whitespace-pre-line">
-                        BUILD THE FUTURE OF INDUSTRIAL AIRFLOW.
+                        BUILD THE FUTURE OF INDUSTRIAL FLOENT.
                     </h1>
                     <p className="font-normal text-[18px] lg:leading-[28px] tracking-[0px] align-middle text-[rgba(93,93,93,1)] lg:whitespace-pre-line">
-                        Join Aerocore Industrial and shape the next generation of precision- engineered ventilation systems. We are recruiting top engineering talent to drive innovation and performance.
+                        Join Floent Industrial and shape the next generation of precision- engineered ventilation systems. We are recruiting top engineering talent to drive innovation and performance.
                     </p>
                 </div>
                 <div >

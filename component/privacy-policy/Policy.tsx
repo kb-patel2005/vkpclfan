@@ -188,7 +188,7 @@ export default function Policy() {
                     </h1>
 
                     <p className="pl-4 font-inter font-medium mb-4 text-[12px] leading-[16px] tracking-[0.6px] align-middle text-[#44474D]">
-                        Last updated Oct 2023
+                        Last updated Oct 2026
                     </p>
 
                     <nav className="flex lg:flex-col overflow-x-auto lg:overflow-visible gap-2 lg:space-y-4 px-4 lg:px-0 scrollbar-hide">
@@ -707,7 +707,7 @@ export default function Policy() {
 
 
                                 <h3 className="font-bold text-[32px] leading-[48px] tracking-[0px] align-middle text-[#071A33]">
-                                    +91 785795757
+                                    +91 9925624342
                                 </h3>
 
 
@@ -716,7 +716,7 @@ export default function Policy() {
                                 </p>
 
                                 <h3 className="font-bold text-[18px] leading-[32px] tracking-[0px] align-middle text-[#071A33]">
-                                    privacy@floent.com →
+                                    sales@floentair.com →
                                 </h3>
 
                             </div>

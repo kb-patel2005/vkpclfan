@@ -6,7 +6,7 @@ interface ApplicationFormProps {
   onSubmit?: (data: { fullName: string; email: string; file: File | null }) => void;
 }
 
-const ApplicationForm: React.FC<ApplicationFormProps> = ({ onSubmit }) => {
+const ApplicationForm: React.FC<ApplicationFormProps> = ({ }) => {
   const [fullName, setFullName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [file, setFile] = useState<File | null>(null);
@@ -39,9 +39,13 @@ const ApplicationForm: React.FC<ApplicationFormProps> = ({ onSubmit }) => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (onSubmit) {
-      onSubmit({ fullName, email, file });
-    }
+    const subject = encodeURIComponent("Job Application - Exhaust Fan Role");
+    const body = encodeURIComponent(
+      `Full Name: ${fullName}\nEmail: ${email}\nResume: ${file?.name || "Attached"}`
+    );
+
+    // Redirect to mail client
+    window.location.href = `mailto:sales@floentair.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -57,6 +61,7 @@ const ApplicationForm: React.FC<ApplicationFormProps> = ({ onSubmit }) => {
           value={fullName}
           onChange={(e) => setFullName(e.target.value)}
           placeholder="Jane Doe"
+          required
           className="w-full text-black font-semibold text-sm px-4 py-3.5 border border-[#C3C5D9] bg-[#09273A1F] rounded-[2px] leading-[100%] outline-none"
         />
       </div>
@@ -72,6 +77,7 @@ const ApplicationForm: React.FC<ApplicationFormProps> = ({ onSubmit }) => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="jane.doe@example.com"
+          required
           className="w-full text-black font-semibold text-sm px-4 py-3.5 border border-[#C3C5D9] bg-[#09273A1F] leading-[100%] rounded-[2px] outline-none"
         />
       </div>
@@ -94,6 +100,7 @@ const ApplicationForm: React.FC<ApplicationFormProps> = ({ onSubmit }) => {
             accept=".pdf,.doc,.docx"
             onChange={handleFileChange}
             className="hidden"
+            required
           />
 
           {/* SVG dashed border */}
@@ -156,7 +163,7 @@ const ApplicationForm: React.FC<ApplicationFormProps> = ({ onSubmit }) => {
       {/* Submit Button */}
       <button
         type="submit"
-        className="w-full bg-[#09273A] py-4 text-white font-inter font-medium text-[14px] rounded-[2px] flex items-center justify-center"
+        className="w-full cursor-pointer bg-[#09273A] py-4 text-white font-inter font-medium text-[14px] rounded-[2px] flex items-center justify-center"
       >
         SUBMIT APPLICATION
       </button>

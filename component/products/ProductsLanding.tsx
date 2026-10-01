@@ -5,7 +5,7 @@ import React from 'react'
 import CountUp from 'react-countup';
 
 const data = [
-    { num: 20, suffix: "+", title: "YEARS EXPERIENCE" },
+    { num: 2, suffix: "+", title: "YEARS EXPERIENCE" },
     { num: 5000, suffix: "+", title: "INSTALLATIONS" }
 ];
 

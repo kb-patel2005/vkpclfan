@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { useRouter } from 'next/navigation'
 
 const links = [
     "ALL INSIGHTS",
@@ -29,7 +30,7 @@ const items: item[] = [
         description:
             "An analysis of blade material fatigue and structural integrity when exposed to highly acidic ambient environments over a 10,000-hour operational cycle.",
         linkname: "VIEW SCHEMATIC",
-        image: '/blog1.jpg'
+        image: '/product-main-image.png'
     },
     {
         tag: "SYSTEMS",
@@ -53,6 +54,7 @@ const items: item[] = [
 export default function Articles() {
 
     const [active, setActive] = useState("ALL INSIGHTS");
+    const router = useRouter()
 
     return (
         <section className='lg:mb-20 w-full'>
@@ -159,6 +161,7 @@ export default function Articles() {
                         {items.map((e: item, idx: number) => (
                             <div
                                 key={idx}
+                                onClick={() => router.push('/blog/exhaust-fan')}
                                 className="grid grid-cols-1 md:grid-rows-1 md:grid-cols-12 gap-2 lg:gap-12 items-center"
                             >
                                 {/* Left Side (Text) */}
