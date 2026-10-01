@@ -116,17 +116,17 @@ export default function JobPositions() {
     const [active, setActive] = useState("");
 
     return (
-        <section className='w-full py-5 lg:py-20 lg:px-0 px-5'>
+        <section className='w-full py-5 lg:py-20 lg:px-0'>
             <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className='flex flex-wrap justify-between items-center px-2 w-full max-w-7xl mx-auto my-4 lg:my-8 bg-white py-4'>
+                className='flex flex-wrap justify-between items-center px-6 w-full max-w-7xl mx-auto my-4 lg:my-8 bg-white py-4'>
                 <h1 className='font-sora font-bold text-[32px] leading-10 text-[#09273A]'> Open Positions</h1>
                 <span className='font-medium text-sm leading-5 tracking-[0.14px] text-[#5D5D5D]'>3 POSITIONS AVAILABLE</span>
             </motion.div>
-            <div className='flex flex-col gap-3 justify-between w-full max-w-7xl mx-auto'>
+            <div className='flex flex-col gap-3 justify-between w-full max-w-7xl mx-auto lg:px-0 px-5'>
                 {jobs.map((e, idx: number) =>
                     (<JobCard job={e} key={idx} active={active} setActive={(e) => setActive(e)} />)
                 )}

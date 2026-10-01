@@ -52,7 +52,7 @@ export function Faq() {
     };
 
     return (
-        <section id="faq" className="w-full lg:pb-10 py-8 bg-[#F8F9FA]">
+        <section id="faq" className="w-full lg:pb-10 py-6 bg-[#F8F9FA]">
 
             {/* FAQ Schema */}
             <script

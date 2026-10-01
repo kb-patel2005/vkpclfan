@@ -76,7 +76,7 @@ export default function Industryworkspace() {
           <span className="text-[#FDCD2E]">Industrial Workspace?</span>
         </h2>
         <p className="max-w-2xl text-base font-normal leading-6 text-white sm:text-lg">
-          Our specialists are ready to provide a custom air-flow audit for your facility.
+          Our specialists are ready to provide a custom Floent audit for your facility.
         </p>
         <div className="flex flex-wrap gap-4 lg:gap-6 justify-center">
           <button
