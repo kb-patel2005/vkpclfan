@@ -241,7 +241,7 @@ export default function Policy() {
 
                     <div className="flex flex-col gap-3">
                         <p className="font-normal text-[16px] leading-[28px] tracking-[0px] text-[#1B1B1D]">
-                            Welcome to floent Technologies ("we," "us," or "our"). We value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, and safeguard your data when you visit our website www.floentfansindia.com
+                            Welcome to floent Technologies ("we," "us," or "our"). We value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, and safeguard your data when you visit our website www.floventair.com
                         </p>
                         <p className="font-normal text-[16px] leading-[28px] tracking-[0px] text-[#1B1B1D]">
                             This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.

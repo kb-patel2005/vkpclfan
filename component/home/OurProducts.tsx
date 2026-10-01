@@ -44,7 +44,7 @@ export default function IndustrialSolutions() {
     const router = useRouter()
 
     return (
-        <section className="w-full bg-white pt-5 px-6 lg:px-6 mt-5 lg:mt-6">
+        <section className="w-full bg-white pt-5 px-6 lg:px-6 mt-5 lg:mt-8">
             <div className="mx-auto max-w-7xl">
 
                 {/* ================= HEADING ================= */}

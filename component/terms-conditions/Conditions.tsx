@@ -247,7 +247,7 @@ export default function Conditions() {
                     {/* RIGHT CONTENT */}
                     <main className="flex flex-col gap-10 lg:gap-16 w-full lg:pl-5 lg:border-l border-l-[#C5C6CE]">
                         <p className="font-normal text-[18px] lg:leading-[32px] tracking-[0px] align-middle">
-                            Welcome to floent Technologies ("we," "us," or "our"). These Terms and Conditions ("Terms") govern your use of our website www.floentfansindia.com . By accessing or using the Site, you agree to comply with and be bound by these Terms. If you do not agree with any part of these Terms, please do not use the Site.
+                            Welcome to floent Technologies ("we," "us," or "our"). These Terms and Conditions ("Terms") govern your use of our website www.floventair.com. By accessing or using the Site, you agree to comply with and be bound by these Terms. If you do not agree with any part of these Terms, please do not use the Site.
                         </p>
 
                         {/* SECTION 1 */}

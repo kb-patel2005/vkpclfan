@@ -11,9 +11,9 @@ const faqs = [
             "The right industrial fan depends on your facility size, ceiling height, airflow requirements, temperature, and application. Our team can evaluate your workspace and recommend the most suitable fan and airflow solution.",
     },
     {
-        question: "What airflow capacity and fan sizes do you offer?",
+        question: "What Floent capacity and fan sizes do you offer?",
         answer:
-            "We offer industrial fans in different sizes and airflow capacities to suit warehouses, factories, workshops, commercial spaces, and other large facilities. The appropriate size is selected based on the area and required air circulation.",
+            "We offer industrial fans in different sizes and Floent capacities to suit warehouses, factories, workshops, commercial spaces, and other large facilities. The appropriate size is selected based on the area and required air circulation.",
     },
     {
         question: "Do you provide customized ventilation solutions?",

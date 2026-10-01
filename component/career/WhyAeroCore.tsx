@@ -9,7 +9,7 @@ interface CardDetail {
     description: string;
 }
 
-const desc = "We don't just build fans; we engineer high-performance systems. Our culture is built on\n precision, innovation, and a commitment to quality. Discover what drives us forward."
+const desc = "We don't just build fans, we engineer high-performance systems. Our culture is built on\n precision, innovation, and a commitment to quality. Discover what drives us forward."
 
 const cards: CardDetail[] = [
     {
