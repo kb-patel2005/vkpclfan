@@ -323,8 +323,9 @@ export default function DetailLanding({ slug }: { slug: string }) {
                 });
             }, 100);
         } else if (active === "") {
-            setActive("Description");
+            
         }
+        setActive("Description");
     }, [slug, searchParams]);
 
 
@@ -465,7 +466,7 @@ Message: ${formData.message}`;
                                 <Image
                                     src={categoryOfFan.get(slug).image}
                                     height={categoryOfFan.get(slug).imageHeight}
-                                    width={categoryOfFan.get(slug).imageWidth || 550}
+                                    width={categoryOfFan.get(slug).imageWidth}
                                     alt={categoryOfFan.get(slug).heading}
                                     className="rounded-lg shadow-lg object-cover"
                                 />

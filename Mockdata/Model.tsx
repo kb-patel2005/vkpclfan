@@ -23,7 +23,7 @@ export const exhaustFan = {
         "Wider speed band with high torque at low RPM",
         "Reduced maintenance schedule and fewer wear parts"
     ],
-    imageHeight: 500,
+    imageHeight: 400,
     imageWidth: 550,
 
     image: "/product-main-image.png"
