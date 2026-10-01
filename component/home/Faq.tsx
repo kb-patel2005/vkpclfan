@@ -67,7 +67,7 @@ export function Faq() {
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.8, ease: "easeOut" }} className="flex w-full flex-col items-center justify-center gap-5 px-4 text-center">
+                transition={{ duration: 0.8, ease: "easeOut" }} className="flex w-full flex-col items-center justify-center gap-2 lg:gap-5 px-4 text-center">
 
                 <div className="w-fit rounded-full bg-[#09273A1A] px-4 py-1.5 text-xs font-semibold tracking-wider text-[#09273A]">
                     SUPPORT CENTER
@@ -89,7 +89,7 @@ export function Faq() {
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.8, ease: "easeOut" }} className="mx-auto mt-12 w-full max-w-[860px] px-5">
+                transition={{ duration: 0.8, ease: "easeOut" }} className="mx-auto mt-6 lg:mt-12 w-full max-w-[860px] px-5">
 
                 <div className="space-y-4">
 
