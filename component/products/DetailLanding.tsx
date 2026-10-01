@@ -322,10 +322,9 @@ export default function DetailLanding({ slug }: { slug: string }) {
                     block: "start",
                 });
             }, 100);
-        } else if (active === "") {
-            
+        } else {
+            setActive("Description");
         }
-        setActive("Description");
     }, [slug, searchParams]);
 
 
@@ -462,7 +461,7 @@ Message: ${formData.message}`;
 
                             {/* Right side: image */}
                             <div className="flex-1"
-                            style={{ textAlign: "-webkit-right" }}>
+                                style={{ textAlign: "-webkit-right" }}>
                                 <Image
                                     src={categoryOfFan.get(slug).image}
                                     height={categoryOfFan.get(slug).imageHeight}

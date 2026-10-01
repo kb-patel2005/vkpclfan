@@ -92,7 +92,7 @@ export default function Features() {
                             </h3>
 
                             {/* Description */}
-                            <p className="text-[10px] text-[#44474D99] opacity-60">
+                            <p className="text-[10px] text-gray-700 opacity-60">
                                 {item.para}
                             </p>
                         </div>

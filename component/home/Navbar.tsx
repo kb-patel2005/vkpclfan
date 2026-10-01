@@ -203,7 +203,17 @@ export default function Navbar() {
                         </Link> */}
                         <Link
                             href="/products/exhaust-fan?quote=true"
-                            onClick={() => setMenuOpen(false)}
+                            onClick={() => {
+                                if(window.location.pathname === "/products/exhaust-fan") {
+                                    const element = document.getElementById("tabs");
+                                    setActive("Ask For a Price");
+                                    if (element) {
+                                        element.scrollIntoView({ behavior: "smooth", block: "start" });
+                                    }
+                                } else {
+                                    router.push("/products/exhaust-fan");
+                                }
+                                setMenuOpen(false)}}
                             // onClick={() => {
                             //     setMenuOpen(false);
                             //     if (
