@@ -35,7 +35,7 @@ export default function CaseStudy() {
                     <motion.button
                         whileTap={{ scale: 0.95 }}
                         whileHover={{ scale: 1.05 }}
-                        onClick={()=>router.push('/products/exhuast-fan')}
+                        onClick={()=>router.push('/products/exhaust-fan')}
                         className="w-full font-inter border border-[#00132C] bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-[#FDCD2E] sm:w-auto lg:px-8 lg:py-4 lg:text-[14px]"
                     >
                         READ THE FULL BRIEF

@@ -36,7 +36,7 @@ const data = {
 
 export default function BlogDetailLanding() {
     return (
-        <section className='w-full flex flex-wrap justify-between max-w-7xl mx-auto py-3 lg:py-20 lg:px-0 px-5'>
+        <section className='w-full flex flex-wrap lg:justify-between justify-center max-w-7xl mx-auto py-3 lg:py-20 lg:px-0 px-5'>
 
             <motion.div
                 initial={{ x: -50, opacity: 0 }}
