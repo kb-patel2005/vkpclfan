@@ -46,7 +46,7 @@ function Card1({
 
 export default function AboutCounters() {
   return (
-    <section className="w-full border border-[#C5C6CD] bg-white py-16 max-lg:px-5">
+    <section className="w-full border border-[#C5C6CD] bg-white py-8 lg:py-16 max-lg:px-5">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-wrap justify-center gap-y-8 lg:justify-between lg:gap-y-0">
           {data.map((item, index) => (

@@ -44,7 +44,7 @@ export default function Industryworkspace() {
   const { active, setActive } = useQuote()
 
   return (
-    <section className="flex w-full flex-col items-center bg-[#F8F9FA] gap-4 justify-center md:gap-5 px-5 sm:px-6 lg:gap-14 lg:pt-8 pb-12">
+    <section className="flex w-full flex-col items-center bg-[#F8F9FA] gap-4 justify-center md:gap-5 px-5 sm:px-6 lg:gap-14 lg:pt-8 pb-10 lg:pb-12">
       {/* ================= STATS ================= */}
       <motion.div
         initial={{ x: -80, opacity: 0.5 }}

@@ -389,7 +389,7 @@ export default function ArticleDetails() {
     }, []);
 
     return (
-        <article className='mb-20 w-full'>
+        <article className='lg:mb-20 mb-10 w-full'>
             <div
                 className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row gap-5 px-5 lg:px-0">
                 {/* Left Sidebar */}

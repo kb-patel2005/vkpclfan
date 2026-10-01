@@ -32,7 +32,7 @@ export default function BlogLanding() {
                     whileHover={{ scale: 1.05 }}
                     onClick={
                         () => {
-                            const el = document.getElementById("insights");
+                            const el = document.getElementById("ALL INSIGHTS");
                             if (el) {
                                 const y = el.getBoundingClientRect().top + window.scrollY - 80; // offset for header
                                 window.scrollTo({ top: y, behavior: "smooth" });

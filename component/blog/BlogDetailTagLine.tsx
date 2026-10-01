@@ -14,7 +14,7 @@ export default function BlogDetailTagLine() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className='text-center pb-5 lg:py-20 lg:mx-0 mx-5'>
 
-            <h2 className='font-semibold text-[32px] leading-10 lg:whitespace-pre-line'>"{tag}"</h2>
+            <h2 className='font-semibold lg:text-[32px] text-[20px] lg:leading-10 lg:whitespace-pre-line'>"{tag}"</h2>
         </motion.section>
     )
 }

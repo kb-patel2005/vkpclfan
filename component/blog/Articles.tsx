@@ -16,6 +16,7 @@ const links = [
 ]
 
 interface item {
+    id: string
     tag: string
     title: string
     description: string
@@ -27,6 +28,7 @@ interface item {
 
 const items: item[] = [
     {
+        id: "HVLS TECHNOLOGY",
         tag: "MATERIALS",
         title: "Mitigating Corrosive Fumes in Heavy Manufacturing",
         description:
@@ -37,6 +39,7 @@ const items: item[] = [
         height: 400
     },
     {
+        id: "FLUID DYNAMICS",
         tag: "SYSTEMS",
         title: "Calculating ROI on VFD Integration",
         description:
@@ -46,6 +49,7 @@ const items: item[] = [
 
     },
     {
+        id: "MAINTENANCE PROTOCOLS",
         tag: "MAINTENANCE",
         title: "Predictive Maintenance via Vibration Telemetry",
         description:
@@ -63,9 +67,9 @@ export default function Articles() {
     const router = useRouter()
 
     return (
-        <section className='lg:mb-20 w-full'>
+        <section className='lg:mb-20 w-full scroll-smooth'>
             <motion.div
-                id="insights"
+                id="ALL INSIGHTS"
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -80,10 +84,25 @@ export default function Articles() {
                             (
                                 <Link
                                     key={e}
-                                    href="/blog"
-                                    onClick={() => setActive(e)}
-                                    className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${active === e ? "border-b-2 border-[#09273A] pb-2" : ""
-                                        } `}
+                                    href={`#${e}`}
+                                    onClick={(event) => {
+                                        event.preventDefault();
+
+                                        setActive(e);
+
+                                        const element = document.getElementById(e);
+
+                                        if (element) {
+                                            element.scrollIntoView({
+                                                behavior: "smooth",
+                                                block: "start",
+                                            });
+                                        }
+                                    }}
+                                    className={`text-[12px] leading-4 tracking-[0.72px] font-bold shrink-0 ${active === e
+                                            ? "border-b-2 border-[#09273A] pb-2"
+                                            : ""
+                                        }`}
                                 >
                                     {e}
                                 </Link>
@@ -106,15 +125,15 @@ export default function Articles() {
                         {/* Content */}
                         <div
                             className="
-            relative lg:absolute
-            z-10
-            w-full lg:max-w-[600px]
-            bg-[#F1F5F9]
-            flex flex-col gap-6
-            p-6 lg:p-8
-            lg:ml-30
-            order-1
-        "
+                                relative lg:absolute
+                                z-10
+                                w-full lg:max-w-[600px]
+                                bg-[#F1F5F9]
+                                flex flex-col gap-6
+                                p-6 lg:p-8
+                                lg:ml-30
+                                order-1
+                            "
                         >
                             <p className="flex gap-4 text-[13px] leading-4 font-medium">
                                 <span className="text-[#0066FF]">
@@ -200,8 +219,9 @@ export default function Articles() {
                         {items.map((e: item, idx: number) => (
                             <div
                                 key={idx}
+                                id={e.id}
                                 onClick={() => router.push('/blog/exhaust-fan')}
-                                className="grid grid-cols-1 md:grid-rows-1 md:grid-cols-12 gap-2 lg:gap-12 items-center"
+                                className="grid grid-cols-1 md:grid-rows-1 md:grid-cols-12 gap-2 lg:gap-12 items-center scroll-mt-20"
                             >
                                 {/* Left Side (Text) */}
                                 <div

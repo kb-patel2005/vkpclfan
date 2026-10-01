@@ -9,7 +9,7 @@ const desc = "Consult with our structural engineering team to specify the exact 
 
 export default function EngineeringEnvironment() {
     return (
-        <section className='my-20 lg:px-0 px-5 w-full'>
+        <section className='lg:my-20 lg:px-0 px-5 w-full'>
             <motion.div initial={{ x: -100, opacity: 0 }}
                                 whileInView={{ x: 0, opacity: 1 }}
                                 viewport={{ once: true, amount: 0.3 }}

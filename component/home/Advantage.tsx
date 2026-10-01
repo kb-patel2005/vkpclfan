@@ -62,7 +62,7 @@ const features = [
 
 export function Advantage() {
   return (
-    <section className="w-full bg-[#F8F9FA] px-6 sm:py-10 lg:px-6 lg:py-4 pb-2">
+    <section className="w-full bg-[#F8F9FA] px-6 sm:py-10 lg:px-6 lg:py-4 pb-4">
         <div className="mx-auto grid max-w-7xl grid-cols-12 lg:gap-10">
 
           <motion.div
