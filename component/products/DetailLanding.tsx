@@ -1010,7 +1010,7 @@ Message: ${formData.message}`;
             }
 
             {application.get(slug) && (
-                <div className="w-full max-w-7xl mx-auto flex flex-col gap-4 lg:gap-8 pb-1.5">
+                <div className="w-full max-w-7xl mx-auto flex flex-col gap-4 lg:gap-8 pb-1.5 lg:pb-8">
                     <h2 className="text-4xl font-bold font-sora text-center">
                         {slug.split("-").slice(-2).
                             map(word => word.charAt(0).toUpperCase() + word.slice(1)) // capitalize each

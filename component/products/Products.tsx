@@ -479,7 +479,7 @@ export default function Products() {
                                 <img
                                     src={e.img}
                                     alt="Industrial Fan"
-                                    className="h-full w-full object-cover"
+                                    className="h-full w-full object-cover hover:scale-105 transition-transform duration-500"
                                 />
                             </div>
 

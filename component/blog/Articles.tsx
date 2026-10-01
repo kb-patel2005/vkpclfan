@@ -21,6 +21,8 @@ interface item {
     description: string
     linkname: string
     image: string
+    width?: number
+    height?: number
 }
 
 const items: item[] = [
@@ -30,7 +32,9 @@ const items: item[] = [
         description:
             "An analysis of blade material fatigue and structural integrity when exposed to highly acidic ambient environments over a 10,000-hour operational cycle.",
         linkname: "VIEW SCHEMATIC",
-        image: '/product-main-image.png'
+        image: '/product-main-image.png',
+        width: 430,
+        height: 400
     },
     {
         tag: "SYSTEMS",
@@ -38,7 +42,8 @@ const items: item[] = [
         description:
             "Variable Frequency Drives represent a significant initial capital expenditure. We break down the mathematical models to prove the long-term thermodynamic efficiencies.",
         linkname: "ACCESS DATA",
-        image: '/blog2.jpg'
+        image: '/blog2.jpg',
+
     },
     {
         tag: "MAINTENANCE",
@@ -46,7 +51,8 @@ const items: item[] = [
         description:
             "Utilizing continuous spectral analysis to detect bearing failure vectors before critical operational shutdown occurs.",
         linkname: "READ LOG",
-        image: '/blog3.jpg'
+        image: '/blog3.jpg',
+
     },
 ]
 
@@ -90,28 +96,61 @@ export default function Articles() {
             </motion.div>
             <div className='bg-white w-full'>
                 <div className="bg-white w-full max-w-7xl mx-auto">
-                    <motion.div initial={{ x: -100, opacity: 0 }}
+                    <motion.div
+                        initial={{ x: -100, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         viewport={{ once: true, amount: 0.3 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }} className='relative flex h-[500px] justify-items-start items-center mt-6 w-full max-w-7xl mx-auto pt-10 lg:pt-20'>
-                        <div className='mx-auto bg-[#F1F5F9] absolute max-w-[600px] flex flex-col gap-6 p-8 lg:ml-30'>
-                            <p className='flex gap-4 text-[13px] leading-4 font-medium'>
-                                <span className='text-[#0066FF]'>01 / FEATURED STORY</span>
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="relative flex flex-col lg:flex-row items-center mt-6 w-full max-w-7xl mx-auto pt-10 lg:pt-20"
+                    >
+                        {/* Content */}
+                        <div
+                            className="
+            relative lg:absolute
+            z-10
+            w-full lg:max-w-[600px]
+            bg-[#F1F5F9]
+            flex flex-col gap-6
+            p-6 lg:p-8
+            lg:ml-30
+            order-1
+        "
+                        >
+                            <p className="flex gap-4 text-[13px] leading-4 font-medium">
+                                <span className="text-[#0066FF]">
+                                    01 / FEATURED STORY
+                                </span>
+
                                 <span>|</span>
-                                <span className='text-[#475569]'>HVLS TECHNOLOGY</span>
+
+                                <span className="text-[#475569]">
+                                    HVLS TECHNOLOGY
+                                </span>
                             </p>
-                            <h2 className='font-monrope font-bold text-5xl tracking-[-0.96px] leading-[52px] text-[#00132C]'>The Fluid Dynamics of
-                                Modern HVLS Systems
-                                in Logistics Hubs
+
+                            <h2 className="font-monrope font-bold text-3xl lg:text-5xl tracking-[-0.96px] leading-[36px] lg:leading-[52px] text-[#00132C]">
+                                The Fluid Dynamics of Modern HVLS Systems in Logistics Hubs
                             </h2>
-                            <p className='text-[13px] leading-4 font-bold text-[#0066FF]'>READ PROTOCOL →</p>
+
+                            <p className="text-[13px] leading-4 font-bold text-[#0066FF]">
+                                READ PROTOCOL →
+                            </p>
                         </div>
+
+                        {/* Image */}
                         <Image
                             src="/blogImage.jpg"
                             alt="blog image"
-                            height={400}
                             width={400}
-                            className='mx-auto w-full max-w-7xl h-[100%]' />
+                            height={400}
+                            className="
+                            order-2
+                            w-full
+                            h-[300px] lg:h-[400px]
+                            object-cover
+                            lg:ml-auto
+                        "
+                        />
                     </motion.div>
 
                     {/* <div className='flex flex-col gap-32'>
@@ -195,21 +234,25 @@ export default function Articles() {
 
                                 {/* Right Side (Image) */}
                                 <div
-                                    className={`order-1 md:order-2 ${idx % 2 === 0
-                                        ? "md:col-start-7 md:col-end-13"
-                                        : "md:col-start-1 md:col-end-7"
-                                        } w-full`}
+                                    className={`order-1 md:order-2 w-full ${idx % 2 === 0
+                                        ? `md:col-start-7 md:col-end-13 ${e.width ? "flex justify-end" : ""
+                                        }`
+                                        : `md:col-start-1 md:col-end-7 ${e.width ? "flex justify-start" : ""
+                                        }`
+                                        }`}
                                 >
-                                    <div>
-                                        <div className="w-full p-2 border border-[#CBD5E1] mx-auto">
-                                            <Image
-                                                width={400}
-                                                height={450}
-                                                alt="blog images"
-                                                src={e.image}
-                                                className="border w-full border-[#0066FF33] object-cover"
-                                            />
-                                        </div>
+                                    <div
+                                        className={`p-2 border border-[#CBD5E1] ${e.width ? "w-fit" : "w-full"
+                                            }`}
+                                    >
+                                        <Image
+                                            width={e.width || 400}
+                                            height={e.height || 400}
+                                            alt="blog images"
+                                            src={e.image}
+                                            className={`border border-[#0066FF33] object-cover ${e.width ? "" : "w-full"
+                                                }`}
+                                        />
                                     </div>
                                 </div>
                             </div>

@@ -31,7 +31,7 @@ const data = {
             tag: "Published Aug 2026"
         }
     ],
-    heroImage: "/blog1.jpg",
+    heroImage: "/product-main-image.png",
 }
 
 export default function BlogDetailLanding() {
@@ -39,10 +39,10 @@ export default function BlogDetailLanding() {
         <section className='w-full flex flex-wrap justify-center max-w-7xl mx-auto py-3 lg:py-20 lg:px-0 px-5'>
 
             <motion.div
-                    initial={{ x: -50, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 0.3, ease: "easeOut" }}
-                 className='lg:w-3/5 flex flex-col gap-8 '>
+                initial={{ x: -50, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+                className='lg:w-3/5 flex flex-col gap-8 '>
                 <h1 className="text-[#09273A] font-sora text-[40px] font-semibold leading-11 lg:leading-[70.4px] trading-[-1.28px] sm:text-5xl lg:text-[64px] lg:whitespace-pre-line">
                     {data.title}
                 </h1>
@@ -60,10 +60,10 @@ export default function BlogDetailLanding() {
 
             </motion.div>
             <motion.div
-                                initial={{ x: 0, opacity: 0 }}
-                                animate={{ x: 0, opacity: 1 }}
-                                transition={{ duration: 0.3, ease: "easeOut" }}>
-                <Image src={data.heroImage} height={500} width={500} alt={data.title}/>
+                initial={{ x: 0, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}>
+                <Image src={data.heroImage} height={500} width={450} alt={data.title} />
             </motion.div>
         </section>
     )

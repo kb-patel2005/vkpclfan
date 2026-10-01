@@ -1087,7 +1087,7 @@ const hvls_8ft_gearless = {
     ],
     warrenty: [
         {
-            title: "5 Years",
+            title: "1 Year",
             description: "Blades, hub, extension tube and mounting structure — replacement warranty",
             icon: (
                 <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -1096,7 +1096,7 @@ const hvls_8ft_gearless = {
                 </svg>),
         },
         {
-            title: "2 Year",
+            title: "1 Year",
             description: "Motor, controller and VFD — replacement warranty",
             icon: (
                 <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -1222,7 +1222,7 @@ const hvls_10ft_gearless = {
     ],
     warrenty: [
         {
-            title: "5 Years",
+            title: "1 Years",
             description: "Blades, hub, extension tube and mounting structure — replacement warranty",
             icon: (
                 <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -1231,7 +1231,7 @@ const hvls_10ft_gearless = {
                 </svg>),
         },
         {
-            title: "2 Year",
+            title: "1 Year",
             description: "Motor, controller and VFD — replacement warranty",
             icon: (
                 <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -1492,7 +1492,7 @@ const hvls_16ft_gearless = {
     ],
     warrenty: [
         {
-            title: "5 Years",
+            title: "1 Years",
             description: "Blades, hub, extension tube and mounting structure — replacement warranty",
             icon: (
                 <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -1501,7 +1501,7 @@ const hvls_16ft_gearless = {
                 </svg>),
         },
         {
-            title: "2 Year",
+            title: "1 Year",
             description: "Motor, controller and VFD — replacement warranty",
             icon: (
                 <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -1885,7 +1885,7 @@ const exhaustfan_FLEH1000 = {
     ],
     warrenty: [
         {
-            title: "5 Years",
+            title: "1 Years",
             description: "Blades, hub, extension tube and mounting structure — replacement warranty",
             icon: (
                 <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -1894,7 +1894,7 @@ const exhaustfan_FLEH1000 = {
                 </svg>),
         },
         {
-            title: "2 Year",
+            title: "1 Year",
             description: "Motor, controller and VFD — replacement warranty",
             icon: (
                 <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -2009,7 +2009,7 @@ const exhaustfan_FLEH1220 = {
     ],
     warrenty: [
         {
-            title: "5 Years",
+            title: "1 Years",
             description: "Blades, hub, extension tube and mounting structure — replacement warranty",
             icon: (
                 <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -2018,7 +2018,7 @@ const exhaustfan_FLEH1220 = {
                 </svg>),
         },
         {
-            title: "2 Year",
+            title: "1 Year",
             description: "Motor, controller and VFD — replacement warranty",
             icon: (
                 <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -2133,7 +2133,7 @@ const exhaustfan_fLEH1380 = {
     ],
     warrenty: [
         {
-            title: "5 Years",
+            title: "1 Years",
             description: "Blades, hub, extension tube and mounting structure — replacement warranty",
             icon: (
                 <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -2142,7 +2142,7 @@ const exhaustfan_fLEH1380 = {
                 </svg>),
         },
         {
-            title: "2 Year",
+            title: "1 Year",
             description: "Motor, controller and VFD — replacement warranty",
             icon: (
                 <svg className="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -2616,7 +2616,10 @@ featureandadv.set("16-feet-gearless-HVLS-fan", featuresandAdvhvls);
 
 /********************************Working principal ***********************************/
 
-const exhaust_fan_Principal = ["Exhaust Fan draws out polluted air from premises and replaces it with fresh air.Air is considered polluted when it contains high amounts of hot air, moisture, carbon dioxide, vaporized chemicals, dust, fungal spores and unpleasant odors.Marut Air exhaust fan combat indoor air pollution by ejecting the unclean indoor air into the outside environment and letting in clean air from the outside."]
+const exhaust_fan_Principal = [
+    "Floent HVLS Fan (High Volume Low Speed) is engineered to circulate massive volumes of air at low rotational speeds, creating a comfortable and energy‑efficient environment in large industrial and commercial spaces. As the fan rotates, it generates a downward column of air that spreads outward along the floor, forming a horizontal floor jet. This airflow moves 360 degrees, displacing hot air, reducing humidity, and pushing dust out of corners, ensuring cleaner and fresher surroundings.",
+    "The principle behind HVLS fans is based on the separation of the boundary layer surrounding the body, which is saturated with moisture. By moving large volumes of air at low speeds, these fans enhance evaporation and create a cooling effect. The size of the fan and its speed determine the thickness and reach of the horizontal floor jet, which continues to flow until it encounters a wall or other vertical surface, maximizing air circulation and comfort in the space."
+];
 
 const hvls_fan_Principal = [
     "HVLS fans operate on the premise that cool flowing air separates the boundary layer surrounding the body that is saturated with moisture and speeds up evaporation to generate a cooling effect. As they rotate, ceiling fans create a column of air. Along the floor, this air column flows downward and outward. This thick wall of horizontally flowing air, also known as a horizontal floor jet, is related to a fan's diameter and, to a lesser extent, its speed. The floor jet moves outward until it encounters a side wall or other vertical surface after it reaches its maximum capacity.",
